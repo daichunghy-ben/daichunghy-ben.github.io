@@ -2099,22 +2099,33 @@ body[data-page="projects"].page-projects-showcase .archive-filter-bar {
     margin: 0.8rem 0 1.35rem;
 }
 
-body[data-page="projects"].page-projects-showcase .archive-filter-bar a {
+body[data-page="projects"].page-projects-showcase .archive-filter-bar a,
+body[data-page="projects"].page-projects-showcase .archive-filter-bar button {
     min-width: 0;
     padding: 0.56rem 1.2rem;
     border: 1px solid rgba(13, 36, 62, 0.2);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.68);
     color: var(--archive-ink);
+    font-family: inherit;
     font-size: 0.8rem;
     font-weight: 800;
     text-decoration: none;
+    cursor: pointer;
 }
 
-body[data-page="projects"].page-projects-showcase .archive-filter-bar a.is-active {
+body[data-page="projects"].page-projects-showcase .archive-filter-bar a.is-active,
+body[data-page="projects"].page-projects-showcase .archive-filter-bar button.is-active {
     border-color: var(--archive-ink);
     background: var(--archive-ink);
     color: #fffdf8;
+}
+
+body[data-page="projects"].page-projects-showcase .archive-filter-bar button:focus-visible,
+body[data-page="projects"].page-projects-showcase .archive-clear-link:focus-visible,
+body[data-page="projects"].page-projects-showcase .project-language-switcher .language-switcher__link:focus-visible {
+    outline: 3px solid rgba(15, 127, 120, 0.28);
+    outline-offset: 3px;
 }
 
 body[data-page="projects"].page-projects-showcase .archive-all-grid {
@@ -2240,7 +2251,8 @@ body[data-page="projects"].page-projects-showcase .archive-load-more {
         flex-direction: column;
     }
 
-    body[data-page="projects"].page-projects-showcase .archive-filter-bar a {
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar a,
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar button {
         flex: 1 1 auto;
         text-align: center;
     }
@@ -2558,6 +2570,46 @@ body[data-page="projects"].page-projects-showcase .archive-cta--reference-hidden
     display: none;
 }
 
+body[data-page="projects"].page-projects-showcase .project-language-switcher {
+    align-self: start;
+    margin-top: 1rem;
+    border-color: rgba(13, 36, 62, 0.13);
+    background: rgba(255, 253, 248, 0.84);
+}
+
+body[data-page="projects"].page-projects-showcase .sidebar-language .project-language-switcher {
+    margin-top: 0;
+}
+
+body[data-page="projects"].page-projects-showcase .project-language-switcher .language-switcher__link {
+    border: 0;
+    appearance: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-hero p:not(.eyebrow),
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-card p,
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-cta p {
+    line-height: 1.68;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+}
+
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .sidebar-nav a,
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-card h3,
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-featured-board h2,
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-all-head h2,
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-rail-action {
+    font-family: var(--font-heading);
+    letter-spacing: 0;
+}
+
+html[lang="vi"] body[data-page="projects"].page-projects-showcase .archive-card h3 {
+    line-height: 1.18;
+    text-wrap: balance;
+}
+
 @media (max-width: 1500px) {
     body[data-page="projects"].page-projects-showcase .archive-hero-grid {
         grid-template-columns: 1fr;
@@ -2613,5 +2665,205 @@ body[data-page="projects"].page-projects-showcase .archive-cta--reference-hidden
     body[data-page="projects"].page-projects-showcase .archive-featured-board .featured-card-grid,
     body[data-page="projects"].page-projects-showcase .archive-all-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    body[data-page="projects"].page-projects-showcase {
+        background:
+            linear-gradient(180deg, #fffdf8 0%, #fbf8f1 48%, #f8faf9 100%);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-main {
+        padding: 4.7rem 0.92rem 2.4rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero {
+        margin-bottom: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-grid {
+        gap: 1.15rem;
+        margin-top: 1.05rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-reference-visual {
+        min-height: 288px;
+        max-width: none;
+        border: 1px solid rgba(13, 36, 62, 0.1);
+        border-radius: 16px;
+        background: rgba(255, 253, 248, 0.72);
+        box-shadow: 0 16px 38px rgba(13, 36, 62, 0.07);
+        overflow: hidden;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-photo {
+        inset: 0;
+        border: 0;
+        border-radius: 16px;
+        box-shadow: none;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-photo img {
+        object-position: 50% 54%;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-photo::after {
+        background:
+            linear-gradient(180deg, transparent 42%, rgba(11, 32, 56, 0.12)),
+            linear-gradient(35deg, rgba(6, 32, 57, 0.06), transparent 58%);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero h1 {
+        max-width: 8ch;
+        font-size: clamp(3.25rem, 14vw, 4.4rem);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-copy > p:not(.eyebrow) {
+        margin-top: 1rem;
+        font-size: 0.94rem;
+        line-height: 1.62;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-hero-copy > p:not(.eyebrow)::before {
+        margin: 1.05rem 0 0.95rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-metrics {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.58rem;
+        max-width: none;
+        margin-top: 1.05rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-metrics div {
+        min-width: 0;
+        padding: 0.68rem 0.58rem;
+        border: 1px solid rgba(13, 36, 62, 0.1);
+        border-radius: 10px;
+        background: rgba(255, 253, 248, 0.74);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-metrics dt {
+        font-size: 1.32rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-metrics dd {
+        margin-top: 0.2rem;
+        font-size: 0.62rem;
+        line-height: 1.2;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-featured-board {
+        margin-top: 1rem;
+        padding: 0.95rem;
+        border-radius: 12px;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-featured-board h2,
+    body[data-page="projects"].page-projects-showcase .archive-all-projects h2 {
+        font-size: 1.72rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-rail-action {
+        min-height: 36px;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        margin: 0.8rem -0.92rem 1rem;
+        padding: 0 0.92rem 0.18rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar a,
+    body[data-page="projects"].page-projects-showcase .archive-filter-bar button {
+        flex: 0 0 auto;
+        min-height: 40px;
+        padding: 0 0.95rem;
+        white-space: nowrap;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-all-grid {
+        gap: 0.72rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card {
+        display: grid;
+        grid-template-columns: 118px minmax(0, 1fr);
+        min-height: 132px;
+        overflow: hidden;
+        border-radius: 12px;
+        background:
+            linear-gradient(135deg, rgba(255, 253, 248, 0.98), rgba(247, 252, 249, 0.9)),
+            #fffdf8;
+        box-shadow: 0 12px 28px rgba(13, 36, 62, 0.06);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card img,
+    body[data-page="projects"].page-projects-showcase .archive-project-card .archive-card-visual {
+        width: 100%;
+        height: 100%;
+        min-height: 132px;
+        aspect-ratio: auto;
+        border-radius: 0;
+        object-fit: cover;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card div {
+        min-width: 0;
+        padding: 0.82rem 0.9rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card h3 {
+        font-size: 0.98rem;
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card p {
+        margin-top: 0.42rem;
+        font-size: 0.75rem;
+        line-height: 1.38;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card small {
+        margin-top: 0.62rem;
+        padding: 0.22rem 0.36rem;
+        font-size: 0.56rem;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card .archive-card-icon {
+        top: 0.58rem;
+        left: 0.58rem;
+        width: 36px;
+        height: 36px;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card .archive-card-icon i {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 420px) {
+    body[data-page="projects"].page-projects-showcase .archive-project-card {
+        grid-template-columns: 106px minmax(0, 1fr);
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card img,
+    body[data-page="projects"].page-projects-showcase .archive-project-card .archive-card-visual {
+        min-height: 128px;
+    }
+
+    body[data-page="projects"].page-projects-showcase .archive-project-card div {
+        padding: 0.74rem 0.78rem;
     }
 }
