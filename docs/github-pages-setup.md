@@ -31,6 +31,6 @@ If `SITE_URL` is not set, canonical/OG tags remain in source-default mode.
 
 ## 6) Local verification before push
 ```bash
-node scripts/stage-pages.mjs
-node scripts/check-site-local.mjs
+npm run stage:pages
+npm run check:local
 ```

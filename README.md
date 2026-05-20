@@ -18,6 +18,21 @@ Active static portfolio workspace for market research, consumer insights, and ap
 - `npm run audit:externals` audits external links and mirrored media.
 - `npm run preview` stages the site and serves `.deploy/public` locally.
 
+## Deploying Changes
+
+The primary production website is hosted on **GitHub Pages** and deploys automatically via GitHub Actions:
+1. Make and verify changes locally (e.g. `npm run preview` and `npm run check:local`).
+2. Stage and commit changes:
+   ```bash
+   git add .
+   git commit -m "Describe your changes"
+   ```
+3. Push to the `main` branch to trigger deployment:
+   ```bash
+   git push origin main
+   ```
+4. Verify the deployment status on the GitHub Actions tab of your repository.
+
 ## Agent Notes
 
 Use this folder for all current portfolio edits. Legacy folders on Desktop are kept only as reference snapshots and should not be opened as the active website. Current pages live under `portfolio/`; do not recreate duplicate root-level HTML pages.
