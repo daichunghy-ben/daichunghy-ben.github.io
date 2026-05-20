@@ -29,7 +29,7 @@ const run = (cmd, args, opts = {}) =>
 const chromePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port = 4179;
 
-const server = spawn('python3', ['-m', 'http.server', String(port)], {
+const server = spawn('python3', ['-m', 'http.server', String(port), '--directory', '.deploy/public'], {
   stdio: 'ignore',
   detached: true
 });
@@ -40,8 +40,8 @@ const mobileFlags = '--preset=perf';
 
 try {
   for (const page of pages) {
-    const url = `http://127.0.0.1:${port}/${page}`;
-    console.log(`\\n[desktop] ${page}`);
+    const url = `http://127.0.0.1:${port}/portfolio/${page}`;
+    console.log(`\n[desktop] ${page}`);
     await run('npx', [
       'lighthouse',
       url,
@@ -64,5 +64,9 @@ try {
     }
   }
 } finally {
-  process.kill(-server.pid, 'SIGTERM');
+  try {
+    process.kill(server.pid, 'SIGTERM');
+  } catch (err) {
+    // ignore
+  }
 }

@@ -1272,11 +1272,11 @@ html.js .page-research-ev .ev-editorial .reveal,
 }
 
 .page-research-ev .ev-segment-photo--pragmatic {
-    background-image: url("../../assets/external/wikimedia/motorbikes-at-hanoi-vietnam.jpg");
+    background-image: url("../../assets/optimized/external/wikimedia/motorbikes-at-hanoi-vietnam-480.webp");
 }
 
 .page-research-ev .ev-segment-photo--aesthetic {
-    background-image: url("../../assets/ev-vietnam-charging-hero.png");
+    background-image: url("../../assets/optimized/ev-vietnam-charging-hero-480.webp");
     background-position: 62% center;
 }
 
@@ -1388,7 +1388,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     color: #f8f4e8;
     background:
         linear-gradient(180deg, rgba(10, 24, 20, 0.3), rgba(10, 24, 20, 0.78)),
-        url("../../assets/ev-vietnam-charging-hero.png") center/cover;
+        url("../../assets/optimized/ev-vietnam-charging-hero-1024.webp") center/cover;
 }
 
 .page-research-ev .ev-impact-row {
@@ -1692,7 +1692,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     min-height: 455px;
     background:
         linear-gradient(90deg, rgba(244, 248, 253, 0.98) 0%, rgba(244, 248, 253, 0.92) 42%, rgba(244, 248, 253, 0.22) 67%),
-        url("../../portfolio/assets/ev-core-challenge-reference.png") center right / auto 100% no-repeat;
+        url("../../assets/optimized/ev-core-challenge-reference-1024.webp") center right / auto 100% no-repeat;
 }
 
 .page-research-ev .ev-poster-challenge-grid {
@@ -1917,7 +1917,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     width: min(100% - 3.2rem, 1320px);
     background:
         linear-gradient(90deg, rgba(7, 18, 40, 0.96), rgba(7, 18, 40, 0.76)),
-        url("../../portfolio/assets/ev-choice-reference-hero.png") left center / auto 100% no-repeat,
+        url("../../assets/optimized/ev-choice-reference-hero-1024.webp") left center / auto 100% no-repeat,
         linear-gradient(135deg, #061026, #0d2a55);
 }
 
@@ -1929,7 +1929,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     .page-research-ev .ev-poster-challenge {
         background:
             linear-gradient(90deg, rgba(244, 248, 253, 0.98), rgba(244, 248, 253, 0.9)),
-            url("../../portfolio/assets/ev-core-challenge-reference.png") center right / cover no-repeat;
+            url("../../assets/optimized/ev-core-challenge-reference-768.webp") center right / cover no-repeat;
     }
 
     .page-research-ev .ev-poster-results-grid {
@@ -2455,7 +2455,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     padding: clamp(2rem, 4vw, 3.2rem) 0;
     background:
         linear-gradient(90deg, rgba(245, 248, 252, 0.98), rgba(245, 248, 252, 0.88) 42%, rgba(245, 248, 252, 0.42)),
-        url("../../portfolio/assets/ev-driver-hesitation.png") center right / cover no-repeat;
+        url("../../assets/optimized/ev-driver-hesitation-1024.webp") center right / cover no-repeat;
     color: var(--ev-ink);
 }
 
@@ -2526,11 +2526,11 @@ html.js .page-research-ev .ev-editorial .reveal,
 }
 
 .page-research-ev .ev-segment-photo--pragmatic {
-    background-image: linear-gradient(rgba(8, 20, 43, 0.16), rgba(8, 20, 43, 0.16)), url("../../portfolio/assets/ev-garage-charging.png");
+    background-image: linear-gradient(rgba(8, 20, 43, 0.16), rgba(8, 20, 43, 0.16)), url("../../assets/optimized/ev-garage-charging-480.webp");
 }
 
 .page-research-ev .ev-segment-photo--aesthetic {
-    background-image: linear-gradient(rgba(8, 20, 43, 0.12), rgba(8, 20, 43, 0.12)), url("../../portfolio/assets/ev-design-sketch.png");
+    background-image: linear-gradient(rgba(8, 20, 43, 0.12), rgba(8, 20, 43, 0.12)), url("../../assets/optimized/ev-design-sketch-480.webp");
 }
 
 .page-research-ev .ev-segment-cards h3,
@@ -2644,7 +2644,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     border-radius: 14px;
     background:
         linear-gradient(90deg, rgba(7, 18, 40, 0.9), rgba(7, 18, 40, 0.76)),
-        url("../../portfolio/assets/ev-vietnam-charging-hero.png") left center / 36% auto no-repeat,
+        url("../../assets/optimized/ev-vietnam-charging-hero-480.webp") left center / 36% auto no-repeat,
         linear-gradient(135deg, #061026, #0d2a55);
     box-shadow: 0 24px 52px rgba(4, 20, 43, 0.26);
     padding: clamp(1.2rem, 3vw, 2rem);
@@ -2796,7 +2796,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     .page-research-ev .ev-simulator .section-container {
         background:
             linear-gradient(135deg, rgba(7, 18, 40, 0.92), rgba(13, 42, 85, 0.9)),
-            url("../../portfolio/assets/ev-vietnam-charging-hero.png") center top / cover no-repeat;
+            url("../../assets/optimized/ev-vietnam-charging-hero-480.webp") center top / cover no-repeat;
     }
 
     .page-research-ev .ev-simulator .ev-section-copy,
@@ -2864,7 +2864,7 @@ html.js .page-research-ev .ev-editorial .reveal,
     .page-research-ev .ev-dark-band {
         background:
             linear-gradient(180deg, rgba(245, 248, 252, 0.98), rgba(245, 248, 252, 0.84)),
-            url("../../portfolio/assets/ev-driver-hesitation.png") center / cover no-repeat;
+            url("../../assets/optimized/ev-driver-hesitation-480.webp") center / cover no-repeat;
     }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-home-locale="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -15,9 +15,9 @@
 <nav class="ecosystem-mobile-nav" aria-label="Mobile navigation">
 <a class="ecosystem-mobile-brand" href="index.html">Chung Hy Dai</a>
 <div>
-<a href="#projects">Projects</a>
-<a href="projects.html">Archive</a>
-<a href="#info">Contact</a>
+<a href="#projects" data-i18n="mobile.projects">Projects</a>
+<a href="projects.html" data-i18n="mobile.archive">Archive</a>
+<a href="#contact" data-i18n="mobile.contact">Contact</a>
 </div>
 </nav>
 <div class="ecosystem-shell" id="top">
@@ -31,16 +31,20 @@
 </picture>
 <span aria-hidden="true"></span>
 </div>
+<div class="home-language-toggle" aria-label="Portfolio language">
+<button class="home-language-toggle__option" type="button" data-home-language="vi" aria-pressed="false"><strong>VI</strong><span>Tiếng Việt</span></button>
+<button class="home-language-toggle__option" type="button" data-home-language="en" aria-pressed="true"><strong>EN</strong><span>English</span></button>
+</div>
 <h1>Chung Hy Dai</h1>
-<p>Market Researcher</p>
+<p data-i18n="profile.role">Market Researcher</p>
 </div>
 <nav class="side-nav" aria-label="Portfolio sections">
-<a class="is-active" href="#education"><i class="ph ph-graduation-cap" aria-hidden="true"></i><span>Education</span></a>
-<a href="#projects"><i class="ph ph-folder" aria-hidden="true"></i><span>Projects</span></a>
-<a href="#honors"><i class="ph ph-trophy" aria-hidden="true"></i><span>Honors &amp; Awards</span></a>
-<a href="#certificates"><i class="ph ph-certificate" aria-hidden="true"></i><span>Certificates</span></a>
-<a href="#skills"><i class="ph ph-code" aria-hidden="true"></i><span>Skills</span></a>
-<a href="#info"><i class="ph ph-user" aria-hidden="true"></i><span>Info</span></a>
+<a class="is-active" href="#education"><i class="ph ph-graduation-cap" aria-hidden="true"></i><span data-i18n="side.education">Education</span></a>
+<a href="#projects"><i class="ph ph-folder" aria-hidden="true"></i><span data-i18n="side.projects">Projects</span></a>
+<a href="#honors"><i class="ph ph-trophy" aria-hidden="true"></i><span data-i18n="side.honors">Honors &amp; Awards</span></a>
+<a href="#certificates"><i class="ph ph-certificate" aria-hidden="true"></i><span data-i18n="side.certificates">Certificates</span></a>
+<a href="#skills"><i class="ph ph-code" aria-hidden="true"></i><span data-i18n="side.skills">Skills</span></a>
+<a href="#contact"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i><span data-i18n="side.contact">Contact</span></a>
 </nav>
 <div class="side-art" aria-hidden="true">
 <div class="wash wash-a"></div>
@@ -54,12 +58,12 @@
 <main class="ecosystem-main">
 <section class="ecosystem-hero" aria-labelledby="home-title">
 <div class="hero-copy">
-<p class="hero-eyebrow"><span>Market Research</span><i aria-hidden="true"></i><span>Consumer Insights</span><i aria-hidden="true"></i><span>Decision Support</span></p>
-<h2 id="home-title">Ecosystem<br/>Data<br/>Collaborator<span>.</span></h2>
-<p class="hero-lede">Early-career researcher with experience in customer feedback analysis, surveys, and consumer behavior studies. Comfortable with Excel, Python, and AI-assisted workflows for analysis and presentation support. Aspiring toward a long-term consulting career through market research and consumer insights track.</p>
+<p class="hero-eyebrow"><span data-i18n="hero.eyebrow.1">Market Research</span><i aria-hidden="true"></i><span data-i18n="hero.eyebrow.2">Consumer Insights</span><i aria-hidden="true"></i><span data-i18n="hero.eyebrow.3">Decision Support</span></p>
+<h2 id="home-title" data-i18n-html="hero.title">Ecosystem<br/>Data<br/>Collaborator<span>.</span></h2>
+<p class="hero-lede" data-i18n="hero.lede">Early-career researcher with experience in customer feedback analysis, surveys, and consumer behavior studies. Comfortable with Excel, Python, and AI-assisted workflows for analysis and presentation support. Aspiring toward a long-term consulting career through market research and consumer insights track.</p>
 <div class="hero-actions">
-<a class="action-primary" href="#projects">View Projects <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
-<a class="action-secondary" href="mailto:daichunghy@gmail.com"><i class="ph ph-envelope" aria-hidden="true"></i> Contact</a>
+<a class="action-primary" href="#projects"><span data-i18n="hero.primary">View Projects</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+<a class="action-secondary" href="#contact"><i class="ph ph-envelope" aria-hidden="true"></i> <span data-i18n="hero.secondary">Contact</span></a>
 </div>
 </div>
 <div class="hero-system" aria-label="Research ecosystem illustration">
@@ -73,28 +77,28 @@
 <div class="orbit-dot dot-a" aria-hidden="true"></div>
 <div class="orbit-dot dot-b" aria-hidden="true"></div>
 <div class="data-card insight-card">
-<span>Market Insights</span>
+<span data-i18n="cards.market">Market Insights</span>
 <div class="bar-chart" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
 </div>
 <div class="data-card segment-card">
-<span>Segmentation</span>
+<span data-i18n="cards.segment">Segmentation</span>
 <div class="pie-chart" aria-hidden="true"></div>
-<small>Discovery<br/>Decision<br/>Retention</small>
+<small data-i18n-html="cards.segment.small">Discovery<br/>Decision<br/>Retention</small>
 </div>
 <div class="data-card trend-card">
-<span>Trend Overview</span>
+<span data-i18n="cards.trend">Trend Overview</span>
 <svg aria-hidden="true" viewBox="0 0 260 94" preserveAspectRatio="none">
 <path d="M8 72 C32 36 54 80 78 50 S124 26 150 45 S190 84 214 36 S242 24 252 18"></path>
 <circle cx="8" cy="72" r="4"></circle><circle cx="78" cy="50" r="4"></circle><circle cx="150" cy="45" r="4"></circle><circle cx="214" cy="36" r="4"></circle><circle cx="252" cy="18" r="4"></circle>
 </svg>
 <strong>+24%</strong>
 </div>
-<div class="data-card evidence-card">Evidence <span>Insight</span> <span>Impact</span></div>
-<p class="vertical-note">Insights that grow with every question</p>
+<div class="data-card evidence-card"><span data-i18n="cards.evidence.1">Evidence</span> <span data-i18n="cards.evidence.2">Insight</span> <span data-i18n="cards.evidence.3">Impact</span></div>
+<p class="vertical-note" data-i18n="cards.vertical">Insights that grow with every question</p>
 </div>
 </section>
 <section class="numbered-section education-section" id="education" aria-labelledby="education-title">
-<div class="section-label"><span>01</span><h2 id="education-title">Education</h2></div>
+<div class="section-label"><span>01</span><h2 id="education-title" data-i18n="section.education">Education</h2></div>
 <article class="education-card">
 <div class="swinburne-mark" aria-label="Swinburne University of Technology">
 <span>Swin<br/>Bur<br/>Ne</span>
@@ -102,59 +106,59 @@
 </div>
 <div>
 <h3>Swinburne University<br/>of Technology</h3>
-<p>Bachelor of Business, Marketing</p>
-<small>Sep 2022 - Jan 2025</small>
+<p data-i18n="education.degree">Bachelor of Business, Marketing</p>
+<small data-i18n="education.dates">Sep 2022 - Jan 2025</small>
 </div>
 <i class="ph ph-buildings" aria-hidden="true"></i>
 </article>
 </section>
 <section class="numbered-section projects-section" id="projects" aria-labelledby="projects-title">
-<div class="section-label with-line"><span>02</span><h2 id="projects-title">Projects</h2><a class="section-action" href="projects.html">Open projects archive <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+<div class="section-label with-line"><span>02</span><h2 id="projects-title" data-i18n="section.projects">Projects</h2><a class="section-action" href="projects.html"><span data-i18n="projects.archive">Open projects archive</span> <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
 <div class="project-row">
 <a class="project-card" href="research-hotel.html">
 <img alt="Hotel pool and resort context for customer segmentation research" decoding="async" height="941" loading="lazy" src="./assets/optimized/research-hotel-segmentation-hero-768.webp" width="1672"/>
 <i class="ph ph-users-three" aria-hidden="true"></i>
-<h3>Hotel customer<br/>segmentation</h3>
-<p>Clustering guest groups to personalize experiences.</p>
+<h3 data-i18n-html="project.hotel.title">Hotel customer<br/>segmentation</h3>
+<p data-i18n="project.hotel.copy">Clustering guest groups to personalize experiences.</p>
 <span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
 </a>
 <a class="project-card" href="research-ev.html">
 <img alt="Electric vehicle charging in a Vietnam urban context" decoding="async" height="941" loading="lazy" src="./assets/optimized/ev-vietnam-charging-hero-768.webp" width="1672"/>
 <i class="ph ph-lightning" aria-hidden="true"></i>
-<h3>EV consumer<br/>preference study</h3>
-<p>Understanding choices for design, range and pricing.</p>
+<h3 data-i18n-html="project.ev.title">EV consumer<br/>preference study</h3>
+<p data-i18n="project.ev.copy">Understanding choices for design, range and pricing.</p>
 <span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
 </a>
 <a class="project-card" href="research-motorbike-ban.html">
 <img alt="Hanoi motorbike phase-out policy acceptance context" decoding="async" height="419" loading="lazy" src="./assets/optimized/motorbike-ban-optimized.webp" width="800"/>
 <i class="ph ph-scales" aria-hidden="true"></i>
-<h3>Motorbike phase-out<br/>policy acceptance</h3>
-<p>Assessing public support and transition readiness.</p>
+<h3 data-i18n-html="project.motorbike.title">Motorbike phase-out<br/>policy acceptance</h3>
+<p data-i18n="project.motorbike.copy">Assessing public support and transition readiness.</p>
 <span><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
 </a>
-<a class="project-card project-card--archive" href="projects.html" aria-label="Open the full projects archive">
+<a class="project-card project-card--archive" href="projects.html">
 <picture>
 <source sizes="(max-width: 760px) 100vw, 260px" srcset="../assets/optimized/portfolio-projects-archive-card-480.avif 480w, ../assets/optimized/portfolio-projects-archive-card-768.avif 768w" type="image/avif"/>
 <source sizes="(max-width: 760px) 100vw, 260px" srcset="../assets/optimized/portfolio-projects-archive-card-480.webp 480w, ../assets/optimized/portfolio-projects-archive-card-768.webp 768w" type="image/webp"/>
 <img alt="Project archive interface with multiple project cards and an open archive arrow" decoding="async" height="992" loading="lazy" src="../assets/optimized/portfolio-projects-archive-card-optimized.webp" width="1586"/>
 </picture>
 <i class="ph ph-stack" aria-hidden="true"></i>
-<h3>Full projects<br/>archive</h3>
-<p>Browse all 11 projects by domain, method, and evidence note.</p>
-<span>Open archive <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+<h3 data-i18n-html="project.archive.title">Full projects<br/>archive</h3>
+<p data-i18n="project.archive.copy">Browse all 11 projects by domain, method, and evidence note.</p>
+<span data-i18n-html="project.archive.cta">Open archive <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
 </a>
 </div>
 </section>
 <section class="numbered-section honors-section" id="honors" aria-labelledby="honors-title">
-<div class="section-label"><span>03</span><h2 id="honors-title">Honors &amp; Awards</h2></div>
+<div class="section-label"><span>03</span><h2 id="honors-title" data-i18n="section.honors">Honors &amp; Awards</h2></div>
 <div class="honor-row">
-<article><i class="ph ph-trophy" aria-hidden="true"></i><div><h3>HSBC Business Case<br/>Competition 2024</h3><p>Regional Finalist</p></div></article>
-<article><i class="ph ph-star" aria-hidden="true"></i><div><h3>Aspiring Star<br/>Research Prize</h3><p>Recognition for research potential</p></div></article>
-<article class="honor-wide"><i class="ph ph-medal" aria-hidden="true"></i><div><h3>Best Performance Awards<br/>at Swinburne Vietnam</h3><p>Project Management - Introduction to Marketing and Consumer Behaviour - Market Research</p></div></article>
+<article><i class="ph ph-trophy" aria-hidden="true"></i><div><h3 data-i18n-html="honor.hsbc.title">HSBC Business Case<br/>Competition 2024</h3><p data-i18n="honor.hsbc.copy">Regional Finalist</p></div></article>
+<article><i class="ph ph-star" aria-hidden="true"></i><div><h3 data-i18n-html="honor.star.title">Aspiring Star<br/>Research Prize</h3><p data-i18n="honor.star.copy">Recognition for research potential</p></div></article>
+<article class="honor-wide"><i class="ph ph-medal" aria-hidden="true"></i><div><h3 data-i18n-html="honor.best.title">Best Performance Awards<br/>at Swinburne Vietnam</h3><p data-i18n="honor.best.copy">Project Management - Introduction to Marketing and Consumer Behaviour - Market Research</p></div></article>
 </div>
 </section>
 <section class="numbered-section certificates-section" id="certificates" aria-labelledby="certificates-title">
-<div class="section-label with-line"><span>04</span><h2 id="certificates-title">Certificates</h2><em>Evidence record</em></div>
+<div class="section-label with-line"><span>04</span><h2 id="certificates-title" data-i18n="section.certificates">Certificates</h2><em data-i18n="certificates.kicker">Evidence record</em></div>
 <div class="certificate-board">
 <article class="certificate-feature">
 <div class="certificate-proof">
@@ -165,9 +169,9 @@
 </picture>
 </div>
 <div>
-<span class="cert-kicker">Academic Recognition</span>
-<h3>Best Performance Award Collection</h3>
-<p>May 2025 award collection notice from Swinburne Vietnam, supporting the Best Performance recognition listed above.</p>
+<span class="cert-kicker" data-i18n="cert.feature.kicker">Academic Recognition</span>
+<h3 data-i18n="cert.feature.title">Best Performance Award Collection</h3>
+<p data-i18n="cert.feature.copy">May 2025 award collection notice from Swinburne Vietnam, supporting the Best Performance recognition listed above.</p>
 <div class="mini-proof-row">
 <span>Project Management</span>
 <span>Marketing &amp; Consumer Behaviour</span>
@@ -178,7 +182,7 @@
 <div class="certificate-grid">
 <article class="certificate-card has-proof">
 <i class="ph ph-exam" aria-hidden="true"></i>
-<div><h3>SAT Score Report</h3><p>1320 / 1600; Math 780 and Evidence-Based Reading &amp; Writing 540.</p><small>College Board evidence</small></div>
+<div><h3 data-i18n="cert.sat.title">SAT Score Report</h3><p data-i18n="cert.sat.copy">1320 / 1600; Math 780 and Evidence-Based Reading &amp; Writing 540.</p><small data-i18n="cert.sat.note">College Board evidence</small></div>
 <picture>
 <source sizes="92px" srcset="../assets/optimized/certs/SAT-320.avif 320w, ../assets/optimized/certs/SAT-480.avif 480w" type="image/avif"/>
 <source sizes="92px" srcset="../assets/optimized/certs/SAT-320.webp 320w, ../assets/optimized/certs/SAT-480.webp 480w" type="image/webp"/>
@@ -187,7 +191,7 @@
 </article>
 <article class="certificate-card has-proof">
 <i class="ph ph-desktop" aria-hidden="true"></i>
-<div><h3>ICDL Profile Certificate</h3><p>Word Processing, Spreadsheets, Presentation, Computer Essentials, and Online Essentials.</p><small>ICDL Asia evidence</small></div>
+<div><h3 data-i18n="cert.icdl.title">ICDL Profile Certificate</h3><p data-i18n="cert.icdl.copy">Word Processing, Spreadsheets, Presentation, Computer Essentials, and Online Essentials.</p><small data-i18n="cert.icdl.note">ICDL Asia evidence</small></div>
 <picture>
 <source sizes="92px" srcset="../assets/optimized/certs/ICDL-320.avif 320w, ../assets/optimized/certs/ICDL-480.avif 480w" type="image/avif"/>
 <source sizes="92px" srcset="../assets/optimized/certs/ICDL-320.webp 320w, ../assets/optimized/certs/ICDL-480.webp 480w" type="image/webp"/>
@@ -196,7 +200,7 @@
 </article>
 <article class="certificate-card has-proof">
 <i class="ph ph-translate" aria-hidden="true"></i>
-<div><h3>IELTS Academic</h3><p>Overall Band Score 6.0 across Listening, Reading, Writing, and Speaking.</p><small>IELTS TRF score proof</small></div>
+<div><h3 data-i18n="cert.ielts.title">IELTS Academic</h3><p data-i18n="cert.ielts.copy">Overall Band Score 6.0 across Listening, Reading, Writing, and Speaking.</p><small data-i18n="cert.ielts.note">IELTS TRF score proof</small></div>
 <picture>
 <source sizes="92px" srcset="../assets/optimized/certs/ielts-score-proof-320.avif 320w, ../assets/optimized/certs/ielts-score-proof-480.avif 480w" type="image/avif"/>
 <source sizes="92px" srcset="../assets/optimized/certs/ielts-score-proof-320.webp 320w, ../assets/optimized/certs/ielts-score-proof-480.webp 480w" type="image/webp"/>
@@ -205,7 +209,7 @@
 </article>
 <article class="certificate-card has-proof linkedin-summary">
 <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
-<div><h3>LinkedIn Learning</h3><p>8 certificates grouped into analytics, finance/FinTech, and retail/service tracks.</p><div class="cert-track-list"><span>Excel BI</span><span>SQL</span><span>FinTech</span><span>Retail</span></div><small>8 local PDF certificates</small></div>
+<div><h3 data-i18n="cert.linkedin.title">LinkedIn Learning</h3><p data-i18n="cert.linkedin.copy">8 certificates grouped into analytics, finance/FinTech, and retail/service tracks.</p><div class="cert-track-list"><span>Excel BI</span><span>SQL</span><span>FinTech</span><span>Retail</span></div><small data-i18n="cert.linkedin.note">8 local PDF certificates</small></div>
 <picture>
 <source sizes="92px" srcset="../assets/optimized/certs/linkedin-learning-proof-320.avif 320w, ../assets/optimized/certs/linkedin-learning-proof-480.avif 480w" type="image/avif"/>
 <source sizes="92px" srcset="../assets/optimized/certs/linkedin-learning-proof-320.webp 320w, ../assets/optimized/certs/linkedin-learning-proof-480.webp 480w" type="image/webp"/>
@@ -214,37 +218,229 @@
 </article>
 <article class="certificate-card">
 <i class="ph ph-crown" aria-hidden="true"></i>
-<div><h3>Winner / Competition Signals</h3><p>Competition and project certificates are grouped here to keep the homepage compact.</p><small>Certificate archive</small></div>
+<div><h3 data-i18n="cert.competition.title">Winner / Competition Signals</h3><p data-i18n="cert.competition.copy">Competition and project certificates are grouped here to keep the homepage compact.</p><small data-i18n="cert.competition.note">Certificate archive</small></div>
 </article>
 </div>
 </div>
 </section>
 <section class="numbered-section skills-section" id="skills" aria-labelledby="skills-title">
-<div class="section-label"><span>05</span><h2 id="skills-title">Skills</h2></div>
+<div class="section-label"><span>05</span><h2 id="skills-title" data-i18n="section.skills">Skills</h2></div>
 <div class="skill-grid" aria-label="Selected skills">
-<span><i class="ph ph-file-py" aria-hidden="true"></i>Python</span>
-<span><i class="ph ph-microsoft-excel-logo" aria-hidden="true"></i>Excel</span>
-<span><i class="ph ph-database" aria-hidden="true"></i>SQL basics</span>
-<span><i class="ph ph-chart-bar" aria-hidden="true"></i>Market research</span>
-<span><i class="ph ph-clipboard-text" aria-hidden="true"></i>Survey design</span>
-<span><i class="ph ph-users-four" aria-hidden="true"></i>Consumer insights</span>
-<span><i class="ph ph-chart-line-up" aria-hidden="true"></i>Data visualization</span>
-<span><i class="ph ph-sparkle" aria-hidden="true"></i>AI-assisted analysis</span>
-<span><i class="ph ph-presentation-chart" aria-hidden="true"></i>Presentation support</span>
+<span><i class="ph ph-file-py" aria-hidden="true"></i><span data-i18n="skill.python">Python</span></span>
+<span><i class="ph ph-microsoft-excel-logo" aria-hidden="true"></i><span data-i18n="skill.excel">Excel</span></span>
+<span><i class="ph ph-database" aria-hidden="true"></i><span data-i18n="skill.sql">SQL basics</span></span>
+<span><i class="ph ph-chart-bar" aria-hidden="true"></i><span data-i18n="skill.market">Market research</span></span>
+<span><i class="ph ph-clipboard-text" aria-hidden="true"></i><span data-i18n="skill.survey">Survey design</span></span>
+<span><i class="ph ph-users-four" aria-hidden="true"></i><span data-i18n="skill.insights">Consumer insights</span></span>
+<span><i class="ph ph-chart-line-up" aria-hidden="true"></i><span data-i18n="skill.dataviz">Data visualization</span></span>
+<span><i class="ph ph-sparkle" aria-hidden="true"></i><span data-i18n="skill.ai">AI-assisted analysis</span></span>
+<span><i class="ph ph-presentation-chart" aria-hidden="true"></i><span data-i18n="skill.presentation">Presentation support</span></span>
 </div>
 </section>
-<section class="numbered-section info-section" id="info" aria-labelledby="info-title">
-<div class="section-label"><span>06</span><h2 id="info-title">Info</h2></div>
-<address class="info-bar">
-<span class="compass" aria-hidden="true"><i class="ph ph-compass" aria-hidden="true"></i></span>
-<span><i class="ph ph-map-pin" aria-hidden="true"></i> Ho Chi Minh City,<br/>Vietnam</span>
-<a href="mailto:daichunghy@gmail.com"><i class="ph ph-envelope" aria-hidden="true"></i> daichunghy@gmail.com</a>
-<a href="https://www.linkedin.com/in/chung-hy-d-17792826b/" rel="noopener noreferrer" target="_blank"><i class="ph ph-linkedin-logo" aria-hidden="true"></i> LinkedIn</a>
-<a href="https://orcid.org/0009-0009-6790-8981" rel="noopener noreferrer" target="_blank"><i class="ph ph-identification-card" aria-hidden="true"></i> ORCID</a>
+<section class="numbered-section contact-section" id="contact" aria-labelledby="contact-title">
+<div class="section-label with-line"><span>06</span><h2 id="contact-title" data-i18n="section.contact">Contact</h2><em data-i18n="contact.kicker">Direct route</em></div>
+<div class="contact-card">
+<div class="contact-copy">
+<span class="contact-location"><i class="ph ph-map-pin" aria-hidden="true"></i> <span data-i18n="contact.location">Ho Chi Minh City, Vietnam</span></span>
+<h3 data-i18n="contact.title">For market research, consumer insights, and applied analytics conversations.</h3>
+<p data-i18n="contact.copy">Use email for project context, role discussions, evidence requests, or collaboration notes. Professional profiles are available for background review.</p>
+</div>
+<address class="contact-actions">
+<a class="contact-primary" href="mailto:daichunghy@gmail.com?subject=Portfolio%20Inquiry">
+<i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+<span><strong data-i18n="contact.email">Email Chung Hy Dai</strong><small>daichunghy@gmail.com</small></span>
+</a>
+<div class="contact-link-grid">
+<a href="https://www.linkedin.com/in/chung-hy-d-17792826b/" rel="noopener noreferrer" target="_blank"><i class="ph ph-linkedin-logo" aria-hidden="true"></i><span>LinkedIn<small data-i18n="contact.linkedin.note">Professional profile</small></span></a>
+<a href="https://github.com/daichunghy-ben" rel="noopener noreferrer" target="_blank"><i class="ph ph-github-logo" aria-hidden="true"></i><span>GitHub<small data-i18n="contact.github.note">Code and project traces</small></span></a>
+<a href="https://orcid.org/0009-0009-6790-8981" rel="noopener noreferrer" target="_blank"><i class="ph ph-identification-card" aria-hidden="true"></i><span>ORCID<small data-i18n="contact.orcid.note">Research identifier</small></span></a>
+</div>
 </address>
+</div>
 </section>
 </main>
 </div>
+<script>
+(() => {
+    const STORAGE_KEY = 'portfolio.homeLocale.v1';
+    const DEFAULT_LOCALE = 'en';
+    const LOCALES = new Set(['en', 'vi']);
+    const copy = {
+        vi: {
+            title: 'Chung Hy Dai | Market Research & Consumer Insights',
+            description: 'Portfolio của Chung Hy Dai, tập trung vào market research, consumer insights, phân tích khảo sát và hỗ trợ quyết định bằng dữ liệu.',
+            text: {
+                'mobile.projects': 'Projects',
+                'mobile.archive': 'Archive',
+                'mobile.contact': 'Liên hệ',
+                'profile.role': 'Market Researcher',
+                'side.education': 'Học vấn',
+                'side.projects': 'Projects',
+                'side.honors': 'Giải thưởng',
+                'side.certificates': 'Chứng chỉ',
+                'side.skills': 'Kỹ năng',
+                'side.contact': 'Liên hệ',
+                'hero.eyebrow.1': 'Market Research',
+                'hero.eyebrow.2': 'Consumer Insights',
+                'hero.eyebrow.3': 'Decision Support',
+                'hero.lede': 'Đang phát triển theo hướng market research và consumer insights. Đã làm với dữ liệu khảo sát, phản hồi khách hàng và các nghiên cứu hành vi người tiêu dùng; quen dùng Excel, Python và workflow có AI hỗ trợ để xử lý dữ liệu, rút insight và chuẩn bị presentation. Mục tiêu dài hạn là đi vào consulting từ nền tảng nghiên cứu thị trường.',
+                'hero.primary': 'Xem projects',
+                'hero.secondary': 'Liên hệ',
+                'cards.market': 'Market insights',
+                'cards.segment': 'Phân khúc',
+                'cards.trend': 'Trend overview',
+                'cards.evidence.1': 'Evidence',
+                'cards.evidence.2': 'Insight',
+                'cards.evidence.3': 'Impact',
+                'cards.vertical': 'Mỗi câu hỏi mở thêm một lớp insight',
+                'section.education': 'Học vấn',
+                'education.degree': 'Bachelor of Business, Marketing',
+                'education.dates': '09/2022 - 01/2025',
+                'section.projects': 'Projects',
+                'projects.archive': 'Xem toàn bộ projects',
+                'project.hotel.copy': 'Phân nhóm khách từ review để hỗ trợ cá nhân hóa trải nghiệm.',
+                'project.ev.copy': 'Đọc cách người trẻ cân nhắc thiết kế, tầm hoạt động, sạc và giá.',
+                'project.motorbike.copy': 'Đánh giá mức ủng hộ chính sách và độ sẵn sàng chuyển đổi.',
+                'project.archive.copy': 'Xem 11 projects theo lĩnh vực, phương pháp và mức độ bằng chứng.',
+                'section.honors': 'Giải thưởng',
+                'honor.hsbc.copy': 'Regional Finalist',
+                'honor.star.copy': 'Ghi nhận tiềm năng nghiên cứu',
+                'honor.best.copy': 'Project Management - Introduction to Marketing and Consumer Behaviour - Market Research',
+                'section.certificates': 'Chứng chỉ',
+                'certificates.kicker': 'Evidence record',
+                'cert.feature.kicker': 'Academic recognition',
+                'cert.feature.title': 'Best Performance Award collection',
+                'cert.feature.copy': 'Thông báo nhận award tháng 05/2025 từ Swinburne Vietnam, dùng làm bằng chứng cho các Best Performance Awards ở trên.',
+                'cert.sat.title': 'SAT Score Report',
+                'cert.sat.copy': '1320 / 1600; Math 780 và Evidence-Based Reading & Writing 540.',
+                'cert.sat.note': 'College Board evidence',
+                'cert.icdl.title': 'ICDL Profile Certificate',
+                'cert.icdl.copy': 'Word Processing, Spreadsheets, Presentation, Computer Essentials và Online Essentials.',
+                'cert.icdl.note': 'ICDL Asia evidence',
+                'cert.ielts.title': 'IELTS Academic',
+                'cert.ielts.copy': 'Overall Band Score 6.0 cho Listening, Reading, Writing và Speaking.',
+                'cert.ielts.note': 'IELTS TRF score proof',
+                'cert.linkedin.title': 'LinkedIn Learning',
+                'cert.linkedin.copy': '8 certificates, nhóm theo analytics, finance/FinTech và retail/service.',
+                'cert.linkedin.note': '8 local PDF certificates',
+                'cert.competition.title': 'Winner / Competition Signals',
+                'cert.competition.copy': 'Các certificate về competition và project được gom lại để homepage không bị quá tải.',
+                'cert.competition.note': 'Certificate archive',
+                'section.skills': 'Kỹ năng',
+                'skill.python': 'Python',
+                'skill.excel': 'Excel',
+                'skill.sql': 'SQL cơ bản',
+                'skill.market': 'Market research',
+                'skill.survey': 'Thiết kế survey',
+                'skill.insights': 'Consumer insights',
+                'skill.dataviz': 'Data visualization',
+                'skill.ai': 'Phân tích có AI hỗ trợ',
+                'skill.presentation': 'Hỗ trợ presentation',
+                'section.contact': 'Liên hệ',
+                'contact.kicker': 'Direct route',
+                'contact.location': 'Ho Chi Minh City, Vietnam',
+                'contact.title': 'Mở cho các trao đổi về market research, consumer insights và applied analytics.',
+                'contact.copy': 'Có thể gửi email nếu bạn muốn trao đổi về dự án, role phù hợp, bằng chứng trong portfolio hoặc hướng cộng tác. Các profile chuyên môn được để sẵn để kiểm tra background.',
+                'contact.email': 'Email Chung Hy Dai',
+                'contact.linkedin.note': 'Professional profile',
+                'contact.github.note': 'Code and project traces',
+                'contact.orcid.note': 'Research identifier'
+            },
+            html: {
+                'cards.segment.small': 'Discovery<br/>Decision<br/>Retention',
+                'project.hotel.title': 'Phân khúc<br/>khách sạn',
+                'project.ev.title': 'EV consumer<br/>preference study',
+                'project.motorbike.title': 'Motorbike phase-out<br/>policy acceptance',
+                'project.archive.title': 'Full projects<br/>archive',
+                'project.archive.cta': 'Mở archive <i class="ph ph-arrow-right" aria-hidden="true"></i>',
+                'honor.hsbc.title': 'HSBC Business Case<br/>Competition 2024',
+                'honor.star.title': 'Aspiring Star<br/>Research Prize',
+                'honor.best.title': 'Best Performance Awards<br/>at Swinburne Vietnam'
+            }
+        }
+    };
+
+    const normalizeLocale = (value) => LOCALES.has(String(value || '').toLowerCase()) ? String(value).toLowerCase() : '';
+
+    const getStoredLocale = () => {
+        try {
+            return normalizeLocale(window.localStorage.getItem(STORAGE_KEY));
+        } catch {
+            return '';
+        }
+    };
+
+    const storeLocale = (locale) => {
+        try {
+            window.localStorage.setItem(STORAGE_KEY, locale);
+        } catch {
+            // The page still switches immediately if storage is unavailable.
+        }
+    };
+
+    const primeOriginalCopy = () => {
+        document.querySelectorAll('[data-i18n]').forEach((node) => {
+            if (!node.dataset.i18nEn) node.dataset.i18nEn = node.textContent;
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach((node) => {
+            if (!node.dataset.i18nHtmlEn) node.dataset.i18nHtmlEn = node.innerHTML;
+        });
+    };
+
+    const setLocale = (locale, shouldStore = true) => {
+        const nextLocale = normalizeLocale(locale) || DEFAULT_LOCALE;
+        const langCopy = copy[nextLocale] || {};
+        document.documentElement.lang = nextLocale;
+        document.documentElement.dataset.homeLocale = nextLocale;
+        document.body?.setAttribute('data-home-locale', nextLocale);
+
+        if (nextLocale === 'vi') {
+            document.title = langCopy.title;
+            const description = document.querySelector('meta[name="description"]');
+            if (description) description.setAttribute('content', langCopy.description);
+        } else {
+            document.title = document.documentElement.dataset.homeTitleEn || document.title;
+            const description = document.querySelector('meta[name="description"]');
+            if (description && document.documentElement.dataset.homeDescriptionEn) {
+                description.setAttribute('content', document.documentElement.dataset.homeDescriptionEn);
+            }
+        }
+
+        document.querySelectorAll('[data-i18n]').forEach((node) => {
+            const key = node.dataset.i18n;
+            node.textContent = nextLocale === 'en' ? node.dataset.i18nEn : (langCopy.text?.[key] || node.dataset.i18nEn);
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach((node) => {
+            const key = node.dataset.i18nHtml;
+            node.innerHTML = nextLocale === 'en' ? node.dataset.i18nHtmlEn : (langCopy.html?.[key] || node.dataset.i18nHtmlEn);
+        });
+        document.querySelectorAll('[data-home-language]').forEach((button) => {
+            const active = button.dataset.homeLanguage === nextLocale;
+            button.classList.toggle('is-active', active);
+            button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        if (shouldStore) storeLocale(nextLocale);
+    };
+
+    const init = () => {
+        if (document.body?.dataset.page !== 'home') return;
+        document.documentElement.dataset.homeTitleEn = document.title;
+        const description = document.querySelector('meta[name="description"]');
+        if (description) document.documentElement.dataset.homeDescriptionEn = description.getAttribute('content') || '';
+        primeOriginalCopy();
+        setLocale(getStoredLocale() || DEFAULT_LOCALE, false);
+        document.querySelectorAll('[data-home-language]').forEach((button) => {
+            button.addEventListener('click', () => setLocale(button.dataset.homeLanguage));
+        });
+    };
+
+    if (document.body) {
+        init();
+    } else {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    }
+})();
+</script>
 <script defer="" src="js/main.js" type="module"></script>
 </body>
 </html>
