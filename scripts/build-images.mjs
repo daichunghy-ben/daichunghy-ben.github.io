@@ -96,12 +96,17 @@ const outputsAreFresh = async (outputs, inputMtime) => {
 
 for (const filename of targets) {
   const input = path.join(assetsDir, filename);
-  const inputMtime = await statMtime(input);
-  const source = sharp(input, { failOn: 'none' });
-  const meta = await source.metadata();
-  if (!meta.width) continue;
+  try {
+    const inputMtime = await statMtime(input);
+    if (inputMtime === 0) {
+      console.warn(`Warning: Source image does not exist, skipping: ${filename}`);
+      continue;
+    }
+    const source = sharp(input, { failOn: 'none' });
+    const meta = await source.metadata();
+    if (!meta.width) continue;
 
-  const name = filename.replace(/\.[^.]+$/, '');
+    const name = filename.replace(/\.[^.]+$/, '');
   const validWidths = widths.filter((w) => w < meta.width).concat(meta.width);
 
   for (const width of [...new Set(validWidths)]) {
@@ -134,6 +139,9 @@ for (const filename of targets) {
       .resize({ width: Math.min(meta.width, 1600), withoutEnlargement: true })
       .webp({ quality: 70, effort: 4 })
       .toFile(optimizedPath);
+  }
+  } catch (err) {
+    console.error(`Error processing image ${filename}:`, err);
   }
 }
 
