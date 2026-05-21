@@ -634,6 +634,44 @@
       "claim_owner": "chung-hy-dai"
     },
     {
+      "id": "1office-consulting",
+      "slug": "insight-1office-consulting",
+      "title": "B2B SaaS Value Mapping & Advisory",
+      "study_type": "organizational",
+      "status": "conceptual",
+      "sample": "1Office AI Consultant onboarding curriculum",
+      "model": "SPICED framework + Customer Journey Map",
+      "key_metrics": [
+        {
+          "label": "curriculum_weeks",
+          "value": "4",
+          "status": "reported",
+          "source_note": "1Office onboarding training roadmap sheets"
+        }
+      ],
+      "source_links": [
+        {
+          "label": "Advisory detail",
+          "url": "./insight-1office-consulting.html",
+          "type": "internal"
+        }
+      ],
+      "visual_modules": [],
+      "card_image": "./assets/portfolio-oneoffice-editorial.png",
+      "card_summary": "Conceptual framework: Systematic value mapping of manufacturing, logistics, and retail pain points to core SaaS systems.",
+      "default_tiers": {
+        "kpi": "conceptual",
+        "figure": "conceptual"
+      },
+      "figure_tiers": [
+        "conceptual"
+      ],
+      "verification_status": "self-reported",
+      "last_verified_at": "2026-05-21",
+      "evidence_strength": "limited",
+      "claim_owner": "chung-hy-dai"
+    },
+    {
       "id": "legacy-hanoi-phaseout",
       "slug": "research-hanoi-phaseout",
       "title": "Legacy Alias: Hanoi Phase-Out",

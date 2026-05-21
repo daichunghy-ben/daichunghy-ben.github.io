@@ -329,7 +329,7 @@
         "four-e-retention-framework",
         "lever-priority-map"
       ],
-      "card_image": "./assets/viz-influencer-four-e-retention.svg",
+      "card_image": "./assets/optimized/leveraging-influencer-dashboard-optimized.webp",
       "card_summary": "Reported (self-reported): Four-E UGC retention model linking experience, expectations, and brand equity with engagement and retention.",
       "default_tiers": {
         "kpi": "reported",
@@ -350,14 +350,14 @@
       "title": "Virtual Influencers and Gen Z Trust",
       "study_type": "creator",
       "status": "derived",
-      "sample": "Conference publication output",
+      "sample": "Published Springer chapter output",
       "model": "Trust-pathway quantitative modeling",
       "key_metrics": [
         {
           "label": "publication_year",
-          "value": "EEEU 2024 conference context; Springer first online: June 18, 2025 (DOI: 10.1007/978-981-96-4116-1_9)",
+          "value": "Published Springer chapter; first online June 18, 2025 (DOI: 10.1007/978-981-96-4116-1_9)",
           "status": "reported",
-          "source_note": "Springer chapter record and conference framing"
+          "source_note": "Springer chapter record"
         }
       ],
       "source_links": [
@@ -376,8 +376,8 @@
         "trust-driver-map",
         "trust-pathway"
       ],
-      "card_image": "https://hbr.org/resources/images/article_assets/2024/03/S24033_HWANG.jpg",
-      "card_summary": "Derived interpretation: Virtual influencer trust transfer is interpreted through credibility, relevance, and disclosure guardrails.",
+      "card_image": "./assets/optimized/virtual-influencer-video-poster-optimized.webp",
+      "card_summary": "Published Springer chapter: Virtual influencer trust transfer is interpreted through argument quality, relevance, disclosure, and speciesism guardrails.",
       "default_tiers": {
         "kpi": "derived",
         "figure": "illustrative"
@@ -494,8 +494,8 @@
         "driver-model",
         "action-priority"
       ],
-      "card_image": "./assets/FCBEM.jpg",
-      "card_summary": "Reported: Nutrition knowledge and activity drivers are mapped into phased intervention priorities.",
+      "card_image": "./assets/optimized/fcbem-optimized.webp",
+      "card_summary": "Proceedings-linked FCBEM 2025 paper: Nutrition knowledge and physical-activity drivers are mapped into phased intervention priorities.",
       "default_tiers": {
         "kpi": "reported",
         "figure": "illustrative"
@@ -536,7 +536,7 @@
         "ownership-lever-map",
         "commitment-pathway"
       ],
-      "card_image": "https://ptehelper.com.au/wp-content/uploads/2022/02/swinburne-viet-nam.jpg",
+      "card_image": "./assets/optimized/psych-ownership-framework-optimized.webp",
       "card_summary": "Conceptual framework: Ownership evidence is translated into practical commitment actions for Vietnam university teams.",
       "default_tiers": {
         "kpi": "conceptual",
@@ -624,7 +624,7 @@
       "visual_modules": [
         "text-to-value-segments"
       ],
-      "card_image": "./assets/viz-hotel-value-segments.svg",
+      "card_image": "./assets/viz-hotel-value-priority-map.svg",
       "card_summary": "Conceptual framework: Review text signals are translated into value-led hospitality segments.",
       "default_tiers": {
         "kpi": "conceptual",
@@ -635,6 +635,44 @@
       ],
       "verification_status": "unverified",
       "last_verified_at": "2026-02-24",
+      "evidence_strength": "limited",
+      "claim_owner": "chung-hy-dai"
+    },
+    {
+      "id": "1office-consulting",
+      "slug": "insight-1office-consulting",
+      "title": "B2B SaaS Value Mapping & Advisory",
+      "study_type": "organizational",
+      "status": "conceptual",
+      "sample": "1Office AI Consultant onboarding curriculum",
+      "model": "SPICED framework + Customer Journey Map",
+      "key_metrics": [
+        {
+          "label": "curriculum_weeks",
+          "value": "4",
+          "status": "reported",
+          "source_note": "1Office onboarding training roadmap sheets"
+        }
+      ],
+      "source_links": [
+        {
+          "label": "Advisory detail",
+          "url": "./insight-1office-consulting.html",
+          "type": "internal"
+        }
+      ],
+      "visual_modules": [],
+      "card_image": "./assets/portfolio-oneoffice-editorial.png",
+      "card_summary": "Conceptual framework: Systematic value mapping of manufacturing, logistics, and retail pain points to core SaaS systems.",
+      "default_tiers": {
+        "kpi": "conceptual",
+        "figure": "conceptual"
+      },
+      "figure_tiers": [
+        "conceptual"
+      ],
+      "verification_status": "self-reported",
+      "last_verified_at": "2026-05-21",
       "evidence_strength": "limited",
       "claim_owner": "chung-hy-dai"
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-03-19",
+  "last_updated": "2026-05-21",
   "status_enum": [
     "Verified",
     "Self-Reported",
@@ -56,16 +56,16 @@
     },
     {
       "claim_id": "hero-publication-count",
-      "claim": "2 peer-reviewed conference publications.",
+      "claim": "2 externally linked publication outputs.",
       "where_displayed": [
         "index.html:82",
         "index.html:86",
         "index.html:144"
       ],
       "status": "Self-Reported",
-      "evidence_url": "https://pub.orcid.org/v3.0/0009-0009-6790-8981/works",
+      "evidence_url": "https://doi.org/10.1007/978-981-96-4116-1_9; https://nxbxaydung.com.vn/2025-6th-fpt-conference-on-business-economics-and-management-fcbem-2025-b12364.html",
       "last_checked": "2026-02-24",
-      "recommended_wording": "2 peer-reviewed conference publications."
+      "recommended_wording": "2 externally linked publication outputs: one published Springer book chapter with DOI and one FCBEM 2025 proceedings-linked conference paper."
     },
     {
       "claim_id": "hero-years",
@@ -161,7 +161,7 @@
       "status": "Verified",
       "evidence_url": "https://pub.orcid.org/v3.0/0009-0009-6790-8981/works",
       "last_checked": "2026-02-24",
-      "recommended_wording": "Conference-paper record available via ORCID and linked FCBEM proceedings page."
+      "recommended_wording": "FCBEM 2025 proceedings-linked paper with hosted PDF, ORCID listing, and linked conference page."
     },
     {
       "claim_id": "nutrition-sample-n280",
@@ -255,7 +255,7 @@
       "status": "Unverified",
       "evidence_url": "https://www.ciemb.org/",
       "last_checked": "2026-02-24",
-      "recommended_wording": "Provide backup citation text or archived source when CIEMB domain is unavailable."
+      "recommended_wording": "Keep CIEMB outputs as manuscript/conference context until an external record, exported email, or archived source is attached."
     },
     {
       "claim_id": "profile-location",
@@ -281,6 +281,18 @@
       "evidence_url": "mailto:daichunghy@gmail.com",
       "last_checked": "2026-02-24",
       "recommended_wording": "daichunghy@gmail.com"
+    },
+    {
+      "claim_id": "1office-ai-consultant",
+      "claim": "AI Consultant at 1Office, started April 2026.",
+      "where_displayed": [
+        "index.html:154",
+        "insight-1office-consulting.html:36"
+      ],
+      "status": "Self-Reported",
+      "evidence_url": "KDHCM3_Đái Chung Hy_Daily Journal.xlsx",
+      "last_checked": "2026-05-21",
+      "recommended_wording": "AI Consultant at 1Office (starting April 2026), undergoing consultative value-mapping and B2B SaaS onboarding training."
     }
   ]
 }
