@@ -286,13 +286,12 @@
       "claim_id": "1office-ai-consultant",
       "claim": "AI Consultant at 1Office, started April 2026.",
       "where_displayed": [
-        "index.html:154",
-        "insight-1office-consulting.html:36"
+        "index.html:154"
       ],
       "status": "Self-Reported",
       "evidence_url": "KDHCM3_Đái Chung Hy_Daily Journal.xlsx",
       "last_checked": "2026-05-21",
-      "recommended_wording": "AI Consultant at 1Office (starting April 2026), undergoing consultative value-mapping and B2B SaaS onboarding training."
+      "recommended_wording": "AI Consultant at 1Office (starting April 2026), undergoing consultative B2B SaaS sales onboarding training."
     }
   ]
 }
