@@ -44,6 +44,7 @@ const targets = [
   'certs/best_performance_swinburne.png',
   'certs/hsbc_participation.png',
   'profile-main.png',
+  'profile-portfolio-main.jpg',
   'virtual-influencer-hero-ai.png',
   'portfolio-botanical-vase.png',
   'portfolio-ev-editorial.png',
