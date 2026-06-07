@@ -393,8 +393,10 @@ const CSP_DIRECTIVES = [
   "object-src 'none'",
   // 'unsafe-inline' is required: the pages use inline <script> blocks and inline
   // event-handler attributes (onload on preloaded styles, onerror on images).
-  // Per-request nonces are impossible on a static host. jsdelivr serves Chart.js.
-  "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net",
+  // Per-request nonces are impossible on a static host. All third-party scripts
+  // (e.g. Chart.js) are self-hosted under assets/vendor, so no external script
+  // origin is allowed.
+  "script-src 'self' 'unsafe-inline'",
   // 'unsafe-inline' covers inline style="" attributes and the <style> block in
   // 404.html; Google Fonts ships its face declarations from googleapis.
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
