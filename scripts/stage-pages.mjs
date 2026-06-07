@@ -27,6 +27,11 @@ const shouldSkipFile = (name) => {
   if (name.startsWith('.')) return true;
   if (name.includes('.report.html')) return true;
   if (name.endsWith('~')) return true;
+  // Never deploy excluded duplicate/legacy HTML. index_patched.html is an
+  // orphan variant that is not linked anywhere, loads third-party images, and
+  // bypasses the CSP injection. Keeping it out of the deploy removes a stale,
+  // unprotected public page.
+  if (HTML_EXCLUDE.has(name)) return true;
   return false;
 };
 
