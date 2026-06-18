@@ -286,12 +286,34 @@
       "claim_id": "1office-ai-consultant",
       "claim": "AI Consultant at 1Office, started April 2026.",
       "where_displayed": [
-        "index.html:154"
+        "portfolio/index.html:107"
       ],
       "status": "Self-Reported",
       "evidence_url": "KDHCM3_Đái Chung Hy_Daily Journal.xlsx",
-      "last_checked": "2026-05-21",
-      "recommended_wording": "AI Consultant at 1Office (starting April 2026), undergoing consultative B2B SaaS sales onboarding training."
+      "last_checked": "2026-06-18",
+      "recommended_wording": "AI Consultant at 1Office (April 2026-present), developing practical B2B consulting experience across organizational setup, master data, workflows, and scenario-based product demos."
+    },
+    {
+      "claim_id": "1office-fnb-project-context",
+      "claim": "Exposure to an anonymized multi-location F&B HRM standardization context.",
+      "where_displayed": [
+        "portfolio/index.html:#consulting"
+      ],
+      "status": "Verified",
+      "evidence_url": "Recap/Cà phê muối chú long.docx",
+      "last_checked": "2026-06-18",
+      "recommended_wording": "Exposure to HRM data standardization, shift planning, attendance, employee movement between locations, and branch-level approvals in an anonymized F&B project context."
+    },
+    {
+      "claim_id": "1office-manufacturing-practice-context",
+      "claim": "Practice with digital workflow scenarios for small and medium-sized manufacturing businesses.",
+      "where_displayed": [
+        "portfolio/index.html:#consulting"
+      ],
+      "status": "Verified",
+      "evidence_url": "T2N4- KDHCM3 - Đái Chung Hy.pdf",
+      "last_checked": "2026-06-18",
+      "recommended_wording": "Practice with task tracking, purchase and warehouse approvals, shift-based work, and shared operational data in a manufacturing consulting exercise."
     }
   ]
 }

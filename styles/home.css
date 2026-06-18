@@ -732,39 +732,32 @@ body[data-page="home"] .trend-card span {
     font-weight: 700;
 }
 
-body[data-page="home"] .bar-chart {
-    display: flex;
-    align-items: end;
-    gap: 11px;
-    height: 78px;
-    margin-top: 0.72rem;
-    padding: 0.4rem 0.25rem 0.1rem;
-    border-top: 1px solid rgba(67, 85, 107, 0.13);
-    border-bottom: 1px solid rgba(67, 85, 107, 0.13);
+body[data-page="home"] .consulting-mini-list {
+    display: grid;
+    gap: 0.34rem;
+    margin-top: 0.74rem;
+    padding-top: 0.64rem;
+    border-top: 1px solid rgba(67, 85, 107, 0.14);
 }
 
-body[data-page="home"] .bar-chart b {
-    width: 18px;
+body[data-page="home"] .consulting-mini-list small {
+    position: relative;
+    padding-left: 0.82rem;
+    color: #516679;
+    font-size: 0.62rem;
+    font-weight: 720;
+}
+
+body[data-page="home"] .consulting-mini-list small::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
     background: var(--eco-teal);
-}
-
-body[data-page="home"] .bar-chart b:nth-child(1) {
-    height: 36px;
-    opacity: 0.58;
-}
-
-body[data-page="home"] .bar-chart b:nth-child(2) {
-    height: 52px;
-    opacity: 0.75;
-}
-
-body[data-page="home"] .bar-chart b:nth-child(3) {
-    height: 45px;
-    opacity: 0.62;
-}
-
-body[data-page="home"] .bar-chart b:nth-child(4) {
-    height: 70px;
+    transform: translateY(-50%);
 }
 
 body[data-page="home"] .segment-card {
@@ -774,20 +767,34 @@ body[data-page="home"] .segment-card {
     padding: 1rem;
 }
 
-body[data-page="home"] .pie-chart {
-    float: left;
-    width: 72px;
-    height: 72px;
-    margin: 0.82rem 0.8rem 0.15rem 0;
-    border-radius: 50%;
-    background: conic-gradient(var(--eco-teal) 0 34%, #b8d0c4 34% 64%, #e4d9c8 64% 100%);
+body[data-page="home"] .process-map {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.15rem;
+}
+
+body[data-page="home"] .process-map b {
+    width: 17px;
+    height: 17px;
+    border: 4px solid rgba(8, 119, 110, 0.17);
+    border-radius: 999px;
+    background: var(--eco-teal);
+}
+
+body[data-page="home"] .process-map i {
+    flex: 1;
+    height: 1px;
+    margin: 0 0.26rem;
+    background: rgba(67, 85, 107, 0.35);
 }
 
 body[data-page="home"] .segment-card small {
-    margin-top: 1.15rem;
-    color: #7b837f;
+    margin-top: 0.86rem;
+    color: #687a88;
     font-size: 0.58rem;
-    line-height: 1.9;
+    font-weight: 650;
+    line-height: 1.45;
 }
 
 body[data-page="home"] .trend-card {
@@ -797,33 +804,31 @@ body[data-page="home"] .trend-card {
     padding: 1rem 1.1rem 0.92rem;
 }
 
-body[data-page="home"] .trend-card svg {
-    display: block;
-    width: 100%;
-    height: 94px;
-    margin-top: 0.5rem;
+body[data-page="home"] .solution-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0.36rem;
+    margin-top: 1rem;
 }
 
-body[data-page="home"] .trend-card path {
-    fill: none;
-    stroke: var(--eco-teal);
-    stroke-width: 4;
+body[data-page="home"] .solution-flow small {
+    display: grid;
+    place-items: center;
+    min-height: 46px;
+    padding: 0.35rem;
+    border: 1px solid rgba(8, 119, 110, 0.18);
+    border-radius: 6px;
+    color: #35516a;
+    background: rgba(232, 244, 240, 0.72);
+    font-size: 0.6rem;
+    font-weight: 780;
+    text-align: center;
 }
 
-body[data-page="home"] .trend-card circle {
-    fill: var(--eco-teal);
-}
-
-body[data-page="home"] .trend-card strong {
-    position: absolute;
-    right: 1rem;
-    top: 3.05rem;
-    padding: 0.34rem 0.48rem;
-    border: 1px solid rgba(8, 119, 110, 0.25);
-    border-radius: 5px;
-    color: var(--eco-teal);
-    background: rgba(255, 253, 248, 0.92);
-    font-size: 0.8rem;
+body[data-page="home"] .solution-flow i {
+    color: var(--eco-gold);
+    font-size: 0.82rem;
 }
 
 body[data-page="home"] .evidence-card {
@@ -955,6 +960,205 @@ body[data-page="home"] .section-action:focus-visible {
     border-color: rgba(8, 119, 110, 0.48);
     color: var(--eco-teal);
     transform: translateY(-1px);
+}
+
+body[data-page="home"] .consulting-section {
+    margin-top: 2.25rem;
+}
+
+body[data-page="home"] .consulting-overview {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.36fr) minmax(0, 1fr);
+    border-top: 1px solid rgba(8, 119, 110, 0.42);
+    border-bottom: 1px solid var(--eco-soft);
+    background: linear-gradient(90deg, rgba(232, 244, 240, 0.42), rgba(255, 253, 248, 0) 42%);
+}
+
+body[data-page="home"] .consulting-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.48rem;
+    padding: 1.45rem 1.35rem 1.45rem 0.2rem;
+    border-right: 1px solid var(--eco-soft);
+}
+
+body[data-page="home"] .consulting-date {
+    color: #d84716;
+    font-size: 0.94rem;
+    font-weight: 820;
+}
+
+body[data-page="home"] .consulting-location {
+    max-width: 18ch;
+    color: #52687d;
+    font-size: 0.76rem;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+body[data-page="home"] .consulting-role {
+    padding: 1.45rem 0.35rem 1.55rem 1.65rem;
+}
+
+body[data-page="home"] .consulting-role-kicker,
+body[data-page="home"] .consulting-capability-header > span,
+body[data-page="home"] .industry-contexts article > span,
+body[data-page="home"] .system-knowledge > span {
+    display: block;
+    color: #d84716;
+    font-size: 0.64rem;
+    font-weight: 820;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+body[data-page="home"] .consulting-role h3 {
+    margin: 0.32rem 0 0;
+    color: var(--eco-ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.95rem, 3vw, 2.45rem);
+    line-height: 1;
+}
+
+body[data-page="home"] .consulting-role h4 {
+    margin: 0.5rem 0 0;
+    color: #486078;
+    font-size: 0.92rem;
+    font-weight: 720;
+}
+
+body[data-page="home"] .consulting-responsibilities {
+    display: grid;
+    gap: 0.68rem;
+    margin: 1.15rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+body[data-page="home"] .consulting-responsibilities li {
+    position: relative;
+    padding-left: 1.3rem;
+    color: #203a52;
+    font-size: 0.82rem;
+    font-weight: 570;
+    line-height: 1.58;
+}
+
+body[data-page="home"] .consulting-responsibilities li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--eco-teal);
+    font-weight: 820;
+}
+
+body[data-page="home"] .consulting-capability-header {
+    display: grid;
+    grid-template-columns: 0.42fr 0.92fr 1.35fr;
+    gap: 1.15rem;
+    align-items: start;
+    padding: 1.65rem 0 1.05rem;
+}
+
+body[data-page="home"] .consulting-capability-header h3 {
+    margin: 0;
+    color: var(--eco-ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.08;
+}
+
+body[data-page="home"] .consulting-capability-header p {
+    margin: 0;
+    color: #486078;
+    font-size: 0.78rem;
+    font-weight: 560;
+    line-height: 1.6;
+}
+
+body[data-page="home"] .consulting-capabilities {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--eco-soft);
+    border-bottom: 1px solid var(--eco-soft);
+}
+
+body[data-page="home"] .consulting-capabilities article {
+    min-width: 0;
+    padding: 1.08rem 1rem 1.2rem;
+    border-right: 1px solid var(--eco-soft);
+}
+
+body[data-page="home"] .consulting-capabilities article:first-child {
+    padding-left: 0.2rem;
+}
+
+body[data-page="home"] .consulting-capabilities article:last-child {
+    border-right: 0;
+}
+
+body[data-page="home"] .consulting-capabilities i {
+    color: var(--eco-teal);
+    font-size: 1.55rem;
+}
+
+body[data-page="home"] .consulting-capabilities h4,
+body[data-page="home"] .industry-contexts h4 {
+    margin: 0.65rem 0 0;
+    color: var(--eco-ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.98rem;
+    line-height: 1.16;
+}
+
+body[data-page="home"] .consulting-capabilities p,
+body[data-page="home"] .industry-contexts p {
+    margin: 0.52rem 0 0;
+    color: #52687d;
+    font-size: 0.72rem;
+    font-weight: 550;
+    line-height: 1.55;
+}
+
+body[data-page="home"] .industry-contexts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-bottom: 1px solid var(--eco-soft);
+}
+
+body[data-page="home"] .industry-contexts article {
+    padding: 1.35rem 1.55rem 1.4rem 0.2rem;
+}
+
+body[data-page="home"] .industry-contexts article + article {
+    padding-left: 1.55rem;
+    border-left: 1px solid var(--eco-soft);
+}
+
+body[data-page="home"] .industry-contexts article > span {
+    color: var(--eco-teal);
+}
+
+body[data-page="home"] .system-knowledge {
+    display: grid;
+    grid-template-columns: minmax(160px, 0.36fr) 1fr;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 1rem 0.2rem;
+    border-bottom: 1px solid rgba(8, 119, 110, 0.42);
+}
+
+body[data-page="home"] .system-knowledge > span {
+    color: var(--eco-teal);
+}
+
+body[data-page="home"] .system-knowledge p {
+    margin: 0;
+    color: #334f68;
+    font-size: 0.76rem;
+    font-weight: 720;
+    line-height: 1.5;
 }
 
 body[data-page="home"] .education-card {
@@ -1372,45 +1576,6 @@ body[data-page="home"] .certificate-card.has-proof {
     padding-right: 1.2rem;
 }
 
-body[data-page="home"] .skills-section {
-    margin-top: 1.35rem;
-}
-
-body[data-page="home"] .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    border: 1px solid var(--eco-soft);
-    border-radius: 8px;
-    overflow: hidden;
-    background: rgba(255, 253, 248, 0.86);
-}
-
-body[data-page="home"] .skill-grid > span {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    min-height: 45px;
-    padding: 0.64rem 0.88rem;
-    border-right: 1px dashed rgba(185, 170, 146, 0.62);
-    border-bottom: 1px solid var(--eco-soft);
-    color: var(--eco-ink);
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-body[data-page="home"] .skill-grid > span:nth-child(5n) {
-    border-right: 0;
-}
-
-body[data-page="home"] .skill-grid > span:nth-last-child(-n + 4) {
-    border-bottom: 0;
-}
-
-body[data-page="home"] .skill-grid i {
-    color: var(--eco-teal);
-    font-size: 1.5rem;
-}
-
 body[data-page="home"] .contact-section {
     margin-top: 1.45rem;
     padding-bottom: 0.7rem;
@@ -1575,6 +1740,10 @@ body[data-page="home"] .contact-link-grid a:focus-visible {
 }
 
 html[lang="vi"] body[data-page="home"] .hero-lede,
+html[lang="vi"] body[data-page="home"] .consulting-responsibilities li,
+html[lang="vi"] body[data-page="home"] .consulting-capability-header p,
+html[lang="vi"] body[data-page="home"] .consulting-capabilities p,
+html[lang="vi"] body[data-page="home"] .industry-contexts p,
 html[lang="vi"] body[data-page="home"] .project-card p,
 html[lang="vi"] body[data-page="home"] .certificate-card p,
 html[lang="vi"] body[data-page="home"] .certificate-feature p,
@@ -1598,6 +1767,10 @@ html[lang="vi"] body[data-page="home"] .contact-copy h3 {
 }
 
 html[lang="vi"] body[data-page="home"] .project-card h3,
+html[lang="vi"] body[data-page="home"] .consulting-role h3,
+html[lang="vi"] body[data-page="home"] .consulting-capability-header h3,
+html[lang="vi"] body[data-page="home"] .consulting-capabilities h4,
+html[lang="vi"] body[data-page="home"] .industry-contexts h4,
 html[lang="vi"] body[data-page="home"] .honor-row h3,
 html[lang="vi"] body[data-page="home"] .certificate-card h3 {
     font-family: var(--font-heading);
@@ -1633,24 +1806,24 @@ html[lang="vi"] body[data-page="home"] .certificate-card h3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    body[data-page="home"] .skill-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    body[data-page="home"] .consulting-overview {
+        grid-template-columns: minmax(175px, 0.32fr) minmax(0, 1fr);
     }
 
-    body[data-page="home"] .skill-grid > span:nth-child(5n) {
-        border-right: 1px dashed rgba(185, 170, 146, 0.62);
+    body[data-page="home"] .consulting-capabilities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    body[data-page="home"] .skill-grid > span:nth-child(3n) {
+    body[data-page="home"] .consulting-capabilities article:nth-child(2n) {
         border-right: 0;
     }
 
-    body[data-page="home"] .skill-grid > span:nth-last-child(-n + 4) {
+    body[data-page="home"] .consulting-capabilities article:nth-child(-n + 2) {
         border-bottom: 1px solid var(--eco-soft);
     }
 
-    body[data-page="home"] .skill-grid > span:nth-last-child(-n + 3) {
-        border-bottom: 0;
+    body[data-page="home"] .consulting-capabilities article:nth-child(3) {
+        padding-left: 0.2rem;
     }
 
     body[data-page="home"] .contact-card {
@@ -1920,6 +2093,79 @@ html[lang="vi"] body[data-page="home"] .certificate-card h3 {
         margin-left: auto;
     }
 
+    body[data-page="home"] .consulting-section .section-label em {
+        display: none;
+    }
+
+    body[data-page="home"] .consulting-overview,
+    body[data-page="home"] .consulting-capability-header,
+    body[data-page="home"] .system-knowledge {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-page="home"] .consulting-meta {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        padding: 1rem 0.2rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--eco-soft);
+    }
+
+    body[data-page="home"] .consulting-date {
+        font-size: 0.84rem;
+        white-space: nowrap;
+    }
+
+    body[data-page="home"] .consulting-location {
+        justify-self: end;
+        max-width: 28ch;
+        font-size: 0.7rem;
+        text-align: right;
+    }
+
+    body[data-page="home"] .consulting-role {
+        padding: 1.2rem 0.2rem 1.35rem;
+    }
+
+    body[data-page="home"] .consulting-capability-header {
+        gap: 0.62rem;
+        padding-top: 1.35rem;
+    }
+
+    body[data-page="home"] .consulting-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-page="home"] .consulting-capabilities article,
+    body[data-page="home"] .consulting-capabilities article:first-child,
+    body[data-page="home"] .consulting-capabilities article:nth-child(3) {
+        padding: 1rem 0.2rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--eco-soft);
+    }
+
+    body[data-page="home"] .consulting-capabilities article:last-child {
+        border-bottom: 0;
+    }
+
+    body[data-page="home"] .industry-contexts {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-page="home"] .industry-contexts article,
+    body[data-page="home"] .industry-contexts article + article {
+        padding: 1.15rem 0.2rem 1.2rem;
+        border-left: 0;
+    }
+
+    body[data-page="home"] .industry-contexts article + article {
+        border-top: 1px solid var(--eco-soft);
+    }
+
+    body[data-page="home"] .system-knowledge {
+        gap: 0.45rem;
+    }
+
     body[data-page="home"] .project-row,
     body[data-page="home"] .honor-row,
     body[data-page="home"] .certificate-board,
@@ -1937,22 +2183,6 @@ html[lang="vi"] body[data-page="home"] .certificate-card h3 {
 
     body[data-page="home"] .project-card img {
         height: 156px;
-    }
-
-    body[data-page="home"] .skill-grid {
-        grid-template-columns: 1fr;
-    }
-
-    body[data-page="home"] .skill-grid > span,
-    body[data-page="home"] .skill-grid > span:nth-child(3n),
-    body[data-page="home"] .skill-grid > span:nth-child(5n),
-    body[data-page="home"] .skill-grid > span:nth-last-child(-n + 3) {
-        border-right: 0;
-        border-bottom: 1px solid var(--eco-soft);
-    }
-
-    body[data-page="home"] .skill-grid > span:last-child {
-        border-bottom: 0;
     }
 
     body[data-page="home"] .contact-link-grid {
@@ -2219,22 +2449,6 @@ html[lang="vi"] body[data-page="home"] .certificate-card h3 {
         font-size: 0.78rem;
     }
 
-    body[data-page="home"] .bar-chart {
-        height: 56px;
-        gap: 8px;
-        margin-top: 0.54rem;
-    }
-
-    body[data-page="home"] .bar-chart b {
-        width: 14px;
-    }
-
-    body[data-page="home"] .pie-chart {
-        width: 52px;
-        height: 52px;
-        margin: 0.62rem 0.62rem 0.1rem 0;
-    }
-
     body[data-page="home"] .segment-card small {
         margin-top: 0.62rem;
         font-size: 0.54rem;
@@ -2243,14 +2457,6 @@ html[lang="vi"] body[data-page="home"] .certificate-card h3 {
 
     body[data-page="home"] .trend-card {
         grid-column: 1 / -1;
-    }
-
-    body[data-page="home"] .trend-card svg {
-        height: 66px;
-    }
-
-    body[data-page="home"] .trend-card strong {
-        top: 2.7rem;
     }
 
     body[data-page="home"] .evidence-card {
