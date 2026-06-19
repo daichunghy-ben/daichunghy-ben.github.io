@@ -284,36 +284,58 @@
     },
     {
       "claim_id": "1office-ai-consultant",
-      "claim": "AI Consultant at 1Office, started April 2026.",
+      "claim": "AI Consultant at 1Office, started April 2026, supporting digital transformation consulting and implementation.",
       "where_displayed": [
         "portfolio/index.html:107"
       ],
       "status": "Self-Reported",
       "evidence_url": "KDHCM3_Đái Chung Hy_Daily Journal.xlsx",
-      "last_checked": "2026-06-19",
-      "recommended_wording": "AI Consultant at 1Office (April 2026-present), practicing process review, organizational setup, master data, permissions, workflows, digital signing, and scenario-based demos."
+      "last_checked": "2026-06-20",
+      "recommended_wording": "AI Consultant at 1Office (April 2026-present), supporting digital transformation consulting and implementation."
     },
     {
       "claim_id": "1office-fnb-project-context",
-      "claim": "An anonymized multi-location F&B project covered HRM data standardization and branch operations.",
+      "claim": "An anonymized F&B client with nearly 900 employees across more than 70 locations implemented employee-record, attendance, and staff-transfer workflows.",
       "where_displayed": [
         "portfolio/index.html:#consulting"
       ],
       "status": "Verified",
       "evidence_url": "Recap/Cà phê muối chú long.docx",
-      "last_checked": "2026-06-19",
-      "recommended_wording": "An anonymized F&B project case covering HRM data standards, shift planning, attendance, employee transfers between locations, and branch-level approvals."
+      "last_checked": "2026-06-20",
+      "recommended_wording": "Supported the review and rollout of employee-record, attendance, and staff-transfer workflows for an anonymized F&B chain with nearly 900 employees across more than 70 locations."
     },
     {
-      "claim_id": "1office-manufacturing-practice-context",
-      "claim": "A manufacturing consulting exercise covered workflows for small and medium-sized businesses.",
+      "claim_id": "1office-fdi-electronic-contract-context",
+      "claim": "An anonymized FDI manufacturer received an electronic labor contract workflow covering signer roles, signing order, record storage, and foreign-worker cases.",
       "where_displayed": [
         "portfolio/index.html:#consulting"
       ],
       "status": "Verified",
-      "evidence_url": "T2N4- KDHCM3 - Đái Chung Hy.pdf",
-      "last_checked": "2026-06-19",
-      "recommended_wording": "A manufacturing consulting exercise covering task tracking, purchase and inventory issue approvals, shift work, and shared data between office and operating teams."
+      "evidence_url": "Recap/Sanyo Seisakusho - Recap hoan chinh.docx",
+      "last_checked": "2026-06-20",
+      "recommended_wording": "Designed and handed over an electronic labor contract workflow for an anonymized FDI manufacturer, covering signer roles, signing order, record storage, and foreign-worker cases."
+    },
+    {
+      "claim_id": "1office-design-construction-work-context",
+      "claim": "An anonymized design and construction client put a digital task and project management solution into operation.",
+      "where_displayed": [
+        "portfolio/index.html:#consulting"
+      ],
+      "status": "Self-Reported",
+      "evidence_url": "",
+      "last_checked": "2026-06-20",
+      "recommended_wording": "Supported the digitization of task and project management for an anonymized design and construction business; the solution is in active use."
+    },
+    {
+      "claim_id": "1office-multichannel-crm-practice",
+      "claim": "Multichannel customer management practice covered social media, SEO, Zalo OA, lead intake, and conversion.",
+      "where_displayed": [
+        "portfolio/index.html:#consulting"
+      ],
+      "status": "Self-Reported",
+      "evidence_url": "W2. Training Sales - 1CRM Overview.pdf",
+      "last_checked": "2026-06-20",
+      "recommended_wording": "Explored multichannel customer management across social media, SEO, and Zalo OA, covering lead intake and conversion."
     }
   ]
 }
