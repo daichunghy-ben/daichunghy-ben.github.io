@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-home-locale="en">
+<html lang="vi" data-home-locale="vi">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -33,8 +33,8 @@
 <span aria-hidden="true"></span>
 </div>
 <div class="home-language-toggle" aria-label="Portfolio language">
-<button class="home-language-toggle__option" type="button" data-home-language="vi" aria-pressed="false"><strong>VI</strong><span>Tiếng Việt</span></button>
-<button class="home-language-toggle__option" type="button" data-home-language="en" aria-pressed="true"><strong>EN</strong><span>English</span></button>
+<button class="home-language-toggle__option is-active" type="button" data-home-language="vi" aria-pressed="true"><strong>VI</strong><span>Tiếng Việt</span></button>
+<button class="home-language-toggle__option" type="button" data-home-language="en" aria-pressed="false"><strong>EN</strong><span>English</span></button>
 </div>
 <h1>Chung Hy Dai</h1>
 <p data-i18n="profile.role">AI Consultant</p>
@@ -368,7 +368,7 @@
 <script>
 (() => {
     const STORAGE_KEY = 'portfolio.homeLocale.v1';
-    const DEFAULT_LOCALE = 'en';
+    const DEFAULT_LOCALE = 'vi';
     const LOCALES = new Set(['en', 'vi']);
     const copy = {
         vi: {
