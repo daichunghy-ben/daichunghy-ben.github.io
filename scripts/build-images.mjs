@@ -15,6 +15,7 @@ const targets = [
   'hanoi-phaseout-dashboard.png',
   'prca-asymmetry-dashboard.png',
   'arts-workshop.jpg',
+  'research-arts-editorial-v2.png',
   'ev-choice-experiment.png',
   'ev-choice-reference-hero.png',
   'ev-core-challenge-reference.png',

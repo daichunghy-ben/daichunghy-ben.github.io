@@ -1,0 +1,36 @@
+AI image provenance report
+Path: /Users/macos/Desktop/portfolio_hy_resources_github/assets/research-arts-editorial-v2.png
+Checked at: 2026-07-25T19:22:02.176722+00:00
+SHA256: f7913bbc38e9e6719f44cbb77b52e03c61b78b189c8d5b7116a9d619bf85cc8c
+Size bytes: 2214358
+Type: .png
+Summary: strong provenance signal found
+Known origin context: Created by OpenAI Imagegen in current Codex task on 2026-07-26
+Strong findings:
+- JUMBF:JUMDType: (c2pa)-0011-0010-800000aa00389b71
+- JUMBF:JUMDToggles: Requestable, Label
+- JUMBF:JUMDLabel: c2pa
+- Jpeg2000:C2PAIconSalt: d5ba7e83af4982581fdc314be61c080f
+- Jpeg2000:C2PAIconType: image/svg+xml
+- Jpeg2000:C2PAIconData: (Binary data 2415 bytes, use -b option to extract)
+- Jpeg2000:C2PAActionsV2Salt: cb9c5fc3a4619a1174f68ee4a5ca4729
+- Jpeg2000:C2PACertificate-statusSalt: 67af10c8c5f6d85b04271e503155faff
+- Jpeg2000:C2PAHashDataSalt: e8ba4cebb6bb9de4afc6e8adf915fac2
+- CBOR:ActionsAction: c2pa.created; c2pa.converted; c2pa.watermarked.unbound
+- CBOR:ActionsDigitalSourceType: http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia
+- CBOR:Name: jumbf manifest
+- CBOR:Claim_Generator_InfoIconUrl: self#jumbf=c2pa.assertions/c2pa.icon
+- CBOR:Claim_Generator_InfoOrgContentauthC2Pa_Rs: 0.79.2
+- CBOR:Signature: self#jumbf=/c2pa/urn:c2pa:4ef1a8f0-b5b7-46af-b26d-b5c80213473b/c2pa.signature
+- CBOR:Created_AssertionsUrl: self#jumbf=c2pa.assertions/c2pa.icon; self#jumbf=c2pa.assertions/c2pa.actions.v2; self#jumbf=c2pa.assertions/c2pa.certificate-status; self#jumbf=c2pa.assertions/c2pa.hash.data
+AI-origin hints:
+- CBOR:Claim_Generator_InfoName: OpenAI Media Service API
+Other provenance context:
+- CBOR:ActionsSoftwareAgentName: gpt-image
+- CBOR:ActionsSoftwareAgentVersion: 2.0
+- CBOR:Claim_Generator_InfoIconHash: (Binary data 32 bytes, use -b option to extract)
+- CBOR:Claim_Generator_InfoSpecVersion: 2.2.0
+Notes:
+- Missing local signals do not prove the image is human-made.
+- Preserve AI-origin metadata, labels, and credentials where possible.
+- For suspected OpenAI images, you can also check https://openai.com/research/verify/ .
