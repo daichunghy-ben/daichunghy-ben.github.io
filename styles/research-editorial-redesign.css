@@ -1127,6 +1127,103 @@ body.editorial-research-page {
   font-size: 0.77rem;
 }
 
+/* Page-specific type systems: editorial contrast without a single-font template feel. */
+.arts-editorial-page {
+  --arts-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --arts-heading: "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --arts-body: "Avenir Next", Inter, "Helvetica Neue", Arial, sans-serif;
+  --arts-data: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--arts-body);
+}
+
+.arts-editorial-page .editorial-hero-copy h1,
+.arts-editorial-page .evidence-layout h2 {
+  font-family: var(--arts-display);
+  font-weight: 600;
+}
+
+.arts-editorial-page .editorial-hero-copy h1 em {
+  font-family: var(--arts-display);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.arts-editorial-page .editorial-section-head h2,
+.arts-editorial-page .material-copy h2,
+.arts-editorial-page .editorial-closing h2 {
+  font-family: var(--arts-heading);
+  font-stretch: condensed;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+.arts-editorial-page .editorial-hero-note strong,
+.arts-editorial-page .arts-attitude strong,
+.arts-editorial-page .arts-intent strong,
+.arts-editorial-page .material-principles strong {
+  font-family: var(--arts-display);
+  font-weight: 600;
+}
+
+.arts-editorial-page .snapshot-grid span,
+.arts-editorial-page .material-principles li > span,
+.arts-editorial-page .evidence-ledger dt {
+  font-family: var(--arts-data);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.035em;
+}
+
+.virtual-lab-page {
+  --virtual-display: "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --virtual-editorial: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --virtual-body: "Avenir Next", Inter, "Helvetica Neue", Arial, sans-serif;
+  --virtual-data: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-family: var(--virtual-body);
+}
+
+.virtual-lab-page .virtual-lab-hero h1,
+.virtual-lab-page .editorial-section-head h2,
+.virtual-lab-page .ceiling-grid h2,
+.virtual-lab-page .virtual-principles h3 {
+  font-family: var(--virtual-display);
+  font-stretch: condensed;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+.virtual-lab-page .virtual-lab-hero h1 em,
+.virtual-lab-page .result-headline h2,
+.virtual-lab-page .virtual-publication-card h2 {
+  font-family: var(--virtual-editorial);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.virtual-lab-page .virtual-lab-hero h1 em {
+  font-style: italic;
+}
+
+.virtual-lab-page .virtual-portrait figcaption strong,
+.virtual-lab-page .virtual-publication-strip strong,
+.virtual-lab-page .experiment-cell strong {
+  font-family: var(--virtual-body);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.virtual-lab-page .cell-code,
+.virtual-lab-page .result-number span,
+.virtual-lab-page .virtual-principles article > span,
+.virtual-lab-page .virtual-publication-card p:not(.editorial-kicker) {
+  font-family: var(--virtual-data);
+  font-variant-numeric: tabular-nums;
+}
+
+.virtual-lab-page .result-number span {
+  font-weight: 650;
+  letter-spacing: -0.07em;
+}
+
 @media (max-width: 1080px) {
   .editorial-shell {
     width: min(100% - 42px, 960px);
