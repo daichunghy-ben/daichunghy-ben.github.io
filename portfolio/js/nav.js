@@ -3,14 +3,17 @@ export function initNav() {
     if (!navbar) return;
 
     const toggle = navbar.querySelector('.nav-toggle');
-    const links = navbar.querySelector('.nav-links');
+    const links = document.querySelector('.nav-links');
     const overlay = document.querySelector('.nav-overlay');
 
     if (!toggle || !links || !overlay) return;
+    if (toggle.dataset.menuBound === 'true') return;
+    toggle.dataset.menuBound = 'true';
 
     const mobileQuery = window.matchMedia('(max-width: 900px)');
+    const overlayMenu = navbar.dataset.overlayMenu === 'true';
 
-    const isMobile = () => mobileQuery.matches;
+    const isMenuMode = () => overlayMenu || mobileQuery.matches;
 
     const setExpanded = (expanded) => {
         toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
@@ -19,7 +22,7 @@ export function initNav() {
     const closeMenu = () => {
         navbar.classList.remove('nav-open');
         document.body.classList.remove('nav-open');
-        if (isMobile()) {
+        if (isMenuMode()) {
             links.hidden = true;
         }
         overlay.hidden = true;
@@ -35,7 +38,7 @@ export function initNav() {
     };
 
     const syncForViewport = () => {
-        if (isMobile()) {
+        if (isMenuMode()) {
             if (!navbar.classList.contains('nav-open')) {
                 links.hidden = true;
                 overlay.hidden = true;
@@ -51,7 +54,7 @@ export function initNav() {
     };
 
     toggle.addEventListener('click', () => {
-        if (!isMobile()) return;
+        if (!isMenuMode()) return;
         if (navbar.classList.contains('nav-open')) {
             closeMenu();
         } else {
@@ -63,7 +66,7 @@ export function initNav() {
 
     links.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
-            if (isMobile()) closeMenu();
+            if (isMenuMode()) closeMenu();
         });
     });
 
