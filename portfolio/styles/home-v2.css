@@ -891,3 +891,168 @@ body.nav-open { overflow: hidden; }
   .contact-links { grid-template-columns: 1fr; }
   .page-footer { font-size: 0.68rem; }
 }
+
+/* Iteration 2: make the door reveal the actual first scene. */
+.intro-section.page-width {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100svh;
+  min-height: 620px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--home-paper);
+}
+.intro-media {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.video-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--home-paper);
+  box-shadow: none;
+}
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: var(--home-paper);
+}
+.intro-copy {
+  position: absolute;
+  z-index: 2;
+  top: clamp(122px, 18vh, 205px);
+  right: clamp(30px, 7vw, 112px);
+  width: min(29vw, 370px);
+  max-width: 370px;
+  padding: 0;
+  justify-self: auto;
+}
+.intro-copy h1 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.intro-copy h1 em::after { display: none; }
+.intro-lede {
+  max-width: 360px;
+  margin-top: 20px !important;
+  color: var(--home-ink);
+  font-size: clamp(1.12rem, 1.55vw, 1.5rem);
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+.intro-principle {
+  max-width: 340px;
+  margin-top: 13px !important;
+  color: var(--home-muted);
+  font-size: 0.86rem;
+  font-weight: 550;
+}
+.intro-actions { gap: 16px; margin-top: 20px; }
+.intro-actions .button { min-height: 42px; padding-inline: 16px; font-size: 0.78rem; }
+.intro-actions .text-link { font-size: 0.77rem; }
+.intro-tags { display: none; }
+.intro-media figcaption {
+  position: absolute;
+  z-index: 2;
+  bottom: 23px;
+  left: clamp(22px, 4vw, 58px);
+  width: fit-content;
+  padding: 7px 11px;
+  border: 1px solid rgba(32,31,36,.08);
+  border-radius: 999px;
+  color: #514d49;
+  background: rgba(255,254,250,.86);
+  font-size: 0.68rem;
+  backdrop-filter: blur(10px);
+}
+.caption-duration { margin-left: 5px; }
+.motion-toggle { right: clamp(18px, 3vw, 38px); bottom: 19px; }
+.intro-section::after {
+  content: "SCROLL TO EXPLORE  ↓";
+  position: absolute;
+  z-index: 2;
+  right: clamp(22px, 4vw, 58px);
+  bottom: 31px;
+  color: #625b54;
+  font-size: 0.61rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+.intro-copy {
+  top: clamp(104px, 14vh, 160px);
+  right: clamp(26px, 6vw, 86px);
+  width: min(34vw, 430px);
+  max-width: 430px;
+  padding: 18px 20px 19px;
+  border: 1px solid rgba(80, 64, 43, .12);
+  border-left: 3px solid var(--home-red);
+  border-radius: 0 18px 18px 0;
+  background: rgba(251, 248, 240, .96);
+  box-shadow: 0 16px 34px rgba(32,31,36,.1);
+}
+.intro-lede {
+  max-width: 420px;
+  margin-top: 15px !important;
+  font-size: clamp(.96rem, 1.28vw, 1.16rem);
+  font-weight: 700;
+  line-height: 1.32;
+}
+.intro-principle { display: none; }
+.intro-actions { margin-top: 17px; }
+.intro-actions .text-link { display: none; }
+.intro-section::after { display: none; }
+.motion-toggle { right: 22px; bottom: 21px; }
+
+@media (max-width: 900px) {
+  .intro-section.page-width {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 19px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 78px 0 42px;
+    overflow: visible;
+  }
+  .intro-media { position: relative; inset: auto; order: 0; width: 100%; height: auto; }
+  .video-frame { position: relative; inset: auto; width: 100%; height: auto; }
+  .video-frame video { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+  .intro-media figcaption { position: static; margin: 0 18px; padding: 7px 9px; }
+  .motion-toggle { right: 25px; bottom: 12px; }
+  .intro-copy {
+    position: relative;
+    top: auto;
+    right: auto;
+    order: 1;
+    width: min(calc(100% - 40px), 620px);
+    max-width: none;
+    margin: 0 auto;
+  }
+  .intro-copy h1 { position: absolute !important; }
+  .intro-copy .eyebrow { font-size: .68rem; }
+  .intro-lede { max-width: 560px; margin-top: 13px !important; font-size: clamp(1.12rem, 3.5vw, 1.45rem); }
+  .intro-principle { display: none; }
+  .intro-actions { margin-top: 15px; }
+  .intro-section::after { display: none; }
+}
