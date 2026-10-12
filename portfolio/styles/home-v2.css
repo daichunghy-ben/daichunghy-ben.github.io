@@ -541,3 +541,121 @@ p + p {
 .site-header {
   justify-content: flex-end
 }
+.resume-entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 25px
+}
+.resume-entry-header h3 {
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: -.02em
+}
+.entry-company {
+  font-weight: 400;
+  color: var(--muted)
+}
+.resume-entry-header time {
+  flex: none;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums
+}
+.experience-row.resume-entry {
+  display: block;
+  padding: 28px 0 38px;
+  max-width: 1080px
+}
+.company-context {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 9px 0 20px
+}
+.resume-bullets {
+  font-size: 16px;
+  line-height: 1.65;
+  gap: 11px
+}
+.resume-bullets strong {
+  font-weight: 700;
+  color: var(--ink)
+}
+.resume-background {
+  grid-template-columns: 1fr;
+  gap: 38px;
+  max-width: 1080px
+}
+.resume-background h3 {
+  font-size: 22px;
+  margin: 0 0 13px
+}
+.resume-background .resume-entry-header h3 {
+  margin: 0 0 5px
+}
+.degree-title {
+  font-size: 15px;
+  color: var(--muted);
+  font-style: italic
+}
+.skills-facts {
+  display: grid;
+  gap: 12px;
+  margin: 0
+}
+.skills-facts > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  font-size: 15px
+}
+.skills-facts dt {
+  font-weight: 700
+}
+.skills-facts dd {
+  margin: 0;
+  color: var(--muted)
+}
+.content-section .section-heading h2 {
+  font-size: 35px;
+  letter-spacing: -.025em
+}
+.experience-row .text-link {
+  font-size: 13px
+}
+@media(max-width:760px) {
+  .resume-entry-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px
+  }
+  .resume-entry-header h3 {
+    font-size: 21px
+  }
+  .resume-entry-header time {
+    font-size: 12px
+  }
+  .experience-row.resume-entry {
+    padding: 24px 0 30px
+  }
+  .company-context {
+    font-size: 13px;
+    margin: 9px 0 17px
+  }
+  .resume-bullets {
+    font-size: 15px
+  }
+  .skills-facts > div {
+    grid-template-columns: 1fr;
+    gap: 4px
+  }
+  .content-section .section-heading h2 {
+    font-size: 31px
+  }
+  .resume-background {
+    gap: 30px
+  }
+}

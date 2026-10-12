@@ -1,94 +1,122 @@
 .detail-main {
-  max-width: 1120px;
-  padding: 45px 0 40px
+  max-width: 1080px;
+  padding: 32px 0 40px
 }
 .detail-intro {
-  max-width: 900px;
-  padding-bottom: 65px
+  padding-bottom: 35px;
+  max-width: 100%
 }
 .detail-intro h1 {
-  font-size: clamp(44px,6vw,78px)
+  font-size: 48px;
+  letter-spacing: -.025em
 }
 .detail-lede {
-  font-size: 20px;
+  font-size: 17px;
   color: var(--muted);
   line-height: 1.65;
-  margin-top: 25px;
-  max-width: 810px
+  margin-top: 20px;
+  max-width: 900px
+}
+.profile-contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 25px;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 19px
+}
+.profile-contact-line a:hover {
+  color: var(--red)
 }
 .detail-nav {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 35px;
-  font-size: 14px;
+  margin-top: 28px;
+  font-size: 13px;
   font-weight: 700
 }
 .detail-nav a:hover {
   color: var(--red)
 }
 .detail-section {
-  display: grid;
-  grid-template-columns: .58fr 1fr;
-  gap: 70px;
-  padding: 55px 0
+  display: block;
+  padding: 34px 0 40px
+}
+.detail-heading {
+  margin-bottom: 23px
 }
 .detail-heading h2 {
-  font-size: 30px;
-  line-height: 1.2
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -.025em
 }
-.detail-heading > p:last-child {
-  font-size: 14px;
-  color: var(--muted);
-  margin-top: 15px
+.detail-entry-header h2 {
+  font-size: 25px;
+  line-height: 1.35;
+  letter-spacing: -.02em
 }
 .detail-body {
   color: var(--muted);
-  font-size: 17px;
-  line-height: 1.7
+  font-size: 16px;
+  line-height: 1.65
 }
 .detail-body h3 {
-  font-size: 21px;
-  line-height: 1.3;
+  font-size: 19px;
+  line-height: 1.35;
   color: var(--ink);
-  margin: 30px 0 15px
+  margin: 25px 0 12px;
+  letter-spacing: -.015em
+}
+.entry-scope {
+  margin-bottom: 20px
+}
+.detail-entry-header + .company-context {
+  margin: 9px 0 18px
 }
 .detail-assignments {
   display: grid;
-  gap: 20px;
+  gap: 17px;
   margin: 0
+}
+.detail-assignments > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px
 }
 .detail-assignments dt {
   font-weight: 700;
   color: var(--ink);
-  font-size: 16px
+  font-size: 15px
 }
 .detail-assignments dd {
-  margin: 7px 0 0
+  margin: 0
 }
 .detail-study {
-  padding-bottom: 20px
-}
-.detail-study .case-meta {
-  margin-top: 25px
+  padding-bottom: 15px
 }
 .detail-study h3 {
-  margin-top: 10px
+  margin-top: 18px
 }
 .detail-study .text-link {
-  margin-top: 15px
+  margin-top: 12px
 }
 .process-list {
   padding-left: 20px;
   display: grid;
-  gap: 17px
+  gap: 13px
 }
 .process-list strong {
   color: var(--ink)
 }
 .credential-list {
   display: grid;
-  gap: 17px
+  gap: 13px
+}
+.credential-list > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px
 }
 .credential-list dt {
   font-weight: 700;
@@ -96,41 +124,85 @@
   font-size: 15px
 }
 .credential-list dd {
-  margin: 4px 0 0;
-  font-size: 16px
+  margin: 0;
+  font-size: 15px
+}
+.activity-record {
+  margin-bottom: 35px
+}
+.activity-record .resume-entry-header h3 {
+  margin: 0;
+  font-size: 20px
+}
+.activity-record .resume-entry-header {
+  margin-bottom: 10px
+}
+.activity-record .company-context {
+  margin-top: 0
+}
+.education-header {
+  margin-bottom: 20px
+}
+.education-header h3 {
+  margin: 0 0 4px
 }
 .profile-detail .site-header > .text-link {
   margin: 0
 }
+.profile-detail .scope-label {
+  font-size: 13px;
+  background: #ebe8df;
+  padding: 13px 17px;
+  border-radius: 10px
+}
+.profile-detail .contact-strip {
+  margin-top: 30px
+}
 @media(max-width:760px) {
   .detail-main {
-    padding-top: 35px
+    padding-top: 22px
+  }
+  .detail-intro h1 {
+    font-size: 38px
   }
   .detail-intro {
     padding-bottom: 20px
   }
   .detail-lede {
-    font-size: 17px
-  }
-  .detail-nav {
-    gap: 18px;
-    font-size: 13px
-  }
-  .detail-section {
-    grid-template-columns: 1fr;
-    gap: 23px;
-    padding: 35px 0
-  }
-  .detail-heading h2 {
-    font-size: 29px
-  }
-  .detail-body {
     font-size: 16px
   }
-  .profile-detail .site-header > .text-link {
-    font-size: 11px
+  .profile-contact-line {
+    font-size: 12px;
+    gap: 10px 20px
+  }
+  .detail-nav {
+    gap: 15px;
+    font-size: 12px
+  }
+  .detail-section {
+    padding: 28px 0
+  }
+  .detail-heading h2 {
+    font-size: 26px
+  }
+  .detail-entry-header h2 {
+    font-size: 23px
+  }
+  .detail-body {
+    font-size: 15px
   }
   .detail-body h3 {
+    font-size: 19px
+  }
+  .credential-list > div,
+  .detail-assignments > div {
+    grid-template-columns: 1fr;
+    gap: 4px
+  }
+  .activity-record .resume-entry-header h3 {
     font-size: 20px
+  }
+  .profile-detail .site-header > .text-link {
+    font-size: 12px
   }
 }
