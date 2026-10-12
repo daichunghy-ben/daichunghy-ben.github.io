@@ -63,3 +63,7 @@
     width: 130px
   }
 }
+.film-portrait canvas {
+  max-width: 480px;
+  aspect-ratio: 4/5
+}

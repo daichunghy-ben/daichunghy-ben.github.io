@@ -1,5 +1,5 @@
 import { PROFILE_COPY } from './profile-copy.js';
-import { GreetingScene, mountGreeting } from './mascot-motion.js';
+import { GreetingScene } from './mascot-motion.js';
 
 /* One clock drives the wall, contact point, effort and profile reveal. */
 export const NAME_READABLE_AT = 6000;
@@ -162,7 +162,7 @@ let activeFinish = null;
 export async function mountOpening(force = false){
   const screen=document.getElementById('opening-screen');if(!screen)return;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  // Deep links open their destination directly. The replay control is always available.
+  // Deep links open their destination directly; fresh visits play the accepted opening.
   if(reduced.matches || (!force && location.hash && location.hash !== '#top'))return;
   activeFinish?.();
   let stopped=false,frame=0;
@@ -173,20 +173,18 @@ export async function mountOpening(force = false){
     screen.hidden=true;screen.setAttribute('aria-hidden','true');
     document.getElementById('main-content')?.removeAttribute('inert');
     document.querySelector('.site-header')?.removeAttribute('inert');
-    document.removeEventListener('keydown',onKey);reduced.removeEventListener('change',onReduced);
+    reduced.removeEventListener('change',onReduced);
     if(previousFocus && previousFocus !== document.body)previousFocus.focus({preventScroll:true});
     activeFinish=null;
   };
-  const onKey=e=>{if(e.key==='Escape')finish();};
   const onReduced=()=>{if(reduced.matches)finish();};
   const failsafe=setTimeout(finish,15000);
   activeFinish=finish;screen.hidden=false;screen.style.opacity='1';screen.setAttribute('aria-hidden','false');
   document.body.classList.add('intro-gate-pending');
   document.getElementById('main-content')?.setAttribute('inert','');
   document.querySelector('.site-header')?.setAttribute('inert','');
-  document.getElementById('opening-skip').onclick=finish;
-  document.getElementById('opening-skip').focus({preventScroll:true});
-  document.addEventListener('keydown',onKey);reduced.addEventListener('change',onReduced);
+  screen.focus({preventScroll:true});
+  reduced.addEventListener('change',onReduced);
   try{
     const scene=await createOpeningScene(screen.querySelector('canvas'));if(stopped)return;
     const start=performance.now();
@@ -199,8 +197,4 @@ export async function mountOpening(force = false){
     frame=requestAnimationFrame(tick);
   }catch{finish();}
 }
-document.getElementById('replay-opening')?.addEventListener('click',()=>mountOpening(true));
-document.querySelector('.skip-link')?.addEventListener('click',()=>activeFinish?.());
-if(matchMedia('(prefers-reduced-motion: reduce)').matches){const replay=document.getElementById('replay-opening');if(replay)replay.hidden=true;}
-mountGreeting();
 mountOpening();

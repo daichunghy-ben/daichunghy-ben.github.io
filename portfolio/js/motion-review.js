@@ -1,9 +1,12 @@
+import { createProfileFilm, PROFILE_FILM_DURATION } from './profile-film.js';
 import { createOpeningScene, OPENING_DURATION } from './opening-motion.js';
 import { createClosingScene, CLOSING_DURATION } from './closing-motion.js';
+const profile=await createProfileFilm(document.querySelector('[data-film="profile"] canvas'));
 const opening=await createOpeningScene(document.querySelector('[data-film="opening"] canvas'));
 const closing=await createClosingScene(document.querySelector('[data-film="closing"] canvas'));
 // Shared by the review controls and the deterministic film exporter.
 window.portfolioFilms = {
+  profile:{scene:profile,duration:PROFILE_FILM_DURATION,options:{}},
   opening:{scene:opening,duration:OPENING_DURATION,options:{includeProfile:false}},
   closing:{scene:closing,duration:CLOSING_DURATION,options:{background:'#e7ebe7',includeCopy:true}}
 };

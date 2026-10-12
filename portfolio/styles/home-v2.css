@@ -698,14 +698,6 @@ details[open] > p {
   font-weight: 400;
   margin-top: 35px
 }
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 30px 0;
-  font-size: 12px;
-  color: var(--muted)
-}
 .opening-screen {
   position: fixed;
   inset: 0;
@@ -724,16 +716,6 @@ details[open] > p {
   color: #656565;
   font-size: 13px;
   pointer-events: none
-}
-.opening-skip {
-  position: absolute;
-  right: 35px;
-  bottom: 25px;
-  background: #fff;
-  color: var(--ink);
-  padding: 11px 18px;
-  border-radius: 25px;
-  font-size: 13px
 }
 .intro-gate-pending {
   overflow: hidden
@@ -976,13 +958,6 @@ details[open] > p {
     bottom: 75px;
     font-size: 12px
   }
-  .opening-skip {
-    right: 20px;
-    bottom: 20px
-  }
-  .page-footer {
-    font-size: 11px
-  }
   .text-button {
     font-size: 12px
   }
@@ -996,5 +971,342 @@ details[open] > p {
   }
   .opening-screen {
     display: none!important
+  }
+}
+.intro-section {
+  grid-template-columns: .95fr 1.05fr;
+  align-items: start;
+  gap: 70px;
+  padding: 38px 0 70px;
+  min-height: 1400px
+}
+.intro-media {
+  grid-column: 1;
+  grid-row: 1;
+  position: sticky;
+  top: 35px;
+  align-self: start;
+  max-width: none;
+  min-width: 0
+}
+.intro-copy {
+  grid-column: 2;
+  grid-row: 1;
+  padding-top: 75px;
+  min-width: 0
+}
+.intro-copy h1 {
+  font-size: clamp(43px,4.4vw,66px)
+}
+.profile-film-card {
+  background: #ece8df;
+  border-radius: 28px;
+  overflow: hidden;
+  transform-origin: center center;
+  box-shadow: 0 22px 55px #20242709;
+  will-change: transform
+}
+.profile-film {
+  width: 100%;
+  height: calc(100svh - 180px);
+  max-height: 700px;
+  min-height: 500px;
+  object-fit: cover;
+  display: block
+}
+.profile-film-fallback {
+  display: none;
+  width: 100%;
+  height: calc(100svh - 180px);
+  max-height: 700px;
+  min-height: 500px;
+  object-fit: cover
+}
+.profile-film-card.is-static .profile-film {
+  display: none
+}
+.profile-film-card.is-static .profile-film-fallback {
+  display: block
+}
+.profile-film-card figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 25px;
+  margin: 0;
+  background: #ece8df;
+  font-size: 11px;
+  letter-spacing: .02em;
+  text-align: left
+}
+.profile-film-card .motion-toggle {
+  bottom: 58px;
+  right: 17px;
+  background: #ffffff90
+}
+.intro-identity {
+  display: grid;
+  gap: 7px;
+  margin-top: 34px;
+  color: var(--muted);
+  font-size: 14px
+}
+.intro-identity strong {
+  font-size: 24px;
+  color: var(--ink);
+  letter-spacing: -.025em
+}
+.intro-work-menu {
+  margin-top: 140px;
+  padding-bottom: 40px
+}
+.intro-work-menu h2 {
+  font-size: 42px;
+  margin-bottom: 30px
+}
+.intro-work-menu a {
+  display: grid;
+  grid-template-columns: 26px 1fr 20px;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 20px;
+  transition: transform .35s,color .35s
+}
+.intro-work-menu a > span:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted)
+}
+.intro-work-menu a:hover {
+  transform: translateX(10px);
+  color: var(--red)
+}
+.intro-work-menu strong {
+  font-weight: 400
+}
+.scroll-cue {
+  left: auto;
+  right: 0;
+  bottom: 10px
+}
+.profile-contact {
+  margin: 30px 0
+}
+.profile-contact > a {
+  display: inline-block;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 22px;
+  overflow-wrap: anywhere
+}
+.credentials-section {
+  padding-bottom: 120px
+}
+.home-motion .about-copy,
+.home-motion .case-copy,
+.home-motion .journey li,
+.home-motion .research-card,
+.home-motion .section-heading {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity .85s,transform .95s cubic-bezier(.2,.75,.2,1);
+  transition-delay: var(--reveal-delay,0ms)
+}
+.home-motion .in-view {
+  opacity: 1;
+  transform: translateY(0)
+}
+.case-visual {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform .65s cubic-bezier(.2,.75,.2,1);
+  will-change: transform
+}
+.process-paper {
+  transition: transform .8s cubic-bezier(.2,.8,.2,1),background .8s;
+  backface-visibility: hidden;
+  transform-origin: 50% 75%
+}
+.office-visual .paper-back {
+  transform: translateY(-12px) rotate(8deg)
+}
+.office-visual .paper-middle {
+  transform: translateY(0) rotate(-7deg)
+}
+.office-visual .paper-front {
+  transform: translateY(8px) rotate(-1deg)
+}
+.office-visual[data-step="1"] .paper-back {
+  transform: translateY(80px) translateZ(45px) rotate(-3deg)
+}
+.office-visual[data-step="1"] .paper-middle {
+  transform: translateY(-45px) translateZ(30px) rotate(5deg)
+}
+.office-visual[data-step="1"] .paper-front {
+  transform: translateY(-115px) translateZ(-40px) rotate(-9deg)
+}
+.office-visual[data-step="2"] .paper-back {
+  transform: translateY(40px) translateZ(70px) rotate(-2deg)
+}
+.office-visual[data-step="2"] .paper-middle {
+  transform: translateY(65px) translateZ(-45px) rotate(9deg)
+}
+.office-visual[data-step="2"] .paper-front {
+  transform: translateY(-105px) translateZ(20px) rotate(-6deg)
+}
+.chat-paper {
+  transition: transform .9s cubic-bezier(.2,.8,.2,1)
+}
+.chatbot-visual[data-step="1"] .chat-paper {
+  transform: rotate(-3deg) translateY(-10px)
+}
+.chat-answer span,
+.chat-question {
+  transition: opacity .45s,transform .65s cubic-bezier(.2,.8,.2,1)
+}
+.chatbot-visual[data-step="0"] .chat-answer span {
+  opacity: 0;
+  transform: translateY(12px) scale(.96)
+}
+.chatbot-visual[data-step="1"] .chat-answer span:nth-child(2),
+.chatbot-visual[data-step="1"] .chat-answer span:nth-child(3) {
+  opacity: 0;
+  transform: translateY(12px) scale(.96)
+}
+.chatbot-visual[data-step="2"] .chat-answer span {
+  opacity: 1;
+  transform: translateY(0) scale(1)
+}
+.research-image {
+  transform: rotate(var(--card-angle,0deg));
+  transition: transform .65s cubic-bezier(.2,.8,.2,1);
+  transform-origin: center
+}
+.research-card:first-child {
+  --card-angle: -2deg
+}
+.research-card:nth-child(2) {
+  --card-angle: 1.5deg
+}
+.research-card:nth-child(3) {
+  --card-angle: -1deg
+}
+.research-card:hover .research-image {
+  transform: rotate(0) translateY(-10px)
+}
+.home-motion.motion-paused * {
+  animation-play-state: paused!important
+}
+.motion-paused .case-visual,
+.motion-paused .chat-paper,
+.motion-paused .process-paper,
+.motion-paused .research-image {
+  transition: none
+}
+.opening-screen:focus {
+  outline: 0
+}
+@media(max-width:1050px) and (min-width:761px) {
+  .intro-section {
+    gap: 40px
+  }
+  .intro-copy {
+    padding-top: 35px
+  }
+  .intro-work-menu {
+    margin-top: 120px
+  }
+  .intro-copy h1 {
+    font-size: 48px
+  }
+  .profile-film {
+    min-height: 500px
+  }
+  .intro-lede {
+    font-size: 16px
+  }
+}
+@media(max-width:760px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    min-height: unset;
+    padding-top: 25px;
+    padding-bottom: 35px
+  }
+  .intro-media {
+    position: relative;
+    top: auto;
+    width: 100%;
+    order: 0
+  }
+  .intro-copy {
+    order: 1;
+    padding: 0
+  }
+  .intro-copy h1 {
+    font-size: 44px
+  }
+  .profile-film,
+  .profile-film-fallback {
+    height: 450px;
+    min-height: 0;
+    max-height: none;
+    object-position: center 24%
+  }
+  .profile-film-card figcaption {
+    font-size: 10px;
+    padding: 13px 18px
+  }
+  .intro-identity {
+    margin-top: 25px
+  }
+  .intro-work-menu {
+    margin-top: 65px;
+    padding-bottom: 15px
+  }
+  .intro-work-menu h2 {
+    font-size: 34px
+  }
+  .intro-work-menu a {
+    font-size: 18px;
+    padding: 15px 0
+  }
+  .scroll-cue {
+    display: none
+  }
+  .profile-contact > a {
+    font-size: 19px
+  }
+  .credentials-section {
+    padding-bottom: 70px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-motion .about-copy,
+  .home-motion .case-copy,
+  .home-motion .journey li,
+  .home-motion .research-card,
+  .home-motion .section-heading {
+    opacity: 1;
+    transform: none
+  }
+  .case-visual,
+  .research-image {
+    transform: none!important
+  }
+  .process-paper {
+    transition: none
+  }
+  .profile-film {
+    display: none
+  }
+  .profile-film-fallback {
+    display: block
+  }
+  .motion-toggle {
+    display: none
   }
 }
