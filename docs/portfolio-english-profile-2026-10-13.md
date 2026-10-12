@@ -29,3 +29,5 @@ Required staging and local-link checks were run. Browser verification covers a d
 The external-audit command only scans root HTML, so the two active pages were additionally audited with its existing checker. Publisher, FCBEM, ORCID and GitHub links responded; LinkedIn restricts automated checks.
 
 Pre-existing edits in workflow/dependency configuration, 404 pages, research pages and build/check scripts remain outside this update. The publication state must be confirmed after the GitHub Pages deployment and a production browser check.
+
+The follow-up visual cleanup removes the header monogram/name/tagline block and the repeated name/location caption under the character. Decorative section-number labels were also removed from the homepage. The substantive profile name, role, education, location and publication status remain in the content.
