@@ -18,9 +18,9 @@ export class ClosingScene {
     ctx.drawImage(options.static?this.image:this.greeting.render(Math.max(0,ms-2000)),0,0,iw,ih);ctx.restore();
     if(options.includeCopy){
       const fade=Math.min(1,Math.max(0,(ms-800)/900));ctx.save();ctx.globalAlpha=fade;ctx.textBaseline='top';ctx.textAlign='left';
-      const left=w*.45,size=Math.min(w*.049,h*.085);ctx.fillStyle='#62676b';ctx.font=`400 ${size*.29}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillText('Cảm ơn bạn đã ghé xem.',left,h*.25);
-      ctx.fillStyle='#202427';ctx.font=`700 ${size}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillText('Mình có thể',left,h*.34);ctx.fillText('trao đổi tiếp.',left,h*.34+size*1.13);
-      ctx.font=`400 ${size*.3}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillStyle='#62676b';ctx.fillText('Tư vấn quy trình · Nghiên cứu ứng dụng',left,h*.59);
+      const left=w*.45,size=Math.min(w*.049,h*.085);ctx.fillStyle='#62676b';ctx.font=`400 ${size*.29}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillText('Thanks for visiting.',left,h*.25);
+      ctx.fillStyle='#202427';ctx.font=`700 ${size}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillText('Continue the',left,h*.34);ctx.fillText('conversation.',left,h*.34+size*1.13);
+      ctx.font=`400 ${size*.3}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillStyle='#62676b';ctx.fillText('Workflow consulting · Applied research',left,h*.59);
       ctx.font=`700 ${size*.42}px Calibri, 'Segoe UI', Arial, sans-serif`;ctx.fillStyle='#202427';ctx.fillText('daichunghy@gmail.com',left,h*.68);ctx.restore();
     }
   }

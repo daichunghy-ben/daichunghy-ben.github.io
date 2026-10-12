@@ -1,0 +1,136 @@
+.detail-main {
+  max-width: 1120px;
+  padding: 45px 0 40px
+}
+.detail-intro {
+  max-width: 900px;
+  padding-bottom: 65px
+}
+.detail-intro h1 {
+  font-size: clamp(44px,6vw,78px)
+}
+.detail-lede {
+  font-size: 20px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 25px;
+  max-width: 810px
+}
+.detail-nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  font-size: 14px;
+  font-weight: 700
+}
+.detail-nav a:hover {
+  color: var(--red)
+}
+.detail-section {
+  display: grid;
+  grid-template-columns: .58fr 1fr;
+  gap: 70px;
+  padding: 55px 0
+}
+.detail-heading h2 {
+  font-size: 30px;
+  line-height: 1.2
+}
+.detail-heading > p:last-child {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 15px
+}
+.detail-body {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7
+}
+.detail-body h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 30px 0 15px
+}
+.detail-assignments {
+  display: grid;
+  gap: 20px;
+  margin: 0
+}
+.detail-assignments dt {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 16px
+}
+.detail-assignments dd {
+  margin: 7px 0 0
+}
+.detail-study {
+  padding-bottom: 20px
+}
+.detail-study .case-meta {
+  margin-top: 25px
+}
+.detail-study h3 {
+  margin-top: 10px
+}
+.detail-study .text-link {
+  margin-top: 15px
+}
+.process-list {
+  padding-left: 20px;
+  display: grid;
+  gap: 17px
+}
+.process-list strong {
+  color: var(--ink)
+}
+.credential-list {
+  display: grid;
+  gap: 17px
+}
+.credential-list dt {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 15px
+}
+.credential-list dd {
+  margin: 4px 0 0;
+  font-size: 16px
+}
+.profile-detail .site-header > .text-link {
+  margin: 0
+}
+@media(max-width:760px) {
+  .detail-main {
+    padding-top: 35px
+  }
+  .detail-intro {
+    padding-bottom: 20px
+  }
+  .detail-lede {
+    font-size: 17px
+  }
+  .detail-nav {
+    gap: 18px;
+    font-size: 13px
+  }
+  .detail-section {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding: 35px 0
+  }
+  .detail-heading h2 {
+    font-size: 29px
+  }
+  .detail-body {
+    font-size: 16px
+  }
+  .profile-detail .site-header > .text-link {
+    font-size: 11px
+  }
+  .detail-body h3 {
+    font-size: 20px
+  }
+}

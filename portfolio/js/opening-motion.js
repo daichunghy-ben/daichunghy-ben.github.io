@@ -122,13 +122,13 @@ export class OpeningScene {
     }
     const profileProgress=smooth((ms-PROFILE_REVEAL_AT)/PROFILE_REVEAL_DURATION);
     if(options.includeProfile!==false&&profileProgress>0&&this.greeting){
-      this.drawProfile(ms,w,h,profileProgress,options.locale||'vi');
+      this.drawProfile(ms,w,h,profileProgress,options.locale||'en');
     }
     this.contact={coverX,handX:x+1018*scale,progress,profileProgress};
     return this.contact;
   }
   drawProfile(ms,w,h,alpha,locale){
-    const ctx=this.ctx, copy=PROFILE_COPY[locale]||PROFILE_COPY.vi, mobile=w<700;
+    const ctx=this.ctx, copy=PROFILE_COPY[locale]||PROFILE_COPY.en, mobile=w<700;
     ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);
     const artHeight=mobile?h*.33:h*.68, artWidth=artHeight*this.greeting.image.width/this.greeting.image.height;
     const artX=mobile?(w-artWidth)/2:w*.055, artY=mobile?h*.035:(h-artHeight)/2;
@@ -158,41 +158,45 @@ export async function createOpeningScene(canvas){
   return new OpeningScene(canvas,image,greeting?new GreetingScene(greeting):null);
 }
 
-let activeFinish = null;
-export async function mountOpening(force = false){
+export async function mountOpening(){
   const screen=document.getElementById('opening-screen');if(!screen)return;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  // Deep links open their destination directly; fresh visits play the accepted opening.
-  if(reduced.matches || (!force && location.hash && location.hash !== '#top'))return;
-  activeFinish?.();
+  // The blocking frame is rendered by the HTML, before modules or images load.
+  if(reduced.matches||document.documentElement.dataset.opening==='bypass'){
+    clearTimeout(window.portfolioIntroFailsafe);window.releasePortfolioIntro?.();return;
+  }
+  // A timed release may already have opened the page after a slow module load.
+  if(document.documentElement.dataset.opening==='ready')return;
   let stopped=false,frame=0;
-  const previousFocus=document.activeElement;
   const finish=()=>{
-    if(stopped)return;stopped=true;cancelAnimationFrame(frame);clearTimeout(failsafe);
-    document.body.classList.remove('intro-gate-pending','intro-gate-revealing');
-    screen.hidden=true;screen.setAttribute('aria-hidden','true');
-    document.getElementById('main-content')?.removeAttribute('inert');
-    document.querySelector('.site-header')?.removeAttribute('inert');
+    if(stopped)return;stopped=true;cancelAnimationFrame(frame);
+    clearTimeout(window.portfolioIntroFailsafe);
     reduced.removeEventListener('change',onReduced);
-    if(previousFocus && previousFocus !== document.body)previousFocus.focus({preventScroll:true});
-    activeFinish=null;
+    document.removeEventListener('portfolio:intro-ready',onExternalRelease);
+    window.releasePortfolioIntro?.();screen.hidden=true;
   };
+  const onExternalRelease=()=>finish();
   const onReduced=()=>{if(reduced.matches)finish();};
-  const failsafe=setTimeout(finish,15000);
-  activeFinish=finish;screen.hidden=false;screen.style.opacity='1';screen.setAttribute('aria-hidden','false');
+  screen.style.opacity='1';
   document.body.classList.add('intro-gate-pending');
   document.getElementById('main-content')?.setAttribute('inert','');
   document.querySelector('.site-header')?.setAttribute('inert','');
-  screen.focus({preventScroll:true});
   reduced.addEventListener('change',onReduced);
+  document.addEventListener('portfolio:intro-ready',onExternalRelease);
   try{
     const scene=await createOpeningScene(screen.querySelector('canvas'));if(stopped)return;
     const start=performance.now();
     const tick=now=>{
-      if(stopped)return;const ms=now-start;
-      const {profileProgress}=scene.render(ms,{includeProfile:false});
-      if(ms>=PROFILE_REVEAL_AT){document.body.classList.remove('intro-gate-pending');document.body.classList.add('intro-gate-revealing');screen.style.opacity=String(1-profileProgress);}
-      if(ms>=OPENING_DURATION){finish();return;}frame=requestAnimationFrame(tick);
+      if(stopped)return;
+      const ms=now-start,{profileProgress}=scene.render(ms,{includeProfile:false});
+      if(ms>=PROFILE_REVEAL_AT){
+        document.documentElement.dataset.opening='revealing';
+        document.body.classList.remove('intro-gate-pending');
+        document.body.classList.add('intro-gate-revealing');
+        screen.style.opacity=String(1-profileProgress);
+      }
+      if(ms>=OPENING_DURATION){finish();return;}
+      frame=requestAnimationFrame(tick);
     };
     frame=requestAnimationFrame(tick);
   }catch{finish();}
