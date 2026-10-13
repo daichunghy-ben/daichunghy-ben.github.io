@@ -7,7 +7,7 @@ const ease = value => {
     return t * t * (3 - 2 * t);
 };
 
-class ProfilePuppet {
+export class ProfilePuppet {
     constructor(image, pointing = false) {
         this.image = image;
         this.pointing = pointing;

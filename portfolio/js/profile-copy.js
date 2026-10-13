@@ -1,11 +1,11 @@
 export const PROFILE_COPY = {
   en: {
-    greeting: 'Chung Hy Dai',
-    title: ['Consulting.', 'Applied research.'],
-    summary: 'Marketing graduate with experience in business workflow consulting and consumer research. Work spans operational requirements, digital workflow proposals, survey analysis and customer feedback.',
-    education: 'Bachelor of Business · Marketing',
-    role: 'AI Business Consultant · 1Office',
+    greeting: 'Dai Chung Hy',
+    title: ['Business analysis.', 'Operations.'],
+    summary: 'Business graduate with six months of B2B software consulting at 1Office. Experience in customer research, process improvement and digital transformation.',
+    education: 'Bachelor of Business, Marketing · Swinburne',
+    role: 'AI Business Consultant · 1Office · Apr–Sep 2026',
     action: 'Explore experience',
-    secondary: 'Read full profile'
+    secondary: 'Full profile'
   }
 };
