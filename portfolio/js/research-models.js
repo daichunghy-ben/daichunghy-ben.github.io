@@ -67,6 +67,8 @@ if(source&&lab){
    if(!reduce.matches)panel.animate([{opacity:.4,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],{duration:400,easing:'ease-out'});
   });
  });
+ const disclosure=document.getElementById('model-details');
+ if(disclosure){disclosure.addEventListener('toggle',schedule);const openMap=()=>{if(location.hash==='#models'){disclosure.open=true;requestAnimationFrame(()=>lab.scrollIntoView({behavior:reduce.matches?'instant':'smooth'}))}};addEventListener('hashchange',openMap);openMap()}
  const observer=new ResizeObserver(schedule);panels.forEach(panel=>observer.observe(panel.querySelector('[data-model-map]')));
  document.fonts.ready.then(schedule);schedule();
  if(!reduce.matches){

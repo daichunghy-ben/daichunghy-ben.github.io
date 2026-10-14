@@ -1,0 +1,799 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "ev-choice",
+      "type": "forest",
+      "title": "Range leads the estimated trade-offs.",
+      "caption": "Reported marginal willingness to pay, VND million. Dots show estimates; spans show the reported 95% intervals.",
+      "source": "Latent class estimates in the project materials; interval values retained from the existing model record.",
+      "range": [
+        -40,
+        280
+      ],
+      "ticks": [
+        0,
+        50,
+        100,
+        150,
+        200,
+        250
+      ],
+      "groups": [
+        {
+          "label": "Utility-focused",
+          "share": 65,
+          "color": "#355d7b",
+          "values": [
+            133.9,
+            96,
+            43.7,
+            43.3
+          ],
+          "intervals": [
+            [
+              65.3,
+              202.5
+            ],
+            [
+              -6.7,
+              198.7
+            ],
+            [
+              -26.4,
+              113.8
+            ],
+            [
+              -21.8,
+              108.4
+            ]
+          ]
+        },
+        {
+          "label": "Design-sensitive",
+          "share": 35,
+          "color": "#b16643",
+          "values": [
+            180,
+            105.3,
+            60.5,
+            67.9
+          ],
+          "intervals": [
+            [
+              100.2,
+              259.8
+            ],
+            [
+              19.4,
+              191.2
+            ],
+            [
+              21.8,
+              99.2
+            ],
+            [
+              -24.8,
+              160.7
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        "Range +100 km",
+        "Charging −15 min",
+        "Network +50,000 stations",
+        "Streamlined body"
+      ],
+      "notes": [
+        "Both range intervals lie above zero. The larger point estimate in the design-sensitive group is not, by itself, a tested difference between groups.",
+        "The utility-focused interval crosses zero, while the design-sensitive interval stays positive. Read each group's uncertainty before using the point estimate.",
+        "The network premium is uncertain in the utility-focused group. The design-sensitive estimate has a positive reported interval.",
+        "Both design intervals cross zero. A positive point estimate alone gives a weak basis for setting a design premium."
+      ],
+      "method": [
+        [
+          "Choice task",
+          "Vehicle attributes enter the utility model as alternatives within a task."
+        ],
+        [
+          "Model comparison",
+          "MNL, mixed logit and latent class address shared, continuous and grouped preferences."
+        ],
+        [
+          "Interpretation",
+          "WTP uses the price coefficient. The displayed values come from the two-class model."
+        ]
+      ],
+      "equation": "WTP for a feature = −βfeature / βprice",
+      "equationNote": "Feature units and price coding determine the resulting WTP unit. Cross-group differences need their own uncertainty calculation."
+    },
+    {
+      "id": "hotel-segmentation",
+      "type": "segments",
+      "title": "The largest group covers 43.7% of reviews.",
+      "caption": "Reported proportions of the review sample. Select a segment, then inspect sentiment by attribute in the original analysis figure.",
+      "source": "Project materials: 74,896 Booking.com reviews, 458 hotels, 10 reported groups.",
+      "labels": [
+        "Minimalists",
+        "Gastronomy",
+        "Explorers",
+        "Hospitality",
+        "Premium",
+        "Homebodies",
+        "Convenience",
+        "Room",
+        "Deal",
+        "Staycation"
+      ],
+      "values": [
+        43.7,
+        9.7,
+        8.3,
+        7.6,
+        7.1,
+        6.1,
+        5.9,
+        4.3,
+        3.9,
+        3.4
+      ],
+      "notes": [
+        "The largest group accounts for 43.7% of the review sample. Its share describes the cluster size; the attribute map is needed to understand what the group says.",
+        "Gastronomy is a reported cluster label. Use the original attribute analysis to inspect the pattern behind the name.",
+        "The label describes a profile interpretation. It does not assign a measured travel motive to every reviewer.",
+        "Read the sentiment and attribute pattern alongside this group label before choosing a service response.",
+        "A smaller cluster can still have a distinct service pattern. Its share is not a spending estimate.",
+        "The profile summarizes review features. It does not establish demographic or household characteristics.",
+        "Service design should follow the recorded attribute pattern rather than the cluster name alone.",
+        "The group label is a concise interpretation of room-related review patterns.",
+        "The share describes the sample partition. A price-sensitivity coefficient is not supplied for this cluster.",
+        "The profile is a review-based group; it does not identify verified local or repeat guests."
+      ],
+      "images": [
+        {
+          "label": "Attribute sentiment",
+          "image": "assets/optimized/fig03_valence_heatmap-1800.webp",
+          "note": "Each row is an original numeric cluster ID; columns are hotel attributes. The source does not provide a checked crosswalk from these IDs to the named profiles, so the two label systems are kept separate."
+        },
+        {
+          "label": "Review volume",
+          "image": "assets/optimized/hotel-segmentation-fig1-optimized.webp",
+          "note": "Original weekly review-volume figure by source market. The image reports a time pattern; counts have not been reconstructed from its pixels."
+        }
+      ],
+      "method": [
+        [
+          "Language layer",
+          "108,906 sentences yielded 148,846 reported aspect–sentence pairs."
+        ],
+        [
+          "Feature layer",
+          "Attribute sentiment represents what was discussed and how it was evaluated."
+        ],
+        [
+          "Clustering",
+          "K-means forms the reported groups; GMM is the reported robustness check."
+        ]
+      ],
+      "equation": "Review text → attribute features → clustering → profile interpretation",
+      "equationNote": "Sentiment and salience answer different questions: how an attribute is evaluated and how much it is mentioned."
+    },
+    {
+      "id": "hotel-prca",
+      "type": "butterfly",
+      "title": "Cleanliness has the largest downside.",
+      "caption": "Penalty and reward coefficients on one shared scale. Negative reward estimates, including WiFi, keep their original sign.",
+      "source": "Reported PRCA coefficients from the project figure; OLS with HC1 robust standard errors.",
+      "range": [
+        -1.6,
+        0.8
+      ],
+      "ticks": [
+        -1.5,
+        -1,
+        -0.5,
+        0,
+        0.5
+      ],
+      "labels": [
+        "Cleanliness",
+        "WiFi",
+        "Staff service",
+        "Room quality",
+        "Value",
+        "Location",
+        "Facilities",
+        "Food"
+      ],
+      "penalty": [
+        -1.5,
+        -0.656,
+        -0.965,
+        -0.967,
+        -0.382,
+        -0.341,
+        -0.115,
+        -0.158
+      ],
+      "reward": [
+        0.145,
+        -0.052,
+        0.68,
+        0.222,
+        0.09,
+        0.034,
+        0.41,
+        0.525
+      ],
+      "classes": [
+        "Basic",
+        "Basic",
+        "Performance",
+        "Performance",
+        "Performance",
+        "Performance",
+        "Excitement",
+        "Excitement"
+      ],
+      "notes": [
+        "Cleanliness has a large downside coefficient and a much smaller upside coefficient. The asymmetry makes failure prevention the practical priority.",
+        "WiFi has a negative penalty and a slightly negative reward estimate. Keep that sign visible; a positive sentiment indicator does not guarantee a positive coefficient.",
+        "Staff service combines a substantial penalty with the largest positive reward estimate in the figure.",
+        "Room quality has a larger negative coefficient than its positive reward estimate. Service consistency matters before upgrades.",
+        "The estimated value coefficients suggest a larger downside than upside in this specification.",
+        "Location is classified as performance in the project materials, despite a small positive reward estimate.",
+        "Facilities have a stronger positive reward than negative penalty in this specification.",
+        "Food has a positive reward of 0.525 and a smaller negative penalty of −0.158."
+      ],
+      "method": [
+        [
+          "Semantic mapping",
+          "Sentence-BERT maps sentences to eight service attributes."
+        ],
+        [
+          "Polarity inputs",
+          "Positive and negative attribute indicators enter the rating regression separately."
+        ],
+        [
+          "Kano reading",
+          "Reported basic, performance and excitement classes summarize the estimated asymmetry."
+        ]
+      ],
+      "equation": "Rating = intercept + Σ penaltyj · negativej + Σ rewardj · positivej + error",
+      "equationNote": "Coefficients describe the supplied regression specification. The figure does not supply confidence intervals or a return-on-investment estimate."
+    },
+    {
+      "id": "virtual-influencers",
+      "type": "factorial",
+      "title": "A 2 × 2 experiment separates message and appeal.",
+      "caption": "Reconstructed experiment layout using the supplied stimulus assets. Argument quality and peripheral appeal form the 2 × 2 design.",
+      "source": "Springer chapter, DOI 10.1007/978-981-96-4116-1_9; N = 244.",
+      "items": [
+        {
+          "label": "Strong argument / high appeal",
+          "image": "../assets/optimized/external/vi-sim-high-high-optimized.webp",
+          "argument": "Strong",
+          "appeal": "High",
+          "note": "Both experimental dimensions are high. Compare with the other high-appeal cell to isolate the argument-quality contrast."
+        },
+        {
+          "label": "Weak argument / high appeal",
+          "image": "../assets/optimized/external/vi-sim-low-high-optimized.webp",
+          "argument": "Weak",
+          "appeal": "High",
+          "note": "Peripheral appeal is high while argument quality is weak. The message contrast should hold the appeal condition fixed."
+        },
+        {
+          "label": "Strong argument / low appeal",
+          "image": "../assets/optimized/external/vi-sim-high-low-optimized.webp",
+          "argument": "Strong",
+          "appeal": "Low",
+          "note": "Argument quality is strong while appeal is low. Compare with the strong-argument, high-appeal condition for the appeal contrast."
+        },
+        {
+          "label": "Weak argument / low appeal",
+          "image": "../assets/optimized/external/vi-sim-low-low-optimized.webp",
+          "argument": "Weak",
+          "appeal": "Low",
+          "note": "Both dimensions are low. This is one experimental condition; it is not a group defined by speciesism."
+        }
+      ],
+      "method": [
+        [
+          "Central route",
+          "Argument quality represents the message content."
+        ],
+        [
+          "Peripheral route",
+          "Attractiveness and attitude similarity represent creator cues."
+        ],
+        [
+          "Measured moderator",
+          "Speciesism concerns human preference; it is measured separately from condition assignment."
+        ]
+      ],
+      "equation": "Argument quality × peripheral appeal → purchase intention",
+      "equationNote": "The publication reports peripheral-cue relationships and moderation. Cell means and interaction coefficients are not supplied here."
+    },
+    {
+      "id": "nutrition-diet",
+      "type": "nutrition",
+      "title": "Basic principles are better understood than calories.",
+      "caption": "Knowledge domains and adjusted diet-quality associations are different parts of the study. Select the view you want to inspect.",
+      "source": "FCBEM paper: Table 2 (knowledge), Table 3 (diet) and Table 5 (regression); n = 280.",
+      "domains": [
+        {
+          "label": "Dietary principles",
+          "items": 7,
+          "correct": 85.5,
+          "mean": 6,
+          "sd": 1.06
+        },
+        {
+          "label": "Nutrient contents",
+          "items": 7,
+          "correct": 69.7,
+          "mean": 4.88,
+          "sd": 1.54
+        },
+        {
+          "label": "Calories",
+          "items": 6,
+          "correct": 46.1,
+          "mean": 2.77,
+          "sd": 1.61
+        }
+      ],
+      "diet": [
+        {
+          "label": "Food diversity",
+          "mean": 6.1,
+          "max": 10,
+          "sd": 1.8,
+          "direction": "More food-group diversity"
+        },
+        {
+          "label": "Protective groups",
+          "mean": 3.9,
+          "max": 9,
+          "sd": 1.9,
+          "direction": "More protective food groups"
+        },
+        {
+          "label": "Foods to limit",
+          "mean": 6.1,
+          "max": 12,
+          "sd": 2.6,
+          "direction": "More groups to limit; higher is not healthier"
+        }
+      ],
+      "regression": [
+        {
+          "label": "Age",
+          "unit": "per year",
+          "estimate": 0.1284,
+          "ci": [
+            0.04,
+            0.217
+          ],
+          "p": "0.005"
+        },
+        {
+          "label": "Sex",
+          "unit": "male = 1",
+          "estimate": -0.0129,
+          "ci": [
+            -0.364,
+            0.338
+          ],
+          "p": "0.942"
+        },
+        {
+          "label": "Knowledge",
+          "unit": "per knowledge-score point",
+          "estimate": 0.1102,
+          "ci": [
+            0.022,
+            0.198
+          ],
+          "p": "0.014"
+        },
+        {
+          "label": "Physical activity",
+          "unit": "per MET-minute / week",
+          "estimate": 0.0029,
+          "ci": [
+            0.003,
+            0.003
+          ],
+          "p": "< 0.001"
+        }
+      ],
+      "method": [
+        [
+          "Knowledge",
+          "Adapted 20-item CoNKS; three domains use 7, 7 and 6 items."
+        ],
+        [
+          "Activity + diet",
+          "IPAQ-SF measures activity; DQQ covers 29 food groups."
+        ],
+        [
+          "Adjusted association",
+          "The paper also reports group comparisons and Spearman correlations. Regression adjusts for age, sex, knowledge and activity; R² = 0.538."
+        ]
+      ],
+      "equation": "GDR score = 6.9845 + 0.1284·age − 0.0129·male + 0.1102·knowledge + 0.0029·activity",
+      "equationNote": "Coefficients are in the units shown, not comparable standardized effects. The paper rounds the activity interval to [0.003, 0.003]; its precision cannot be recovered from the printed table."
+    },
+    {
+      "id": "motorbike-phaseout",
+      "type": "policy",
+      "title": "Restrictions and support belong in the same picture.",
+      "caption": "Reported monthly willingness to pay for policy attributes. Amounts are model trade-offs, expressed in VND per month.",
+      "source": "Existing CIEMB manuscript-table reconstruction: Table 5 values; Table 4 interactions.",
+      "labels": [
+        "Restrict fossil-fuel motorcycles",
+        "Restrict all fossil-fuel vehicles",
+        "Public transport +15%",
+        "Public transport +30%",
+        "Fares −25%",
+        "Fares −50%",
+        "Green space +20%",
+        "Green space +40%",
+        "Unguarded park & ride",
+        "Guarded park & ride",
+        "Support pass",
+        "Electric-motorcycle grant",
+        "Revenue reinvestment",
+        "Reinvestment + oversight"
+      ],
+      "values": [
+        -68450,
+        -135220,
+        51780,
+        84150,
+        34260,
+        76920,
+        102550,
+        153830,
+        17110,
+        59840,
+        85470,
+        188120,
+        68410,
+        102550
+      ],
+      "groups": [
+        "Restriction",
+        "Restriction",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Transport",
+        "Support",
+        "Support",
+        "Governance",
+        "Governance"
+      ],
+      "interactions": [
+        {
+          "label": "Ban × dependence",
+          "estimate": -0.324,
+          "se": 0.078
+        },
+        {
+          "label": "Cost × income",
+          "estimate": 0.005,
+          "se": 0.002
+        },
+        {
+          "label": "Support × income",
+          "estimate": -0.018,
+          "se": 0.005
+        },
+        {
+          "label": "Green × environmental concern",
+          "estimate": 0.217,
+          "se": 0.088
+        },
+        {
+          "label": "Status quo × trust",
+          "estimate": -0.281,
+          "se": 0.065
+        }
+      ],
+      "method": [
+        [
+          "Choice attributes",
+          "Restriction, transport, financial support and governance vary within policy packages."
+        ],
+        [
+          "Preference variation",
+          "Mixed logit and reported interactions examine variation across respondents."
+        ],
+        [
+          "Trade-offs",
+          "WTP summarizes each attribute relative to cost; values are not a policy budget."
+        ]
+      ],
+      "equation": "Utility = policy-attribute terms + respondent interactions + random component",
+      "equationNote": "An interaction changes how an attribute relates to preference. It is not an independent policy benefit to add to the package."
+    },
+    {
+      "id": "buffet-nudging",
+      "type": "paired",
+      "title": "Lower intended intake, with a premium-tier trade-off.",
+      "caption": "Both conditions are shown together. Calorie outcomes are intended intake; premium share is the reported Study 2 choice outcome.",
+      "source": "Project materials: Study 1 n = 257; Study 2 n = 147; ordinal logit and mediation.",
+      "studies": [
+        {
+          "label": "Study 1",
+          "n": 257,
+          "before": 1573,
+          "after": 1427
+        },
+        {
+          "label": "Study 2",
+          "n": 147,
+          "before": 1668,
+          "after": 1445
+        }
+      ],
+      "premium": {
+        "before": 52.4,
+        "after": 23.8,
+        "oddsRatio": 0.52
+      },
+      "mediation": {
+        "estimate": -0.339,
+        "ci": [
+          -0.56,
+          -0.15
+        ]
+      },
+      "images": [
+        {
+          "label": "Study 1 · healthier first",
+          "image": "assets/menu-giao-hy/buffet-sim-veg-1.webp"
+        },
+        {
+          "label": "Study 1 · comparison",
+          "image": "assets/menu-giao-hy/buffet-sim-korean-grill-1.webp"
+        },
+        {
+          "label": "Study 2 · low to high",
+          "image": "assets/menu-giao-hy/buffet-sim-jp-hotpot-variant-a.webp"
+        },
+        {
+          "label": "Study 2 · high to low",
+          "image": "assets/menu-giao-hy/buffet-sim-jp-hotpot-variant-e.webp"
+        }
+      ],
+      "method": [
+        [
+          "Presentation",
+          "The experiments vary menu or price-tier order."
+        ],
+        [
+          "Choice outcome",
+          "Ordinal logit models higher-tier choice in Study 2."
+        ],
+        [
+          "Mechanism",
+          "The reported indirect effect through perceived value is −0.339, CI [−0.56, −0.15]."
+        ]
+      ],
+      "equation": "Menu condition → perceived value → tier choice",
+      "equationNote": "The mediation model helps interpret the trade-off. The odds ratio of 0.52 means lower odds, not a 48 percentage-point fall in probability."
+    },
+    {
+      "id": "influencer-strategy",
+      "type": "constructs",
+      "title": "Engagement connects three inputs with retention.",
+      "caption": "Reported structural model. R² describes explained variance in the survey constructs, not conversion uplift.",
+      "source": "Manuscript structure and reported figure; total n = 565, EFA = 200, CFA/SEM = 365.",
+      "inputs": [
+        {
+          "label": "Content experience",
+          "short": "CX",
+          "note": "Content experience is a measured antecedent of engagement. EFA and CFA establish the scale structure before SEM estimates the structural relationships."
+        },
+        {
+          "label": "Expectation alignment",
+          "short": "CEX",
+          "note": "Expectation alignment is modeled separately from content experience. Its relationship with retention is examined through engagement."
+        },
+        {
+          "label": "Brand equity transfer",
+          "short": "BE",
+          "note": "The brand-related construct enters the engagement model. A structural association does not assign a measured return on influencer spending."
+        }
+      ],
+      "middle": {
+        "label": "Consumer engagement",
+        "short": "CE",
+        "metric": "R² = 0.55"
+      },
+      "end": {
+        "label": "Customer retention",
+        "short": "CR",
+        "metric": "R² = 0.70"
+      },
+      "sample": [
+        [
+          "EFA",
+          200
+        ],
+        [
+          "CFA / SEM",
+          365
+        ]
+      ],
+      "method": [
+        [
+          "EFA",
+          "200 responses explore the measurement structure."
+        ],
+        [
+          "CFA",
+          "365 responses evaluate the measurement model."
+        ],
+        [
+          "SEM",
+          "The same 365-response analysis examines direct and mediated paths."
+        ]
+      ],
+      "equation": "CX, CEX, BE → CE → CR",
+      "equationNote": "The project record provides the model structure and R², but no path-coefficient or measurement-fit table. Numeric labels therefore remain limited to the supplied outputs."
+    },
+    {
+      "id": "arts-workshop",
+      "type": "constructs",
+      "title": "Attitude is the link to participation intention.",
+      "caption": "The figure focuses on the mediated pathway. Only the two numeric paths supplied in the project record are labelled.",
+      "source": "Ladder Art Space project record; 216 valid responses; PROCESS Model 4.",
+      "inputs": [
+        {
+          "label": "Learning value",
+          "short": "Learning",
+          "coefficient": 0.35,
+          "note": "The source reports a learning-value → attitude path of 0.35. Its standardized status is not documented, so it remains labelled as a reported path."
+        },
+        {
+          "label": "Social value",
+          "short": "Social",
+          "note": "Social experience is included in the model. The source record does not provide a separate numeric coefficient for this path."
+        },
+        {
+          "label": "Hedonic value",
+          "short": "Enjoyment",
+          "note": "Enjoyment is the third experience dimension. It is modeled alongside learning and social value rather than assigned an invented effect size."
+        }
+      ],
+      "middle": {
+        "label": "Workshop attitude",
+        "short": "Attitude",
+        "metric": "Mediator"
+      },
+      "end": {
+        "label": "Participation intention",
+        "short": "Intention",
+        "metric": "Reported path: 0.59",
+        "coefficient": 0.59
+      },
+      "method": [
+        [
+          "Measurement",
+          "Check the experience-value and attitude measures before interpreting paths."
+        ],
+        [
+          "Mediation",
+          "PROCESS Model 4 examines an indirect path through attitude."
+        ],
+        [
+          "Service test",
+          "Beginner guidance is a proposed service experiment; actual booking requires a new outcome."
+        ]
+      ],
+      "equation": "Experience value → workshop attitude → participation intention",
+      "equationNote": "PROCESS Model 4 includes a direct effect and an indirect effect through the mediator. The figure focuses on the mediated path; the source does not supply the direct coefficient or enough detail to multiply the two displayed paths into a confirmed indirect estimate."
+    },
+    {
+      "id": "psych-ownership",
+      "type": "constructs",
+      "title": "Personal ownership and shared ownership are distinct.",
+      "caption": "Conceptual research model. Selecting a perspective changes the explanation, not an estimated effect.",
+      "source": "Existing psychological-ownership framework; no estimated sample or coefficients in the source record.",
+      "inputs": [
+        {
+          "label": "Individual ownership",
+          "short": "Personal",
+          "note": "The felt connection is personal: control and identification with a work target. Measurement needs to specify the target, such as a task, project or organization."
+        },
+        {
+          "label": "Collective ownership",
+          "short": "Shared",
+          "note": "A shared sense of ownership requires more than an individual response. The proposed study must define the group and justify how shared meaning is measured."
+        }
+      ],
+      "middle": {
+        "label": "Affective commitment",
+        "short": "Commitment",
+        "metric": "Proposed mediator"
+      },
+      "end": {
+        "label": "Cooperation",
+        "short": "Cooperation",
+        "metric": "Proposed outcome"
+      },
+      "method": [
+        [
+          "Target",
+          "Define what is felt to be owned before writing items."
+        ],
+        [
+          "Level",
+          "Keep individual ownership and collective ownership separate."
+        ],
+        [
+          "Pathway",
+          "Commitment and cooperation are relationships to test with new data."
+        ]
+      ],
+      "equation": "Individual / collective ownership → commitment → cooperation",
+      "equationNote": "The model is a conceptual specification. Numerical coefficients remain unestimated."
+    },
+    {
+      "id": "hotel-value-framework",
+      "type": "profiles",
+      "title": "Three lenses for interpreting guest value.",
+      "caption": "Conceptual service profiles. Each lens joins a review theme, a service response and a question to validate.",
+      "source": "Interpretation framework linked to the Da Nang segmentation study; no separate dataset or numerical weights.",
+      "profiles": [
+        {
+          "label": "Rest & comfort",
+          "image": "assets/optimized/hvf-segment-relaxed-comfort-1024.webp",
+          "theme": "Room comfort, calm and service care",
+          "response": "Make room readiness and a restful stay reliable.",
+          "question": "Which elements of comfort do guests mention and evaluate consistently?"
+        },
+        {
+          "label": "Local experience",
+          "image": "assets/optimized/hvf-segment-local-experience-1024.webp",
+          "theme": "Food, recommendations and location",
+          "response": "Connect guests with a small set of useful local experiences.",
+          "question": "Does local experience add value after basic service quality is accounted for?"
+        },
+        {
+          "label": "Reliable stay",
+          "image": "assets/optimized/hvf-segment-reliability-1024.webp",
+          "theme": "Access, responsiveness and consistency",
+          "response": "Reduce friction during arrival and everyday requests.",
+          "question": "Which service failures repeatedly weaken value judgments?"
+        }
+      ],
+      "method": [
+        [
+          "Themes",
+          "Start with the review features used in the segmentation."
+        ],
+        [
+          "Value dimensions",
+          "Comfort, care and local experience provide interpretation vocabulary."
+        ],
+        [
+          "Validation",
+          "Interviews and a measurement study can test whether the dimensions are distinct."
+        ]
+      ],
+      "equation": "Review theme → value dimension → service hypothesis",
+      "equationNote": "The profiles organize questions for service design. They are not additional observed clusters or measured market shares."
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="648pt" viewBox="0 0 1080 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T15:58:48.981459</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1080 648 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 216 486 
+L 583.2 486 
+L 583.2 149.04 
+L 216 149.04 
+z
+" style="fill: #faf9f6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 216 486 
+L 216 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="216" y="503.161875" transform="rotate(-0 216 503.161875)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 289.44 486 
+L 289.44 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="289.44" y="503.161875" transform="rotate(-0 289.44 503.161875)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 362.88 486 
+L 362.88 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="362.88" y="503.161875" transform="rotate(-0 362.88 503.161875)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 436.32 486 
+L 436.32 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="436.32" y="503.161875" transform="rotate(-0 436.32 503.161875)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 509.76 486 
+L 509.76 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="509.76" y="503.161875" transform="rotate(-0 509.76 503.161875)">80</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 583.2 486 
+L 583.2 149.04 
+" clip-path="url(#pf0cf897fed)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="583.2" y="503.161875" transform="rotate(-0 583.2 503.161875)">100</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="399.6" y="517.4575" transform="rotate(-0 399.6 517.4575)">Correct answers · %</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="207" y="201.472595" transform="rotate(-0 207 201.472595)">Dietary principles</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="207" y="321.600937" transform="rotate(-0 207 321.600937)">Nutrient contents</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="207" y="441.72928" transform="rotate(-0 207 441.72928)">Calories</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 216 164.356364 
+L 529.956 164.356364 
+L 529.956 230.426952 
+L 216 230.426952 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #6b7650"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 216 284.484706 
+L 471.9384 284.484706 
+L 471.9384 350.555294 
+L 216 350.555294 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #6b7650"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 216 404.613048 
+L 385.2792 404.613048 
+L 385.2792 470.683636 
+L 216 470.683636 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #6b7650"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 529.956 164.356364 
+L 583.2 164.356364 
+L 583.2 230.426952 
+L 529.956 230.426952 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #e7e5dc"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 471.9384 284.484706 
+L 583.2 284.484706 
+L 583.2 350.555294 
+L 471.9384 350.555294 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #e7e5dc"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 385.2792 404.613048 
+L 583.2 404.613048 
+L 583.2 470.683636 
+L 385.2792 470.683636 
+z
+" clip-path="url(#pf0cf897fed)" style="fill: #e7e5dc"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="535.0968" y="200.154548" transform="rotate(-0 535.0968 200.154548)">85.5%</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="477.0792" y="320.282891" transform="rotate(-0 477.0792 320.282891)">69.7%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="390.42" y="440.411233" transform="rotate(-0 390.42 440.411233)">46.1%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="648" y="149.04" transform="rotate(-0 648 149.04)">Adjusted diet-quality model</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 13px; font-family: 'Calibri'; text-anchor: start; fill: #6b7650" x="648" y="191.0304" transform="rotate(-0 648 191.0304)">R² = 0.538  ·  n = 280</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="648" y="250.5168" transform="rotate(-0 648 250.5168)">Age</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 13px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="848.34" y="250.5168" transform="rotate(-0 848.34 250.5168)">0.1284</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="648" y="273.2616" transform="rotate(-0 648 273.2616)">per year</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="848.34" y="273.2616" transform="rotate(-0 848.34 273.2616)">CI 0.04 to 0.217</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="648" y="313.5024" transform="rotate(-0 648 313.5024)">Sex</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 13px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="848.34" y="313.5024" transform="rotate(-0 848.34 313.5024)">-0.0129</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="648" y="336.2472" transform="rotate(-0 648 336.2472)">male = 1</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="848.34" y="336.2472" transform="rotate(-0 848.34 336.2472)">CI -0.364 to 0.338</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="648" y="376.488" transform="rotate(-0 648 376.488)">Knowledge</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 13px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="848.34" y="376.488" transform="rotate(-0 848.34 376.488)">0.1102</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="648" y="399.2328" transform="rotate(-0 648 399.2328)">per knowledge-score point</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="848.34" y="399.2328" transform="rotate(-0 848.34 399.2328)">CI 0.022 to 0.198</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="648" y="439.4736" transform="rotate(-0 648 439.4736)">Physical activity</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 13px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="848.34" y="439.4736" transform="rotate(-0 848.34 439.4736)">0.0029</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="648" y="462.2184" transform="rotate(-0 648 462.2184)">per MET-minute / week</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="848.34" y="462.2184" transform="rotate(-0 848.34 462.2184)">CI 0.003 to 0.003</text>
+   </g>
+  </g>
+  <g id="text_32">
+   <text style="font-weight: 700; font-size: 24px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="59.4" y="45.4725" transform="rotate(-0 59.4 45.4725)">Basic principles are better understood than calories.</text>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="73.003125" transform="rotate(-0 59.4 73.003125)">Knowledge domains and adjusted diet-quality associations are different parts of the study. Select the view you want to inspect.</text>
+  </g>
+  <g id="text_34">
+   <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="610.577188" transform="rotate(-0 59.4 610.577188)">FCBEM paper: Table 2 (knowledge), Table 3 (diet) and Table 5 (regression); n = 280.</text>
+  </g>
+  <g id="text_35">
+   <text style="font-size: 10px; font-family: 'Calibri'; fill: #60646b" transform="translate(648 553.82)">Different coefficient units; do not rank their raw sizes.</text>
+   <text style="font-size: 10px; font-family: 'Calibri'; fill: #60646b" transform="translate(648 563.76)">The activity interval is rounded in the printed paper.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf0cf897fed">
+   <rect x="216" y="149.04" width="367.2" height="336.96"/>
+  </clipPath>
+ </defs>
+</svg>

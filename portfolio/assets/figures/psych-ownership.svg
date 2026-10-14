@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="648pt" viewBox="0 0 1080 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T15:58:49.447148</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1080 648 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 212.112 285.12 
+C 245.050225 285.12 276.64382 280.681971 299.934662 272.783338 
+C 323.225504 264.884704 336.312 254.170355 336.312 243 
+C 336.312 231.829645 323.225504 221.115296 299.934662 213.216662 
+C 276.64382 205.318029 245.050225 200.88 212.112 200.88 
+C 179.173775 200.88 147.58018 205.318029 124.289338 213.216662 
+C 100.998496 221.115296 87.912 231.829645 87.912 243 
+C 87.912 254.170355 100.998496 264.884704 124.289338 272.783338 
+C 147.58018 280.681971 179.173775 285.12 212.112 285.12 
+z
+" clip-path="url(#p53b8b78cb5)" style="fill: #4d6972"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 342.970618 244.061741 
+Q 408.346528 285.119076 472.018192 325.106111 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #4d6972; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 468.067875 318.610343 
+L 472.018192 325.106111 
+L 464.451388 324.368904 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #4d6972; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 212.112 453.6 
+C 245.050225 453.6 276.64382 449.161971 299.934662 441.263338 
+C 323.225504 433.364704 336.312 422.650355 336.312 411.48 
+C 336.312 400.309645 323.225504 389.595296 299.934662 381.696662 
+C 276.64382 373.798029 245.050225 369.36 212.112 369.36 
+C 179.173775 369.36 147.58018 373.798029 124.289338 381.696662 
+C 100.998496 389.595296 87.912 400.309645 87.912 411.48 
+C 87.912 422.650355 100.998496 433.364704 124.289338 441.263338 
+C 147.58018 449.161971 179.173775 453.6 212.112 453.6 
+z
+" clip-path="url(#p53b8b78cb5)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 342.970618 410.418259 
+Q 408.346528 369.360924 472.018192 329.373889 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 464.451388 330.111096 
+L 472.018192 329.373889 
+L 468.067875 335.869657 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 604.584 369.36 
+C 637.522225 369.36 669.11582 364.921971 692.406662 357.023338 
+C 715.697504 349.124704 728.784 338.410355 728.784 327.24 
+C 728.784 316.069645 715.697504 305.355296 692.406662 297.456662 
+C 669.11582 289.558029 637.522225 285.12 604.584 285.12 
+C 571.645775 285.12 540.05218 289.558029 516.761338 297.456662 
+C 493.470496 305.355296 480.384 316.069645 480.384 327.24 
+C 480.384 338.410355 493.470496 349.124704 516.761338 357.023338 
+C 540.05218 364.921971 571.645775 369.36 604.584 369.36 
+z
+" clip-path="url(#p53b8b78cb5)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 897.696 369.36 
+C 930.634225 369.36 962.22782 364.921971 985.518662 357.023338 
+C 1008.809504 349.124704 1021.896 338.410355 1021.896 327.24 
+C 1021.896 316.069645 1008.809504 305.355296 985.518662 297.456662 
+C 962.22782 289.558029 930.634225 285.12 897.696 285.12 
+C 864.757775 285.12 833.16418 289.558029 809.873338 297.456662 
+C 786.582496 305.355296 773.496 316.069645 773.496 327.24 
+C 773.496 338.410355 786.582496 349.124704 809.873338 357.023338 
+C 833.16418 364.921971 864.757775 369.36 897.696 369.36 
+z
+" clip-path="url(#p53b8b78cb5)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 735.75145 327.24 
+Q 751.141465 327.24 764.519018 327.24 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #4d6972; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 757.719018 323.84 
+L 764.519018 327.24 
+L 757.719018 330.64 
+" clip-path="url(#p53b8b78cb5)" style="fill: none; stroke: #4d6972; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #ffffff" x="212.112" y="231.7755" transform="rotate(-0 212.112 231.7755)">Individual ownership</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #f3f1e8" x="212.112" y="268.677719" transform="rotate(-0 212.112 268.677719)">Personal</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="212.112" y="400.2555" transform="rotate(-0 212.112 400.2555)">Collective ownership</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="212.112" y="437.157719" transform="rotate(-0 212.112 437.157719)">Shared</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="604.584" y="316.0155" transform="rotate(-0 604.584 316.0155)">Affective commitment</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="604.584" y="352.917719" transform="rotate(-0 604.584 352.917719)">Proposed mediator</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="897.696" y="316.0155" transform="rotate(-0 897.696 316.0155)">Cooperation</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="897.696" y="352.917719" transform="rotate(-0 897.696 352.917719)">Proposed outcome</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="540" y="527.31" transform="rotate(-0 540 527.31)">Conceptual relationships</text>
+   </g>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 24px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="59.4" y="45.4725" transform="rotate(-0 59.4 45.4725)">Personal ownership and shared ownership are distinct.</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="73.003125" transform="rotate(-0 59.4 73.003125)">Conceptual research model. Selecting a perspective changes the explanation, not an estimated effect.</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="610.577188" transform="rotate(-0 59.4 610.577188)">Existing psychological-ownership framework; no estimated sample or coefficients in the source record.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p53b8b78cb5">
+   <rect x="43.2" y="116.64" width="993.6" height="421.2"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="648pt" viewBox="0 0 1080 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T15:58:49.373337</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1080 648 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 212.112 251.424 
+C 245.050225 251.424 276.64382 246.985971 299.934662 239.087338 
+C 323.225504 231.188704 336.312 220.474355 336.312 209.304 
+C 336.312 198.133645 323.225504 187.419296 299.934662 179.520662 
+C 276.64382 171.622029 245.050225 167.184 212.112 167.184 
+C 179.173775 167.184 147.58018 171.622029 124.289338 179.520662 
+C 100.998496 187.419296 87.912 198.133645 87.912 209.304 
+C 87.912 220.474355 100.998496 231.188704 124.289338 239.087338 
+C 147.58018 246.985971 179.173775 251.424 212.112 251.424 
+z
+" clip-path="url(#p17ceb59694)" style="fill: #886952"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 342.78027 210.623078 
+Q 408.346271 268.27048 472.400911 324.589052 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #886952; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 469.539124 317.545603 
+L 472.400911 324.589052 
+L 465.049079 322.652412 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #886952; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 212.112 369.36 
+C 245.050225 369.36 276.64382 364.921971 299.934662 357.023338 
+C 323.225504 349.124704 336.312 338.410355 336.312 327.24 
+C 336.312 316.069645 323.225504 305.355296 299.934662 297.456662 
+C 276.64382 289.558029 245.050225 285.12 212.112 285.12 
+C 179.173775 285.12 147.58018 289.558029 124.289338 297.456662 
+C 100.998496 305.355296 87.912 316.069645 87.912 327.24 
+C 87.912 338.410355 100.998496 349.124704 124.289338 357.023338 
+C 147.58018 364.921971 179.173775 369.36 212.112 369.36 
+z
+" clip-path="url(#p17ceb59694)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 343.281724 327.24 
+Q 408.350839 327.24 471.407492 327.24 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 464.607492 323.84 
+L 471.407492 327.24 
+L 464.607492 330.64 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 212.112 487.296 
+C 245.050225 487.296 276.64382 482.857971 299.934662 474.959338 
+C 323.225504 467.060704 336.312 456.346355 336.312 445.176 
+C 336.312 434.005645 323.225504 423.291296 299.934662 415.392662 
+C 276.64382 407.494029 245.050225 403.056 212.112 403.056 
+C 179.173775 403.056 147.58018 407.494029 124.289338 415.392662 
+C 100.998496 423.291296 87.912 434.005645 87.912 445.176 
+C 87.912 456.346355 100.998496 467.060704 124.289338 474.959338 
+C 147.58018 482.857971 179.173775 487.296 212.112 487.296 
+z
+" clip-path="url(#p17ceb59694)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 342.78027 443.856922 
+Q 408.346271 386.20952 472.400911 329.890948 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 465.049079 331.827588 
+L 472.400911 329.890948 
+L 469.539124 336.934397 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #a3aaa0; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 604.584 369.36 
+C 637.522225 369.36 669.11582 364.921971 692.406662 357.023338 
+C 715.697504 349.124704 728.784 338.410355 728.784 327.24 
+C 728.784 316.069645 715.697504 305.355296 692.406662 297.456662 
+C 669.11582 289.558029 637.522225 285.12 604.584 285.12 
+C 571.645775 285.12 540.05218 289.558029 516.761338 297.456662 
+C 493.470496 305.355296 480.384 316.069645 480.384 327.24 
+C 480.384 338.410355 493.470496 349.124704 516.761338 357.023338 
+C 540.05218 364.921971 571.645775 369.36 604.584 369.36 
+z
+" clip-path="url(#p17ceb59694)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 897.696 369.36 
+C 930.634225 369.36 962.22782 364.921971 985.518662 357.023338 
+C 1008.809504 349.124704 1021.896 338.410355 1021.896 327.24 
+C 1021.896 316.069645 1008.809504 305.355296 985.518662 297.456662 
+C 962.22782 289.558029 930.634225 285.12 897.696 285.12 
+C 864.757775 285.12 833.16418 289.558029 809.873338 297.456662 
+C 786.582496 305.355296 773.496 316.069645 773.496 327.24 
+C 773.496 338.410355 786.582496 349.124704 809.873338 357.023338 
+C 833.16418 364.921971 864.757775 369.36 897.696 369.36 
+z
+" clip-path="url(#p17ceb59694)" style="fill: #e9e7df"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 735.75145 327.24 
+Q 751.141465 327.24 764.519018 327.24 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #886952; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 757.719018 323.84 
+L 764.519018 327.24 
+L 757.719018 330.64 
+" clip-path="url(#p17ceb59694)" style="fill: none; stroke: #886952; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #ffffff" x="212.112" y="198.071844" transform="rotate(-0 212.112 198.071844)">Learning value</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #f3f1e8" x="212.112" y="234.977031" transform="rotate(-0 212.112 234.977031)">Learning</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'Calibri'; text-anchor: start; fill: #886952" x="361.152" y="251.424" transform="rotate(-0 361.152 251.424)">0.35</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="212.112" y="316.0155" transform="rotate(-0 212.112 316.0155)">Social value</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="212.112" y="352.917719" transform="rotate(-0 212.112 352.917719)">Social</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="212.112" y="433.9515" transform="rotate(-0 212.112 433.9515)">Hedonic value</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="212.112" y="470.849031" transform="rotate(-0 212.112 470.849031)">Enjoyment</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="604.584" y="316.0155" transform="rotate(-0 604.584 316.0155)">Workshop attitude</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="604.584" y="352.917719" transform="rotate(-0 604.584 352.917719)">Mediator</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; fill: #24272c" transform="translate(860.355375 309.065812)">Participation</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Calibri'; fill: #24272c" transform="translate(870.847719 322.965188)">intention</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="897.696" y="352.917719" transform="rotate(-0 897.696 352.917719)">Outcome</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 14px; font-family: 'Calibri'; text-anchor: middle; fill: #886952" x="748.656" y="297.756" transform="rotate(-0 748.656 297.756)">0.59</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="540" y="527.31" transform="rotate(-0 540 527.31)">Reported paths; standardized status is unspecified</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 24px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="59.4" y="45.4725" transform="rotate(-0 59.4 45.4725)">Attitude is the link to participation intention.</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="73.003125" transform="rotate(-0 59.4 73.003125)">The figure focuses on the mediated pathway. Only the two numeric paths supplied in the project record are labelled.</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="610.577188" transform="rotate(-0 59.4 610.577188)">Ladder Art Space project record; 216 valid responses; PROCESS Model 4.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p17ceb59694">
+   <rect x="43.2" y="116.64" width="993.6" height="421.2"/>
+  </clipPath>
+ </defs>
+</svg>

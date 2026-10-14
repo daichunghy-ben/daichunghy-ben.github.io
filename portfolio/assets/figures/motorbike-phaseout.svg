@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="648pt" viewBox="0 0 1080 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T15:58:49.084351</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1080 648 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 345.6 550.8 
+L 961.2 550.8 
+L 961.2 110.16 
+L 345.6 110.16 
+z
+" style="fill: #faf9f6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 433.542857 550.8 
+L 433.542857 110.16 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="433.542857" y="567.961875" transform="rotate(-0 433.542857 567.961875)">−100</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 609.428571 550.8 
+L 609.428571 110.16 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="609.428571" y="567.961875" transform="rotate(-0 609.428571 567.961875)">0</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 785.314286 550.8 
+L 785.314286 110.16 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="785.314286" y="567.961875" transform="rotate(-0 785.314286 567.961875)">100</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 961.2 550.8 
+L 961.2 110.16 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="961.2" y="567.961875" transform="rotate(-0 961.2 567.961875)">200</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="653.4" y="582.2575" transform="rotate(-0 653.4 582.2575)">VND thousand / month</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="134.290653" transform="rotate(-0 336.6 134.290653)">Restrict fossil-fuel motorcycles</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="165.084014" transform="rotate(-0 336.6 165.084014)">Restrict all fossil-fuel vehicles</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11"/>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="195.898" transform="rotate(-0 336.6 195.898)">Public transport +15%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="226.711986" transform="rotate(-0 336.6 226.711986)">Public transport +30%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13"/>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="257.525972" transform="rotate(-0 336.6 257.525972)">Fares −25%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14"/>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="288.339958" transform="rotate(-0 336.6 288.339958)">Fares −50%</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15"/>
+     <g id="text_12">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="319.153944" transform="rotate(-0 336.6 319.153944)">Green space +20%</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_16"/>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="349.967931" transform="rotate(-0 336.6 349.967931)">Green space +40%</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_17"/>
+     <g id="text_14">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="380.781917" transform="rotate(-0 336.6 380.781917)">Unguarded park &amp; ride</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_18"/>
+     <g id="text_15">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="411.595903" transform="rotate(-0 336.6 411.595903)">Guarded park &amp; ride</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_19"/>
+     <g id="text_16">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="442.409889" transform="rotate(-0 336.6 442.409889)">Support pass</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_20"/>
+     <g id="text_17">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="473.223875" transform="rotate(-0 336.6 473.223875)">Electric-motorcycle grant</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_21"/>
+     <g id="text_18">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="504.037861" transform="rotate(-0 336.6 504.037861)">Revenue reinvestment</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_22"/>
+     <g id="text_19">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="336.6" y="534.851847" transform="rotate(-0 336.6 534.851847)">Reinvestment + oversight</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 609.428571 130.189091 
+L 489.0348 130.189091 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #a65745; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 609.428571 161.003077 
+L 371.595909 161.003077 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #a65745; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 609.428571 191.817063 
+L 700.502194 191.817063 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 609.428571 222.631049 
+L 757.4364 222.631049 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 609.428571 253.445035 
+L 669.687017 253.445035 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 609.428571 284.259021 
+L 744.719863 284.259021 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 609.428571 315.073007 
+L 789.799371 315.073007 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_30">
+    <path d="M 609.428571 345.886993 
+L 879.993566 345.886993 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_31">
+    <path d="M 609.428571 376.700979 
+L 639.522617 376.700979 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_32">
+    <path d="M 609.428571 407.514965 
+L 714.678583 407.514965 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_33">
+    <path d="M 609.428571 438.328951 
+L 759.758091 438.328951 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_34">
+    <path d="M 609.428571 469.142937 
+L 940.304777 469.142937 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_35">
+    <path d="M 609.428571 499.956923 
+L 729.751989 499.956923 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_36">
+    <path d="M 609.428571 530.770909 
+L 789.799371 530.770909 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke: #47716d; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_37">
+    <path d="M 609.428571 550.8 
+L 609.428571 110.16 
+" clip-path="url(#p177e56b21f)" style="fill: none; stroke-dasharray: 1,1.65; stroke-dashoffset: 0; stroke: #60646b"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="mf001a8068c" d="M 0 2.95804 
+C 0.784481 2.95804 1.536938 2.646362 2.09165 2.09165 
+C 2.646362 1.536938 2.95804 0.784481 2.95804 0 
+C 2.95804 -0.784481 2.646362 -1.536938 2.09165 -2.09165 
+C 1.536938 -2.646362 0.784481 -2.95804 0 -2.95804 
+C -0.784481 -2.95804 -1.536938 -2.646362 -2.09165 -2.09165 
+C -2.646362 -1.536938 -2.95804 -0.784481 -2.95804 0 
+C -2.95804 0.784481 -2.646362 1.536938 -2.09165 2.09165 
+C -1.536938 2.646362 -0.784481 2.95804 0 2.95804 
+z
+" style="stroke: #a65745"/>
+    </defs>
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#mf001a8068c" x="489.0348" y="130.189091" style="fill: #a65745; stroke: #a65745"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="132.70081" transform="rotate(-0 978.788571 132.70081)">-68.45</text>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#mf001a8068c" x="371.595909" y="161.003077" style="fill: #a65745; stroke: #a65745"/>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="163.514796" transform="rotate(-0 978.788571 163.514796)">-135.22</text>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="m01ce77f830" d="M 0 2.95804 
+C 0.784481 2.95804 1.536938 2.646362 2.09165 2.09165 
+C 2.646362 1.536938 2.95804 0.784481 2.95804 0 
+C 2.95804 -0.784481 2.646362 -1.536938 2.09165 -2.09165 
+C 1.536938 -2.646362 0.784481 -2.95804 0 -2.95804 
+C -0.784481 -2.95804 -1.536938 -2.646362 -2.09165 -2.09165 
+C -2.646362 -1.536938 -2.95804 -0.784481 -2.95804 0 
+C -2.95804 0.784481 -2.646362 1.536938 -2.09165 2.09165 
+C -1.536938 2.646362 -0.784481 2.95804 0 2.95804 
+z
+" style="stroke: #47716d"/>
+    </defs>
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="700.502194" y="191.817063" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="194.328782" transform="rotate(-0 978.788571 194.328782)">51.78</text>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="757.4364" y="222.631049" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="225.142768" transform="rotate(-0 978.788571 225.142768)">84.15</text>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="669.687017" y="253.445035" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="255.956754" transform="rotate(-0 978.788571 255.956754)">34.26</text>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="744.719863" y="284.259021" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="286.77074" transform="rotate(-0 978.788571 286.77074)">76.92</text>
+   </g>
+   <g id="PathCollection_7">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="789.799371" y="315.073007" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="317.584726" transform="rotate(-0 978.788571 317.584726)">102.55</text>
+   </g>
+   <g id="PathCollection_8">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="879.993566" y="345.886993" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="348.398712" transform="rotate(-0 978.788571 348.398712)">153.83</text>
+   </g>
+   <g id="PathCollection_9">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="639.522617" y="376.700979" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="379.212698" transform="rotate(-0 978.788571 379.212698)">17.11</text>
+   </g>
+   <g id="PathCollection_10">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="714.678583" y="407.514965" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="410.026684" transform="rotate(-0 978.788571 410.026684)">59.84</text>
+   </g>
+   <g id="PathCollection_11">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="759.758091" y="438.328951" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="440.84067" transform="rotate(-0 978.788571 440.84067)">85.47</text>
+   </g>
+   <g id="PathCollection_12">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="940.304777" y="469.142937" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="471.654656" transform="rotate(-0 978.788571 471.654656)">188.12</text>
+   </g>
+   <g id="PathCollection_13">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="729.751989" y="499.956923" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="502.468642" transform="rotate(-0 978.788571 502.468642)">68.41</text>
+   </g>
+   <g id="PathCollection_14">
+    <g clip-path="url(#p177e56b21f)">
+     <use xlink:href="#m01ce77f830" x="789.799371" y="530.770909" style="fill: #47716d; stroke: #47716d"/>
+    </g>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="978.788571" y="533.282628" transform="rotate(-0 978.788571 533.282628)">102.55</text>
+   </g>
+  </g>
+  <g id="text_34">
+   <text style="font-weight: 700; font-size: 24px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="59.4" y="45.4725" transform="rotate(-0 59.4 45.4725)">Restrictions and support belong in the same picture.</text>
+  </g>
+  <g id="text_35">
+   <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="73.003125" transform="rotate(-0 59.4 73.003125)">Reported monthly willingness to pay for policy attributes. Amounts are model trade-offs, expressed in VND per month.</text>
+  </g>
+  <g id="text_36">
+   <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="610.577188" transform="rotate(-0 59.4 610.577188)">Existing CIEMB manuscript-table reconstruction: Table 5 values; Table 4 interactions.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p177e56b21f">
+   <rect x="345.6" y="110.16" width="615.6" height="440.64"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="648pt" viewBox="0 0 1080 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T15:58:49.202881</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1080 648 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #faf9f6"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 129.6 453.6 
+L 572.4 453.6 
+L 572.4 149.04 
+L 129.6 149.04 
+z
+" style="fill: #faf9f6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 129.6 453.6 
+L 129.6 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="129.6" y="470.761875" transform="rotate(-0 129.6 470.761875)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 178.8 453.6 
+L 178.8 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="178.8" y="470.761875" transform="rotate(-0 178.8 470.761875)">200</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 228 453.6 
+L 228 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="228" y="470.761875" transform="rotate(-0 228 470.761875)">400</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 277.2 453.6 
+L 277.2 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="277.2" y="470.761875" transform="rotate(-0 277.2 470.761875)">600</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 326.4 453.6 
+L 326.4 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="326.4" y="470.761875" transform="rotate(-0 326.4 470.761875)">800</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 375.6 453.6 
+L 375.6 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="375.6" y="470.761875" transform="rotate(-0 375.6 470.761875)">1000</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 424.8 453.6 
+L 424.8 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="424.8" y="470.761875" transform="rotate(-0 424.8 470.761875)">1200</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 474 453.6 
+L 474 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="474" y="470.761875" transform="rotate(-0 474 470.761875)">1400</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_17">
+      <path d="M 523.2 453.6 
+L 523.2 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="523.2" y="470.761875" transform="rotate(-0 523.2 470.761875)">1600</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_19">
+      <path d="M 572.4 453.6 
+L 572.4 149.04 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="572.4" y="470.761875" transform="rotate(-0 572.4 470.761875)">1800</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="351" y="485.0575" transform="rotate(-0 351 485.0575)">Mean intended intake · kcal</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_21"/>
+     <g id="text_12">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="120.6" y="229.260937" transform="rotate(-0 120.6 229.260937)">Study 1 · n = 257</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_22"/>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="120.6" y="381.540937" transform="rotate(-0 120.6 381.540937)">Study 2 · n = 147</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 480.642 225.18 
+L 516.558 225.18 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #c7ccbe; stroke-width: 9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 485.07 377.46 
+L 539.928 377.46 
+" clip-path="url(#p41699448f1)" style="fill: none; stroke: #c7ccbe; stroke-width: 9; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m2e6932d267" d="M 0 4.330127 
+C 1.148363 4.330127 2.249847 3.873878 3.061862 3.061862 
+C 3.873878 2.249847 4.330127 1.148363 4.330127 0 
+C 4.330127 -1.148363 3.873878 -2.249847 3.061862 -3.061862 
+C 2.249847 -3.873878 1.148363 -4.330127 0 -4.330127 
+C -1.148363 -4.330127 -2.249847 -3.873878 -3.061862 -3.061862 
+C -3.873878 -2.249847 -4.330127 -1.148363 -4.330127 0 
+C -4.330127 1.148363 -3.873878 2.249847 -3.061862 3.061862 
+C -2.249847 3.873878 -1.148363 4.330127 0 4.330127 
+z
+" style="stroke: #919986"/>
+    </defs>
+    <g clip-path="url(#p41699448f1)">
+     <use xlink:href="#m2e6932d267" x="516.558" y="225.18" style="fill: #919986; stroke: #919986"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mcb3c98749d" d="M 0 4.330127 
+C 1.148363 4.330127 2.249847 3.873878 3.061862 3.061862 
+C 3.873878 2.249847 4.330127 1.148363 4.330127 0 
+C 4.330127 -1.148363 3.873878 -2.249847 3.061862 -3.061862 
+C 2.249847 -3.873878 1.148363 -4.330127 0 -4.330127 
+C -1.148363 -4.330127 -2.249847 -3.873878 -3.061862 -3.061862 
+C -3.873878 -2.249847 -4.330127 -1.148363 -4.330127 0 
+C -4.330127 1.148363 -3.873878 2.249847 -3.061862 3.061862 
+C -2.249847 3.873878 -1.148363 4.330127 0 4.330127 
+z
+" style="stroke: #996447"/>
+    </defs>
+    <g clip-path="url(#p41699448f1)">
+     <use xlink:href="#mcb3c98749d" x="480.642" y="225.18" style="fill: #996447; stroke: #996447"/>
+    </g>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #996447" x="480.642" y="251.0676" transform="rotate(-0 480.642 251.0676)">1427</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="516.558" y="197.7696" transform="rotate(-0 516.558 197.7696)">1573</text>
+   </g>
+   <g id="PathCollection_3">
+    <g clip-path="url(#p41699448f1)">
+     <use xlink:href="#m2e6932d267" x="539.928" y="377.46" style="fill: #919986; stroke: #919986"/>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p41699448f1)">
+     <use xlink:href="#mcb3c98749d" x="485.07" y="377.46" style="fill: #996447; stroke: #996447"/>
+    </g>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #996447" x="485.07" y="403.3476" transform="rotate(-0 485.07 403.3476)">1445</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="539.928" y="350.0496" transform="rotate(-0 539.928 350.0496)">1668</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="351" y="131.04" transform="rotate(-0 351 131.04)">Intended intake</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 702 453.6 
+L 972 453.6 
+L 972 149.04 
+L 702 149.04 
+z
+" style="fill: #faf9f6"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_11">
+     <g id="line2d_25">
+      <path d="M 755.181818 453.6 
+L 755.181818 149.04 
+" clip-path="url(#p22fce2f392)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_19">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="755.181818" y="470.761875" transform="rotate(-0 755.181818 470.761875)">Comparison</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_27">
+      <path d="M 918.818182 453.6 
+L 918.818182 149.04 
+" clip-path="url(#p22fce2f392)" style="fill: none; stroke: #e5e5dd; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28"/>
+     <g id="text_20">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="918.818182" y="470.761875" transform="rotate(-0 918.818182 470.761875)">Healthier first</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_3">
+     <g id="line2d_29"/>
+     <g id="text_21">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="457.680938" transform="rotate(-0 693 457.680938)">0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_30"/>
+     <g id="text_22">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="406.920937" transform="rotate(-0 693 406.920937)">10</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_31"/>
+     <g id="text_23">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="356.160937" transform="rotate(-0 693 356.160937)">20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_32"/>
+     <g id="text_24">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="305.400937" transform="rotate(-0 693 305.400937)">30</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_33"/>
+     <g id="text_25">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="254.640937" transform="rotate(-0 693 254.640937)">40</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_34"/>
+     <g id="text_26">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="203.880937" transform="rotate(-0 693 203.880937)">50</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_35"/>
+     <g id="text_27">
+      <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: end; fill: #24272c" x="693" y="153.120937" transform="rotate(-0 693 153.120937)">60</text>
+     </g>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #60646b" x="674.70125" y="301.32" transform="rotate(-90 674.70125 301.32)">Premium choice share · %</text>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 714.272727 453.6 
+L 796.090909 453.6 
+L 796.090909 187.6176 
+L 714.272727 187.6176 
+z
+" clip-path="url(#p22fce2f392)" style="fill: #919986"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 877.909091 453.6 
+L 959.727273 453.6 
+L 959.727273 332.7912 
+L 877.909091 332.7912 
+z
+" clip-path="url(#p22fce2f392)" style="fill: #996447"/>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="755.181818" y="177.4656" transform="rotate(-0 755.181818 177.4656)">52.4%</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="918.818182" y="322.6392" transform="rotate(-0 918.818182 322.6392)">23.8%</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Calibri'; text-anchor: middle; fill: #24272c" x="837" y="131.04" transform="rotate(-0 837 131.04)">Study 2 tier choice</text>
+   </g>
+  </g>
+  <g id="text_32">
+   <text style="font-weight: 700; font-size: 24px; font-family: 'Calibri'; text-anchor: start; fill: #24272c" x="59.4" y="45.56625" transform="rotate(-0 59.4 45.56625)">Lower intended intake, with a premium-tier trade-off.</text>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 12px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="72.961875" transform="rotate(-0 59.4 72.961875)">Both conditions are shown together. Calorie outcomes are intended intake; premium share is the reported Study 2 choice outcome.</text>
+  </g>
+  <g id="text_34">
+   <text style="font-size: 10px; font-family: 'Calibri'; text-anchor: start; fill: #60646b" x="59.4" y="610.577188" transform="rotate(-0 59.4 610.577188)">Project materials: Study 1 n = 257; Study 2 n = 147; ordinal logit and mediation.</text>
+  </g>
+  <g id="text_35">
+   <text style="font-size: 11px; font-family: 'Calibri'; fill: #60646b" transform="translate(129.6 552.826)">Comparison → healthier first: −146 kcal and −223 kcal.</text>
+   <text style="font-size: 11px; font-family: 'Calibri'; fill: #60646b" transform="translate(129.6 563.76)">Premium share: −28.6 percentage points; separate ordinal model OR = 0.52.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p41699448f1">
+   <rect x="129.6" y="149.04" width="442.8" height="304.56"/>
+  </clipPath>
+  <clipPath id="p22fce2f392">
+   <rect x="702" y="149.04" width="270" height="304.56"/>
+  </clipPath>
+ </defs>
+</svg>
