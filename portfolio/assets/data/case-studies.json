@@ -548,7 +548,7 @@
         ],
         [
           "Model",
-          "Robust regression with HC1 standard errors; R² = 0.220. Mean review score: 8.83/10. Eight service attributes were classified."
+          "OLS with HC1 robust standard errors; R² = 0.220. Mean review score: 8.83/10. Eight service attributes were classified."
         ],
         [
           "Classification",

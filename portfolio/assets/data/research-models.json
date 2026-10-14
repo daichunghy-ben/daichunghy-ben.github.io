@@ -1,0 +1,1882 @@
+{
+  "version": 1,
+  "models": [
+    {
+      "id": "hotel-segmentation",
+      "study": {
+        "title": "From review text to guest segments",
+        "summary": "Language analysis builds the features; clustering tests how reviews group together.",
+        "nodes": [
+          {
+            "id": "reviews",
+            "label": "Review text",
+            "kind": "Data",
+            "x": 12,
+            "y": 50,
+            "detail": "74,896 reviews across 458 Da Nang hotels. The unit represented in the segmentation is a review, not a verified unique guest."
+          },
+          {
+            "id": "absa",
+            "label": "Aspect sentiment",
+            "kind": "Language analysis",
+            "x": 37,
+            "y": 50,
+            "detail": "Map sentences to hotel attributes and score sentiment at that level. Project materials report 148,846 aspect–sentence pairs; they do not identify a specific ABSA checkpoint."
+          },
+          {
+            "id": "kmeans",
+            "label": "K-means",
+            "kind": "Primary model",
+            "x": 63,
+            "y": 28,
+            "detail": "Group reviews by similarity in attribute-level features. Ten reported groups form the displayed segmentation; the portfolio does not contain the full selection diagnostics."
+          },
+          {
+            "id": "gmm",
+            "label": "Gaussian mixture",
+            "kind": "Robustness model",
+            "x": 63,
+            "y": 72,
+            "detail": "Check the segmentation with a probabilistic alternative. Agreement scores and covariance settings are not supplied, so this is a reported robustness step rather than a reproduced test."
+          },
+          {
+            "id": "segments",
+            "label": "Guest profiles",
+            "kind": "Interpretation",
+            "x": 88,
+            "y": 50,
+            "detail": "Compare what each group emphasizes, then name the profiles. The labels summarize priorities visible in the review features."
+          }
+        ],
+        "edges": [
+          {
+            "from": "reviews",
+            "to": "absa",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "absa",
+            "to": "kmeans",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "absa",
+            "to": "gmm",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "kmeans",
+            "to": "segments",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "gmm",
+            "to": "segments",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "kmeans",
+        "legend": "Arrows show the analysis sequence, not causal effects."
+      },
+      "next": {
+        "title": "Test whether the segments travel",
+        "summary": "Develop a reproducible NLP and clustering benchmark before applying profiles to new hotels.",
+        "nodes": [
+          {
+            "id": "audit",
+            "label": "Annotated reviews",
+            "kind": "Data audit",
+            "x": 12,
+            "y": 50,
+            "detail": "Create a stratified human-labelled subset covering languages, hotel classes and positive and negative reviews. Keep annotator agreement and uncertain labels visible."
+          },
+          {
+            "id": "text",
+            "label": "Embedding + ABSA",
+            "kind": "Candidate features",
+            "x": 38,
+            "y": 27,
+            "detail": "Compare the existing attribute features with multilingual sentence embeddings and a sentiment model. Fine-tuning is conditional on enough labelled examples; no checkpoint has been trained here."
+          },
+          {
+            "id": "models",
+            "label": "K-means / GMM",
+            "kind": "Benchmark",
+            "x": 64,
+            "y": 27,
+            "detail": "Compare cluster counts, feature scaling and covariance choices. Consider HDBSCAN only if uneven density or outliers make the existing partition unsuitable."
+          },
+          {
+            "id": "holdout",
+            "label": "Unseen hotels + dates",
+            "kind": "Validation",
+            "x": 64,
+            "y": 74,
+            "detail": "Reserve hotels and a later time window. Examine cluster stability, semantic coherence and assignment uncertainty, not just a visually neat two-dimensional plot."
+          },
+          {
+            "id": "service",
+            "label": "Service trial",
+            "kind": "Next decision",
+            "x": 88,
+            "y": 50,
+            "detail": "Use validated profiles to choose one service intervention. Test guest outcomes with a separate design; cluster membership alone does not show that an intervention works."
+          }
+        ],
+        "edges": [
+          {
+            "from": "audit",
+            "to": "text",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "text",
+            "to": "models",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "models",
+            "to": "holdout",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "holdout",
+            "to": "service",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "holdout",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Do the same service priorities remain visible in unseen hotels and later reviews?"
+          ],
+          [
+            "Design & unit",
+            "Model-development study using reviews nested within hotels; retain hotel and date identifiers for validation."
+          ],
+          [
+            "Measures & analysis",
+            "Audit aspect and sentiment labels, benchmark feature representations and clustering, then report stability and uncertain assignments."
+          ],
+          [
+            "Data & sample",
+            "Requires the review matrix, collection dates, feature codebook and reuse permission. Set annotation size from class coverage and target precision; do not treat 10 clusters as a fixed requirement."
+          ],
+          [
+            "Decision gate",
+            "Extend only if the patterns are stable and interpretable in the reserved data. A service pilot needs its own outcome, comparison and sample rationale."
+          ]
+        ],
+        "references": [
+          [
+            "Sentence embeddings",
+            "https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html"
+          ],
+          [
+            "Clustering methods",
+            "https://scikit-learn.org/stable/modules/clustering.html"
+          ],
+          [
+            "Gaussian mixture models",
+            "https://scikit-learn.org/stable/modules/mixture.html"
+          ],
+          [
+            "Grouped validation",
+            "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ev-choice",
+      "study": {
+        "title": "Three ways to model the same choices",
+        "summary": "Each model answers a different question about preference differences.",
+        "nodes": [
+          {
+            "id": "choice",
+            "label": "Choice tasks",
+            "kind": "Stated preference",
+            "x": 12,
+            "y": 50,
+            "detail": "212 validated young consumers compared vehicle profiles. Repeated tasks belong to the same respondent; they are not independent new consumers."
+          },
+          {
+            "id": "mnl",
+            "label": "Multinomial logit",
+            "kind": "Common preference",
+            "x": 41,
+            "y": 20,
+            "detail": "Estimate a shared utility specification as a baseline. Price and vehicle features enter the choice model; the archive does not provide a complete comparison table."
+          },
+          {
+            "id": "mixed",
+            "label": "Mixed logit",
+            "kind": "Continuous variation",
+            "x": 41,
+            "y": 50,
+            "detail": "Allow preferences to vary across people rather than imposing one coefficient vector. Distribution and simulation settings require the full estimation specification."
+          },
+          {
+            "id": "class",
+            "label": "Latent class",
+            "kind": "Discrete groups",
+            "x": 41,
+            "y": 80,
+            "detail": "Represent preference differences with two reported groups: 65% utility-focused and 35% design-sensitive. These are model-based groups rather than observed market shares."
+          },
+          {
+            "id": "wtp",
+            "label": "Willingness to pay",
+            "kind": "Model output",
+            "x": 80,
+            "y": 50,
+            "detail": "Express feature trade-offs relative to price, with intervals. The displayed values come from the reported latent class model and summarize stated preferences in the task design."
+          }
+        ],
+        "edges": [
+          {
+            "from": "choice",
+            "to": "mnl",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "choice",
+            "to": "mixed",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "choice",
+            "to": "class",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "mnl",
+            "to": "wtp",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "mixed",
+            "to": "wtp",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "class",
+            "to": "wtp",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "mixed",
+        "legend": "Arrows show the analysis sequence, not causal effects."
+      },
+      "next": {
+        "title": "From explanation to held-out choice prediction",
+        "summary": "Keep interpretable choice models as the benchmark; add ML only if it improves a genuine prediction task.",
+        "nodes": [
+          {
+            "id": "spec",
+            "label": "Recover task design",
+            "kind": "Reproducibility",
+            "x": 12,
+            "y": 50,
+            "detail": "Recover alternatives, coding, price units, respondent IDs and the experimental design. Reproduce the existing utility and willingness-to-pay calculations first."
+          },
+          {
+            "id": "compare",
+            "label": "Logit + boosted trees",
+            "kind": "Candidate comparison",
+            "x": 38,
+            "y": 50,
+            "detail": "Compare the choice specifications with a choice-set-aware boosted-tree ranking baseline. Each prediction must account for all alternatives available in that task."
+          },
+          {
+            "id": "test",
+            "label": "Respondent holdout",
+            "kind": "Validation",
+            "x": 64,
+            "y": 50,
+            "detail": "Keep every task from a respondent in one fold. Compare held-out choice log loss, probability calibration and uncertainty; fit preprocessing only within training folds."
+          },
+          {
+            "id": "new",
+            "label": "New buyer sample",
+            "kind": "External check",
+            "x": 88,
+            "y": 50,
+            "detail": "Test transportability with a separately recruited buyer sample. Observed purchase follow-up would be a distinct outcome; do not equate intention, stated choice and purchase."
+          }
+        ],
+        "edges": [
+          {
+            "from": "spec",
+            "to": "compare",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "compare",
+            "to": "test",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "test",
+            "to": "new",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "test",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Can the estimated preferences predict choices for consumers outside the estimation sample?"
+          ],
+          [
+            "Design & unit",
+            "Prediction benchmark using respondent-grouped validation, followed by an independently collected sample."
+          ],
+          [
+            "Measures & analysis",
+            "Compare choice probabilities and calibration. Preserve logit-based willingness-to-pay interpretation separately from tree predictions."
+          ],
+          [
+            "Data & sample",
+            "Requires the full task-level data and model code. Budget the external sample against the desired precision in held-out performance and subgroup estimates."
+          ],
+          [
+            "Decision gate",
+            "Keep the simpler model unless prediction improves consistently. A pricing experiment needs observed demand and a separate causal design."
+          ]
+        ],
+        "references": [
+          [
+            "Grouped validation",
+            "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
+          ],
+          [
+            "Tree ensemble methods",
+            "https://scikit-learn.org/stable/modules/ensemble.html"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "virtual-influencers",
+      "study": {
+        "title": "Message, appeal and purchase intention",
+        "summary": "The 2 × 2 experiment separates manipulated cues from the measured moderator.",
+        "nodes": [
+          {
+            "id": "argument",
+            "label": "Argument quality",
+            "kind": "Central-route cue",
+            "x": 15,
+            "y": 25,
+            "detail": "High and low argument quality define one experimental factor. The supplied stimulus set supports this contrast; no additional conditions are introduced."
+          },
+          {
+            "id": "appeal",
+            "label": "Peripheral appeal",
+            "kind": "Peripheral-route cue",
+            "x": 15,
+            "y": 75,
+            "detail": "Appeal is the second experimental factor. The framework includes social attractiveness, physical attractiveness and attitude similarity."
+          },
+          {
+            "id": "response",
+            "label": "Purchase intention",
+            "kind": "Measured outcome",
+            "x": 80,
+            "y": 50,
+            "detail": "Compare intention across the four stimulus conditions. The outcome is a stated response, not an observed transaction."
+          },
+          {
+            "id": "species",
+            "label": "Speciesism",
+            "kind": "Measured moderator",
+            "x": 48,
+            "y": 15,
+            "detail": "Examine whether the response to virtual endorsers differs with stronger human preference. Speciesism is measured rather than randomized."
+          }
+        ],
+        "edges": [
+          {
+            "from": "argument",
+            "to": "response",
+            "label": "Cue contrast",
+            "type": "relation"
+          },
+          {
+            "from": "appeal",
+            "to": "response",
+            "label": "Cue contrast",
+            "type": "relation"
+          },
+          {
+            "from": "species",
+            "to": "response",
+            "label": "Moderation",
+            "type": "moderation",
+            "target": [
+              "argument",
+              "response"
+            ]
+          },
+          {
+            "from": "species",
+            "to": "response",
+            "label": "Moderation",
+            "type": "moderation",
+            "target": [
+              "appeal",
+              "response"
+            ]
+          }
+        ],
+        "selected": "species",
+        "legend": "Solid arrows show cue–outcome relationships; dashed arrows point to the relationships moderated by speciesism."
+      },
+      "next": {
+        "title": "Test disclosure alongside persuasion",
+        "summary": "Extend the experiment to the decision a brand actually faces: how clearly to identify a virtual creator.",
+        "nodes": [
+          {
+            "id": "disclose",
+            "label": "Disclosure × message",
+            "kind": "New experiment",
+            "x": 15,
+            "y": 50,
+            "detail": "Randomize disclosure clarity and message quality with matched creative assets. Pretest comprehension and keep the product, creator exposure and layout comparable."
+          },
+          {
+            "id": "mechanism",
+            "label": "Trust + recognition",
+            "kind": "Measured mechanism",
+            "x": 48,
+            "y": 25,
+            "detail": "Measure recognition of the virtual creator and trust after exposure. Mediation remains conditional on temporal ordering and identification assumptions."
+          },
+          {
+            "id": "behavior",
+            "label": "Click or product choice",
+            "kind": "Behavioral outcome",
+            "x": 80,
+            "y": 50,
+            "detail": "Record a prespecified voluntary click or incentive-compatible choice. Report intention as a separate secondary outcome."
+          },
+          {
+            "id": "moderator",
+            "label": "Human preference",
+            "kind": "Measured variation",
+            "x": 48,
+            "y": 78,
+            "detail": "Retain the measured moderator, define interaction tests before collection and avoid splitting a continuous score just to obtain a stronger result."
+          }
+        ],
+        "edges": [
+          {
+            "from": "disclose",
+            "to": "mechanism",
+            "label": "Hypothesis",
+            "type": "relation"
+          },
+          {
+            "from": "mechanism",
+            "to": "behavior",
+            "label": "Hypothesis",
+            "type": "relation"
+          },
+          {
+            "from": "disclose",
+            "to": "behavior",
+            "label": "Primary contrast",
+            "type": "relation"
+          },
+          {
+            "from": "moderator",
+            "to": "behavior",
+            "label": "Interaction",
+            "type": "moderation",
+            "target": [
+              "disclose",
+              "behavior"
+            ]
+          }
+        ],
+        "selected": "disclose",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Does clearer virtual-creator disclosure change behavior, and does the effect vary with human preference?"
+          ],
+          [
+            "Design & unit",
+            "Preregistered factorial experiment with participants randomly assigned to matched posts."
+          ],
+          [
+            "Measures & analysis",
+            "Primary randomized contrast on behavior; secondary intention, trust and recognition. Specify interactions and multiplicity before data collection."
+          ],
+          [
+            "Data & sample",
+            "Requires new stimuli and participants. Use a smallest meaningful main effect and interaction to plan sample size; pilot the measures first."
+          ],
+          [
+            "Decision gate",
+            "Report the randomized contrast separately from measured mechanisms. Use real purchase claims only if transactions are observed."
+          ]
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nutrition-diet",
+      "study": {
+        "title": "Knowledge and activity in the same model",
+        "summary": "Regression separates adjusted associations from the descriptive knowledge scores.",
+        "nodes": [
+          {
+            "id": "knowledge",
+            "label": "Nutrition knowledge",
+            "kind": "CoNKS · 20 items",
+            "x": 15,
+            "y": 20,
+            "detail": "The adapted 20-item CoNKS scale measures correct nutrition-knowledge responses. Its score enters the regression alongside activity and the demographic covariates."
+          },
+          {
+            "id": "activity",
+            "label": "Physical activity",
+            "kind": "IPAQ-SF",
+            "x": 15,
+            "y": 50,
+            "detail": "Activity is expressed in MET-minutes per week. Its adjusted association is evaluated alongside knowledge, age and sex."
+          },
+          {
+            "id": "controls",
+            "label": "Age + sex",
+            "kind": "Covariates",
+            "x": 15,
+            "y": 80,
+            "detail": "The reported regression includes age and sex. Adjustment does not remove all possible confounding or establish time order."
+          },
+          {
+            "id": "regression",
+            "label": "Multiple regression",
+            "kind": "Association model",
+            "x": 49,
+            "y": 50,
+            "detail": "The reported model has R² = 0.538 in the student sample. This is explanatory fit in the supplied analysis, not a held-out prediction score."
+          },
+          {
+            "id": "diet",
+            "label": "Diet-quality score",
+            "kind": "DQQ outcome",
+            "x": 82,
+            "y": 50,
+            "detail": "Dietary responses provide the modeled outcome. Diversity, protective-food and food-to-limit scores remain distinct measures."
+          }
+        ],
+        "edges": [
+          {
+            "from": "knowledge",
+            "to": "regression",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "activity",
+            "to": "regression",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "controls",
+            "to": "regression",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "regression",
+            "to": "diet",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "regression",
+        "legend": "Arrows show model inputs and outcome; this cross-sectional model does not establish causation."
+      },
+      "next": {
+        "title": "Can prediction identify a useful intervention?",
+        "summary": "Build a small, auditable prediction benchmark before testing nutrition support.",
+        "nodes": [
+          {
+            "id": "followup",
+            "label": "Repeated diet measures",
+            "kind": "New data",
+            "x": 12,
+            "y": 50,
+            "detail": "Collect repeated dietary responses with prespecified recall windows. Record the timing of knowledge, activity and outcome measures."
+          },
+          {
+            "id": "models",
+            "label": "Regression + trees",
+            "kind": "Candidate models",
+            "x": 38,
+            "y": 50,
+            "detail": "Compare regularized regression with a constrained tree ensemble. Model complexity should follow available independent participants and outcome reliability."
+          },
+          {
+            "id": "validate",
+            "label": "Nested validation",
+            "kind": "Prediction check",
+            "x": 64,
+            "y": 50,
+            "detail": "Keep each participant within one fold and reserve future measurements. Report error, calibration and subgroup performance; do not use test data to tune the model."
+          },
+          {
+            "id": "trial",
+            "label": "Nutrition-support trial",
+            "kind": "Causal question",
+            "x": 88,
+            "y": 50,
+            "detail": "Use the benchmark to define a support strategy, then test that strategy separately. Random assignment is needed to estimate its effect on the prespecified diet outcome."
+          }
+        ],
+        "edges": [
+          {
+            "from": "followup",
+            "to": "models",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "models",
+            "to": "validate",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "validate",
+            "to": "trial",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "models",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Can baseline measures predict later diet quality well enough to guide a support study?"
+          ],
+          [
+            "Design & unit",
+            "Prospective participant-level study for prediction; a subsequent randomized support trial is a separate phase."
+          ],
+          [
+            "Measures & analysis",
+            "Retain validated scoring and timing, compare simple and nonlinear models, then assess future-outcome prediction."
+          ],
+          [
+            "Data & sample",
+            "Requires raw scale responses, repeated outcomes, consent and a data dictionary. Plan participant count against model complexity, outcome variance and attrition."
+          ],
+          [
+            "Decision gate",
+            "Advance only if prediction adds useful information over the baseline. Predictive importance does not identify an intervention effect."
+          ]
+        ],
+        "references": [
+          [
+            "Cross-validation guide",
+            "https://scikit-learn.org/stable/modules/cross_validation.html"
+          ],
+          [
+            "Tree ensemble methods",
+            "https://scikit-learn.org/stable/modules/ensemble.html"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "motorbike-phaseout",
+      "study": {
+        "title": "Policy packages, preferences and acceptance",
+        "summary": "The model accounts for both the package and differences between respondents.",
+        "nodes": [
+          {
+            "id": "policy",
+            "label": "Restrictions + support",
+            "kind": "Choice attributes",
+            "x": 15,
+            "y": 25,
+            "detail": "Packages combine restrictions with grants, public transport, fares and reinvestment measures. Values refer to the supplied policy-choice specification."
+          },
+          {
+            "id": "people",
+            "label": "Dependence + context",
+            "kind": "Interactions",
+            "x": 15,
+            "y": 75,
+            "detail": "The reported interaction analysis includes motorcycle dependence, income, environmental concern and trust. These are preference differences, not randomized personal traits."
+          },
+          {
+            "id": "choice",
+            "label": "Policy-choice model",
+            "kind": "Utility estimation",
+            "x": 49,
+            "y": 50,
+            "detail": "Estimate how package features change stated choices. The project materials report n = 320 and ρ² = 0.28; a full estimation file is not available here."
+          },
+          {
+            "id": "wtp",
+            "label": "Monthly WTP",
+            "kind": "Trade-off interpretation",
+            "x": 82,
+            "y": 50,
+            "detail": "Convert model coefficients relative to cost into VND per month. Positive support values and negative restriction values describe stated trade-offs."
+          }
+        ],
+        "edges": [
+          {
+            "from": "policy",
+            "to": "choice",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "people",
+            "to": "choice",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "choice",
+            "to": "wtp",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "people",
+        "legend": "Arrows show the analysis sequence, not causal effects."
+      },
+      "next": {
+        "title": "Test the transition before scaling it",
+        "summary": "Separate a richer preference model from an evaluation of actual policy support.",
+        "nodes": [
+          {
+            "id": "replicate",
+            "label": "Recover choice data",
+            "kind": "Reproducibility",
+            "x": 12,
+            "y": 50,
+            "detail": "Recover the task design, coding and respondent identifiers. Reproduce the interaction and willingness-to-pay estimates before adding model complexity."
+          },
+          {
+            "id": "heterogeneity",
+            "label": "Mixed / latent class",
+            "kind": "Candidate extension",
+            "x": 38,
+            "y": 50,
+            "detail": "Compare continuous and discrete preference variation with the existing specification. Do not assign additional classes without stable fit and interpretable profiles."
+          },
+          {
+            "id": "outside",
+            "label": "District holdout",
+            "kind": "Transferability",
+            "x": 64,
+            "y": 50,
+            "detail": "Test packages in independently sampled districts and income groups. Keep uncertainty visible for groups with limited coverage."
+          },
+          {
+            "id": "pilot",
+            "label": "Support-package pilot",
+            "kind": "Observed outcome",
+            "x": 88,
+            "y": 50,
+            "detail": "Evaluate a feasible support measure using a prespecified comparison. Observe uptake, travel costs and mode use; do not read simulated acceptance as actual compliance."
+          }
+        ],
+        "edges": [
+          {
+            "from": "replicate",
+            "to": "heterogeneity",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "heterogeneity",
+            "to": "outside",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "outside",
+            "to": "pilot",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "pilot",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Which support package remains acceptable across districts, and does it change observed travel behavior?"
+          ],
+          [
+            "Design & unit",
+            "Preference replication followed by a district-aware pilot; the assignment and comparison design must be set before intervention."
+          ],
+          [
+            "Measures & analysis",
+            "Compare model stability and subgroup uncertainty, then estimate a separate pilot contrast on observed uptake or travel behavior."
+          ],
+          [
+            "Data & sample",
+            "Requires task data, district sampling information and new pilot observations. Plan for district clustering, subgroup precision and attrition."
+          ],
+          [
+            "Decision gate",
+            "Keep predicted preference and observed uptake separate. Policy-effect claims require a defensible comparison and assumptions."
+          ]
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "hotel-prca",
+      "study": {
+        "title": "Semantic mapping meets asymmetric effects",
+        "summary": "The language model identifies attributes; PRCA distinguishes reward from penalty.",
+        "nodes": [
+          {
+            "id": "reviews",
+            "label": "Hotel reviews",
+            "kind": "Text + ratings",
+            "x": 12,
+            "y": 50,
+            "detail": "Project materials report 97,014 reviews from approximately 1,000 properties. Retain the review score as a separate outcome."
+          },
+          {
+            "id": "sbert",
+            "label": "Sentence-BERT",
+            "kind": "Attribute mapping",
+            "x": 37,
+            "y": 50,
+            "detail": "Use sentence embeddings to map review text to eight service attributes. Embedding similarity is a mapping signal; it is not the review rating itself."
+          },
+          {
+            "id": "negative",
+            "label": "Negative sentiment",
+            "kind": "Penalty input",
+            "x": 63,
+            "y": 25,
+            "detail": "Construct the negative attribute indicators used in the regression. A penalty coefficient describes a score association when the negative indicator is present."
+          },
+          {
+            "id": "positive",
+            "label": "Positive sentiment",
+            "kind": "Reward input",
+            "x": 63,
+            "y": 75,
+            "detail": "Construct positive attribute indicators separately. Reward and penalty need not be equal in size or opposite in sign."
+          },
+          {
+            "id": "prca",
+            "label": "PRCA + Kano",
+            "kind": "OLS · HC1 errors",
+            "x": 88,
+            "y": 50,
+            "detail": "Compare OLS coefficients with HC1 robust standard errors, then classify service attributes. The reported R² = 0.220 describes fit to the supplied sample."
+          }
+        ],
+        "edges": [
+          {
+            "from": "reviews",
+            "to": "sbert",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "sbert",
+            "to": "negative",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "sbert",
+            "to": "positive",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "negative",
+            "to": "prca",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "positive",
+            "to": "prca",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "sbert",
+        "legend": "Arrows show the analysis sequence, not causal effects."
+      },
+      "next": {
+        "title": "Check the language model before ranking services",
+        "summary": "Develop annotation, uncertainty and transfer checks around the existing PRCA analysis.",
+        "nodes": [
+          {
+            "id": "labels",
+            "label": "Attribute + sentiment",
+            "kind": "Human audit",
+            "x": 12,
+            "y": 50,
+            "detail": "Label a stratified review subset. Audit attribute mapping and polarity separately, including mixed-sentiment and ambiguous sentences."
+          },
+          {
+            "id": "text",
+            "label": "Embedding benchmark",
+            "kind": "Candidate mapping",
+            "x": 38,
+            "y": 50,
+            "detail": "Compare the current mapping with a multilingual encoder or supervised classifier. Reuse the same labelled evaluation split; do not choose a model from attractive examples."
+          },
+          {
+            "id": "regression",
+            "label": "PRCA + dependence",
+            "kind": "Sensitivity analysis",
+            "x": 64,
+            "y": 50,
+            "detail": "Assess whether findings survive alternative sentiment thresholds and dependence within properties. Compare property-clustered uncertainty with the reported HC1 specification."
+          },
+          {
+            "id": "future",
+            "label": "Later-period check",
+            "kind": "Validation",
+            "x": 88,
+            "y": 50,
+            "detail": "Reserve later reviews and new properties. Examine whether priority rankings remain stable before linking the analysis to service investment."
+          }
+        ],
+        "edges": [
+          {
+            "from": "labels",
+            "to": "text",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "text",
+            "to": "regression",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "regression",
+            "to": "future",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "regression",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Do service priorities survive annotation error, property dependence and a later review period?"
+          ],
+          [
+            "Design & unit",
+            "Review-level reanalysis with property identifiers and a reserved temporal sample."
+          ],
+          [
+            "Measures & analysis",
+            "Report mapping and sentiment errors, coefficient intervals, threshold sensitivity and ranking stability. Keep mapping quality separate from regression fit."
+          ],
+          [
+            "Data & sample",
+            "Requires sentence-level labels, rating data, property IDs and collection dates. Size the annotation set for rare attributes as well as frequent ones."
+          ],
+          [
+            "Decision gate",
+            "Recommend a priority only when the direction and practical size remain stable. Investment returns require a separate service evaluation."
+          ]
+        ],
+        "references": [
+          [
+            "Sentence embeddings",
+            "https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html"
+          ],
+          [
+            "Grouped validation",
+            "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hotel-value-framework",
+      "study": {
+        "title": "From themes to service hypotheses",
+        "summary": "This map is an interpretation framework linked to the segmentation study.",
+        "nodes": [
+          {
+            "id": "themes",
+            "label": "Review themes",
+            "kind": "Source patterns",
+            "x": 15,
+            "y": 50,
+            "detail": "Start with recurring themes from the Da Nang review analysis. This framework does not add an independent dataset."
+          },
+          {
+            "id": "comfort",
+            "label": "Comfort + care",
+            "kind": "Value dimensions",
+            "x": 48,
+            "y": 20,
+            "detail": "Connect room comfort and service care to possible guest priorities. These dimensions provide an interpretation vocabulary, not estimated importance weights."
+          },
+          {
+            "id": "local",
+            "label": "Local experience",
+            "kind": "Value dimensions",
+            "x": 48,
+            "y": 50,
+            "detail": "Connect food, location and ambience with what guests seek during a stay. Avoid assigning the same priority to every guest group."
+          },
+          {
+            "id": "overall",
+            "label": "Overall value",
+            "kind": "Value dimension",
+            "x": 48,
+            "y": 80,
+            "detail": "Relate price and the overall stay to value judgments. A theme alone does not identify willingness to pay."
+          },
+          {
+            "id": "service",
+            "label": "Service hypotheses",
+            "kind": "Application",
+            "x": 82,
+            "y": 50,
+            "detail": "Translate themes into service or messaging options to test. A plausible guest story remains a hypothesis until measured."
+          }
+        ],
+        "edges": [
+          {
+            "from": "themes",
+            "to": "comfort",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "themes",
+            "to": "local",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "themes",
+            "to": "overall",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "comfort",
+            "to": "service",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "local",
+            "to": "service",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "overall",
+            "to": "service",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "comfort",
+        "legend": "Arrows represent interpretation steps, not estimated structural paths."
+      },
+      "next": {
+        "title": "Turn the value framework into measurable constructs",
+        "summary": "Use qualitative work to define the dimensions before estimating a structural model.",
+        "nodes": [
+          {
+            "id": "interview",
+            "label": "Guest interviews",
+            "kind": "Construct definition",
+            "x": 12,
+            "y": 50,
+            "detail": "Ask guests what comfort, care and local experience mean in actual stays. Purposefully sample contrasting profiles; retain a transparent coding record."
+          },
+          {
+            "id": "instrument",
+            "label": "Items + pilot",
+            "kind": "Measurement",
+            "x": 38,
+            "y": 50,
+            "detail": "Write candidate items from the definitions and existing scales. Check content coverage, translation and comprehension before statistical screening."
+          },
+          {
+            "id": "cfa",
+            "label": "CFA + invariance",
+            "kind": "Candidate validation",
+            "x": 64,
+            "y": 50,
+            "detail": "Collect an independent survey to test measurement structure and comparability. EFA may precede CFA if the dimensions remain uncertain."
+          },
+          {
+            "id": "outcome",
+            "label": "Value → stay outcome",
+            "kind": "Proposed relationship",
+            "x": 88,
+            "y": 50,
+            "detail": "Test whether the measured dimensions relate to satisfaction or return intention. Observed repeat stays would require permissioned longitudinal records."
+          }
+        ],
+        "edges": [
+          {
+            "from": "interview",
+            "to": "instrument",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "instrument",
+            "to": "cfa",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "cfa",
+            "to": "outcome",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "instrument",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Are the proposed value dimensions distinct, understandable and comparable across guest groups?"
+          ],
+          [
+            "Design & unit",
+            "Sequential qualitative instrument development and an independent guest survey."
+          ],
+          [
+            "Measures & analysis",
+            "Document definitions and item origins, evaluate measurement structure, then test a bounded association with a prespecified stay outcome."
+          ],
+          [
+            "Data & sample",
+            "Requires interviews, pilot feedback and new survey data. Plan qualitative coverage and quantitative precision separately; no new sample is claimed."
+          ],
+          [
+            "Decision gate",
+            "Use a structural model only after the measurement is defensible. Numerical weights and loyalty effects remain unestimated."
+          ]
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "influencer-strategy",
+      "study": {
+        "title": "Measurement first, structural paths second",
+        "summary": "EFA uses 200 responses; CFA and SEM use the remaining 365.",
+        "nodes": [
+          {
+            "id": "cx",
+            "label": "Content experience",
+            "kind": "CX",
+            "x": 15,
+            "y": 20,
+            "detail": "Content experience is one of the three modeled antecedents of consumer engagement. Its scale captures the survey construct defined in the manuscript."
+          },
+          {
+            "id": "cex",
+            "label": "Expectation alignment",
+            "kind": "CEX",
+            "x": 15,
+            "y": 50,
+            "detail": "Evaluate the correspondence between expected and experienced content. The original items are needed to reproduce its measurement."
+          },
+          {
+            "id": "be",
+            "label": "Brand equity transfer",
+            "kind": "BE",
+            "x": 15,
+            "y": 80,
+            "detail": "Model the brand-related construct as a separate engagement antecedent. Its path is not an observed commercial uplift."
+          },
+          {
+            "id": "engagement",
+            "label": "Consumer engagement",
+            "kind": "CE · mediator",
+            "x": 49,
+            "y": 50,
+            "detail": "SEM examines the direct and mediated relationships. The reported 55% refers to explained variance, not a percentage increase in engagement."
+          },
+          {
+            "id": "retention",
+            "label": "Customer retention",
+            "kind": "CR · outcome",
+            "x": 82,
+            "y": 50,
+            "detail": "The reported 70% refers to explained variance in the modeled construct. Survey retention measures do not establish logged repeat visits."
+          }
+        ],
+        "edges": [
+          {
+            "from": "cx",
+            "to": "engagement",
+            "label": "Path",
+            "type": "relation"
+          },
+          {
+            "from": "cex",
+            "to": "engagement",
+            "label": "Path",
+            "type": "relation"
+          },
+          {
+            "from": "be",
+            "to": "engagement",
+            "label": "Path",
+            "type": "relation"
+          },
+          {
+            "from": "engagement",
+            "to": "retention",
+            "label": "Mediation model",
+            "type": "relation"
+          }
+        ],
+        "selected": "engagement",
+        "legend": "Arrows show hypothesized structural relationships; cross-sectional SEM does not establish causal direction."
+      },
+      "next": {
+        "title": "Follow engagement into observed return behavior",
+        "summary": "Extend the survey model with time ordering and permissioned behavioral data.",
+        "nodes": [
+          {
+            "id": "panel",
+            "label": "Repeated survey",
+            "kind": "Measurement over time",
+            "x": 12,
+            "y": 50,
+            "detail": "Measure antecedents before engagement and later return outcomes. Check whether the constructs retain comparable meaning across waves."
+          },
+          {
+            "id": "logs",
+            "label": "Return events",
+            "kind": "Behavioral data",
+            "x": 38,
+            "y": 50,
+            "detail": "With consent, join survey responses to defined return events. Specify an observation window and distinguish a revisit from an engaged return."
+          },
+          {
+            "id": "models",
+            "label": "SEM + return model",
+            "kind": "Separate tasks",
+            "x": 64,
+            "y": 50,
+            "detail": "Use longitudinal SEM for the construct pathway and a prespecified binary or survival model for return events. An ML benchmark is optional when data volume supports it."
+          },
+          {
+            "id": "validate",
+            "label": "Future-period test",
+            "kind": "Validation",
+            "x": 88,
+            "y": 50,
+            "detail": "Evaluate the return model on a later period, with people kept separate across training and evaluation. Report attrition and uncertainty in the longitudinal paths."
+          }
+        ],
+        "edges": [
+          {
+            "from": "panel",
+            "to": "logs",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "logs",
+            "to": "models",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "models",
+            "to": "validate",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "models",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Does earlier measured engagement predict later observed return behavior?"
+          ],
+          [
+            "Design & unit",
+            "Consent-based longitudinal panel with participant-linked return events."
+          ],
+          [
+            "Measures & analysis",
+            "Evaluate measurement comparability, temporal structural relationships and future return prediction as distinct outputs."
+          ],
+          [
+            "Data & sample",
+            "Requires scale items, linked events, consent and a follow-up plan. Sample rationale must account for events, attrition and the proposed longitudinal model."
+          ],
+          [
+            "Decision gate",
+            "Do not call the mechanism causal without additional identification. Logged behavior and the original retention construct must be reported separately."
+          ]
+        ],
+        "references": [
+          [
+            "Grouped validation",
+            "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
+          ],
+          [
+            "Cross-validation guide",
+            "https://scikit-learn.org/stable/modules/cross_validation.html"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buffet-nudging",
+      "study": {
+        "title": "Menu order, intended intake and tier choice",
+        "summary": "The two studies address different outcomes; perceived value is the reported mediation pathway.",
+        "nodes": [
+          {
+            "id": "order",
+            "label": "Menu ordering",
+            "kind": "Manipulated presentation",
+            "x": 15,
+            "y": 50,
+            "detail": "Participants see menu options and price tiers in different orders. The source describes two stated-preference experiments, with n = 257 and n = 147."
+          },
+          {
+            "id": "intake",
+            "label": "Intended calories",
+            "kind": "Study 1 contrast",
+            "x": 49,
+            "y": 20,
+            "detail": "Compare estimated intended intake across menu conditions. This is not weighed food consumption or measured plate waste."
+          },
+          {
+            "id": "value",
+            "label": "Perceived value",
+            "kind": "Study 2 mediator",
+            "x": 49,
+            "y": 75,
+            "detail": "The reported indirect-effect analysis examines perceived value. Interpretation depends on mediation assumptions as well as randomized presentation."
+          },
+          {
+            "id": "tier",
+            "label": "Higher-tier choice",
+            "kind": "Ordinal logit",
+            "x": 82,
+            "y": 75,
+            "detail": "The reported odds ratio is 0.52. Odds, choice probability and premium share are different quantities; the study reports them separately."
+          }
+        ],
+        "edges": [
+          {
+            "from": "order",
+            "to": "intake",
+            "label": "Condition contrast",
+            "type": "relation"
+          },
+          {
+            "from": "order",
+            "to": "value",
+            "label": "Model path",
+            "type": "relation"
+          },
+          {
+            "from": "value",
+            "to": "tier",
+            "label": "Indirect pathway",
+            "type": "relation"
+          },
+          {
+            "from": "order",
+            "to": "tier",
+            "label": "Tier model",
+            "type": "relation"
+          }
+        ],
+        "selected": "value",
+        "legend": "Arrows summarize contrasts and the mediation specification; the mediator itself was not randomized."
+      },
+      "next": {
+        "title": "Move from intended choice to restaurant behavior",
+        "summary": "Test the menu intervention where diners order and eat.",
+        "nodes": [
+          {
+            "id": "assign",
+            "label": "Menu randomization",
+            "kind": "Field experiment",
+            "x": 12,
+            "y": 50,
+            "detail": "Randomize menu versions at a practical unit such as a session or table. Prevent exposure to both versions and document implementation failures."
+          },
+          {
+            "id": "measure",
+            "label": "Orders + plate waste",
+            "kind": "Observed outcomes",
+            "x": 38,
+            "y": 50,
+            "detail": "Record ordered tier, food served and food left using a consistent protocol. Define how estimated calories and waste are measured."
+          },
+          {
+            "id": "analysis",
+            "label": "Multilevel contrasts",
+            "kind": "Candidate analysis",
+            "x": 64,
+            "y": 50,
+            "detail": "Account for diners nested in the randomization unit. Prespecify the primary nutrition or waste outcome and a commercial guardrail such as spend."
+          },
+          {
+            "id": "rollout",
+            "label": "Balance health + spend",
+            "kind": "Next decision",
+            "x": 88,
+            "y": 50,
+            "detail": "Use effect intervals and the commercial guardrail to decide whether to retain the menu order. A subgroup model is exploratory unless powered and prespecified."
+          }
+        ],
+        "edges": [
+          {
+            "from": "assign",
+            "to": "measure",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "measure",
+            "to": "analysis",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "analysis",
+            "to": "rollout",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "measure",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Does healthier-first ordering change actual intake or waste without an unacceptable commercial trade-off?"
+          ],
+          [
+            "Design & unit",
+            "Field experiment with the randomization unit fixed before recruitment."
+          ],
+          [
+            "Measures & analysis",
+            "Observe consumption or waste and spending; estimate contrasts with dependence at the assignment unit."
+          ],
+          [
+            "Data & sample",
+            "Requires restaurant cooperation, consistent measurement and participant information. Plan sample size from a meaningful primary effect, clustering and implementation loss."
+          ],
+          [
+            "Decision gate",
+            "Set the acceptable commercial trade-off before the trial. Do not substitute intended calories for observed consumption."
+          ]
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "psych-ownership",
+      "study": {
+        "title": "Individual and shared ownership",
+        "summary": "A conceptual framework for relationships to test in an organizational setting.",
+        "nodes": [
+          {
+            "id": "control",
+            "label": "Control + identification",
+            "kind": "Proposed antecedents",
+            "x": 13,
+            "y": 50,
+            "detail": "The framework links control over work, identification and responsibility with a felt ownership connection. The current source does not provide an estimated measurement model."
+          },
+          {
+            "id": "individual",
+            "label": "Individual ownership",
+            "kind": "Concept",
+            "x": 43,
+            "y": 25,
+            "detail": "A felt sense that a work target is mine. It is distinct from legal ownership and from a verified claim of higher performance."
+          },
+          {
+            "id": "collective",
+            "label": "Collective ownership",
+            "kind": "Concept",
+            "x": 43,
+            "y": 75,
+            "detail": "A shared sense that the target is ours. Team-level meaning requires a justified measure and aggregation; it cannot be assumed from one person's answer."
+          },
+          {
+            "id": "commitment",
+            "label": "Commitment",
+            "kind": "Proposed mediator",
+            "x": 71,
+            "y": 50,
+            "detail": "The framework proposes commitment as a link to cooperative behavior. No coefficients, sample or confirmed mediation test are supplied."
+          },
+          {
+            "id": "cooperation",
+            "label": "Cooperation",
+            "kind": "Proposed outcome",
+            "x": 88,
+            "y": 85,
+            "detail": "Define observable cooperative behavior before collecting data. This conceptual endpoint does not establish employee retention or teaching improvement."
+          }
+        ],
+        "edges": [
+          {
+            "from": "control",
+            "to": "individual",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "control",
+            "to": "collective",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "individual",
+            "to": "commitment",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "collective",
+            "to": "commitment",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "commitment",
+            "to": "cooperation",
+            "label": "",
+            "type": "relation"
+          }
+        ],
+        "selected": "collective",
+        "legend": "Arrows represent proposed relationships. No structural coefficients have been estimated."
+      },
+      "next": {
+        "title": "Build the measures before testing the pathway",
+        "summary": "Develop a setting-specific ownership study with individual and team levels kept distinct.",
+        "nodes": [
+          {
+            "id": "define",
+            "label": "Interviews + definitions",
+            "kind": "Construct work",
+            "x": 12,
+            "y": 50,
+            "detail": "Identify the ownership target and who shares it. Interview contrasting roles before selecting or adapting items."
+          },
+          {
+            "id": "pilot",
+            "label": "Items + pilot",
+            "kind": "Measurement",
+            "x": 38,
+            "y": 50,
+            "detail": "Check comprehension and content coverage for individual ownership, collective ownership, commitment and cooperation."
+          },
+          {
+            "id": "validate",
+            "label": "Independent CFA",
+            "kind": "Candidate validation",
+            "x": 64,
+            "y": 25,
+            "detail": "Test distinctness and uncertainty in an independent sample. A good fit index alone does not establish valid measurement."
+          },
+          {
+            "id": "teams",
+            "label": "Team structure",
+            "kind": "Level check",
+            "x": 64,
+            "y": 75,
+            "detail": "Examine whether a shared ownership construct supports aggregation. Use a multilevel design only with enough independent teams."
+          },
+          {
+            "id": "sem",
+            "label": "Longitudinal pathway",
+            "kind": "Proposed test",
+            "x": 88,
+            "y": 50,
+            "detail": "Measure ownership before commitment and cooperation. Evaluate alternative explanations and report associations unless a stronger identification strategy is available."
+          }
+        ],
+        "edges": [
+          {
+            "from": "define",
+            "to": "pilot",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "pilot",
+            "to": "validate",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "pilot",
+            "to": "teams",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "validate",
+            "to": "sem",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "teams",
+            "to": "sem",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "teams",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "How do individual and shared ownership relate to later commitment and cooperation in a defined workplace?"
+          ],
+          [
+            "Design & unit",
+            "Qualitative adaptation, independent measurement study and a longitudinal employee panel; teams are a possible second level."
+          ],
+          [
+            "Measures & analysis",
+            "Specify the ownership target, audit item meaning, test measurement structure and justify aggregation before structural modeling."
+          ],
+          [
+            "Data & sample",
+            "Requires a named setting, access, new measures and consent. Plan employees and independent teams separately, including attrition."
+          ],
+          [
+            "Decision gate",
+            "Do not estimate a team model without adequate team-level information. The existing page remains a conceptual framework."
+          ]
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "arts-workshop",
+      "study": {
+        "title": "Experience value, attitude and intention",
+        "summary": "Measurement checks precede the reported PROCESS Model 4 mediation analysis.",
+        "nodes": [
+          {
+            "id": "learn",
+            "label": "Learning value",
+            "kind": "Experience dimension",
+            "x": 15,
+            "y": 20,
+            "detail": "Evaluate the learning component of the workshop experience. The project reports a 0.35 learning-to-attitude path, without enough detail to label it standardized."
+          },
+          {
+            "id": "social",
+            "label": "Social value",
+            "kind": "Experience dimension",
+            "x": 15,
+            "y": 50,
+            "detail": "Represent the social component separately from learning and enjoyment. Select the mediator to inspect how the experience dimensions connect with intention."
+          },
+          {
+            "id": "hedonic",
+            "label": "Hedonic value",
+            "kind": "Experience dimension",
+            "x": 15,
+            "y": 80,
+            "detail": "Represent enjoyment as a distinct experience dimension. The reported model connects this value with attitude toward the workshop."
+          },
+          {
+            "id": "attitude",
+            "label": "Workshop attitude",
+            "kind": "Mediator",
+            "x": 49,
+            "y": 50,
+            "detail": "PROCESS Model 4 examines an indirect pathway through attitude. The project reports an attitude-to-intention path of 0.59."
+          },
+          {
+            "id": "intention",
+            "label": "Participation intention",
+            "kind": "Outcome",
+            "x": 82,
+            "y": 50,
+            "detail": "The source reports 216 valid responses in Melbourne. Intention is not an observed booking or repeat-attendance outcome."
+          }
+        ],
+        "edges": [
+          {
+            "from": "learn",
+            "to": "attitude",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "social",
+            "to": "attitude",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "hedonic",
+            "to": "attitude",
+            "label": "",
+            "type": "relation"
+          },
+          {
+            "from": "attitude",
+            "to": "intention",
+            "label": "",
+            "type": "relation"
+          }
+        ],
+        "selected": "attitude",
+        "legend": "Arrows summarize the tested pathway; coefficients are not relabeled as standardized or causal."
+      },
+      "next": {
+        "title": "Test an experience change against actual booking",
+        "summary": "Move from a mediation model to a small, measurable service experiment.",
+        "nodes": [
+          {
+            "id": "change",
+            "label": "Guided-learning format",
+            "kind": "New intervention",
+            "x": 12,
+            "y": 50,
+            "detail": "Define one teachable change, such as structured beginner guidance. Match the comparison workshop on duration, price and basic materials."
+          },
+          {
+            "id": "assign",
+            "label": "Workshop assignment",
+            "kind": "Experiment design",
+            "x": 38,
+            "y": 50,
+            "detail": "Randomize a feasible unit such as a session. Record who receives the format and avoid mixing conditions within a shared session."
+          },
+          {
+            "id": "outcome",
+            "label": "Booking + experience",
+            "kind": "Observed and measured",
+            "x": 64,
+            "y": 50,
+            "detail": "Measure learning experience and attitude separately from bookings or repeat attendance. Set a consistent follow-up window."
+          },
+          {
+            "id": "evaluate",
+            "label": "Primary contrast",
+            "kind": "Decision",
+            "x": 88,
+            "y": 50,
+            "detail": "Estimate the randomized contrast on the prespecified booking outcome. Examine mediation secondarily with explicit assumptions and session-level dependence."
+          }
+        ],
+        "edges": [
+          {
+            "from": "change",
+            "to": "assign",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "assign",
+            "to": "outcome",
+            "label": "",
+            "type": "flow"
+          },
+          {
+            "from": "outcome",
+            "to": "evaluate",
+            "label": "",
+            "type": "flow"
+          }
+        ],
+        "selected": "outcome",
+        "legend": "Proposed workflow. No new data or model results are claimed.",
+        "plan": [
+          [
+            "Question",
+            "Does structured beginner guidance improve actual booking or repeat attendance?"
+          ],
+          [
+            "Design & unit",
+            "Session-aware experiment with a defined follow-up period and a matched comparison."
+          ],
+          [
+            "Measures & analysis",
+            "Preregister a behavioral primary outcome, retain experience measures as secondary outcomes and account for session dependence."
+          ],
+          [
+            "Data & sample",
+            "Requires new workshop delivery, participant information and permissioned booking records. Plan sessions and participants against a meaningful effect and attrition."
+          ],
+          [
+            "Decision gate",
+            "Keep the service change only if the behavioral contrast supports it. The original intention model does not establish this effect."
+          ]
+        ],
+        "references": []
+      }
+    }
+  ]
+}

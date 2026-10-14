@@ -1,8 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {validateModels,modelMarkup,modelSvg} from './research-model-markup.mjs';
 
 const root=process.cwd();
 const {cases}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/case-studies.json'),'utf8'));
+const {models}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/research-models.json'),'utf8'));
+validateModels(cases,models);
+await fs.mkdir(path.join(root,'portfolio/assets/models'),{recursive:true});
 const escape=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const text=value=>escape(value);
 const number=value=>new Intl.NumberFormat('en-US',{maximumFractionDigits:3}).format(value);
@@ -27,6 +31,8 @@ for(let i=0;i<cases.length;i++){
  if(!/^research-[\w-]+\.html$/.test(c.file))throw new Error('Invalid filename');
  const canonical='https://daichunghy-ben.github.io/portfolio/'+c.file;
  const figure=visualMarkup(c.visual);
+ const model=models.find(m=>m.id===c.id);
+ for(const mode of ['study','next'])await fs.writeFile(path.join(root,'portfolio/assets/models',c.id+'-'+mode+'.svg'),modelSvg(c,model,mode));
  const html=`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,13 +47,13 @@ for(let i=0;i<cases.length;i++){
 <link rel="canonical" href="${canonical}"/>
 <link rel="icon" href="../assets/favicon.png"/>
 <link rel="stylesheet" href="styles/home-v2.css?v=cases8"/>
-<link rel="stylesheet" href="styles/case-study.css?v=cases8"/>
+<link rel="stylesheet" href="styles/case-study.css?v=models1"/>
 </head>
 <body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
 <main class="page-width case-main">
 <section class="case-hero" aria-labelledby="case-title">
-<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(c.lead)}</p><p class="case-status">${text(c.status)}</p><a class="case-jump" href="#findings">Explore findings <span aria-hidden="true">↓</span></a></div>
+<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(c.lead)}</p><p class="case-status">${text(c.status)}</p><div class="case-jumps"><a class="case-jump" href="#findings">Explore findings <span aria-hidden="true">↓</span></a><a class="case-jump" href="#models">Model map <span aria-hidden="true">↓</span></a></div></div>
 <figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/></figure>
 </section>
 <dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
@@ -55,12 +61,15 @@ for(let i=0;i<cases.length;i++){
 <section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
 <figure class="case-figure" data-figure><figcaption><h3>${text(c.visual.title)}</h3><p>${text(c.visual.caption)}</p></figcaption>${figure}</figure>
 </section>
+${modelMarkup(c,model)}
 <section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">${text(c.useTitle)}</h2><div><p>${text(c.use)}</p><p class="case-limit">${text(c.limit)}</p></div></section>
 <details class="case-notes" id="study-notes"><summary>Methods & sources <span aria-hidden="true">+</span></summary><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>${c.sources.length?`<div class="case-sources">${c.sources.map(([label,href])=>link(label,href)).join('')}</div>`:''}</div></details>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
 <script type="application/json" id="study-visual-data">${JSON.stringify(c.visual).replaceAll('<','\\u003c')}</script>
+<script type="application/json" id="study-model-data">${JSON.stringify(model).replaceAll('<','\\u003c')}</script>
 <script type="module" src="js/case-study.js?v=cases8"></script>
+<script type="module" src="js/research-models.js?v=models1"></script>
 </body>
 </html>
 `;
