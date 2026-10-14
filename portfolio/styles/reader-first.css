@@ -1,0 +1,146 @@
+/* Show the work, skills and outputs first. All research content stays open. */
+.case-header {min-height:65px;font-size:16px}
+.case-hero {grid-template-columns:minmax(0,.58fr) minmax(0,.42fr);gap:35px;min-height:0;padding:22px 0 27px;align-items:start}
+.case-topic {font-size:15px;margin-bottom:14px}
+.case-hero h1 {font-size:clamp(40px,4vw,56px);line-height:1.08;max-width:760px}
+.case-lede {font-size:22px;line-height:1.5;margin-top:20px;max-width:740px;color:var(--ink)}
+.case-skills {font-size:19px;font-weight:700;color:var(--case-accent);line-height:1.6;margin-top:17px}
+.case-output {margin-top:17px}
+.case-output>span {font-size:13px;font-weight:700;color:var(--muted)}
+.case-output>p {font-size:18px;line-height:1.5;margin-top:5px}
+.case-status {margin-top:14px;font-size:13px}
+.case-cover {aspect-ratio:1.5;align-self:center;border-radius:6px;position:relative}
+.cover-label {position:absolute;bottom:10px;right:10px;background:#faf9f6e6;padding:5px 9px;border-radius:3px;font-size:11px;color:var(--muted)}
+.case-hero-image {transform:none}
+.case-facts {gap:24px;padding:14px 0 20px}
+.case-facts dt {font-size:14px}
+.case-facts dd {font-size:19px}
+.case-overview,.case-interpretation,.finding-intro {gap:30px;padding:22px 0}
+.case-overview h2,.case-interpretation h2 {font-size:31px;max-width:400px}
+.case-overview>p,.case-interpretation p,.finding-intro>p {font-size:20px;line-height:1.55}
+.case-findings {padding:8px 0 22px}
+.finding-intro {margin-bottom:4px}
+.finding-intro h2 {font-size:34px;max-width:420px}
+.case-evidence {padding:16px 0 10px}
+.case-evidence>figcaption {margin-bottom:17px;max-width:1000px}
+.case-evidence>figcaption h3 {font-size:28px}
+.case-evidence>figcaption p {font-size:17px;margin-top:10px}
+.evidence-workspace {display:block}
+.evidence-plot {max-width:1020px;margin:0 0 15px}
+.evidence-reading {background:transparent;padding:12px 0;margin:0;min-height:0;max-width:1050px}
+.evidence-reading h4 {font-size:22px;margin-bottom:8px}
+.evidence-reading p {font-size:19px;line-height:1.55}
+.evidence-metric {font-size:29px;margin-bottom:9px}
+.evidence-table,.evidence-source-images,.evidence-interactions,.method-equation {background:transparent;padding:18px 0;margin-top:12px;border-radius:0}
+.evidence-table h4,.evidence-source-images h4,.evidence-interactions h4,.method-equation h4,.nutrition-view>h4,.paired-view>h4 {font-size:23px;line-height:1.3;margin:0 0 15px}
+.evidence-table th,.evidence-table td {font-size:17px;padding:10px 12px}
+.evidence-table caption {font-size:15px;line-height:1.5}
+.evidence-source {font-size:14px;margin-top:14px}
+.evidence-image-grid {gap:24px;margin-top:12px}
+.evidence-image-grid img {height:auto;width:100%;object-fit:contain}
+.evidence-image-grid figcaption {font-size:17px;line-height:1.55}
+.evidence-image-grid figcaption p {margin-top:7px}
+.evidence-segment-list>div {display:grid;grid-template-columns:145px minmax(0,1fr) 70px;gap:20px;align-items:center;padding:8px 0;font-size:18px}
+.evidence-segment-list {max-width:1000px}
+.evidence-segment-list strong {text-align:right}
+.factorial-labels {font-size:17px;margin-bottom:12px}
+.factorial-labels>span:first-child {font-size:15px}
+.factorial-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.factorial-cell {background:transparent;padding:0;border-radius:0}
+.factorial-cell.is-selected {background:transparent}
+.factorial-cell>span {font-size:16px;margin-bottom:10px;min-height:48px}
+.factorial-cell img {height:auto;max-height:370px;object-fit:contain;background:transparent}
+.evidence-factorial .factorial-labels {display:none}
+.evidence-factorial .evidence-reading {display:none}
+.case-methods {padding:20px 0 10px}
+.case-methods>h3 {font-size:27px;margin-bottom:20px}
+.method-strip {gap:28px}
+.method-strip h4 {font-size:21px;margin-bottom:8px}
+.method-strip p {font-size:19px;line-height:1.55}
+.method-equation .equation {font-size:21px;margin:10px 0}
+.method-equation>p {font-size:17px}
+.models-heading {display:block;margin:0 0 12px}
+.models-heading h2 {font-size:31px}
+.models-heading>p {font-size:19px;line-height:1.5;color:var(--muted);margin-top:10px}
+.case-models {padding:25px 0 15px}
+.inline-model {max-width:1020px;margin:0}
+.inline-model img {width:100%;height:auto;max-height:520px;object-fit:contain;object-position:left center}
+.inline-model figcaption {font-size:14px;color:var(--muted);line-height:1.5;margin:7px 0 18px}
+.model-explanations {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 30px}
+.model-explanations article>p:first-child {font-size:13px;color:var(--case-accent);margin-bottom:7px}
+.model-explanations h3 {font-size:23px;margin-bottom:9px}
+.model-explanations article>p:last-child {font-size:18px;line-height:1.55;color:var(--muted)}
+.research-next-plan {background:var(--sand);padding:24px;border-radius:6px;margin-top:25px}
+.next-plan-status {font-size:13px;color:var(--case-accent);margin-bottom:8px}
+.research-next-plan h3 {font-size:27px;line-height:1.25}
+.research-next-plan>p:not(.next-plan-status) {font-size:18px;line-height:1.55;margin-top:12px;color:var(--muted)}
+.research-next-plan dl {display:grid;gap:15px;margin:20px 0 0}
+.research-next-plan dl>div {display:grid;grid-template-columns:150px minmax(0,1fr);gap:25px}
+.research-next-plan dt {font-size:16px;font-weight:700}
+.research-next-plan dd {font-size:17px;line-height:1.55;color:var(--muted);margin:0}
+.case-notes {padding:24px;margin:20px 0 30px}
+.case-notes>h2 {font-size:26px}
+.notes-content {padding-top:18px}
+.notes-content dd {font-size:17px}
+.nutrition-view,.paired-view {margin:15px 0 24px}
+.value-profiles-all {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.value-profiles-all img {width:100%;height:220px;object-fit:cover;border-radius:5px}
+.value-profiles-all h4 {font-size:23px;margin:16px 0 10px}
+.value-profiles-all p {font-size:18px;line-height:1.5;color:var(--muted);margin-top:9px}
+.value-profiles-all .profile-question {font-size:16px}
+.knowledge-domains>div>span {font-size:19px;min-height:0}
+.knowledge-domains>div>p {font-size:16px}
+.regression-output dt {font-size:19px}
+.regression-output dt small,.regression-output dd span {font-size:15px}
+.interaction-list>div {font-size:18px;padding:10px}
+.evidence-mobile-row {opacity:1}
+.intro-skills {display:grid;gap:12px;margin:20px 0 0}
+.intro-skills>div {display:grid;grid-template-columns:90px minmax(0,1fr);gap:15px}
+.intro-skills dt {font-size:15px;font-weight:700;color:var(--ink)}
+.intro-skills dd {margin:0;font-size:17px;line-height:1.5;color:var(--muted)}
+.intro-section {min-height:80svh;padding-top:70px;padding-bottom:50px}
+.intro-lede {font-size:22px;line-height:1.5;margin-top:22px}
+.work-contributions {font-size:19px;line-height:1.55;gap:17px}
+@media(max-width:900px){
+ .case-hero {display:grid;grid-template-columns:minmax(0,1fr);padding-top:15px;gap:22px}
+ .case-hero h1 {font-size:42px}
+ .case-lede {font-size:21px;margin-top:17px}
+ .case-cover {aspect-ratio:1.8;max-height:280px}
+ .case-skills {font-size:18px;margin-top:14px}
+ .case-output>p {font-size:18px}
+ .case-facts {padding:12px 0 15px}
+ .case-facts dd {font-size:18px}
+ .case-overview,.case-interpretation,.finding-intro {display:block;padding:18px 0}
+ .case-overview>p,.case-interpretation p,.finding-intro>p {font-size:19px}
+ .factorial-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .factorial-cell img {max-height:none;height:auto}
+ .factorial-cell>span {font-size:15px;min-height:44px}
+ .evidence-segment-list>div {grid-template-columns:110px minmax(0,1fr) 58px;gap:12px;font-size:16px;padding:9px 0}
+ .evidence-image-grid {grid-template-columns:1fr}
+ .model-explanations {grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+ .research-next-plan dl>div {grid-template-columns:130px minmax(0,1fr);gap:20px}
+ .evidence-table th,.evidence-table td {font-size:15px}
+ .value-profiles-all {grid-template-columns:1fr;gap:25px}
+ .value-profiles-all img {height:auto;max-height:330px;object-fit:cover}
+ .intro-section {min-height:0;padding:35px 0 45px}
+ .intro-lede {font-size:20px}
+ .work-contributions {font-size:18px}
+}
+@media(max-width:600px){
+ .case-hero h1 {font-size:38px}
+ .case-header {font-size:14px;min-height:60px}
+ .case-cover {aspect-ratio:1.65}
+ .evidence-reading p {font-size:18px}
+ .evidence-image-grid figcaption {font-size:16px}
+ .model-explanations {grid-template-columns:1fr;gap:20px}
+ .inline-model img {max-height:none}
+ .research-next-plan {padding:21px}
+ .research-next-plan dl>div {display:block}
+ .research-next-plan dt {margin-bottom:6px}
+ .case-notes {padding:21px}
+ .case-notes>h2 {font-size:25px}
+ .method-strip p {font-size:18px}
+ .factorial-cell>span {font-size:14px}
+ .intro-skills>div {display:block}
+ .intro-skills dd {font-size:17px;margin-top:5px}
+}

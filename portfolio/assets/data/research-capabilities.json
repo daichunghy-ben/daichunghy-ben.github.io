@@ -1,0 +1,114 @@
+{
+  "entries": [
+    {
+      "id": "hotel-segmentation",
+      "skills": [
+        "Review analysis",
+        "Aspect-level sentiment",
+        "K-means & GMM"
+      ],
+      "work": "Grouped hotel-review patterns into guest profiles and compared the service attributes each profile valued.",
+      "output": "Review features, ten reported profiles and recommendations for hotel service planning."
+    },
+    {
+      "id": "ev-choice",
+      "skills": [
+        "Choice experiments",
+        "Preference modelling",
+        "WTP interpretation"
+      ],
+      "work": "Modeled how young consumers trade EV range, charging time and design against price to identify buyer groups and product priorities.",
+      "output": "Two preference groups and feature valuations to support product-positioning decisions."
+    },
+    {
+      "id": "virtual-influencers",
+      "skills": [
+        "Experimental design",
+        "Consumer research",
+        "Moderation analysis"
+      ],
+      "work": "Co-authored research on how product arguments and creator appeal relate to purchase intention among Generation Z consumers.",
+      "output": "An interpretation of persuasion cues and purchase intention, published in a Springer chapter."
+    },
+    {
+      "id": "nutrition-diet",
+      "skills": [
+        "Survey measures",
+        "Data analysis",
+        "Regression interpretation"
+      ],
+      "work": "Co-authored a study of how students’ nutrition knowledge and physical activity relate to their dietary choices.",
+      "output": "Knowledge-domain comparisons and an adjusted diet-quality model for the student sample."
+    },
+    {
+      "id": "motorbike-phaseout",
+      "skills": [
+        "Policy choice design",
+        "Mixed logit",
+        "Preference heterogeneity"
+      ],
+      "work": "Compared policy packages and respondent interactions to examine how restrictions and support measures are valued.",
+      "output": "Monthly willingness-to-pay estimates and subgroup considerations for transition planning."
+    },
+    {
+      "id": "hotel-prca",
+      "skills": [
+        "Semantic text mapping",
+        "Regression",
+        "Service prioritisation"
+      ],
+      "work": "Mapped review sentences to service attributes with Sentence-BERT and compared separate penalty and reward coefficients.",
+      "output": "A service-priority framework distinguishing failure prevention from improvement opportunities."
+    },
+    {
+      "id": "hotel-value-framework",
+      "skills": [
+        "Research synthesis",
+        "Value mapping",
+        "Service design"
+      ],
+      "work": "Translated hotel-review themes into value dimensions and practical service hypotheses.",
+      "output": "Three conceptual guest-value profiles and questions for a future measurement study."
+    },
+    {
+      "id": "influencer-strategy",
+      "skills": [
+        "Survey analysis",
+        "EFA & CFA",
+        "Structural modelling"
+      ],
+      "work": "Interpreted the split-sample measurement and structural model linking content, expectations and brand equity with engagement.",
+      "output": "An engagement-to-retention framework with reported explanatory statistics."
+    },
+    {
+      "id": "buffet-nudging",
+      "skills": [
+        "Experiment design",
+        "Ordinal logit",
+        "Mediation interpretation"
+      ],
+      "work": "Compared menu-order conditions across two studies and interpreted the trade-off between intended intake and premium-tier choice.",
+      "output": "Condition comparisons, an ordinal-choice result and a perceived-value mediation finding."
+    },
+    {
+      "id": "psych-ownership",
+      "skills": [
+        "Concept development",
+        "Construct definition",
+        "Research design"
+      ],
+      "work": "Separated individual and collective ownership and mapped their proposed links with commitment and cooperation.",
+      "output": "A conceptual specification for a future organizational study; no fitted effects are claimed."
+    },
+    {
+      "id": "arts-workshop",
+      "skills": [
+        "Experience research",
+        "Measurement review",
+        "Mediation interpretation"
+      ],
+      "work": "Examined experience-value pathways through workshop attitude to participation intention.",
+      "output": "A reported mediation pathway and service-design questions for beginner learning support."
+    }
+  ]
+}

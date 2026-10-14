@@ -112,7 +112,7 @@
       "id": "hotel-segmentation",
       "type": "segments",
       "title": "The largest group covers 43.7% of reviews.",
-      "caption": "Reported proportions of the review sample. Select a segment, then inspect sentiment by attribute in the original analysis figure.",
+      "caption": "Reported proportions of the review sample, followed by attribute sentiment and review coverage in the original analysis figures.",
       "source": "Project materials: 74,896 Booking.com reviews, 458 hotels, 10 reported groups.",
       "labels": [
         "Minimalists",
@@ -320,7 +320,7 @@
       "id": "nutrition-diet",
       "type": "nutrition",
       "title": "Basic principles are better understood than calories.",
-      "caption": "Knowledge domains and adjusted diet-quality associations are different parts of the study. Select the view you want to inspect.",
+      "caption": "Knowledge domains, dietary patterns and adjusted diet-quality estimates are shown together below.",
       "source": "FCBEM paper: Table 2 (knowledge), Table 3 (diet) and Table 5 (regression); n = 280.",
       "domains": [
         {
@@ -708,7 +708,7 @@
       "id": "psych-ownership",
       "type": "constructs",
       "title": "Personal ownership and shared ownership are distinct.",
-      "caption": "Conceptual research model. Selecting a perspective changes the explanation, not an estimated effect.",
+      "caption": "Conceptual research model linking individual and shared ownership with commitment and cooperation.",
       "source": "Existing psychological-ownership framework; no estimated sample or coefficients in the source record.",
       "inputs": [
         {

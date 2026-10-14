@@ -22,6 +22,15 @@ addEventListener('pageswap',()=>{
 });
 addEventListener('pageshow',()=>{image?.style.removeProperty('view-transition-name');scheduleCover()});
 
+// Static figures remain readable; scrolling adds a single, bounded entrance.
+if(!reduced.matches){
+ const targets=document.querySelectorAll('.evidence-svg,.inline-model img,.factorial-grid,.value-profiles-all');
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.animate([{opacity:.75,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:450,easing:'ease-out'});observer.unobserve(entry.target)}},{threshold:.15});
+ targets.forEach(node=>observer.observe(node));
+ addEventListener('pagehide',()=>observer.disconnect(),{once:true});
+ reduced.addEventListener('change',()=>{if(reduced.matches)document.getAnimations().forEach(animation=>animation.cancel())});
+}
+
 // Analysis-image links stay within the study; original files remain available.
 const imageLinks=[...document.querySelectorAll('.case-sources a,[data-analysis-image]')].filter(a=>/\.(?:svg|png|webp|jpe?g)$/i.test(new URL(a.href).pathname));
 if(imageLinks.length){

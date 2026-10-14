@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {validateModels,modelMarkup,modelSvg} from './research-model-markup.mjs';
-import {evidenceMarkup} from '../portfolio/js/evidence-render.js';
+import {validateModels,modelSvg} from './research-model-markup.mjs';
+import {modelMarkup} from './static-research-models.mjs';
+import {evidenceMarkup} from './static-research-evidence.mjs';
 
 const root=process.cwd();
 const {cases}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/case-studies.json'),'utf8'));
@@ -9,6 +10,7 @@ const {models}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/dat
 const {entries}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/research-evidence.json'),'utf8'));
 if(entries.length!==cases.length||new Set(entries.map(e=>e.id)).size!==cases.length)throw new Error('Invalid evidence set');
 validateModels(cases,models);
+const {entries:capabilities}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/research-capabilities.json'),'utf8'));
 await fs.mkdir(path.join(root,'portfolio/assets/models'),{recursive:true});
 const escape=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const text=value=>escape(value);
@@ -22,6 +24,8 @@ for(let i=0;i<cases.length;i++){
  if(!evidence)throw new Error('Missing case evidence');
  const figure=evidenceMarkup(evidence,c);
  const model=models.find(m=>m.id===c.id);
+ const capability=capabilities.find(entry=>entry.id===c.id);
+ if(!capability)throw new Error('Missing capability');
  for(const mode of ['study','next'])await fs.writeFile(path.join(root,'portfolio/assets/models',c.id+'-'+mode+'.svg'),modelSvg(c,model,mode));
  const html=`<!DOCTYPE html>
 <html lang="en">
@@ -37,31 +41,28 @@ for(let i=0;i<cases.length;i++){
 <link rel="canonical" href="${canonical}"/>
 <link rel="icon" href="../assets/favicon.png"/>
 <link rel="stylesheet" href="styles/home-v2.css?v=cases8"/>
-<link rel="stylesheet" href="styles/case-study.css?v=evidence2"/>
-<link rel="stylesheet" href="styles/research-evidence.css?v=evidence2"/>
+<link rel="stylesheet" href="styles/case-study.css?v=reader-first1"/>
+<link rel="stylesheet" href="styles/research-evidence.css?v=reader-first1"/>
+<link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>
 </head>
 <body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
 <main class="page-width case-main">
 <section class="case-hero" aria-labelledby="case-title">
-<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(c.lead)}</p><p class="case-status">${text(c.status)}</p><div class="case-jumps"><a class="case-jump" href="#findings">Explore findings <span aria-hidden="true">↓</span></a><a class="case-jump" href="#models">Model map <span aria-hidden="true">↓</span></a></div></div>
-<figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/></figure>
+<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(capability.work)}</p><p class="case-skills">${capability.skills.map(text).join(' · ')}</p><div class="case-output"><span>Output</span><p>${text(capability.output)}</p></div><p class="case-status">${text(c.status)}</p></div>
+<figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/>${c.image.includes('research-reader-first/')?'<figcaption class="cover-label">Concept illustration</figcaption>':''}</figure>
 </section>
 <dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
 <section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">${text(c.question)}</h2><p>${text(c.study)}</p></section>
 <section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
 ${figure}
 </section>
-<details class="case-model-disclosure" id="model-details"><summary>Model architecture & next study <span aria-hidden="true">+</span></summary>${modelMarkup(c,model)}</details>
+${modelMarkup(c,model)}
 <section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">${text(c.useTitle)}</h2><div><p>${text(c.use)}</p><p class="case-limit">${text(c.limit)}</p></div></section>
-<details class="case-notes" id="study-notes"><summary>Methods & sources <span aria-hidden="true">+</span></summary><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>${c.sources.length?`<div class="case-sources">${c.sources.map(([label,href])=>link(label,href)).join('')}</div>`:''}</div></details>
+<section class="case-notes" id="study-notes"><h2>Study notes & sources</h2><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
-<script type="application/json" id="study-evidence-data">${JSON.stringify({entry:evidence,accent:c.accent}).replaceAll('<','\\u003c')}</script>
-<script type="application/json" id="study-model-data">${JSON.stringify(model).replaceAll('<','\\u003c')}</script>
-<script type="module" src="js/case-study.js?v=evidence2"></script>
-<script type="module" src="js/research-models.js?v=evidence2"></script>
-<script type="module" src="js/research-evidence.js?v=evidence2"></script>
+<script type="module" src="js/case-study.js?v=reader-first1"></script>
 </body>
 </html>
 `;

@@ -1738,7 +1738,7 @@
             "kind": "Experience dimension",
             "x": 15,
             "y": 50,
-            "detail": "Represent the social component separately from learning and enjoyment. Select the mediator to inspect how the experience dimensions connect with intention."
+            "detail": "Represent the social component separately from learning and enjoyment. The experience dimensions connect with intention through the workshop-attitude pathway."
           },
           {
             "id": "hedonic",
