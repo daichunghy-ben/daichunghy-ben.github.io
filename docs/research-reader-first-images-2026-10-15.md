@@ -21,4 +21,3 @@ Use case: stylized-concept. Asset type: wide portfolio research cover. Create a 
 ### ev
 
 Use case: product-mockup. Asset type: wide portfolio consumer research cover. Create an art-directed premium editorial 3D product scene: one elegant unbranded silver compact electric car in three-quarter view beside a restrained matte-blue charging post; a short curved roadway and two small geometric route markers suggest range and charging choices. Warm off-white studio setting, pale concrete floor, muted steel blue and small burnt-orange accents, soft natural daylight, precise materials and crisp gentle shadows. Tight landscape composition with the car clearly visible and filling most of the frame, minimal professional product photography appearance. No logos, no brand-specific car grille, no words, no charts, no numeric displays, no neon cityscape, no extra vehicles. This is an illustrative research cover, not a tested car or a result.
-
