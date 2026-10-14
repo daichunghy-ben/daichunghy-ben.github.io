@@ -147,6 +147,8 @@ for e in data:
     else:
         raise ValueError(kind)
     fig.savefig(OUT / (e['id']+'.svg'), facecolor=PAPER)
+    svg_path = OUT / (e['id']+'.svg')
+    svg_path.write_text('\n'.join(line.rstrip() for line in svg_path.read_text().splitlines())+'\n')
     fig.savefig(OUT / (e['id']+'.png'), dpi=180, facecolor=PAPER)
     plt.close(fig)
 print(f'Exported {len(data)} research figures as SVG and PNG.')
