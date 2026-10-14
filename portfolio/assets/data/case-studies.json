@@ -1,0 +1,950 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "hotel-segmentation",
+      "file": "research-hotel.html",
+      "title": "Hotel customer segmentation",
+      "topic": "Hospitality research",
+      "status": "Analysis project",
+      "image": "assets/optimized/research-hotel-value-coast-1440.webp",
+      "imageAlt": "Illustration of the Da Nang coastline and hotels",
+      "accent": "#315f70",
+      "lead": "Guest reviews reveal different priorities within the same hotel market. This study grouped Da Nang guests by the service attributes they discussed and how they rated them.",
+      "facts": [
+        [
+          "Data",
+          "74,896 reviews"
+        ],
+        [
+          "Coverage",
+          "458 Da Nang hotels"
+        ],
+        [
+          "Method",
+          "Sentiment analysis + clustering"
+        ]
+      ],
+      "question": "What do different guests value?",
+      "study": "Overall ratings can hide differences between guests. Review text was mapped to hotel attributes, scored for sentiment and grouped with K-means. A Gaussian mixture model provided a robustness check.",
+      "findingTitle": "Ten groups within the review data",
+      "finding": "The largest reported group, Minimalists, accounts for 43.7% of the sample. Smaller groups focus on dining, exploration, service and other parts of the stay.",
+      "use": "The segmentation gives hotel teams a way to compare guest priorities before choosing service improvements or messages for different audiences.",
+      "limit": "Segments describe the review sample. Their shares should not be treated as hotel occupancy, market share or measured revenue effects.",
+      "visual": {
+        "type": "segments",
+        "title": "Guest groups",
+        "caption": "Reported share of the review sample. Select a group to compare its size.",
+        "items": [
+          [
+            "Minimalists",
+            43.7
+          ],
+          [
+            "Gastronomy",
+            9.7
+          ],
+          [
+            "Explorers",
+            8.3
+          ],
+          [
+            "Hospitality",
+            7.6
+          ],
+          [
+            "Premium",
+            7.1
+          ],
+          [
+            "Homebodies",
+            6.1
+          ],
+          [
+            "Convenience",
+            5.9
+          ],
+          [
+            "Room",
+            4.3
+          ],
+          [
+            "Deal",
+            3.9
+          ],
+          [
+            "Staycation",
+            3.4
+          ]
+        ]
+      },
+      "notes": [
+        [
+          "Dataset",
+          "Project materials report 74,896 Booking.com reviews across 458 Da Nang hotels. This is the dataset for this segmentation study."
+        ],
+        [
+          "Analysis",
+          "Attribute-level sentiment analysis (ABSA), K-means clustering and a Gaussian mixture robustness check. The materials report 108,906 sentences and 148,846 extracted aspect–sentence pairs."
+        ],
+        [
+          "Evidence",
+          "Dataset counts and segment shares are reported in the project materials; they have not been independently verified here."
+        ]
+      ],
+      "sources": [
+        [
+          "Analysis figure",
+          "assets/optimized/hotel-segmentation-fig1-optimized.webp"
+        ],
+        [
+          "Related value framework",
+          "research-hotel-value.html"
+        ]
+      ],
+      "useTitle": "Service priorities"
+    },
+    {
+      "id": "ev-choice",
+      "file": "research-ev.html",
+      "title": "EV choice experiment",
+      "topic": "Consumer research · Vietnam",
+      "status": "CIEMB 2025 manuscript",
+      "image": "assets/optimized/ev-vietnam-charging-hero-1440.webp",
+      "imageAlt": "Illustration of an electric vehicle at a city charging point",
+      "accent": "#365c80",
+      "lead": "A choice experiment with young consumers in Hanoi and Ho Chi Minh City examined how range, charging, network size and body design affect EV preferences.",
+      "facts": [
+        [
+          "Sample",
+          "212 consumers"
+        ],
+        [
+          "Design",
+          "Stated-choice experiment"
+        ],
+        [
+          "Analysis",
+          "Two-class latent model"
+        ]
+      ],
+      "question": "Which trade-offs shape an EV choice?",
+      "study": "Participants compared vehicle profiles with different features. Multinomial and mixed logit models were compared with a latent class model to examine differences between buyer groups.",
+      "findingTitle": "Two ways to value an EV",
+      "finding": "The reported model separates a utility-focused group (65%) from a design-sensitive group (35%). Range has the highest marginal willingness-to-pay estimate in both groups. Design estimates are less certain.",
+      "use": "The results can inform product positioning and the features emphasized for each group. They do not establish demand at a particular retail price.",
+      "limit": "These are stated preferences and model estimates. Several attribute confidence intervals include zero; the estimated willingness to pay is not a sales result.",
+      "visual": {
+        "type": "comparison",
+        "title": "Compare the two groups",
+        "caption": "Marginal willingness to pay, VND million per attribute change. Reported model estimates.",
+        "labels": [
+          "Range +100 km",
+          "Charging time −15 min",
+          "Network +50,000 stations",
+          "Streamlined body"
+        ],
+        "unit": "m VND",
+        "max": 200,
+        "states": [
+          {
+            "label": "Utility-focused · 65%",
+            "values": [
+              133.9,
+              96.0,
+              43.7,
+              43.3
+            ],
+            "note": "The larger group places most of its estimated value on driving range."
+          },
+          {
+            "label": "Design-sensitive · 35%",
+            "values": [
+              180.0,
+              105.3,
+              60.5,
+              67.9
+            ],
+            "note": "Estimates are higher in this group, but the design interval still includes zero."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Sample and model",
+          "212 validated young consumers in Hanoi and Ho Chi Minh City. Reported two-class split: 65% / 35%; model log-likelihood: −1523.26."
+        ],
+        [
+          "Uncertainty",
+          "Utility-focused 95% intervals: range 65.3–202.5; charging −6.7–198.7; network −26.4–113.8; body −21.8–108.4. Design-sensitive intervals: range 100.2–259.8; charging 19.4–191.2; network 21.8–99.2; body −24.8–160.7. Units match the figure."
+        ],
+        [
+          "Status",
+          "CIEMB manuscript/conference context. The current materials do not establish an external publication record or measured commercial outcomes."
+        ]
+      ],
+      "sources": [
+        [
+          "Transport policy study",
+          "research-motorbike-ban.html"
+        ]
+      ],
+      "useTitle": "Product positioning"
+    },
+    {
+      "id": "virtual-influencers",
+      "file": "research-virtual-influencers.html",
+      "title": "Virtual influencers and purchase intention",
+      "topic": "Consumer research · Generation Z",
+      "status": "Published chapter · Springer",
+      "image": "assets/optimized/virtual-influencer-hero-ai-1440.webp",
+      "imageAlt": "Illustrative portrait of a virtual influencer",
+      "accent": "#795e76",
+      "lead": "A survey experiment tested whether the message or the virtual creator's appeal affected purchase intention among Vietnamese Generation Z consumers.",
+      "facts": [
+        [
+          "Participants",
+          "244 valid responses"
+        ],
+        [
+          "Design",
+          "2 × 2 experiment"
+        ],
+        [
+          "Published",
+          "18 June 2025"
+        ]
+      ],
+      "question": "Does the message or the creator persuade?",
+      "study": "Participants saw one of four simulated Instagram posts. The experiment varied argument quality and peripheral appeal, then examined purchase intention and the moderating role of speciesism.",
+      "findingTitle": "Creator appeal mattered, with a limit",
+      "finding": "Peripheral cues could affect purchase intention independently. Participants with stronger preferences for human endorsers reported lower purchase intention regardless of the virtual creator's attractiveness.",
+      "use": "The result supports examining audience acceptance alongside creator design. Attractive visuals alone may not persuade audiences who strongly prefer human endorsers.",
+      "limit": "The experiment measured purchase intention after simulated content exposure. It did not measure purchases or campaign conversion.",
+      "visual": {
+        "type": "stimuli",
+        "title": "The four experimental conditions",
+        "caption": "Argument quality and peripheral appeal were varied separately. Select a condition to view its stimulus.",
+        "items": [
+          {
+            "label": "Strong argument · high appeal",
+            "image": "../assets/optimized/external/vi-sim-high-high-optimized.webp",
+            "note": "Both the product argument and peripheral creator cues were strengthened."
+          },
+          {
+            "label": "Weak argument · high appeal",
+            "image": "../assets/optimized/external/vi-sim-low-high-optimized.webp",
+            "note": "Peripheral creator cues were strengthened while the product argument was weaker."
+          },
+          {
+            "label": "Strong argument · low appeal",
+            "image": "../assets/optimized/external/vi-sim-high-low-optimized.webp",
+            "note": "The product argument was strengthened while peripheral creator cues were weaker."
+          },
+          {
+            "label": "Weak argument · low appeal",
+            "image": "../assets/optimized/external/vi-sim-low-low-optimized.webp",
+            "note": "Both dimensions were presented at their lower experimental levels."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Framework",
+          "Elaboration likelihood model: argument quality represents the central route; social attractiveness, physical attractiveness and attitude similarity represent peripheral cues."
+        ],
+        [
+          "Speciesism",
+          "The study uses speciesism to examine stronger preferences for human over non-human endorsers. It is a moderator, not an additional experimental condition."
+        ],
+        [
+          "Publication",
+          "Exploring the Effect of Social Media Content of Virtual Influencers on Generation Z’s Purchase Intention: An Elaboration Likelihood Model Approach. Springer Proceedings in Business and Economics, pages 143–157. DOI 10.1007/978-981-96-4116-1_9."
+        ]
+      ],
+      "sources": [
+        [
+          "Springer publication record",
+          "https://doi.org/10.1007/978-981-96-4116-1_9"
+        ],
+        [
+          "Conference certificate (PDF)",
+          "assets/research-files/Virtual-Influencer.pdf"
+        ]
+      ],
+      "useTitle": "Choosing a virtual creator"
+    },
+    {
+      "id": "nutrition-diet",
+      "file": "research-nutrition.html",
+      "title": "Student diet quality",
+      "topic": "Student nutrition · Vietnam",
+      "status": "FCBEM 2025 proceedings-linked paper",
+      "image": "assets/optimized/research-nutrition-hero-1440.webp",
+      "imageAlt": "Illustration of a university student and a balanced meal",
+      "accent": "#6b7650",
+      "lead": "A survey of 280 university students examined nutrition knowledge, physical activity and the foods eaten on the previous day.",
+      "facts": [
+        [
+          "Sample",
+          "280 students"
+        ],
+        [
+          "Measures",
+          "CoNKS · IPAQ-SF · DQQ"
+        ],
+        [
+          "Design",
+          "Cross-sectional survey"
+        ]
+      ],
+      "question": "How does knowledge relate to daily food choices?",
+      "study": "The study combined a 20-item nutrition knowledge scale, physical activity measures and a dietary questionnaire. Regression examined their associations with diet quality while accounting for age and sex.",
+      "findingTitle": "Knowledge differed across topics",
+      "finding": "Students answered basic dietary questions more accurately than calorie questions. The reported diet scores also showed more foods to limit than protective food groups.",
+      "use": "The findings suggest specific topics for nutrition education and areas to examine in campus food provision. Physical activity was associated with better diet quality in the regression.",
+      "limit": "A cross-sectional survey identifies associations. It does not show that an education or activity programme caused better diets.",
+      "visual": {
+        "type": "comparison",
+        "title": "Knowledge and dietary patterns",
+        "caption": "Values reproduced from the paper. Dietary averages use different maximum scores and should not be read as percentages.",
+        "states": [
+          {
+            "label": "Knowledge",
+            "labels": [
+              "Basic dietary principles",
+              "Nutrient contents",
+              "Calories"
+            ],
+            "values": [
+              85.5,
+              69.7,
+              46.1
+            ],
+            "unit": "% correct",
+            "max": 100,
+            "note": "Correct answers by knowledge domain, Table 2."
+          },
+          {
+            "label": "Dietary pattern",
+            "labels": [
+              "Food diversity",
+              "Protective food groups",
+              "Foods to limit"
+            ],
+            "values": [
+              6.1,
+              3.9,
+              6.1
+            ],
+            "unit": "mean score",
+            "max": 12,
+            "note": "Reported means: diversity 6.1/10, protective groups 3.9/9 and foods to limit 6.1/12."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Instruments",
+          "Adapted CoNKS: 20 items. IPAQ-SF: activity in MET-minutes per week. DQQ: 29 food groups with food-diversity and Global Dietary Recommendations scores."
+        ],
+        [
+          "Regression",
+          "The reported model explains 53.8% of the variance in the diet-quality score (R² = 0.538). Physical activity, age and nutrition knowledge have positive adjusted associations; sex is not significant."
+        ],
+        [
+          "Source",
+          "Values were checked against the hosted FCBEM paper, including Tables 2 and 3. The results describe this student sample rather than all Vietnamese students."
+        ]
+      ],
+      "sources": [
+        [
+          "Paper PDF",
+          "assets/research-files/FCBEM-029-Nutrition.pdf"
+        ],
+        [
+          "FCBEM 2025 record",
+          "https://science.fpt.edu.vn/FCBEM25/tour"
+        ]
+      ],
+      "useTitle": "Campus food choices"
+    },
+    {
+      "id": "motorbike-phaseout",
+      "file": "research-motorbike-ban.html",
+      "title": "Motorbike phase-out policy",
+      "topic": "Transport policy · Hanoi",
+      "status": "CIEMB 2025 manuscript",
+      "image": "assets/optimized/external/wikimedia/hanoi-metro-train-vanh-dai-3-1024.webp",
+      "imageAlt": "Hanoi metro train as an alternative to motorcycle travel",
+      "accent": "#47716d",
+      "lead": "A policy choice study examined how Hanoi residents valued travel restrictions, public transport improvements and support for changing vehicles.",
+      "facts": [
+        [
+          "Sample",
+          "320 respondents"
+        ],
+        [
+          "Method",
+          "Discrete choice experiment"
+        ],
+        [
+          "Context",
+          "Hanoi transport transition"
+        ]
+      ],
+      "question": "What makes a transition acceptable?",
+      "study": "Participants evaluated policy packages. The model estimated how restrictions and support measures changed their choices, with willingness to pay expressed in VND per month.",
+      "findingTitle": "Restrictions and support pull in different directions",
+      "finding": "Restrictions on fossil-fuel vehicles carried negative willingness-to-pay estimates. Public transport improvements, reinvestment and an electric-motorcycle grant carried positive estimates.",
+      "use": "The study supports comparing support measures alongside restrictions when discussing a transition package. The estimates describe stated policy preferences.",
+      "limit": "The model does not forecast traffic, compliance or the outcome of a particular regulation. The sequencing proposal remains a policy interpretation.",
+      "visual": {
+        "type": "comparison",
+        "title": "Monthly willingness to pay",
+        "caption": "Selected values from the reported manuscript tables. A negative value indicates compensation needed; a positive value indicates support for the attribute.",
+        "states": [
+          {
+            "label": "Restrictions",
+            "labels": [
+              "Restrict all fossil-fuel vehicles",
+              "Restrict fossil-fuel motorcycles"
+            ],
+            "values": [
+              -135220,
+              -68450
+            ],
+            "unit": "VND / month",
+            "max": 190000,
+            "note": "Reported restrictions carry negative values in the choice model."
+          },
+          {
+            "label": "Support measures",
+            "labels": [
+              "Electric-motorcycle grant",
+              "Public transport +30%",
+              "Fares −50%",
+              "Reinvestment + citizen oversight"
+            ],
+            "values": [
+              188120,
+              84150,
+              76920,
+              102550
+            ],
+            "unit": "VND / month",
+            "max": 190000,
+            "note": "Reported support values are positive. They are model estimates, not policy budgets."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Model",
+          "The project materials report n = 320, ρ² = 0.28 and an alternative-specific constant of +1.621. The figure uses values from manuscript Tables 4 and 5."
+        ],
+        [
+          "Interpretation",
+          "Greater dependence on motorcycles changes how restrictions are valued. Income, environmental concern and trust also appear in the reported interaction analysis."
+        ],
+        [
+          "Status",
+          "CIEMB manuscript/conference context. Existing portfolio figures report the model values; no external publication record is established here."
+        ]
+      ],
+      "sources": [
+        [
+          "Reported WTP figure",
+          "assets/viz-motorbike-wtp-heterogeneity-enhanced.svg"
+        ],
+        [
+          "EV choice study",
+          "research-ev.html"
+        ]
+      ],
+      "useTitle": "Policy package design"
+    },
+    {
+      "id": "hotel-prca",
+      "file": "research-hotel-prca.html",
+      "title": "Hotel service priorities",
+      "topic": "Hospitality · Vietnam",
+      "status": "PRCA + Kano analysis",
+      "image": "assets/optimized/hotel_resort_background-1024.webp",
+      "imageAlt": "Illustration of a hotel resort and guest facilities",
+      "accent": "#6d7560",
+      "lead": "An analysis of hotel reviews examined whether poor service and good service had equal effects on review scores.",
+      "facts": [
+        [
+          "Data",
+          "97,014 reviews"
+        ],
+        [
+          "Period",
+          "Jan 2023–Jan 2025"
+        ],
+        [
+          "Model",
+          "PRCA + Kano classification"
+        ]
+      ],
+      "question": "Which service failures cost the most?",
+      "study": "Review text was mapped to eight attributes with Sentence-BERT. Positive and negative sentiment indicators entered a regression to compare reward and penalty coefficients.",
+      "findingTitle": "Cleanliness and staff service have different roles",
+      "finding": "Cleanliness has the largest reported penalty when it fails. Staff service has the largest positive reward coefficient. The model groups attributes into basic, performance and excitement categories.",
+      "use": "Hotel teams can use the comparison to distinguish failures that need attention from improvements that may support differentiation.",
+      "limit": "Regression coefficients describe associations with review scores. They do not establish the revenue return from investing in an attribute.",
+      "visual": {
+        "type": "comparison",
+        "title": "Penalty and reward by attribute",
+        "caption": "Reported regression coefficients. Compare the downside of negative sentiment with the upside of positive sentiment.",
+        "labels": [
+          "Cleanliness",
+          "WiFi",
+          "Staff service",
+          "Room quality",
+          "Value",
+          "Location",
+          "Facilities",
+          "Food"
+        ],
+        "unit": "coefficient",
+        "max": 1.5,
+        "states": [
+          {
+            "label": "Penalty",
+            "values": [
+              -1.5,
+              -0.656,
+              -0.965,
+              -0.967,
+              -0.382,
+              -0.341,
+              -0.115,
+              -0.158
+            ],
+            "note": "Cleanliness has the largest negative coefficient."
+          },
+          {
+            "label": "Reward",
+            "values": [
+              0.145,
+              -0.052,
+              0.68,
+              0.222,
+              0.09,
+              0.034,
+              0.41,
+              0.525
+            ],
+            "note": "Staff service has the largest positive reward coefficient; the WiFi estimate remains negative."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Dataset",
+          "The project materials report 97,014 Booking.com reviews from approximately 1,000 Vietnamese properties, collected for Jan 2023–Jan 2025."
+        ],
+        [
+          "Model",
+          "Robust regression with HC1 standard errors; R² = 0.220. Mean review score: 8.83/10. Eight service attributes were classified."
+        ],
+        [
+          "Classification",
+          "Basic: cleanliness and WiFi. Performance: staff, room quality, value and location. Excitement: facilities and food."
+        ]
+      ],
+      "sources": [
+        [
+          "Coefficient figure",
+          "assets/viz-prca-mirrored-effects.svg"
+        ],
+        [
+          "Guest segmentation study",
+          "research-hotel.html"
+        ]
+      ],
+      "useTitle": "Service investment priorities"
+    },
+    {
+      "id": "hotel-value-framework",
+      "file": "research-hotel-value.html",
+      "title": "Hotel customer value",
+      "topic": "Hospitality · Interpretation framework",
+      "status": "Companion to the segmentation study",
+      "image": "assets/optimized/hvf-breakfast-table-1440.webp",
+      "imageAlt": "Illustration of a hotel breakfast and service experience",
+      "accent": "#957044",
+      "lead": "This framework translates themes in guest reviews into service priorities that hotel teams can discuss and test.",
+      "facts": [
+        [
+          "Context",
+          "Da Nang hospitality"
+        ],
+        [
+          "Purpose",
+          "Interpret guest priorities"
+        ],
+        [
+          "Type",
+          "Conceptual framework"
+        ]
+      ],
+      "question": "How can review themes guide a service decision?",
+      "study": "Review themes are mapped to value dimensions such as comfort, service care and local experience. Guest stories then connect those themes with possible service and messaging choices.",
+      "findingTitle": "Three ways to discuss guest value",
+      "finding": "Comfort seekers, local experience hunters and reliability-first travelers represent different service priorities. These are communication profiles for the framework, not additional measured segments.",
+      "use": "A hotel team can select a profile, review its priorities and use it as a starting point for a service-design discussion.",
+      "limit": "The profiles and actions are conceptual. Dataset counts and measured segment shares belong to the linked segmentation study.",
+      "visual": {
+        "type": "profiles",
+        "title": "Compare guest priorities",
+        "caption": "Conceptual profiles for interpreting review themes. No market shares or measured effects are assigned.",
+        "items": [
+          {
+            "label": "Relaxed comfort",
+            "image": "assets/optimized/hvf-segment-relaxed-comfort-1024.webp",
+            "title": "Rest and comfort",
+            "note": "Room comfort, calm ambience and attentive service are the main priorities in this profile."
+          },
+          {
+            "label": "Local experience",
+            "image": "assets/optimized/hvf-segment-local-experience-1024.webp",
+            "title": "Food and discovery",
+            "note": "Local food, recommendations and access to nearby experiences shape the service discussion."
+          },
+          {
+            "label": "Reliable stay",
+            "image": "assets/optimized/hvf-segment-reliability-1024.webp",
+            "title": "Predictable service",
+            "note": "Convenient access, responsive staff and consistent room quality guide the discussion."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Relationship to the study",
+          "This is an interpretation layer for the Da Nang segmentation work. It does not introduce an independent dataset."
+        ],
+        [
+          "Value dimensions",
+          "Comfort, service care, local food, location ease, ambience and overall value provide the framework vocabulary."
+        ],
+        [
+          "Evidence",
+          "The profiles summarize proposed service priorities. The framework does not establish numerical importance weights."
+        ]
+      ],
+      "sources": [
+        [
+          "Segmentation methods and results",
+          "research-hotel.html"
+        ]
+      ],
+      "useTitle": "Service design discussions"
+    },
+    {
+      "id": "influencer-strategy",
+      "file": "research-leveraging-influencer.html",
+      "title": "Influencer engagement and retention",
+      "topic": "Consumer behavior · Vietnam",
+      "status": "Survey research project",
+      "image": "assets/optimized/research-influencer-retention-hero-1440.webp",
+      "imageAlt": "Illustration of creator content and audience interaction",
+      "accent": "#6a5879",
+      "lead": "A survey of active UGC-platform users examined how content experience, expectation alignment and brand equity relate to engagement and retention.",
+      "facts": [
+        [
+          "Sample",
+          "565 users"
+        ],
+        [
+          "Validation",
+          "EFA 200 · CFA/SEM 365"
+        ],
+        [
+          "Method",
+          "Structural equation model"
+        ]
+      ],
+      "question": "What sits between exposure and returning?",
+      "study": "The sample was split between exploratory factor analysis and confirmatory measurement and structural analysis. The model tested engagement as the pathway linking the antecedent constructs with retention.",
+      "findingTitle": "Engagement connects the model",
+      "finding": "The reported model explains 55% of engagement variance and 70% of retention variance. These are explanatory statistics, not increases in engagement or customer retention.",
+      "use": "The model suggests examining content quality, expectation matching and creator–brand fit alongside the depth of audience interaction.",
+      "limit": "The cross-sectional survey does not prove that changing a campaign causes customers to return. Available materials do not include a complete public coefficient table.",
+      "visual": {
+        "type": "pathway",
+        "title": "The reported model structure",
+        "caption": "Select an input to follow its path through engagement. The diagram shows relationships, not measured conversion uplift.",
+        "items": [
+          {
+            "label": "Content experience",
+            "note": "Informational and narrative quality of creator content enters the model through engagement."
+          },
+          {
+            "label": "Expectation alignment",
+            "note": "The match between creator claims and the delivered experience enters the model through engagement."
+          },
+          {
+            "label": "Brand equity",
+            "note": "Creator credibility and brand associations enter the model through engagement."
+          }
+        ],
+        "middle": "Engagement",
+        "end": "Retention",
+        "middleMetric": "R² 55%",
+        "endMetric": "R² 70%"
+      },
+      "notes": [
+        [
+          "Sample",
+          "565 active UGC users in Vietnam. Exploratory factor analysis used 200 respondents; CFA and SEM used 365. Exact collection dates are not available in the current source set."
+        ],
+        [
+          "Constructs",
+          "CX: content experience. CEX: expectation alignment. BE: brand equity transfer. CE: consumer engagement. CR: customer retention."
+        ],
+        [
+          "Source boundary",
+          "The source contains archived manuscript screenshots and reported model structure. External creator examples were explanatory cases, not survey observations, and are omitted from this concise page."
+        ]
+      ],
+      "sources": [
+        [
+          "Reported model figure",
+          "assets/viz-influencer-four-e-reported-enhanced.svg"
+        ]
+      ],
+      "useTitle": "Campaign evaluation"
+    },
+    {
+      "id": "buffet-nudging",
+      "file": "research-buffet.html",
+      "title": "Buffet menu choices",
+      "topic": "Consumer choice · Vietnam",
+      "status": "Two experimental studies",
+      "image": "assets/buffet-case-cover.webp",
+      "imageAlt": "Hotpot buffet meal used to illustrate the study context",
+      "accent": "#996447",
+      "lead": "Two studies tested how the order of menu information affected intended calorie intake, perceived value and the choice of a higher-priced buffet tier.",
+      "facts": [
+        [
+          "Study 1",
+          "257 respondents"
+        ],
+        [
+          "Study 2",
+          "147 respondents"
+        ],
+        [
+          "Design",
+          "Menu-order experiment"
+        ]
+      ],
+      "question": "Does menu order change a diner's choice?",
+      "study": "Participants saw menu conditions with healthier options or price tiers presented in different orders. The analysis compared intended intake and estimated the odds of choosing a higher tier.",
+      "findingTitle": "Lower intended intake came with a trade-off",
+      "finding": "Healthier-first menus reduced intended calorie intake in both studies. In Study 2, the reported premium-tier choice share fell from 52.4% to 23.8%.",
+      "use": "The result gives operators a menu-order option to test, while showing why perceived value and premium-tier demand need to be considered together.",
+      "limit": "The studies measured stated choices and intended intake. They did not measure plate waste in an operating restaurant.",
+      "visual": {
+        "type": "comparison",
+        "title": "Compare the menu conditions",
+        "caption": "Reported mean intended calorie intake. These are intentions measured in the study, not observed food consumption.",
+        "labels": [
+          "Study 1",
+          "Study 2"
+        ],
+        "unit": "kcal",
+        "max": 1800,
+        "states": [
+          {
+            "label": "Unhealthy options first",
+            "values": [
+              1573,
+              1668
+            ],
+            "note": "Reported means in the comparison condition."
+          },
+          {
+            "label": "Healthier options first",
+            "values": [
+              1427,
+              1445
+            ],
+            "note": "Intended intake is lower by 146 kcal in Study 1 and 223 kcal in Study 2."
+          }
+        ]
+      },
+      "notes": [
+        [
+          "Study design",
+          "Study 1: buffet/hotpot choice experiment, n = 257. Study 2: price-tier choice experiment, n = 147. The source describes a 2 × 3 between-subjects design and ordinal logistic analysis."
+        ],
+        [
+          "Tier choice",
+          "Higher-tier odds ratio: 0.52, meaning 48% lower odds, not a 48-point decrease in probability. Premium choice share changes from 52.4% to 23.8%."
+        ],
+        [
+          "Mediation",
+          "Reported indirect effect through perceived value: −0.339, 95% CI [−0.56, −0.15]. This helps interpret the commercial trade-off in the experimental conditions."
+        ]
+      ],
+      "sources": [
+        [
+          "Example menu stimulus",
+          "assets/menu-giao-hy/buffet-sim-main-menu.webp"
+        ]
+      ],
+      "useTitle": "Menu design"
+    },
+    {
+      "id": "psych-ownership",
+      "file": "research-psych-ownership.html",
+      "title": "Psychological ownership at university",
+      "topic": "Organizational research · Vietnam",
+      "status": "Research framework",
+      "image": "assets/optimized/research-psych-ownership-hero-1440.webp",
+      "imageAlt": "Illustration of a university setting and shared work",
+      "accent": "#4d6972",
+      "lead": "This framework examines how a sense that work is mine or ours may relate to commitment and cooperation in universities.",
+      "facts": [
+        [
+          "Focus",
+          "Individual + collective ownership"
+        ],
+        [
+          "Context",
+          "Vietnamese universities"
+        ],
+        [
+          "Type",
+          "Conceptual interpretation"
+        ]
+      ],
+      "question": "How does ownership relate to commitment?",
+      "study": "The framework connects control over work, identification with it and shared responsibility with organizational commitment. It outlines relationships to examine rather than reporting a new university dataset.",
+      "findingTitle": "A pathway to investigate",
+      "finding": "Individual ownership concerns a person's connection with the work. Collective ownership concerns a shared sense of responsibility. Both provide questions for examining commitment and teamwork.",
+      "use": "Universities can use the framework to frame interviews or future surveys about participation in decisions, the meaning of work and shared goals.",
+      "limit": "The current materials do not provide a study sample, model fit or university-specific effect sizes. The pathway is conceptual.",
+      "visual": {
+        "type": "pathway",
+        "title": "Explore the proposed relationships",
+        "caption": "Conceptual diagram. Select a perspective to see the relationship it proposes.",
+        "items": [
+          {
+            "label": "Individual ownership",
+            "note": "A personal sense of connection, influence and identification with work may relate to commitment."
+          },
+          {
+            "label": "Collective ownership",
+            "note": "A shared sense of responsibility may relate to commitment and cooperation."
+          }
+        ],
+        "middle": "Commitment",
+        "end": "Cooperation",
+        "middleMetric": "Proposed relationship",
+        "endMetric": "For further study"
+      },
+      "notes": [
+        [
+          "Definition",
+          "Psychological ownership refers to a felt connection with a target such as work or an organization. It is distinct from legal ownership."
+        ],
+        [
+          "Evidence gap",
+          "The current portfolio sources do not include a sample, university-specific coefficients or confirmed SEM results."
+        ],
+        [
+          "Practical reading",
+          "Use the framework to define research questions. Outcomes such as improved teaching or employee retention require separate evidence."
+        ]
+      ],
+      "sources": [
+        [
+          "Original framework diagram",
+          "assets/psych-ownership-framework.svg"
+        ]
+      ],
+      "useTitle": "Future university research"
+    },
+    {
+      "id": "arts-workshop",
+      "file": "research-arts-workshop.html",
+      "title": "Arts workshop participation",
+      "topic": "Service experience · Melbourne",
+      "status": "Survey research project",
+      "image": "assets/optimized/arts-workshop-1280.webp",
+      "imageAlt": "Research team in the arts workshop setting",
+      "accent": "#886952",
+      "lead": "A survey at Ladder Art Space examined how learning, social and enjoyment values related to attitudes toward a workshop and intentions to participate.",
+      "facts": [
+        [
+          "Sample",
+          "216 valid responses"
+        ],
+        [
+          "Context",
+          "Ladder Art Space, Melbourne"
+        ],
+        [
+          "Analysis",
+          "Mediation model"
+        ]
+      ],
+      "question": "What makes a workshop worth joining?",
+      "study": "The analysis examined experience values, workshop attitude and participation intention. Measurement checks and PROCESS Model 4 were used to examine the mediation pathway.",
+      "findingTitle": "Learning value connects with attitude",
+      "finding": "The project materials report learning value as the strongest signal for attitude. The reported paths are 0.35 from learning value to attitude and 0.59 from attitude to intention.",
+      "use": "The findings suggest testing clear learning goals, beginner guidance and feedback during the workshop. These are service-design proposals rather than measured attendance gains.",
+      "limit": "The cross-sectional data measures intention. It does not prove that these changes cause bookings or repeat attendance.",
+      "visual": {
+        "type": "pathway",
+        "title": "From experience to participation intention",
+        "caption": "Reported pathway and service-design interpretation. Select an experience value to follow its role.",
+        "items": [
+          {
+            "label": "Learning value",
+            "note": "Reported learning-value → attitude path: 0.35. Participants valued what they could learn to make."
+          },
+          {
+            "label": "Social value",
+            "note": "The model examines social value alongside the other experience dimensions. A separate numeric path is not assigned here."
+          },
+          {
+            "label": "Enjoyment",
+            "note": "The model examines enjoyment alongside learning and social value. A separate numeric path is not assigned here."
+          }
+        ],
+        "middle": "Workshop attitude",
+        "end": "Participation intention",
+        "middleMetric": "Learning path: 0.35",
+        "endMetric": "Attitude path: 0.59",
+        "inputMetrics": [
+          "Learning path: 0.35",
+          "Path included in the model",
+          "Path included in the model"
+        ]
+      },
+      "notes": [
+        [
+          "Sample and setting",
+          "216 valid responses after screening; Ladder Art Space, Melbourne. Figures are reported in the project page."
+        ],
+        [
+          "Analysis",
+          "Measurement checks, structural paths and PROCESS Model 4. The current source set does not provide enough detail to label the displayed coefficients as standardized or causal."
+        ],
+        [
+          "Evidence",
+          "The sample and paths are reported in the project materials. A publication record and independent data verification are not provided."
+        ]
+      ],
+      "sources": [],
+      "useTitle": "Workshop service design"
+    }
+  ]
+}

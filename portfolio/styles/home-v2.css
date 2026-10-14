@@ -196,3 +196,13 @@ p+p {margin-top:15px}
 .legacy-anchor {position:absolute;top:0;width:0;height:0;pointer-events:none}
 .study-row img[src*="virtual-influencer-hero"] {object-position:70% center}
 .study-row img[src*="research-nutrition-hero"] {object-position:75% center}
+/* Same-origin study navigation connects the selected image with the case cover. */
+@view-transition {navigation:auto}
+::view-transition-group(study-image) {animation-duration:.55s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+::view-transition-old(root),::view-transition-new(root) {animation-duration:.3s}
+.study-row img {transition:filter .25s,transform .35s;transform-origin:center}
+.study-row:hover img,.study-row:focus-visible img {transform:translateY(-3px);filter:saturate(1.12)}
+@media(prefers-reduced-motion:reduce) {
+ @view-transition {navigation:none}
+ .study-row:hover img,.study-row:focus-visible img {transform:none;filter:none}
+}

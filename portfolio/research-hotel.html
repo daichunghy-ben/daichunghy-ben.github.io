@@ -1,186 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-    <title>Hotel Customer Segmentation | Chung Hy Dai</title>
-    <meta content="Self-reported hotel segmentation project using 74,896 Booking.com reviews across 458 Da Nang hotels, aspect-level sentiment, and clustering." name="description"/>
-    <link href="styles/base.css" rel="stylesheet"/>
-    <link href="styles/research.css" rel="stylesheet"/>
-    <link href="styles/pitch-deck.css" rel="stylesheet"/>
-    <noscript><link href="styles/research.css" rel="stylesheet"/></noscript>
-    <link href="assets/vendor/phosphor/regular/style.css" rel="stylesheet"/>
-<link href="styles/project-sidebar.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#faf9f6"/>
+<title>Hotel customer segmentation | Dai Chung Hy</title>
+<meta name="description" content="Guest reviews reveal different priorities within the same hotel market. This study grouped Da Nang guests by the service attributes they discussed and how they rated them."/>
+<meta property="og:title" content="Hotel customer segmentation | Dai Chung Hy"/>
+<meta property="og:description" content="Guest reviews reveal different priorities within the same hotel market. This study grouped Da Nang guests by the service attributes they discussed and how they rated them."/>
+<meta property="og:url" content="https://daichunghy-ben.github.io/portfolio/research-hotel.html"/>
+<link rel="canonical" href="https://daichunghy-ben.github.io/portfolio/research-hotel.html"/>
+<link rel="icon" href="../assets/favicon.png"/>
+<link rel="stylesheet" href="styles/home-v2.css?v=cases8"/>
+<link rel="stylesheet" href="styles/case-study.css?v=cases8"/>
 </head>
-<body class="page-research-detail page-research-custom page-research-hotel page-research-hotel-poster research-story-page story-hotel project-left-banner" data-page="research" data-research-id="hotel-segmentation">
-<!-- PROJECT_HOME_SIDEBAR -->
-<aside class="ecosystem-sidebar project-home-sidebar" aria-label="Profile and project navigation">
-<div class="side-profile">
-<div class="side-avatar">
-<picture>
-<source srcset="./assets/optimized/profile-portfolio-main-480.avif 480w, ./assets/optimized/profile-portfolio-main-768.avif 768w" type="image/avif"/>
-<source srcset="./assets/optimized/profile-portfolio-main-480.webp 480w, ./assets/optimized/profile-portfolio-main-768.webp 768w" type="image/webp"/>
-<img alt="Portrait of Chung Hy Dai" decoding="async" fetchpriority="high" height="1664" loading="eager" src="./assets/optimized/profile-portfolio-main-optimized.webp" width="1248"/>
-</picture>
-<span aria-hidden="true"></span>
-</div>
-<h1>Chung Hy Dai</h1>
-<p>Market Researcher</p>
-</div>
-<nav class="side-nav" aria-label="Portfolio sections">
-<a href="index.html#education"><i class="ph ph-graduation-cap" aria-hidden="true"></i><span>Education</span></a>
-<a class="is-active" href="projects.html"><i class="ph ph-folder" aria-hidden="true"></i><span>Projects</span></a>
-<a href="index.html#honors"><i class="ph ph-trophy" aria-hidden="true"></i><span>Honors &amp; Awards</span></a>
-<a href="index.html#certificates"><i class="ph ph-certificate" aria-hidden="true"></i><span>Certificates</span></a>
-<a href="index.html#skills"><i class="ph ph-code" aria-hidden="true"></i><span>Skills</span></a>
-<a href="index.html#info"><i class="ph ph-user" aria-hidden="true"></i><span>Info</span></a>
-</nav>
-<div class="side-art" aria-hidden="true">
-<div class="wash wash-a"></div>
-<div class="wash wash-b"></div>
-<div class="reed reed-a"></div>
-<div class="reed reed-b"></div>
-<div class="reed reed-c"></div>
-</div>
-<blockquote class="side-quote">Work for a cause,<br/>not for applause.<br/>Live life to express,<br/>not to impress.</blockquote>
-</aside>
-<!-- /PROJECT_HOME_SIDEBAR -->
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <main class="hotel-poster-main">
-        <section class="hotel-poster-hero" aria-labelledby="hotel-title">
-            <div class="hotel-poster-bg" aria-hidden="true">
-                <img alt="" decoding="async" fetchpriority="high" src="./assets/research-hotel-value-coast.png"/>
-            </div>
-            <div class="hotel-poster-shore" aria-hidden="true"></div>
-            <div class="hotel-wavefield" aria-hidden="true"></div>
-            <div class="hotel-sea-ribbons" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="hotel-poster-wrap hotel-hero-grid">
-                <div class="hotel-hero-copy">
-                    <p class="hotel-kicker">Research project</p>
-                    <h1 id="hotel-title"><span>Hotel Customer</span><span>Segmentation</span></h1>
-                    <p class="hotel-hero-subtitle">from Aspect-Level Sentiment in Da Nang</p>
-                    <p class="hotel-hero-lede">Turning 74,896 Booking.com reviews into 10 actionable guest segments to guide experiences, operations, and revenue.</p>
-                </div>
-                <div class="hotel-hero-caption" aria-label="Project location">
-                    <strong>Da Nang, Vietnam</strong>
-                    <span>Where hospitality meets the sea</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="hotel-poster-wrap hotel-stat-strip" aria-label="Research scope">
-            <article><i class="ph ph-chats-circle" aria-hidden="true"></i><strong>74,896</strong><span>Reviews</span><small>From Booking.com</small></article>
-            <article><i class="ph ph-buildings" aria-hidden="true"></i><strong>458</strong><span>Hotels</span><small>Across Da Nang</small></article>
-            <article><i class="ph ph-files" aria-hidden="true"></i><strong>108,906</strong><span>Sentences</span><small>Used for ABSA</small></article>
-            <article><i class="ph ph-sparkle" aria-hidden="true"></i><strong>148,846</strong><span>Aspect-Sentence</span><small>Pairs extracted</small></article>
-            <article><i class="ph ph-users-three" aria-hidden="true"></i><strong>10</strong><span>Customer Segments</span><small>Discovered</small></article>
-        </section>
-
-        <div class="hotel-rolling-wave" aria-hidden="true"><span></span><span></span></div>
-
-        <section id="method" class="hotel-poster-wrap hotel-overview-grid" aria-label="Project overview and key challenge">
-            <article class="hotel-info-card hotel-overview-card">
-                <div>
-                    <p class="hotel-section-label">Project overview</p>
-                    <h2>Review text became a segmentation system.</h2>
-                    <p>We applied NLP and aspect-level sentiment analytics to thousands of guest reviews to uncover what truly drives satisfaction in Da Nang hotels.</p>
-                    <p>Aspect-level understanding reveals distinct guest priorities, enabling hotels to tailor experiences that matter most.</p>
-                </div>
-                <ul class="hotel-method-pills" aria-label="Methods applied">
-                    <li><i class="ph ph-crosshair" aria-hidden="true"></i> Granular aspect extraction</li>
-                    <li><i class="ph ph-check-circle" aria-hidden="true"></i> Sentiment scoring at scale</li>
-                    <li><i class="ph ph-git-branch" aria-hidden="true"></i> Data-driven segmentation</li>
-                </ul>
-            </article>
-            <article class="hotel-info-card hotel-challenge-card">
-                <div>
-                    <p class="hotel-section-label">The key challenge</p>
-                    <h2>Different guests judge the same stay differently.</h2>
-                    <p>Hotels face diverse expectations across experiences and budgets. Average ratings hide where each guest group is delighted, disappointed, or undecided.</p>
-                    <p>How might unstructured review data become clear, actionable segments for strategy and resource allocation?</p>
-                </div>
-            </article>
-        </section>
-
-        <section id="insights" class="hotel-poster-wrap hotel-evidence" aria-labelledby="hotel-evidence-title">
-            <div class="hotel-section-divider">
-                <span></span>
-                <p id="hotel-evidence-title">Visual evidence</p>
-                <span></span>
-            </div>
-            <div class="hotel-evidence-grid">
-                <figure class="hotel-evidence-card modal-trigger">
-                    <figcaption><strong>Review volume over time</strong><span>Monthly review volume highlights strong seasonal peaks.</span></figcaption>
-                    <img alt="Hotel review volume over time by source market" decoding="async" loading="lazy" src="./assets/general_time_series.png"/>
-                </figure>
-
-                <article class="hotel-evidence-card hotel-segment-mosaic">
-                    <header><strong>Customer segments (observed share)</strong><span>Distribution of guests by dominant sentiment theme.</span></header>
-                    <div class="hotel-segment-board" aria-label="Customer segment share mosaic">
-                        <figure class="seg-tile seg-large"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-value-coast.png"/><figcaption>Minimalists <b>43.7%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-segmentation-hero.png"/><figcaption>Gastronomy <b>9.7%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-value-coast.png"/><figcaption>Explorers <b>8.3%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/hotel_resort_background.png"/><figcaption>Hospitality <b>7.6%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-segmentation-hero.png"/><figcaption>Premium <b>7.1%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/hotel_resort_background.png"/><figcaption>Homebodies <b>6.1%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-value-coast.png"/><figcaption>Convenience <b>5.9%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-segmentation-hero.png"/><figcaption>Room <b>4.3%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/hotel_resort_background.png"/><figcaption>Deal <b>3.9%</b></figcaption></figure>
-                        <figure class="seg-tile"><img alt="" decoding="async" loading="lazy" src="./assets/research-hotel-value-coast.png"/><figcaption>Staycation <b>3.4%</b></figcaption></figure>
-                    </div>
-                </article>
-
-                <figure class="hotel-evidence-card modal-trigger">
-                    <figcaption><strong>Aspect salience by segment</strong><span>What each segment talks about most versus overall average.</span></figcaption>
-                    <img alt="Heatmap showing sentiment by segment and hotel service aspect" decoding="async" loading="lazy" src="./assets/optimized/fig03_valence_heatmap-1800.webp"/>
-                </figure>
-
-                <article class="hotel-evidence-card hotel-priority-card">
-                    <header><strong>Value vs risk priority matrix</strong><span>Where to focus to deliver the highest impact.</span></header>
-                    <div class="hotel-matrix" role="img" aria-label="Value versus risk priority matrix">
-                        <div class="matrix-zone quick"><b>Quick wins</b><small>High impact, low effort</small><span>Cleanliness</span><span>Service</span><span>Wi-Fi</span></div>
-                        <div class="matrix-zone strategic"><b>Strategic priorities</b><small>High impact, higher effort</small><span>Rooms</span><span>Experience</span><span>Amenities</span></div>
-                        <div class="matrix-zone maintain"><b>Maintain</b><small>Lower impact, low effort</small><span>Value for Money</span><span>Check-in</span></div>
-                        <div class="matrix-zone bets"><b>Long-term bets</b><small>Lower impact, higher effort</small><span>Food &amp; Dining</span><span>Beach</span></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="hotel-poster-wrap hotel-takeaways" aria-labelledby="hotel-takeaways-title">
-            <div class="hotel-takeaway-panel">
-                <div class="hotel-takeaway-list">
-                    <p class="hotel-section-label" id="hotel-takeaways-title">Key takeaways</p>
-                    <article><i class="ph ph-compass" aria-hidden="true"></i><strong>Guest expectations are diverse and distinct.</strong><span>Segments reveal what matters most to each type of traveler.</span></article>
-                    <article><i class="ph ph-buildings" aria-hidden="true"></i><strong>Service and cleanliness drive broad satisfaction.</strong><span>Core operating strengths appear across most segments.</span></article>
-                    <article><i class="ph ph-hand-heart" aria-hidden="true"></i><strong>Experience differentiates.</strong><span>Amenities, room quality, and local experiences set hotels apart.</span></article>
-                    <article><i class="ph ph-chart-line-up" aria-hidden="true"></i><strong>Data turns reviews into strategy.</strong><span>Actionable insights support allocation and product decisions.</span></article>
-                </div>
-                <aside class="hotel-contact-card">
-                    <h2>Let's turn guest feedback into unforgettable stays.</h2>
-                    <p>Interested in the full methodology, segment deep-dives, or custom analysis?</p>
-                    <a href="mailto:daichunghy@gmail.com">Let's Connect <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
-                </aside>
-            </div>
-        </section>
-
-        <footer class="hotel-poster-footer">
-            <span>&copy; 2026 Chung Hy Dai</span>
-            <a href="mailto:daichunghy@gmail.com"><i class="ph ph-envelope" aria-hidden="true"></i> daichunghy@gmail.com</a>
-            <span><i class="ph ph-map-pin" aria-hidden="true"></i> Da Nang, Vietnam</span>
-            <span class="hotel-footer-note"><i class="ph ph-waves" aria-hidden="true"></i> Designing data stories that elevate hospitality.</span>
-        </footer>
-    </main>
-
-    <div id="image-modal" class="modal-overlay">
-        <span class="modal-close" role="button" tabindex="0" aria-label="Close image modal">x</span>
-        <img class="modal-content" id="modal-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Zoomed in context" width="1600" height="1000"/>
-    </div>
-
-    <script defer src="js/main.js" type="module"></script>
+<body class="case-study" data-study="hotel-segmentation" style="--case-accent:#315f70">
+<header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
+<main class="page-width case-main">
+<section class="case-hero" aria-labelledby="case-title">
+<div class="case-hero-copy"><p class="case-topic">Hospitality research</p><h1 id="case-title">Hotel customer segmentation</h1><p class="case-lede">Guest reviews reveal different priorities within the same hotel market. This study grouped Da Nang guests by the service attributes they discussed and how they rated them.</p><p class="case-status">Analysis project</p><a class="case-jump" href="#findings">Explore findings <span aria-hidden="true">↓</span></a></div>
+<figure class="case-cover"><img class="case-hero-image" src="assets/optimized/research-hotel-value-coast-1440.webp" alt="Illustration of the Da Nang coastline and hotels" width="1440" height="1024" fetchpriority="high"/></figure>
+</section>
+<dl class="case-facts"><div><dt>Data</dt><dd>74,896 reviews</dd></div><div><dt>Coverage</dt><dd>458 Da Nang hotels</dd></div><div><dt>Method</dt><dd>Sentiment analysis + clustering</dd></div></dl>
+<section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">What do different guests value?</h2><p>Overall ratings can hide differences between guests. Review text was mapped to hotel attributes, scored for sentiment and grouped with K-means. A Gaussian mixture model provided a robustness check.</p></section>
+<section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">Ten groups within the review data</h2><p>The largest reported group, Minimalists, accounts for 43.7% of the sample. Smaller groups focus on dining, exploration, service and other parts of the stay.</p></div>
+<figure class="case-figure" data-figure><figcaption><h3>Guest groups</h3><p>Reported share of the review sample. Select a group to compare its size.</p></figcaption><div class="segment-layout"><div class="segment-detail" aria-live="polite"><strong data-share>43.7<small>%</small></strong><h3 data-segment>Minimalists</h3><p>Share of the review sample</p></div><div class="segment-bars" aria-label="Guest segments"><button class="segment-row is-selected" data-choice="0" type="button" aria-pressed="true" disabled><span>Minimalists</span><span class="segment-track" aria-hidden="true"><span style="width:100%"></span></span><strong>43.7%</strong></button><button class="segment-row" data-choice="1" type="button" aria-pressed="false" disabled><span>Gastronomy</span><span class="segment-track" aria-hidden="true"><span style="width:22.196796338672765%"></span></span><strong>9.7%</strong></button><button class="segment-row" data-choice="2" type="button" aria-pressed="false" disabled><span>Explorers</span><span class="segment-track" aria-hidden="true"><span style="width:18.993135011441648%"></span></span><strong>8.3%</strong></button><button class="segment-row" data-choice="3" type="button" aria-pressed="false" disabled><span>Hospitality</span><span class="segment-track" aria-hidden="true"><span style="width:17.391304347826082%"></span></span><strong>7.6%</strong></button><button class="segment-row" data-choice="4" type="button" aria-pressed="false" disabled><span>Premium</span><span class="segment-track" aria-hidden="true"><span style="width:16.247139588100683%"></span></span><strong>7.1%</strong></button><button class="segment-row" data-choice="5" type="button" aria-pressed="false" disabled><span>Homebodies</span><span class="segment-track" aria-hidden="true"><span style="width:13.958810068649885%"></span></span><strong>6.1%</strong></button><button class="segment-row" data-choice="6" type="button" aria-pressed="false" disabled><span>Convenience</span><span class="segment-track" aria-hidden="true"><span style="width:13.501144164759726%"></span></span><strong>5.9%</strong></button><button class="segment-row" data-choice="7" type="button" aria-pressed="false" disabled><span>Room</span><span class="segment-track" aria-hidden="true"><span style="width:9.839816933638442%"></span></span><strong>4.3%</strong></button><button class="segment-row" data-choice="8" type="button" aria-pressed="false" disabled><span>Deal</span><span class="segment-track" aria-hidden="true"><span style="width:8.924485125858123%"></span></span><strong>3.9%</strong></button><button class="segment-row" data-choice="9" type="button" aria-pressed="false" disabled><span>Staycation</span><span class="segment-track" aria-hidden="true"><span style="width:7.780320366132723%"></span></span><strong>3.4%</strong></button></div></div></figure>
+</section>
+<section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">Service priorities</h2><div><p>The segmentation gives hotel teams a way to compare guest priorities before choosing service improvements or messages for different audiences.</p><p class="case-limit">Segments describe the review sample. Their shares should not be treated as hotel occupancy, market share or measured revenue effects.</p></div></section>
+<details class="case-notes" id="study-notes"><summary>Methods & sources <span aria-hidden="true">+</span></summary><div class="notes-content"><dl><div><dt>Dataset</dt><dd>Project materials report 74,896 Booking.com reviews across 458 Da Nang hotels. This is the dataset for this segmentation study.</dd></div><div><dt>Analysis</dt><dd>Attribute-level sentiment analysis (ABSA), K-means clustering and a Gaussian mixture robustness check. The materials report 108,906 sentences and 148,846 extracted aspect–sentence pairs.</dd></div><div><dt>Evidence</dt><dd>Dataset counts and segment shares are reported in the project materials; they have not been independently verified here.</dd></div></dl><div class="case-sources"><a href="assets/optimized/hotel-segmentation-fig1-optimized.webp">Analysis figure <span aria-hidden="true">↗</span></a><a href="research-hotel-value.html">Related value framework <span aria-hidden="true">↗</span></a></div></div></details>
+<nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="research-ev.html" data-study-link><span>Next study</span><strong>EV choice experiment <span aria-hidden="true">→</span></strong></a></nav>
+</main>
+<script type="application/json" id="study-visual-data">{"type":"segments","title":"Guest groups","caption":"Reported share of the review sample. Select a group to compare its size.","items":[["Minimalists",43.7],["Gastronomy",9.7],["Explorers",8.3],["Hospitality",7.6],["Premium",7.1],["Homebodies",6.1],["Convenience",5.9],["Room",4.3],["Deal",3.9],["Staycation",3.4]]}</script>
+<script type="module" src="js/case-study.js?v=cases8"></script>
 </body>
 </html>
