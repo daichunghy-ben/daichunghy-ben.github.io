@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {buildLocales} from './build-locales.mjs';
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, '.deploy', 'public');
@@ -491,6 +492,7 @@ const rewriteStagedHtmlAssetRefs = async () => {
 };
 
 const main = async () => {
+  await buildLocales();
   await ensureCleanOutDir();
 
   const counters = { files: 0 };

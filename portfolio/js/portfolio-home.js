@@ -78,7 +78,7 @@ function syncMotion() {
 control.addEventListener('click', () => {
   paused = !paused;
   control.setAttribute('aria-pressed', String(paused));
-  control.setAttribute('aria-label', paused ? 'Resume animations' : 'Pause animations');
+  control.setAttribute('aria-label', document.documentElement.lang==='vi'?(paused?'Tiếp tục chuyển động':'Tạm dừng chuyển động'):(paused?'Resume animations':'Pause animations'));
   control.querySelector('span').textContent = paused ? '▷' : 'Ⅱ';syncMotion();
 });
 new IntersectionObserver(entries => { stageVisible = entries[0].isIntersecting;syncMotion(); }, { threshold: .01 }).observe(stage);

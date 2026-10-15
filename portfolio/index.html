@@ -31,7 +31,7 @@ html[data-opening="bypass"] .opening-screen{display:none}
   };
   addEventListener('hashchange',redirectProfile);
   if(redirectProfile())return;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches||(location.hash&&location.hash!=='#top'))root.dataset.opening='bypass';
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||(location.hash&&location.hash!=='#top')||new URLSearchParams(location.search).has('lang'))root.dataset.opening='bypass';
   window.releasePortfolioIntro=()=>{
     root.dataset.opening='ready';
     const screen=document.getElementById('opening-screen');if(screen)screen.hidden=true;
@@ -53,6 +53,11 @@ html[data-opening="bypass"] .opening-screen{display:none}
 <link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>
 <link rel="preload" as="image" href="assets/chung-hy-mascot-profile-point-v3.webp"/>
 <noscript><style>.menu-toggle,.motion-control{display:none}.site-header .desktop-nav{display:flex;gap:16px;font-size:12px}.portrait-canvas{display:none}.portrait-fallback{opacity:1!important}</style></noscript>
+<link data-bilingual rel="alternate" hreflang="en" href="https://daichunghy-ben.github.io/portfolio/index.html"/>
+<link data-bilingual rel="alternate" hreflang="vi" href="https://daichunghy-ben.github.io/portfolio/index.vi.html"/>
+<link data-bilingual rel="alternate" hreflang="x-default" href="https://daichunghy-ben.github.io/portfolio/index.html"/>
+<link data-bilingual rel="stylesheet" href="styles/bilingual.css?v=bilingual1"/>
+<script data-bilingual type="module" src="js/language-switch.js?v=bilingual1"></script>
 </head>
 <body class="home-v2" data-page="home">
 <div class="opening-screen" id="opening-screen" tabindex="-1" role="img" aria-label="Chung Hy pushes open a door to reveal his name">
@@ -64,7 +69,7 @@ html[data-opening="bypass"] .opening-screen{display:none}
 </nav>
 <button id="motion-control" class="icon-button motion-control" type="button" aria-label="Pause animations" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
 <button class="menu-toggle" disabled aria-controls="nav-links" aria-expanded="false" type="button">Menu</button>
-</header>
+<nav class="locale-switcher" data-locale-switcher aria-label="Language"><a data-locale-link href="index.vi.html?lang=vi" lang="vi" hreflang="vi" aria-label="Tiếng Việt">VI</a><a data-locale-link href="index.html?lang=en" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a></nav></header>
 <nav id="nav-links" class="mobile-nav" hidden aria-label="Navigation">
 <a href="#work">Experience</a><a href="#publications">Research</a><a href="about.html">Full profile ↗</a><a href="#credentials">Education</a><a href="#contact">Contact</a>
 </nav>
@@ -141,7 +146,7 @@ html[data-opening="bypass"] .opening-screen{display:none}
 </section>
 </main>
 <script type="module" src="js/opening-motion.js?v=english4"></script>
-<script type="module" src="js/portfolio-home.js?v=simple7"></script>
+<script type="module" src="js/portfolio-home.js?v=bilingual1"></script>
 <script type="module" src="js/study-navigation.js?v=cases8"></script>
 </body>
 </html>

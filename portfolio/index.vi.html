@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi" data-opening="pending">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#faf9f6"/>
+<meta name="description" content="Dai Chung Hy, tốt nghiệp ngành Kinh doanh, có sáu tháng kinh nghiệm tư vấn phần mềm B2B, nghiên cứu khách hàng và cải tiến quy trình."/>
+<meta name="google-site-verification" content="5HvqR0hKK48naDWAbrXVW8xrbp0tQqGdIdFvSCsFAYo"/>
+<meta property="og:title" content="Dai Chung Hy | Phân tích kinh doanh &amp; Vận hành"/>
+<meta property="og:description" content="Phân tích kinh doanh, vận hành và chuyển đổi số. Kinh nghiệm tại 1Office, FPT Education cùng các nghiên cứu thị trường ứng dụng."/>
+<meta property="og:url" content="https://daichunghy-ben.github.io/portfolio/index.vi.html"/>
+<meta property="og:image" content="https://daichunghy-ben.github.io/portfolio/assets/profile-portfolio-main.jpg"/>
+<link rel="canonical" href="https://daichunghy-ben.github.io/portfolio/index.vi.html"/>
+<link rel="icon" href="assets/favicon.png"/>
+<title>Dai Chung Hy | Phân tích kinh doanh &amp; Vận hành</title>
+<style>
+html[data-opening="pending"] body{background:#171719;overflow:hidden}
+html[data-opening="pending"] .site-header,html[data-opening="pending"] #main-content{visibility:hidden;pointer-events:none}
+.opening-screen{position:fixed;inset:0;background:#171719;z-index:100}
+.opening-stage{display:block;width:100%;height:100%}
+html[data-opening="bypass"] .opening-screen{display:none}
+</style>
+<script>
+(()=>{
+  const root=document.documentElement;
+  const profileDestinations={education:'education',honors:'education',certificates:'skills',skills:'skills',info:'contact'};
+  const redirectProfile=()=>{
+    const destination=profileDestinations[location.hash.slice(1)];
+    if(!destination)return false;
+    location.replace(new URL('about.vi.html#'+destination,location.href));return true;
+  };
+  addEventListener('hashchange',redirectProfile);
+  if(redirectProfile())return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||(location.hash&&location.hash!=='#top')||new URLSearchParams(location.search).has('lang'))root.dataset.opening='bypass';
+  window.releasePortfolioIntro=()=>{
+    root.dataset.opening='ready';
+    const screen=document.getElementById('opening-screen');if(screen)screen.hidden=true;
+    document.body?.classList.remove('intro-gate-pending','intro-gate-revealing');
+    document.querySelector('.site-header')?.removeAttribute('inert');
+    document.getElementById('main-content')?.removeAttribute('inert');
+    document.dispatchEvent(new Event('portfolio:intro-ready'));
+  };
+  window.portfolioIntroFailsafe=setTimeout(window.releasePortfolioIntro,15000);
+})();
+</script>
+<noscript>
+<style>html[data-opening="pending"] body{background:#faf9f6;overflow:auto}html[data-opening="pending"] .site-header,html[data-opening="pending"] #main-content{visibility:visible;pointer-events:auto}.opening-screen{display:none!important}</style>
+</noscript>
+<link rel="preload" as="image" href="assets/chung-hy-mascot-chibi-v1.webp" fetchpriority="high"/>
+<link rel="preload" as="image" href="assets/chung-hy-mascot-greeting-v1.webp"/>
+<link rel="modulepreload" href="js/opening-motion.js?v=english4"/>
+<link rel="stylesheet" href="styles/home-v2.css?v=reader-first1"/>
+<link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>
+<link rel="preload" as="image" href="assets/chung-hy-mascot-profile-point-v3.webp"/>
+<noscript><style>.menu-toggle,.motion-control{display:none}.site-header .desktop-nav{display:flex;gap:16px;font-size:12px}.portrait-canvas{display:none}.portrait-fallback{opacity:1!important}</style></noscript>
+<link data-bilingual rel="alternate" hreflang="en" href="https://daichunghy-ben.github.io/portfolio/index.html"/>
+<link data-bilingual rel="alternate" hreflang="vi" href="https://daichunghy-ben.github.io/portfolio/index.vi.html"/>
+<link data-bilingual rel="alternate" hreflang="x-default" href="https://daichunghy-ben.github.io/portfolio/index.html"/>
+<link data-bilingual rel="stylesheet" href="styles/bilingual.css?v=bilingual1"/>
+<script data-bilingual type="module" src="js/language-switch.js?v=bilingual1"></script>
+</head>
+<body class="home-v2" data-page="home">
+<div class="opening-screen" id="opening-screen" tabindex="-1" role="img" aria-label="Chung Hy đẩy cánh cửa, tên nhân vật xuất hiện phía sau">
+<canvas class="opening-stage" aria-hidden="true"></canvas>
+</div>
+<header class="site-header">
+<nav class="desktop-nav" aria-label="Điều hướng chính">
+<a href="#work">Kinh nghiệm</a><a href="#publications">Nghiên cứu</a><a href="about.vi.html">Hồ sơ ↗</a><a href="#contact">Liên hệ</a>
+</nav>
+<button id="motion-control" class="icon-button motion-control" type="button" aria-label="Tạm dừng chuyển động" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+<button class="menu-toggle" disabled aria-controls="nav-links" aria-expanded="false" type="button">Mục lục</button>
+<nav class="locale-switcher" data-locale-switcher aria-label="Ngôn ngữ"><a data-locale-link href="index.vi.html?lang=vi" lang="vi" hreflang="vi" aria-label="Tiếng Việt" aria-current="page">VI</a><a data-locale-link href="index.html?lang=en" lang="en" hreflang="en" aria-label="English">EN</a></nav></header>
+<nav id="nav-links" class="mobile-nav" hidden aria-label="Điều hướng">
+<a href="#work">Kinh nghiệm</a><a href="#publications">Nghiên cứu</a><a href="about.vi.html">Hồ sơ ↗</a><a href="#credentials">Học vấn</a><a href="#contact">Liên hệ</a>
+</nav>
+<main id="main-content">
+<div class="portrait-story page-width">
+<figure class="portrait-stage" role="img" aria-label="Nhân vật hoạt hình Dai Chung Hy chào người xem và chỉ về phần kinh nghiệm khi cuộn trang.">
+<div class="portrait-floor" aria-hidden="true"></div>
+<img class="portrait-fallback" src="assets/chung-hy-mascot-greeting-v1.webp" alt="" width="1024" height="1536" fetchpriority="high"/>
+<canvas id="portrait-canvas" class="portrait-canvas" aria-hidden="true"></canvas>
+</figure>
+<div class="story-copy">
+<section id="top" class="story-panel intro-section" data-pose="greeting" aria-labelledby="intro-title">
+<p class="name-line">DAI CHUNG HY</p>
+<h1 id="intro-title">Nghiên cứu khách hàng.<br><span class="accent">Cải tiến quy trình.</span></h1>
+<p class="intro-lede">Tốt nghiệp ngành Kinh doanh, có kinh nghiệm tư vấn phần mềm B2B tại 1Office. Phân tích dữ liệu khách hàng, cấu hình quy trình báo cáo và xác định yêu cầu cho các công cụ số.</p>
+<dl class="intro-skills"><div><dt>Dữ liệu</dt><dd>Excel (PivotTables, Power Query) · Phân nhóm khách hàng · Phân tích nghiên cứu</dd></div><div><dt>Quy trình</dt><dd>Cấu hình quy trình · Phân tích yêu cầu nghiệp vụ</dd></div></dl>
+<p class="education-line">Cử nhân Kinh doanh, chuyên ngành Marketing<br>Swinburne University of Technology</p>
+<div class="intro-actions"><a class="text-link" href="#work">Kinh nghiệm ↓</a><a class="text-link" href="about.vi.html">Hồ sơ ↗</a></div>
+</section>
+<section id="work" class="story-panel work-section" aria-labelledby="work-title">
+<h2 id="work-title">Kinh nghiệm</h2>
+<article class="work-entry" id="case-office">
+<header class="work-heading"><h3>1Office</h3><time>04–09/2026</time></header>
+<p class="entry-role">Chuyên viên tư vấn giải pháp AI</p>
+<p class="work-company-context">Nhà cung cấp phần mềm quản lý doanh nghiệp tại Việt Nam.</p>
+<ul class="work-contributions">
+<li>Rút thời gian chuẩn bị báo cáo và trình duyệt từ khoảng ba ngày xuống 30 phút bằng cách phân loại tài sản theo nhu cầu bảo hành, sửa chữa và cấu hình ba quy trình cho khu nhà gồm 400 căn hộ.</li>
+<li>Phân tích 595 hồ sơ khách hàng trong hai năm, phân nhóm theo ngành, khu vực và quy mô doanh nghiệp để đánh giá nhu cầu phần mềm, tiềm năng hợp tác. Trình bày với ban quản lý các thị trường ưu tiên và đề xuất phân bổ nguồn lực.</li>
+<li>Tổng hợp 600 hồ sơ khách hàng từ CRM và dữ liệu do 80 nhân viên kinh doanh quản lý để phục vụ phân tích khách hàng, gợi ý bán hàng trong đề xuất AI agent nội bộ.</li>
+<li>Phối hợp với đội kỹ thuật và đối tác Salesforce xác định yêu cầu cho AI agent bán hàng, gồm đánh giá tiềm năng giao dịch từ lịch sử cơ hội và tự động hóa email khách hàng.</li>
+</ul>
+</article>
+<article class="work-entry" id="case-fpt">
+<header class="work-heading"><h3>FPT Education</h3><time>03–05/2025</time></header>
+<p class="entry-role">Trợ lý dự án chatbot AI</p>
+<ul class="work-contributions">
+<li>Thiết kế bảng hỏi và phân tích phản hồi của học sinh tại sáu trường THPT để xác định nhu cầu cho đề xuất chatbot hỗ trợ học sinh.</li>
+<li>Đối chiếu dịch vụ chatbot của các trường đại học, chuyển kết quả thành ý tưởng dịch vụ và cấu trúc thông tin, trình bày đề xuất trước hội đồng nghiên cứu.</li>
+</ul>
+</article>
+</section>
+</div>
+</div>
+<section id="publications" class="research-section page-width" aria-labelledby="research-title">
+<div class="section-intro"><h2 id="research-title">Nghiên cứu</h2><a class="text-link" href="projects.vi.html">Tất cả nghiên cứu ↗</a></div>
+<div class="study-list">
+<a class="study-row" href="research-hotel.vi.html">
+<img src="assets/research-reader-first/hotel-v1.webp" alt="" width="768" height="432" loading="lazy"/>
+<div class="study-copy"><h3>Nghiên cứu khách hàng khách sạn</h3><p>Phân tích nhận xét của khách để tìm hiểu các nhóm nhu cầu và đề xuất cho thị trường khách sạn.</p></div><span class="study-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="study-row" href="research-ev.vi.html">
+<img src="assets/research-reader-first/ev-v1.webp" alt="" width="768" height="768" loading="lazy"/>
+<div class="study-copy"><h3>Quyết định chọn xe điện</h3><p>Tìm hiểu cách người mua cân nhắc đặc điểm của xe và các hỗ trợ chuyển đổi.</p></div><span class="study-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="study-row" href="research-virtual-influencers.vi.html">
+<img src="assets/research-reader-first/virtual-influencers-v1.webp" alt="" width="768" height="768" loading="lazy"/>
+<div class="study-copy"><h3>Niềm tin với người ảnh hưởng ảo</h3><p>Niềm tin và ý định mua hàng. Chương sách đã xuất bản tại Springer.</p></div><span class="study-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section id="credentials" class="background-section page-width" aria-labelledby="education-title">
+<span id="education" class="legacy-anchor" aria-hidden="true"></span>
+<div class="education-visual"><img src="assets/optimized/swinburne-dai-chung-hy-khoa-hoc2-1024.webp" alt="Dai Chung Hy trình bày nghiên cứu về dinh dưỡng sinh viên" width="1024" height="683" loading="lazy"/></div>
+<div class="education-copy"><p class="entry-date">09/2022–02/2026</p><h2 id="education-title">Học vấn</h2><p class="entry-role">Swinburne University of Technology</p><p>Cử nhân Kinh doanh, chuyên ngành Marketing</p>
+<p>Thành tích học tập nổi bật ở các môn Kế toán, Quản lý dự án và Nghiên cứu Marketing.</p>
+<p id="honors">Vào vòng chung kết khu vực HSBC Business Case Competition. Nhận giải Aspiring Star Research Prize.</p>
+<span id="certificates" class="legacy-anchor" aria-hidden="true"></span><a id="skills" class="text-link" href="about.vi.html#education">Học vấn, kỹ năng &amp; Đào tạo ↗</a>
+<div class="leadership-summary"><h3>Lãnh đạo nhóm</h3><p>Dẫn dắt 30 tình nguyện viên tại VietPride năm 2025. Thiết lập đánh giá hằng tháng cho 20 thành viên SUS Business Club.</p><a class="text-link" href="about.vi.html#leadership">Vai trò &amp; Trách nhiệm ↗</a></div></div>
+</section>
+<section id="contact" class="contact-section page-width" aria-labelledby="contact-title">
+<span id="info" class="legacy-anchor" aria-hidden="true"></span>
+<figure class="closing-portrait" role="img" aria-label="Dai Chung Hy vẫy tay chào tạm biệt"><img class="closing-fallback" src="assets/chung-hy-mascot-closing-v2.webp" alt="" width="1024" height="1536" loading="lazy"/><canvas id="closing-canvas" aria-hidden="true"></canvas></figure>
+<div class="contact-copy"><h2 id="contact-title">Liên hệ</h2><a class="contact-email" href="mailto:daichunghy@gmail.com">daichunghy@gmail.com <span aria-hidden="true">↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/chung-hy-d-17792826b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://orcid.org/0009-0009-6790-8981" target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href="https://github.com/daichunghy-ben" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+</section>
+</main>
+<script type="module" src="js/opening-motion.js?v=english4"></script>
+<script type="module" src="js/portfolio-home.js?v=bilingual1"></script>
+<script type="module" src="js/study-navigation.js?v=cases8"></script>
+</body>
+</html>

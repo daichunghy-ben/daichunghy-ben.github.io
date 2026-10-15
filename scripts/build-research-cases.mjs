@@ -65,7 +65,7 @@ ${modelMarkup(c,model)}
 <section class="case-notes" id="study-notes"><h2>Study notes & sources</h2><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
-<script type="module" src="js/case-study.js?v=reader-first1"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v=plain-research1"></script>':''}
+<script type="module" src="js/case-study.js?v=reader-first1"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v=bilingual1"></script>':''}
 </body>
 </html>
 `;
