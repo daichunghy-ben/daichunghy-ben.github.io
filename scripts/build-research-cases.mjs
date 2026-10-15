@@ -3,6 +3,7 @@ import path from 'node:path';
 import {validateModels,modelSvg} from './research-model-markup.mjs';
 import {modelMarkup} from './static-research-models.mjs';
 import {evidenceMarkup} from './static-research-evidence.mjs';
+import {researchExperienceMarkup} from './research-experience-markup.mjs';
 
 const root=process.cwd();
 const {cases}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/case-studies.json'),'utf8'));
@@ -23,6 +24,7 @@ for(let i=0;i<cases.length;i++){
  const evidence=entries.find(e=>e.id===c.id);
  if(!evidence)throw new Error('Missing case evidence');
  const figure=evidenceMarkup(evidence,c);
+ const experience=researchExperienceMarkup(c.id);
  const model=models.find(m=>m.id===c.id);
  const capability=capabilities.find(entry=>entry.id===c.id);
  if(!capability)throw new Error('Missing capability');
@@ -43,7 +45,7 @@ for(let i=0;i<cases.length;i++){
 <link rel="stylesheet" href="styles/home-v2.css?v=cases8"/>
 <link rel="stylesheet" href="styles/case-study.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/research-evidence.css?v=reader-first1"/>
-<link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>
+<link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<link rel="stylesheet" href="styles/research-experiences.css?v=experiences1"/>':''}
 </head>
 <body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
@@ -53,7 +55,7 @@ for(let i=0;i<cases.length;i++){
 <figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/>${c.image.includes('research-reader-first/')?'<figcaption class="cover-label">Concept illustration</figcaption>':''}</figure>
 </section>
 <dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
-<section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">${text(c.question)}</h2><p>${text(c.study)}</p></section>
+<section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">${text(c.question)}</h2><p>${text(c.study)}</p></section>${experience?'\n'+experience:''}
 <section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
 ${figure}
 </section>
@@ -62,7 +64,7 @@ ${modelMarkup(c,model)}
 <section class="case-notes" id="study-notes"><h2>Study notes & sources</h2><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
-<script type="module" src="js/case-study.js?v=reader-first1"></script>
+<script type="module" src="js/case-study.js?v=reader-first1"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v=experiences1"></script>':''}
 </body>
 </html>
 `;

@@ -1,0 +1,97 @@
+/* Two restrained research tools, using the portfolio's typography and palette. */
+.research-experience {--tool-ink:#253e50;--tool-wash:#e9eef0;margin:18px 0 30px;padding:30px;border-radius:8px;scroll-margin-top:25px}
+.ev-experience {background:#efeee9}
+.experience-heading {display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:45px;align-items:end;margin-bottom:24px}
+.experience-kicker {font-size:14px;font-weight:700;color:var(--case-accent);margin-bottom:10px}
+.experience-heading h2 {font-size:clamp(29px,3.2vw,40px);line-height:1.08;max-width:520px}
+.experience-heading>p {font-size:18px;line-height:1.5;color:var(--muted);max-width:440px}
+.choice-taskbar {display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 12px;font-size:15px;font-weight:700}
+.choice-step-controls {display:flex;gap:8px}
+.choice-step-controls button {width:44px;height:44px;background:var(--paper);color:var(--ink);border-radius:50%;font-size:21px;transition:background .18s,color .18s}
+.choice-step-controls button:hover:enabled {background:var(--tool-ink);color:var(--paper)}
+.choice-step-controls button:disabled {opacity:.32;cursor:default}
+.choice-options {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.choice-option {min-width:0;background:var(--paper);padding:23px 25px 24px;border-radius:6px;transition:background .2s,box-shadow .2s}
+.choice-option.is-chosen {background:var(--tool-wash)}
+.choice-option-heading {display:flex;align-items:center;justify-content:space-between;gap:12px}
+.choice-option h3 {font-size:25px;line-height:1.2}
+.choice-selected {font-size:13px;color:var(--muted)}
+.is-chosen .choice-selected {color:var(--tool-ink);font-weight:700}
+.choice-car {display:block;width:100%;height:auto;max-height:126px;margin:13px 0 9px;color:var(--ink)}
+.choice-specs {display:grid;gap:11px;margin:0}
+.choice-specs>div {display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.choice-specs dt {font-size:16px;color:var(--muted)}
+.choice-specs dd {margin:0;text-align:right;font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.choice-specs strong {font-size:27px;font-weight:700;letter-spacing:-.03em}
+.choice-specs dd>span {font-size:14px;color:var(--muted)}
+.choice-option>button {display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:23px;padding:12px 17px;background:var(--sand);color:var(--ink);border-radius:4px;font-size:17px;font-weight:700;min-height:48px;transition:background .2s,color .2s}
+.choice-option>button:hover,.choice-option>button[aria-pressed=true] {background:var(--tool-ink);color:var(--paper)}
+.choice-reading {padding:21px 0 0}
+.choice-result {font-size:21px;font-weight:700;line-height:1.4}
+.choice-reading>p+p {font-size:18px;line-height:1.5;margin-top:5px;color:var(--muted)}
+.choice-method {display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:30px;margin-top:22px}
+.choice-method h3,.attribute-method h3 {font-size:21px;line-height:1.3;letter-spacing:-.015em}
+.choice-method p,.attribute-method p {font-size:17px;line-height:1.5;color:var(--muted)}
+.experience-source {font-size:14px;line-height:1.55;color:var(--muted);margin-top:18px;max-width:1000px}
+.research-experience button:focus-visible,.attribute-scroll:focus-visible {outline:3px solid var(--case-accent);outline-offset:4px}
+.hotel-experience {background:#eeefea;--tool-ink:#244b52}
+.attribute-controls {display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.attribute-controls button {font-size:15px;line-height:1.25;padding:11px 13px;min-height:44px;background:#faf9f6;color:var(--ink);border-radius:3px;transition:background .18s,color .18s}
+.attribute-controls button:hover {background:#d9e1df}
+.attribute-controls button[aria-pressed=true] {background:var(--tool-ink);color:var(--paper)}
+.attribute-figure {margin:0}
+.attribute-key {font-size:14px;color:var(--muted);line-height:1.5;margin:0 0 10px}
+.attribute-scroll {overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#8c9f9c #e1e4dd;background:#fff;border-radius:4px}
+.attribute-stage {position:relative;min-width:780px;display:grid}
+.attribute-stage img {width:100%;height:auto;max-width:none;grid-area:1/1}
+.attribute-row-labels {display:none}
+.attribute-shade {position:absolute;pointer-events:none;top:var(--plot-top);height:calc(var(--plot-bottom) - var(--plot-top));background:#faf9f6;opacity:0;transition:opacity .18s,width .18s,left .18s}
+.attribute-shade-before {left:var(--plot-left);width:0}
+.attribute-shade-after {left:var(--plot-right);width:0}
+.attribute-stage.has-highlight .attribute-shade {opacity:.6}
+.attribute-selection {font-size:18px;line-height:1.5;font-weight:700;margin-top:16px}
+.attribute-figure figcaption .experience-source {margin-top:8px}
+.attribute-mobile-hint {display:none}
+.attribute-method {display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:30px;margin-top:23px}
+[data-study="hotel-segmentation"] .evidence-image-grid {grid-template-columns:1fr}
+@media(max-width:900px){
+ .research-experience {padding:25px}
+ .experience-heading {display:block;margin-bottom:20px}
+ .experience-heading>p {max-width:650px;margin-top:13px}
+ .choice-option {padding:20px}
+ .choice-specs>div {display:block}
+ .choice-specs dd {text-align:left}
+ .choice-specs dt {font-size:15px}
+ .choice-method,.attribute-method {grid-template-columns:1fr;gap:9px}
+ .attribute-mobile-hint {display:block;font-size:14px;color:var(--muted);margin-top:6px}
+ .attribute-stage img {clip-path:inset(8% 0 0 0)}
+ .attribute-row-labels {display:block;grid-area:1/1;position:sticky;left:0;width:28px;background:#fff;z-index:2;pointer-events:none}
+ .attribute-row-labels span {position:absolute;right:8px;transform:translateY(-50%);font-size:12px;line-height:1;color:#24272c}
+}
+@media(max-width:600px){
+ .research-experience {padding:20px 16px;margin-inline:-4px}
+ .experience-heading h2 {font-size:32px}
+ .experience-heading>p {font-size:18px}
+ .choice-options {gap:9px}
+ .choice-option {padding:16px 11px}
+ .choice-option-heading {display:block}
+ .choice-option h3 {font-size:22px}
+ .choice-selected {display:block;font-size:12px;margin-top:4px;min-height:19px}
+ .choice-car {margin:13px 0;min-height:45px}
+ .choice-specs {gap:13px}
+ .choice-specs dd {font-size:12px;white-space:normal}
+ .choice-specs strong {font-size:27px}
+ .choice-specs dd>span {display:block;font-size:12px;margin-top:-2px}
+ .choice-specs dt {font-size:14px}
+ .choice-option>button {font-size:15px;padding:11px;margin-top:19px}
+ .choice-reading>p+p {font-size:17px}
+ .choice-result {font-size:20px}
+ .choice-method h3,.attribute-method h3 {font-size:22px}
+ .experience-source {font-size:13px}
+ .attribute-controls {gap:6px}
+ .attribute-controls button {font-size:14px;padding:10px}
+ .attribute-selection {font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){
+ .research-experience * {transition:none!important;scroll-behavior:auto!important}
+}

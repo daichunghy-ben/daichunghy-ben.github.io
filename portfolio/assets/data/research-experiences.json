@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "ev": {
+    "status": "Illustrative profiles, not the original survey tasks or model predictions.",
+    "tasks": [
+      {"a": {"price": 600, "range": 350, "charging": 45}, "b": {"price": 720, "range": 500, "charging": 30}},
+      {"a": {"price": 620, "range": 420, "charging": 40}, "b": {"price": 680, "range": 420, "charging": 20}},
+      {"a": {"price": 660, "range": 450, "charging": 30}, "b": {"price": 720, "range": 550, "charging": 45}}
+    ]
+  },
+  "hotel": {
+    "image": "assets/optimized/fig03_valence_heatmap-1800.webp",
+    "source": "assets/fig03_valence_heatmap.png",
+    "attributes": ["Ambiance", "Cleanliness", "Facilities", "Food & beverage", "Location", "Room", "Service", "Value"],
+    "plot": {"left": 3.5, "right": 79.5556, "top": 9.4444, "bottom": 72.5},
+    "note": "Original cluster IDs 0–9. The source has no verified crosswalk to the named guest profiles below. Color shows sentiment, not attribute importance."
+  }
+}
