@@ -25,7 +25,7 @@ if(choice){
   const task=tasks[taskIndex];
   for(const id of ['a','b'])for(const key of ['price','range','charging'])choice.querySelector(`[data-spec="${id}-${key}"]`).textContent=task[id][key];
   const price=task.b.price-task.a.price,range=task.b.range-task.a.range,charging=task.b.charging-task.a.charging;
-  choice.querySelector('[data-choice-comparison]').textContent=`B costs VND ${price}m more${range?`, adds ${range} km of range`:`, offers the same range`}${charging<0?` and charges ${-charging} minutes faster.`:` and takes ${charging} minutes longer to charge.`}`;
+  choice.querySelector('[data-choice-comparison]').textContent=`B costs VND ${price} million more${range?`, adds ${range} km of range`:`, offers the same range`}${charging<0?` and charges ${-charging} minutes faster.`:` and takes ${charging} minutes longer to charge.`}`;
   choice.querySelector('[data-task-count]').textContent=`Comparison ${taskIndex+1} / ${tasks.length}`;
   stepButtons[0].disabled=taskIndex===0;stepButtons[1].disabled=taskIndex===tasks.length-1;
   renderSelection();animateChange(choice.querySelector('.choice-options'));
@@ -54,6 +54,6 @@ if(map){
    const scroller=map.querySelector('.attribute-scroll');
    scroller.scrollTo({left:stage.clientWidth*(start+columnWidth/2)/100-scroller.clientWidth/2,behavior:reducedMotion.matches?'instant':'smooth'});
   }
-  map.querySelector('[data-attribute-reading]').textContent=all?'All eight attributes are visible. Color runs from negative to positive sentiment (−1 to +1).':`${button.textContent} highlighted across cluster IDs 0–9. The other attributes remain visible for context.`;
+  map.querySelector('[data-attribute-reading]').textContent=all?'All eight topics are visible. Color shows whether comments were negative or positive (−1 to +1).':`${button.textContent} highlighted across review groups 0–9. Compare the colors down this column; the other topics remain visible.`;
  });
 }

@@ -22,15 +22,15 @@
         ],
         [
           "Method",
-          "Sentiment analysis + clustering"
+          "Review analysis + grouping"
         ]
       ],
-      "question": "What do different guests value?",
-      "study": "Overall ratings can hide differences between guests. Review text was mapped to hotel attributes, scored for sentiment and grouped with K-means. A Gaussian mixture model provided a robustness check.",
-      "findingTitle": "Ten groups within the review data",
-      "finding": "The largest reported group, Minimalists, accounts for 43.7% of the sample. Smaller groups focus on dining, exploration, service and other parts of the stay.",
-      "use": "The segmentation gives hotel teams a way to compare guest priorities before choosing service improvements or messages for different audiences.",
-      "limit": "Segments describe the review sample. Their shares should not be treated as hotel occupancy, market share or measured revenue effects.",
+      "question": "What do guests say about their stay?",
+      "study": "A hotel can have a good overall rating but receive very different feedback from different guests. This study grouped reviews with similar patterns, looking at what guests mentioned and how they described it.",
+      "findingTitle": "Guests described ten different patterns",
+      "finding": "The analysis reported ten review-based groups. The largest, labelled Minimalists, covered 43.7% of the reviews. These are groups in the review data, not confirmed types of people.",
+      "use": "Compare feedback before deciding which part of the guest experience to investigate or improve. The group names help summarize patterns; the actual comments and attribute results should guide a decision.",
+      "limit": "The shares describe this review sample. They do not measure hotel occupancy, market share or revenue.",
       "visual": {
         "type": "segments",
         "title": "Guest groups",
@@ -102,7 +102,7 @@
           "research-hotel-value.html"
         ]
       ],
-      "useTitle": "Service priorities"
+      "useTitle": "How a hotel could use this"
     },
     {
       "id": "ev-choice",
@@ -121,19 +121,19 @@
         ],
         [
           "Design",
-          "Stated-choice experiment"
+          "Comparing car choices"
         ],
         [
           "Analysis",
-          "Two-class latent model"
+          "Two buyer groups"
         ]
       ],
-      "question": "Which trade-offs shape an EV choice?",
-      "study": "Participants compared vehicle profiles with different features. Multinomial and mixed logit models were compared with a latent class model to examine differences between buyer groups.",
-      "findingTitle": "Two ways to value an EV",
-      "finding": "The reported model separates a utility-focused group (65%) from a design-sensitive group (35%). Range has the highest marginal willingness-to-pay estimate in both groups. Design estimates are less certain.",
-      "use": "The results can inform product positioning and the features emphasized for each group. They do not establish demand at a particular retail price.",
-      "limit": "These are stated preferences and model estimates. Several attribute confidence intervals include zero; the estimated willingness to pay is not a sales result.",
+      "question": "What matters when choosing an electric car?",
+      "study": "Participants chose between cars with different features and prices. Comparing many choices helped identify which features mattered and whether buyers followed different patterns.",
+      "findingTitle": "Driving range stood out in both groups",
+      "finding": "The analysis reported two buyer groups, making up 65% and 35% of the sample. Extra driving range had the highest estimated value in both. The estimates for body design were less certain.",
+      "use": "The results can help a team decide which features to emphasize for different buyers. They do not predict how many cars will sell at a given price.",
+      "limit": "People chose hypothetical cars. The amounts are model estimates, not money spent on actual purchases.",
       "visual": {
         "type": "comparison",
         "title": "Compare the two groups",
@@ -189,7 +189,7 @@
           "research-motorbike-ban.html"
         ]
       ],
-      "useTitle": "Product positioning"
+      "useTitle": "What a car team could learn"
     },
     {
       "id": "virtual-influencers",
@@ -208,19 +208,19 @@
         ],
         [
           "Design",
-          "2 × 2 experiment"
+          "Four versions of a post"
         ],
         [
           "Published",
           "18 June 2025"
         ]
       ],
-      "question": "Does the message or the creator persuade?",
-      "study": "Participants saw one of four simulated Instagram posts. The experiment varied argument quality and peripheral appeal, then examined purchase intention and the moderating role of speciesism.",
-      "findingTitle": "Creator appeal mattered, with a limit",
-      "finding": "Peripheral cues could affect purchase intention independently. Participants with stronger preferences for human endorsers reported lower purchase intention regardless of the virtual creator's attractiveness.",
-      "use": "The result supports examining audience acceptance alongside creator design. Attractive visuals alone may not persuade audiences who strongly prefer human endorsers.",
-      "limit": "The experiment measured purchase intention after simulated content exposure. It did not measure purchases or campaign conversion.",
+      "question": "Is it the message or the creator?",
+      "study": "Each participant saw one of four simulated Instagram posts. The posts varied the strength of the product message and the creator’s appeal. The study then compared willingness to buy.",
+      "findingTitle": "Audience acceptance matters too",
+      "finding": "Creator-related cues were linked to willingness to buy. A stronger preference for human endorsers was linked to lower willingness to buy after seeing a virtual creator.",
+      "use": "Check whether an audience accepts virtual creators before choosing one. An appealing appearance may not be enough for people who prefer human endorsers.",
+      "limit": "The study measured what people said they might buy after seeing a simulated post. It did not measure purchases or sales.",
       "visual": {
         "type": "stimuli",
         "title": "The four experimental conditions",
@@ -272,7 +272,7 @@
           "assets/research-files/Virtual-Influencer.pdf"
         ]
       ],
-      "useTitle": "Choosing a virtual creator"
+      "useTitle": "What a brand could learn"
     },
     {
       "id": "nutrition-diet",
@@ -291,19 +291,19 @@
         ],
         [
           "Measures",
-          "CoNKS · IPAQ-SF · DQQ"
+          "Food knowledge, activity + diet"
         ],
         [
           "Design",
-          "Cross-sectional survey"
+          "One-time survey"
         ]
       ],
-      "question": "How does knowledge relate to daily food choices?",
-      "study": "The study combined a 20-item nutrition knowledge scale, physical activity measures and a dietary questionnaire. Regression examined their associations with diet quality while accounting for age and sex.",
-      "findingTitle": "Knowledge differed across topics",
-      "finding": "Students answered basic dietary questions more accurately than calorie questions. The reported diet scores also showed more foods to limit than protective food groups.",
-      "use": "The findings suggest specific topics for nutrition education and areas to examine in campus food provision. Physical activity was associated with better diet quality in the regression.",
-      "limit": "A cross-sectional survey identifies associations. It does not show that an education or activity programme caused better diets.",
+      "question": "Does knowing about food go with eating well?",
+      "study": "Students answered questions about nutrition, physical activity and foods eaten the previous day. The analysis compared these answers while also accounting for age and sex.",
+      "findingTitle": "Calories were harder to understand",
+      "finding": "Students answered basic dietary questions more accurately than calorie questions. The food-group scores describe their reported diets; each score uses its own scale.",
+      "use": "Use the knowledge gaps to choose topics for nutrition education. The study also found a link between physical activity and diet quality that could be examined further.",
+      "limit": "This was a survey at one point in time. It cannot show that a class or an activity programme caused healthier eating.",
       "visual": {
         "type": "comparison",
         "title": "Knowledge and dietary patterns",
@@ -367,7 +367,7 @@
           "https://science.fpt.edu.vn/FCBEM25/tour"
         ]
       ],
-      "useTitle": "Campus food choices"
+      "useTitle": "What a university could learn"
     },
     {
       "id": "motorbike-phaseout",
@@ -386,19 +386,19 @@
         ],
         [
           "Method",
-          "Discrete choice experiment"
+          "Comparing policy packages"
         ],
         [
           "Context",
           "Hanoi transport transition"
         ]
       ],
-      "question": "What makes a transition acceptable?",
-      "study": "Participants evaluated policy packages. The model estimated how restrictions and support measures changed their choices, with willingness to pay expressed in VND per month.",
-      "findingTitle": "Restrictions and support pull in different directions",
-      "finding": "Restrictions on fossil-fuel vehicles carried negative willingness-to-pay estimates. Public transport improvements, reinvestment and an electric-motorcycle grant carried positive estimates.",
-      "use": "The study supports comparing support measures alongside restrictions when discussing a transition package. The estimates describe stated policy preferences.",
-      "limit": "The model does not forecast traffic, compliance or the outcome of a particular regulation. The sequencing proposal remains a policy interpretation.",
+      "question": "What would make a transport change easier to accept?",
+      "study": "Hanoi respondents chose between policy packages. Some included restrictions; others added public transport or financial support. Their choices were used to estimate how they valued each feature.",
+      "findingTitle": "Restrictions were disliked; support was valued",
+      "finding": "Restrictions on fossil-fuel vehicles received negative estimated values. Better public transport, reinvestment and an electric-motorcycle grant received positive values.",
+      "use": "Compare restrictions and support together when discussing a transition. The results show what respondents preferred in the survey, not what they will necessarily do.",
+      "limit": "The study does not predict traffic, compliance or the effects of a particular law. Suggested policy sequencing is an interpretation of the findings.",
       "visual": {
         "type": "comparison",
         "title": "Monthly willingness to pay",
@@ -462,14 +462,14 @@
           "research-ev.html"
         ]
       ],
-      "useTitle": "Policy package design"
+      "useTitle": "What policy teams could learn"
     },
     {
       "id": "hotel-prca",
       "file": "research-hotel-prca.html",
       "title": "Hotel service priorities",
       "topic": "Hospitality · Vietnam",
-      "status": "PRCA + Kano analysis",
+      "status": "Review analysis project",
       "image": "assets/optimized/hotel_resort_background-1024.webp",
       "imageAlt": "Illustration of a hotel resort and guest facilities",
       "accent": "#6d7560",
@@ -484,16 +484,16 @@
           "Jan 2023–Jan 2025"
         ],
         [
-          "Model",
-          "PRCA + Kano classification"
+          "Analysis",
+          "Comparing praise and complaints"
         ]
       ],
-      "question": "Which service failures cost the most?",
-      "study": "Review text was mapped to eight attributes with Sentence-BERT. Positive and negative sentiment indicators entered a regression to compare reward and penalty coefficients.",
-      "findingTitle": "Cleanliness and staff service have different roles",
-      "finding": "Cleanliness has the largest reported penalty when it fails. Staff service has the largest positive reward coefficient. The model groups attributes into basic, performance and excitement categories.",
-      "use": "Hotel teams can use the comparison to distinguish failures that need attention from improvements that may support differentiation.",
-      "limit": "Regression coefficients describe associations with review scores. They do not establish the revenue return from investing in an attribute.",
+      "question": "Which service problems matter most in reviews?",
+      "study": "The analysis sorted review sentences into eight parts of the hotel experience. It then compared how positive and negative comments about each part related to review scores.",
+      "findingTitle": "Cleanliness and staff service played different roles",
+      "finding": "Poor cleanliness had the largest reported link to lower scores. Positive comments about staff service had the largest link to higher scores.",
+      "use": "Separate problems that need fixing from improvements that might help a hotel stand out. The comparison gives a starting point for investigating service priorities.",
+      "limit": "The results link review language with review scores. They do not show how much revenue a service investment would generate.",
       "visual": {
         "type": "comparison",
         "title": "Penalty and reward by attribute",
@@ -565,7 +565,7 @@
           "research-hotel.html"
         ]
       ],
-      "useTitle": "Service investment priorities"
+      "useTitle": "What a hotel team could learn"
     },
     {
       "id": "hotel-value-framework",
@@ -584,19 +584,19 @@
         ],
         [
           "Purpose",
-          "Interpret guest priorities"
+          "Discuss guest needs"
         ],
         [
           "Type",
-          "Conceptual framework"
+          "Framework to test"
         ]
       ],
-      "question": "How can review themes guide a service decision?",
-      "study": "Review themes are mapped to value dimensions such as comfort, service care and local experience. Guest stories then connect those themes with possible service and messaging choices.",
-      "findingTitle": "Three ways to discuss guest value",
-      "finding": "Comfort seekers, local experience hunters and reliability-first travelers represent different service priorities. These are communication profiles for the framework, not additional measured segments.",
-      "use": "A hotel team can select a profile, review its priorities and use it as a starting point for a service-design discussion.",
-      "limit": "The profiles and actions are conceptual. Dataset counts and measured segment shares belong to the linked segmentation study.",
+      "question": "How can guest feedback guide a service idea?",
+      "study": "The framework connects review themes, such as comfort and local experiences, with possible hotel services. It provides examples to discuss and test, rather than new customer groups measured from data.",
+      "findingTitle": "Three example ways to understand a guest",
+      "finding": "The profiles describe guests seeking comfort, local experiences or reliability. They are discussion tools, not additional groups discovered in the segmentation study.",
+      "use": "Discuss which needs a service idea addresses, then check those assumptions through guest interviews or a new study.",
+      "limit": "These profiles and service ideas are conceptual. Measured group sizes belong to the separate customer-segmentation study.",
       "visual": {
         "type": "profiles",
         "title": "Compare guest priorities",
@@ -642,7 +642,7 @@
           "research-hotel.html"
         ]
       ],
-      "useTitle": "Service design discussions"
+      "useTitle": "How a hotel could use the examples"
     },
     {
       "id": "influencer-strategy",
@@ -660,20 +660,20 @@
           "565 users"
         ],
         [
-          "Validation",
-          "EFA 200 · CFA/SEM 365"
+          "Survey checks",
+          "200 users + 365 users"
         ],
         [
           "Method",
-          "Structural equation model"
+          "Testing linked survey responses"
         ]
       ],
-      "question": "What sits between exposure and returning?",
-      "study": "The sample was split between exploratory factor analysis and confirmatory measurement and structural analysis. The model tested engagement as the pathway linking the antecedent constructs with retention.",
-      "findingTitle": "Engagement connects the model",
-      "finding": "The reported model explains 55% of engagement variance and 70% of retention variance. These are explanatory statistics, not increases in engagement or customer retention.",
-      "use": "The model suggests examining content quality, expectation matching and creator–brand fit alongside the depth of audience interaction.",
-      "limit": "The cross-sectional survey does not prove that changing a campaign causes customers to return. Available materials do not include a complete public coefficient table.",
+      "question": "What might make an audience come back?",
+      "study": "The analysis first checked whether the survey questions measured the intended ideas. It then examined how content experience, expectations and brand perceptions related to engagement and returning.",
+      "findingTitle": "Engagement connected the parts of the model",
+      "finding": "The model accounted for 55% of variation in engagement scores and 70% in retention scores. These describe patterns in survey answers, not improvements delivered by a campaign.",
+      "use": "Look beyond exposure alone. Examine whether content meets expectations, fits the brand and gives people a reason to interact.",
+      "limit": "A one-time survey cannot prove that a campaign change makes people return. The available materials do not include all model coefficients.",
       "visual": {
         "type": "pathway",
         "title": "The reported model structure",
@@ -717,7 +717,7 @@
           "assets/viz-influencer-four-e-reported-enhanced.svg"
         ]
       ],
-      "useTitle": "Campaign evaluation"
+      "useTitle": "What a campaign team could learn"
     },
     {
       "id": "buffet-nudging",
@@ -743,12 +743,12 @@
           "Menu-order experiment"
         ]
       ],
-      "question": "Does menu order change a diner's choice?",
-      "study": "Participants saw menu conditions with healthier options or price tiers presented in different orders. The analysis compared intended intake and estimated the odds of choosing a higher tier.",
-      "findingTitle": "Lower intended intake came with a trade-off",
-      "finding": "Healthier-first menus reduced intended calorie intake in both studies. In Study 2, the reported premium-tier choice share fell from 52.4% to 23.8%.",
-      "use": "The result gives operators a menu-order option to test, while showing why perceived value and premium-tier demand need to be considered together.",
-      "limit": "The studies measured stated choices and intended intake. They did not measure plate waste in an operating restaurant.",
+      "question": "Does menu order change what people choose?",
+      "study": "Participants saw menus with food options or price tiers in different orders. The studies compared how much people planned to eat and whether they chose a higher-priced option.",
+      "findingTitle": "Lower planned intake came with fewer premium choices",
+      "finding": "Putting healthier options first reduced planned calorie intake in both studies. In Study 2, the share choosing a higher-priced tier fell from 52.4% to 23.8%.",
+      "use": "Try changing menu order while watching both food choices and interest in higher-priced tiers. A design that supports one goal may work against another.",
+      "limit": "These were stated choices and planned intake. The studies did not measure food eaten or waste in an operating restaurant.",
       "visual": {
         "type": "comparison",
         "title": "Compare the menu conditions",
@@ -798,7 +798,7 @@
           "assets/menu-giao-hy/buffet-sim-main-menu.webp"
         ]
       ],
-      "useTitle": "Menu design"
+      "useTitle": "What a restaurant could test"
     },
     {
       "id": "psych-ownership",
@@ -813,7 +813,7 @@
       "facts": [
         [
           "Focus",
-          "Individual + collective ownership"
+          "Personal + shared ownership"
         ],
         [
           "Context",
@@ -821,15 +821,15 @@
         ],
         [
           "Type",
-          "Conceptual interpretation"
+          "Framework to test"
         ]
       ],
-      "question": "How does ownership relate to commitment?",
-      "study": "The framework connects control over work, identification with it and shared responsibility with organizational commitment. It outlines relationships to examine rather than reporting a new university dataset.",
-      "findingTitle": "A pathway to investigate",
-      "finding": "Individual ownership concerns a person's connection with the work. Collective ownership concerns a shared sense of responsibility. Both provide questions for examining commitment and teamwork.",
-      "use": "Universities can use the framework to frame interviews or future surveys about participation in decisions, the meaning of work and shared goals.",
-      "limit": "The current materials do not provide a study sample, model fit or university-specific effect sizes. The pathway is conceptual.",
+      "question": "Does feeling ownership change how people work together?",
+      "study": "The framework separates a personal connection to work from a shared sense of responsibility. It proposes questions about how these feelings relate to commitment and cooperation.",
+      "findingTitle": "Two ideas to test in a future study",
+      "finding": "Personal ownership is a sense that the work is mine. Shared ownership is a sense that it is ours. The framework proposes studying how each relates to commitment and teamwork.",
+      "use": "Use it to plan interviews or a survey about involvement in decisions, meaningful work and shared goals.",
+      "limit": "This is a research framework. The materials do not provide a university sample or measured effects.",
       "visual": {
         "type": "pathway",
         "title": "Explore the proposed relationships",
@@ -869,7 +869,7 @@
           "assets/psych-ownership-framework.svg"
         ]
       ],
-      "useTitle": "Future university research"
+      "useTitle": "How a university could use the framework"
     },
     {
       "id": "arts-workshop",
@@ -892,15 +892,15 @@
         ],
         [
           "Analysis",
-          "Mediation model"
+          "Learning, attitude + intention"
         ]
       ],
-      "question": "What makes a workshop worth joining?",
-      "study": "The analysis examined experience values, workshop attitude and participation intention. Measurement checks and PROCESS Model 4 were used to examine the mediation pathway.",
-      "findingTitle": "Learning value connects with attitude",
-      "finding": "The project materials report learning value as the strongest signal for attitude. The reported paths are 0.35 from learning value to attitude and 0.59 from attitude to intention.",
-      "use": "The findings suggest testing clear learning goals, beginner guidance and feedback during the workshop. These are service-design proposals rather than measured attendance gains.",
-      "limit": "The cross-sectional data measures intention. It does not prove that these changes cause bookings or repeat attendance.",
+      "question": "What makes someone want to join a workshop?",
+      "study": "Participants answered questions about learning, social experience and enjoyment at Ladder Art Space. The analysis examined how these related to their view of the workshop and their intention to take part.",
+      "findingTitle": "Learning was the strongest reported link",
+      "finding": "Learning value had the strongest reported link to a positive view of the workshop. A more positive view was, in turn, linked to the intention to participate.",
+      "use": "Test clearer learning goals, beginner guidance and feedback. These ideas follow from the survey findings but have not yet been shown to increase bookings.",
+      "limit": "The survey measured intention at one point in time. It did not establish an increase in bookings or repeat attendance.",
       "visual": {
         "type": "pathway",
         "title": "From experience to participation intention",
@@ -944,7 +944,7 @@
         ]
       ],
       "sources": [],
-      "useTitle": "Workshop service design"
+      "useTitle": "What a workshop team could test"
     }
   ]
 }

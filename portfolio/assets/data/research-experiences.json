@@ -13,6 +13,6 @@
     "source": "assets/fig03_valence_heatmap.png",
     "attributes": ["Ambiance", "Cleanliness", "Facilities", "Food & beverage", "Location", "Room", "Service", "Value"],
     "plot": {"left": 3.5, "right": 79.5556, "top": 9.4444, "bottom": 72.5},
-    "note": "Original cluster IDs 0–9. The source has no verified crosswalk to the named guest profiles below. Color shows sentiment, not attribute importance."
+    "note": "Rows 0–9 are groups of similar review patterns. The source does not confirm which named profile matches each row. Colors show review tone, not how important a service is."
   }
 }

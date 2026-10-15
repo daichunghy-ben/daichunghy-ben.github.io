@@ -4,8 +4,8 @@
     {
       "id": "ev-choice",
       "type": "forest",
-      "title": "Range leads the estimated trade-offs.",
-      "caption": "Reported marginal willingness to pay, VND million. Dots show estimates; spans show the reported 95% intervals.",
+      "title": "How much extra was each feature worth?",
+      "caption": "Estimated extra amounts for each feature, in VND million. Dots show the estimates; lines show their 95% uncertainty ranges. A line crossing zero means the estimate is uncertain.",
       "source": "Latent class estimates in the project materials; interval values retained from the existing model record.",
       "range": [
         -40,
@@ -93,16 +93,16 @@
       ],
       "method": [
         [
-          "Choice task",
-          "Vehicle attributes enter the utility model as alternatives within a task."
+          "Compare cars",
+          "Participants repeatedly chose between cars with different features and prices."
         ],
         [
-          "Model comparison",
-          "MNL, mixed logit and latent class address shared, continuous and grouped preferences."
+          "Look for patterns",
+          "Multinomial logit describes shared preferences. Mixed logit allows individual differences. Latent class looks for groups of buyers."
         ],
         [
-          "Interpretation",
-          "WTP uses the price coefficient. The displayed values come from the two-class model."
+          "Estimate feature values",
+          "Willingness to pay (WTP) is the estimated extra amount for a feature. The displayed estimates come from the two-group model."
         ]
       ],
       "equation": "WTP for a feature = −βfeature / βprice",
@@ -111,8 +111,8 @@
     {
       "id": "hotel-segmentation",
       "type": "segments",
-      "title": "The largest group covers 43.7% of reviews.",
-      "caption": "Reported proportions of the review sample, followed by attribute sentiment and review coverage in the original analysis figures.",
+      "title": "The largest group contains 43.7% of reviews.",
+      "caption": "Each bar shows the share of reviews in a named group. A larger group is more common in this sample, not necessarily more valuable to a hotel.",
       "source": "Project materials: 74,896 Booking.com reviews, 458 hotels, 10 reported groups.",
       "labels": [
         "Minimalists",
@@ -164,16 +164,16 @@
       ],
       "method": [
         [
-          "Language layer",
-          "108,906 sentences yielded 148,846 reported aspect–sentence pairs."
+          "Read the comments",
+          "The materials report 108,906 sentences and 148,846 pairs linking a hotel attribute with a sentence."
         ],
         [
-          "Feature layer",
-          "Attribute sentiment represents what was discussed and how it was evaluated."
+          "Describe the feedback",
+          "Record which part of a stay is discussed and whether the comment is positive or negative."
         ],
         [
-          "Clustering",
-          "K-means forms the reported groups; GMM is the reported robustness check."
+          "Group similar patterns",
+          "K-means groups similar review patterns. A Gaussian mixture model (GMM) provides another way to check the grouping."
         ]
       ],
       "equation": "Review text → attribute features → clustering → profile interpretation",
@@ -182,8 +182,8 @@
     {
       "id": "hotel-prca",
       "type": "butterfly",
-      "title": "Cleanliness has the largest downside.",
-      "caption": "Penalty and reward coefficients on one shared scale. Negative reward estimates, including WiFi, keep their original sign.",
+      "title": "Cleanliness complaints had the largest downside.",
+      "caption": "Penalty shows the link between a service problem and review scores. Reward shows the link for positive feedback. Compare values on the same scale; the signs and estimates are unchanged.",
       "source": "Reported PRCA coefficients from the project figure; OLS with HC1 robust standard errors.",
       "range": [
         -1.6,
@@ -248,16 +248,16 @@
       ],
       "method": [
         [
-          "Semantic mapping",
-          "Sentence-BERT maps sentences to eight service attributes."
+          "Sort the comments",
+          "Sentence-BERT, a text-analysis model, matches sentences to eight hotel service attributes."
         ],
         [
-          "Polarity inputs",
-          "Positive and negative attribute indicators enter the rating regression separately."
+          "Compare praise and complaints",
+          "Examine positive and negative comments separately to see how each relates to review scores."
         ],
         [
-          "Kano reading",
-          "Reported basic, performance and excitement classes summarize the estimated asymmetry."
+          "Interpret the pattern",
+          "The reported categories distinguish expected basics, services where better performance helps, and extras that can delight guests."
         ]
       ],
       "equation": "Rating = intercept + Σ penaltyj · negativej + Σ rewardj · positivej + error",
@@ -266,8 +266,8 @@
     {
       "id": "virtual-influencers",
       "type": "factorial",
-      "title": "A 2 × 2 experiment separates message and appeal.",
-      "caption": "Reconstructed experiment layout using the supplied stimulus assets. Argument quality and peripheral appeal form the 2 × 2 design.",
+      "title": "Four posts test two things separately.",
+      "caption": "The product message is stronger or weaker. The creator’s appeal is higher or lower. Comparing these four versions helps separate the two influences. These are the supplied study images.",
       "source": "Springer chapter, DOI 10.1007/978-981-96-4116-1_9; N = 244.",
       "items": [
         {
@@ -301,16 +301,16 @@
       ],
       "method": [
         [
-          "Central route",
-          "Argument quality represents the message content."
+          "Change the message",
+          "Show a stronger or weaker product argument."
         ],
         [
-          "Peripheral route",
-          "Attractiveness and attitude similarity represent creator cues."
+          "Change the creator cues",
+          "Vary the creator’s appeal. The study also examines attractiveness and similarity of attitudes."
         ],
         [
-          "Measured moderator",
-          "Speciesism concerns human preference; it is measured separately from condition assignment."
+          "Check audience preferences",
+          "Preference for human endorsers, called speciesism in this study, is measured separately. It is not an assigned post version."
         ]
       ],
       "equation": "Argument quality × peripheral appeal → purchase intention",
@@ -319,8 +319,8 @@
     {
       "id": "nutrition-diet",
       "type": "nutrition",
-      "title": "Basic principles are better understood than calories.",
-      "caption": "Knowledge domains, dietary patterns and adjusted diet-quality estimates are shown together below.",
+      "title": "Basic food advice was better understood than calories.",
+      "caption": "The first chart compares correct answers. The next compares reported food-group scores. The final table shows how diet quality was associated with the other survey measures.",
       "source": "FCBEM paper: Table 2 (knowledge), Table 3 (diet) and Table 5 (regression); n = 280.",
       "domains": [
         {
@@ -412,16 +412,16 @@
       ],
       "method": [
         [
-          "Knowledge",
-          "Adapted 20-item CoNKS; three domains use 7, 7 and 6 items."
+          "Ask about food knowledge",
+          "The adapted CoNKS questionnaire has 20 questions: 7, 7 and 6 across its three topic areas."
         ],
         [
-          "Activity + diet",
-          "IPAQ-SF measures activity; DQQ covers 29 food groups."
+          "Ask about activity and diet",
+          "IPAQ-SF is a short physical-activity questionnaire. DQQ asks about 29 food groups."
         ],
         [
-          "Adjusted association",
-          "The paper also reports group comparisons and Spearman correlations. Regression adjusts for age, sex, knowledge and activity; R² = 0.538."
+          "Compare the answers",
+          "The analysis checks how the answers vary together while accounting for age, sex, knowledge and activity. The reported model fit is R² = 0.538."
         ]
       ],
       "equation": "GDR score = 6.9845 + 0.1284·age − 0.0129·male + 0.1102·knowledge + 0.0029·activity",
@@ -430,8 +430,8 @@
     {
       "id": "motorbike-phaseout",
       "type": "policy",
-      "title": "Restrictions and support belong in the same picture.",
-      "caption": "Reported monthly willingness to pay for policy attributes. Amounts are model trade-offs, expressed in VND per month.",
+      "title": "Compare the restrictions with the support offered.",
+      "caption": "Positive amounts indicate a feature respondents favored in the choice tasks; negative amounts indicate one they disliked. Amounts are estimated values in VND per month, not actual payments or a policy budget.",
       "source": "Existing CIEMB manuscript-table reconstruction: Table 5 values; Table 4 interactions.",
       "labels": [
         "Restrict fossil-fuel motorcycles",
@@ -510,16 +510,16 @@
       ],
       "method": [
         [
-          "Choice attributes",
-          "Restriction, transport, financial support and governance vary within policy packages."
+          "Compare packages",
+          "Policy packages vary restrictions, public transport, financial support and governance."
         ],
         [
-          "Preference variation",
-          "Mixed logit and reported interactions examine variation across respondents."
+          "Look for differences",
+          "Mixed logit allows preferences to vary across people. Additional comparisons examine differences between respondents."
         ],
         [
-          "Trade-offs",
-          "WTP summarizes each attribute relative to cost; values are not a policy budget."
+          "Express the trade-off",
+          "Willingness to pay (WTP) converts a feature’s estimated value into a monthly amount. It is not a proposed government budget."
         ]
       ],
       "equation": "Utility = policy-attribute terms + respondent interactions + random component",
@@ -528,8 +528,8 @@
     {
       "id": "buffet-nudging",
       "type": "paired",
-      "title": "Lower intended intake, with a premium-tier trade-off.",
-      "caption": "Both conditions are shown together. Calorie outcomes are intended intake; premium share is the reported Study 2 choice outcome.",
+      "title": "Healthier-first menus changed two kinds of choice.",
+      "caption": "The first comparison shows planned calorie intake. The second shows the share choosing a higher-priced buffet tier in Study 2. Neither measures actual restaurant consumption.",
       "source": "Project materials: Study 1 n = 257; Study 2 n = 147; ordinal logit and mediation.",
       "studies": [
         {
@@ -577,16 +577,16 @@
       ],
       "method": [
         [
-          "Presentation",
-          "The experiments vary menu or price-tier order."
+          "Change the order",
+          "Show food options or price tiers in different orders."
         ],
         [
-          "Choice outcome",
-          "Ordinal logit models higher-tier choice in Study 2."
+          "Compare the choices",
+          "An ordinal logit model examines the choice of higher-priced tiers in Study 2."
         ],
         [
-          "Mechanism",
-          "The reported indirect effect through perceived value is −0.339, CI [−0.56, −0.15]."
+          "Examine perceived value",
+          "The analysis examines whether people’s sense of value helps explain the choice. The reported indirect effect is −0.339, CI [−0.56, −0.15]."
         ]
       ],
       "equation": "Menu condition → perceived value → tier choice",
@@ -595,8 +595,8 @@
     {
       "id": "influencer-strategy",
       "type": "constructs",
-      "title": "Engagement connects three inputs with retention.",
-      "caption": "Reported structural model. R² describes explained variance in the survey constructs, not conversion uplift.",
+      "title": "Engagement links content experience with returning.",
+      "caption": "The arrows show relationships examined in the survey model. R² describes how much variation in survey scores the model accounts for. It is not a percentage increase in engagement or returning users.",
       "source": "Manuscript structure and reported figure; total n = 565, EFA = 200, CFA/SEM = 365.",
       "inputs": [
         {
@@ -637,16 +637,16 @@
       ],
       "method": [
         [
-          "EFA",
-          "200 responses explore the measurement structure."
+          "Explore the questions",
+          "Exploratory factor analysis (EFA) uses 200 responses to examine which survey questions belong together."
         ],
         [
-          "CFA",
-          "365 responses evaluate the measurement model."
+          "Check the measures",
+          "Confirmatory factor analysis (CFA) uses 365 responses to check that measurement structure."
         ],
         [
-          "SEM",
-          "The same 365-response analysis examines direct and mediated paths."
+          "Test the relationships",
+          "Structural equation modelling (SEM) uses the same 365 responses to examine how the measured ideas relate to one another."
         ]
       ],
       "equation": "CX, CEX, BE → CE → CR",
@@ -655,8 +655,8 @@
     {
       "id": "arts-workshop",
       "type": "constructs",
-      "title": "Attitude is the link to participation intention.",
-      "caption": "The figure focuses on the mediated pathway. Only the two numeric paths supplied in the project record are labelled.",
+      "title": "A positive view of the workshop links learning with intention.",
+      "caption": "The arrows show the relationships examined in the study. The two numbers are reported model coefficients, not percentages or increases in bookings.",
       "source": "Ladder Art Space project record; 216 valid responses; PROCESS Model 4.",
       "inputs": [
         {
@@ -689,16 +689,16 @@
       },
       "method": [
         [
-          "Measurement",
-          "Check the experience-value and attitude measures before interpreting paths."
+          "Check the questions",
+          "Check that the questions measure the intended workshop experiences and attitudes."
         ],
         [
-          "Mediation",
-          "PROCESS Model 4 examines an indirect path through attitude."
+          "Examine the link",
+          "PROCESS Model 4 examines whether attitude helps connect experience value with intention to participate. This is called mediation."
         ],
         [
-          "Service test",
-          "Beginner guidance is a proposed service experiment; actual booking requires a new outcome."
+          "Plan a real-world test",
+          "Beginner guidance is a proposed service test. Measuring actual bookings would require new data."
         ]
       ],
       "equation": "Experience value → workshop attitude → participation intention",
@@ -707,8 +707,8 @@
     {
       "id": "psych-ownership",
       "type": "constructs",
-      "title": "Personal ownership and shared ownership are distinct.",
-      "caption": "Conceptual research model linking individual and shared ownership with commitment and cooperation.",
+      "title": "Feeling mine and feeling ours are different.",
+      "caption": "The arrows show proposed relationships with commitment and teamwork. These relationships have not been estimated with a new university dataset.",
       "source": "Existing psychological-ownership framework; no estimated sample or coefficients in the source record.",
       "inputs": [
         {
@@ -734,16 +734,16 @@
       },
       "method": [
         [
-          "Target",
-          "Define what is felt to be owned before writing items."
+          "Define the work",
+          "Specify what a person or group feels connected to."
         ],
         [
-          "Level",
-          "Keep individual ownership and collective ownership separate."
+          "Separate mine from ours",
+          "Distinguish personal ownership from a shared sense of responsibility."
         ],
         [
-          "Pathway",
-          "Commitment and cooperation are relationships to test with new data."
+          "Plan a study",
+          "Collect new data to examine how these feelings relate to commitment and cooperation."
         ]
       ],
       "equation": "Individual / collective ownership → commitment → cooperation",
@@ -752,8 +752,8 @@
     {
       "id": "hotel-value-framework",
       "type": "profiles",
-      "title": "Three lenses for interpreting guest value.",
-      "caption": "Conceptual service profiles. Each lens joins a review theme, a service response and a question to validate.",
+      "title": "Three examples connect guest needs with service ideas.",
+      "caption": "Each profile shows a review theme, a possible service response and a question to check with guests. These profiles are examples, not measured market segments.",
       "source": "Interpretation framework linked to the Da Nang segmentation study; no separate dataset or numerical weights.",
       "profiles": [
         {
@@ -780,16 +780,16 @@
       ],
       "method": [
         [
-          "Themes",
-          "Start with the review features used in the segmentation."
+          "Start with reviews",
+          "Use the review themes from the linked customer-grouping study."
         ],
         [
-          "Value dimensions",
-          "Comfort, care and local experience provide interpretation vocabulary."
+          "Describe guest needs",
+          "Organize the ideas around comfort, care and local experience."
         ],
         [
-          "Validation",
-          "Interviews and a measurement study can test whether the dimensions are distinct."
+          "Check with guests",
+          "Interviews and a new survey could test whether these proposed needs are distinct."
         ]
       ],
       "equation": "Review theme → value dimension → service hypothesis",

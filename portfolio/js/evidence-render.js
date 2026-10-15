@@ -15,7 +15,7 @@ export function plotSvg(e,c,state={view:0,item:0}){
  const color=c.accent||'#355d7b';let content='';
  if(e.type==='forest'){
   const l=290,r=785,scaleX=x=>scale(x,e.range,l,r),groups=state.view===0?e.groups:[e.groups[state.view-1]];
-  content=axis(e.range,e.ticks,l,r,58,425,'Marginal WTP · VND million');
+  content=axis(e.range,e.ticks,l,r,58,425,'Estimated extra amount · VND million');
   content+=groups.map((g,i)=>dot(300+i*260,25,g.color)+text(316+i*260,31,g.label+' · '+g.share+'%','class="plot-unit"')).join('');
   e.labels.forEach((name,i)=>{
    const y=97+i*95;content+=label(20,y,name,24);
@@ -66,11 +66,11 @@ export function plotSvg(e,c,state={view:0,item:0}){
  return '';
 }
 export function evidenceTable(e){
- if(e.type==='forest')return table(['Attribute','Group','Estimate','95% interval'],e.labels.flatMap((l,i)=>e.groups.map(g=>[l,g.label,g.values[i],g.intervals[i].join(' to ')])),'WTP in VND million per stated feature change.');
+ if(e.type==='forest')return table(['Attribute','Group','Estimate','95% interval'],e.labels.flatMap((l,i)=>e.groups.map(g=>[l,g.label,g.values[i],g.intervals[i].join(' to ')])),'Estimated extra amount for each feature change, in VND million. The 95% interval shows the reported uncertainty.');
  if(e.type==='butterfly')return table(['Attribute','Penalty','Reward','Reported class'],e.labels.map((l,i)=>[l,e.penalty[i],e.reward[i],e.classes[i]]),'Coefficient values from the supplied project figure.');
  if(e.type==='segments')return table(['Named profile','Share'],e.labels.map((l,i)=>[l,e.values[i]+'%']),'Share of the review sample; named profiles are not mapped to numeric cluster IDs here.');
  if(e.type==='policy')return table(['Policy attribute','Monthly WTP'],e.labels.map((l,i)=>[l,fmt(e.values[i])+' VND']),'Reported WTP values from the existing Table 5 reconstruction.');
- if(e.type==='nutrition')return table(['Predictor','Unit','Coefficient','Printed 95% CI','p'],e.regression.map(r=>[r.label,r.unit,r.estimate,r.ci.join(' to '),r.p]),'Paper Table 5. Units differ; the activity interval is rounded in the source.');
+ if(e.type==='nutrition')return table(['Predictor','Unit','Coefficient','Printed 95% CI','p'],e.regression.map(r=>[r.label,r.unit,r.estimate,r.ci.join(' to '),r.p]),'Paper Table 5. Coefficient is the model estimate; CI is its reported 95% confidence interval; p is a statistical test value. Units differ, so the estimates should not be ranked by size. The activity interval is rounded in the source.');
  if(e.type==='paired')return table(['Outcome','Comparison','Healthier first','Difference'],[...e.studies.map(s=>[s.label+' · kcal',s.before,s.after,s.after-s.before]),['Study 2 premium share',e.premium.before+'%',e.premium.after+'%',fmt(e.premium.after-e.premium.before,1)+' percentage points']],'Differences are arithmetic contrasts of reported values, without newly estimated uncertainty.');
  if(e.type==='constructs')return table(['Relationship','Available numeric output'],[...e.inputs.map(n=>[n.label+' → '+e.middle.label,n.coefficient!==undefined?'Reported path: '+n.coefficient:'No coefficient supplied']),[e.middle.label+' → '+e.end.label,e.end.coefficient!==undefined?'Reported path: '+e.end.coefficient:'No coefficient supplied']],'Diagram paths are structural or conceptual relationships; R² values, where supplied, are explained variance.');
  return '';

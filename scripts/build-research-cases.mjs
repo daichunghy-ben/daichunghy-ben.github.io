@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {validateModels,modelSvg} from './research-model-markup.mjs';
 import {modelMarkup} from './static-research-models.mjs';
-import {evidenceMarkup} from './static-research-evidence.mjs';
+import {evidenceMarkup,methodsMarkup} from './static-research-evidence.mjs';
 import {researchExperienceMarkup} from './research-experience-markup.mjs';
 
 const root=process.cwd();
@@ -57,10 +57,11 @@ for(let i=0;i<cases.length;i++){
 <dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
 <section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">${text(c.question)}</h2><p>${text(c.study)}</p></section>${experience?'\n'+experience:''}
 <section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
+<section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">${text(c.useTitle)}</h2><div><p>${text(c.use)}</p><p class="case-limit">${text(c.limit)}</p></div></section>
 ${figure}
 </section>
+${methodsMarkup(evidence)}
 ${modelMarkup(c,model)}
-<section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">${text(c.useTitle)}</h2><div><p>${text(c.use)}</p><p class="case-limit">${text(c.limit)}</p></div></section>
 <section class="case-notes" id="study-notes"><h2>Study notes & sources</h2><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>

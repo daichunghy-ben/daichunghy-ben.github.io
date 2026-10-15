@@ -3,112 +3,112 @@
     {
       "id": "hotel-segmentation",
       "skills": [
-        "Review analysis",
-        "Aspect-level sentiment",
-        "K-means & GMM"
+        "Customer review analysis",
+        "Text analysis",
+        "Customer grouping"
       ],
-      "work": "Grouped hotel-review patterns into guest profiles and compared the service attributes each profile valued.",
-      "output": "Review features, ten reported profiles and recommendations for hotel service planning."
+      "work": "Grouped hotel reviews by what guests discussed and whether their comments were positive or negative.",
+      "output": "Ten review-based groups to help hotel teams compare guest feedback."
     },
     {
       "id": "ev-choice",
       "skills": [
-        "Choice experiments",
-        "Preference modelling",
-        "WTP interpretation"
+        "Survey design",
+        "Customer choice analysis",
+        "Comparing buyer groups"
       ],
-      "work": "Modeled how young consumers trade EV range, charging time and design against price to identify buyer groups and product priorities.",
-      "output": "Two preference groups and feature valuations to support product-positioning decisions."
+      "work": "Compared what young consumers would give up in price, driving range or charging time when choosing an electric car.",
+      "output": "Two buyer groups and estimates of how much extra they would pay for different features."
     },
     {
       "id": "virtual-influencers",
       "skills": [
-        "Experimental design",
+        "Experiment design",
         "Consumer research",
-        "Moderation analysis"
+        "Comparing audience responses"
       ],
-      "work": "Co-authored research on how product arguments and creator appeal relate to purchase intention among Generation Z consumers.",
-      "output": "An interpretation of persuasion cues and purchase intention, published in a Springer chapter."
+      "work": "Co-authored a study of how a virtual creator and the product message relate to young consumers’ willingness to buy.",
+      "output": "A published Springer chapter on how audiences respond to virtual creators."
     },
     {
       "id": "nutrition-diet",
       "skills": [
-        "Survey measures",
-        "Data analysis",
-        "Regression interpretation"
+        "Survey analysis",
+        "Nutrition research",
+        "Comparing dietary patterns"
       ],
-      "work": "Co-authored a study of how students’ nutrition knowledge and physical activity relate to their dietary choices.",
-      "output": "Knowledge-domain comparisons and an adjusted diet-quality model for the student sample."
+      "work": "Co-authored a study of students’ nutrition knowledge, physical activity and reported food choices.",
+      "output": "A comparison of what students knew about food and how that related to their reported diets."
     },
     {
       "id": "motorbike-phaseout",
       "skills": [
-        "Policy choice design",
-        "Mixed logit",
-        "Preference heterogeneity"
+        "Policy research",
+        "Survey design",
+        "Comparing public preferences"
       ],
-      "work": "Compared policy packages and respondent interactions to examine how restrictions and support measures are valued.",
-      "output": "Monthly willingness-to-pay estimates and subgroup considerations for transition planning."
+      "work": "Compared how people valued travel restrictions and support when considering a move away from petrol motorbikes.",
+      "output": "Estimates of which policy features people favored or disliked in the choice tasks."
     },
     {
       "id": "hotel-prca",
       "skills": [
-        "Semantic text mapping",
-        "Regression",
-        "Service prioritisation"
+        "Customer review analysis",
+        "Text analysis",
+        "Service planning"
       ],
-      "work": "Mapped review sentences to service attributes with Sentence-BERT and compared separate penalty and reward coefficients.",
-      "output": "A service-priority framework distinguishing failure prevention from improvement opportunities."
+      "work": "Compared which service complaints went with lower hotel ratings and which positive comments went with higher ratings.",
+      "output": "A comparison of service failures to prevent and improvements worth investigating."
     },
     {
       "id": "hotel-value-framework",
       "skills": [
         "Research synthesis",
-        "Value mapping",
+        "Understanding guest needs",
         "Service design"
       ],
-      "work": "Translated hotel-review themes into value dimensions and practical service hypotheses.",
-      "output": "Three conceptual guest-value profiles and questions for a future measurement study."
+      "work": "Organized themes from hotel reviews into examples of guest needs and possible service responses.",
+      "output": "Three example guest profiles and questions for a future study."
     },
     {
       "id": "influencer-strategy",
       "skills": [
         "Survey analysis",
-        "EFA & CFA",
-        "Structural modelling"
+        "Checking survey measures",
+        "Understanding engagement"
       ],
-      "work": "Interpreted the split-sample measurement and structural model linking content, expectations and brand equity with engagement.",
-      "output": "An engagement-to-retention framework with reported explanatory statistics."
+      "work": "Examined a survey model of what encourages people to engage with content and keep using a platform.",
+      "output": "A research model linking content experience, engagement and the intention to return."
     },
     {
       "id": "buffet-nudging",
       "skills": [
         "Experiment design",
-        "Ordinal logit",
-        "Mediation interpretation"
+        "Comparing menu choices",
+        "Data interpretation"
       ],
-      "work": "Compared menu-order conditions across two studies and interpreted the trade-off between intended intake and premium-tier choice.",
-      "output": "Condition comparisons, an ordinal-choice result and a perceived-value mediation finding."
+      "work": "Compared how menu order affected the amount people planned to eat and their choice of a higher-priced buffet option.",
+      "output": "A comparison of planned calorie intake and higher-priced buffet choices under different menu orders."
     },
     {
       "id": "psych-ownership",
       "skills": [
-        "Concept development",
-        "Construct definition",
-        "Research design"
+        "Research planning",
+        "Defining research concepts",
+        "Commitment and teamwork"
       ],
-      "work": "Separated individual and collective ownership and mapped their proposed links with commitment and cooperation.",
-      "output": "A conceptual specification for a future organizational study; no fitted effects are claimed."
+      "work": "Outlined how feeling that work is mine or ours may relate to commitment and teamwork.",
+      "output": "A plan for future research, rather than results from a new university survey."
     },
     {
       "id": "arts-workshop",
       "skills": [
         "Experience research",
-        "Measurement review",
-        "Mediation interpretation"
+        "Survey interpretation",
+        "Workshop service design"
       ],
-      "work": "Examined experience-value pathways through workshop attitude to participation intention.",
-      "output": "A reported mediation pathway and service-design questions for beginner learning support."
+      "work": "Examined how what people valued in a workshop related to their view of it and their intention to join.",
+      "output": "Findings about learning value and questions for improving beginner workshop support."
     }
   ]
 }
