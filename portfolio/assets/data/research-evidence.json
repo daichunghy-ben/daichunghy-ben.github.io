@@ -5,7 +5,7 @@
       "id": "ev-choice",
       "type": "forest",
       "title": "How much extra was each feature worth?",
-      "caption": "Estimated extra amounts for each feature, in VND million. Dots show the estimates; lines show their 95% uncertainty ranges. A line crossing zero means the estimate is uncertain.",
+      "caption": "Extra payment estimate · VND millions · 95% intervals.",
       "source": "Latent class estimates in the project materials; interval values retained from the existing model record.",
       "range": [
         -40,
@@ -112,7 +112,7 @@
       "id": "hotel-segmentation",
       "type": "segments",
       "title": "The largest group contains 43.7% of reviews.",
-      "caption": "Each bar shows the share of reviews in a named group. A larger group is more common in this sample, not necessarily more valuable to a hotel.",
+      "caption": "Reviews by group · largest is 43.7%.",
       "source": "Project materials: 74,896 Booking.com reviews, 458 hotels, 10 reported groups.",
       "labels": [
         "Minimalists",
@@ -183,7 +183,7 @@
       "id": "hotel-prca",
       "type": "butterfly",
       "title": "Cleanliness complaints had the largest downside.",
-      "caption": "Penalty shows the link between a service problem and review scores. Reward shows the link for positive feedback. Compare values on the same scale; the signs and estimates are unchanged.",
+      "caption": "Review language and hotel ratings.",
       "source": "Reported PRCA coefficients from the project figure; OLS with HC1 robust standard errors.",
       "range": [
         -1.6,
@@ -267,7 +267,7 @@
       "id": "virtual-influencers",
       "type": "factorial",
       "title": "Four posts test two things separately.",
-      "caption": "The product message is stronger or weaker. The creator’s appeal is higher or lower. Comparing these four versions helps separate the two influences. These are the supplied study images.",
+      "caption": "2 × 2 experiment · message strength × creator appeal.",
       "source": "Springer chapter, DOI 10.1007/978-981-96-4116-1_9; N = 244.",
       "items": [
         {
@@ -320,7 +320,7 @@
       "id": "nutrition-diet",
       "type": "nutrition",
       "title": "Basic food advice was better understood than calories.",
-      "caption": "The first chart compares correct answers. The next compares reported food-group scores. The final table shows how diet quality was associated with the other survey measures.",
+      "caption": "Knowledge scores · food groups · diet associations.",
       "source": "FCBEM paper: Table 2 (knowledge), Table 3 (diet) and Table 5 (regression); n = 280.",
       "domains": [
         {
@@ -431,7 +431,7 @@
       "id": "motorbike-phaseout",
       "type": "policy",
       "title": "Compare the restrictions with the support offered.",
-      "caption": "Positive amounts indicate a feature respondents favored in the choice tasks; negative amounts indicate one they disliked. Amounts are estimated values in VND per month, not actual payments or a policy budget.",
+      "caption": "Estimated monthly value by policy feature.",
       "source": "Existing CIEMB manuscript-table reconstruction: Table 5 values; Table 4 interactions.",
       "labels": [
         "Restrict fossil-fuel motorcycles",
@@ -529,7 +529,7 @@
       "id": "buffet-nudging",
       "type": "paired",
       "title": "Healthier-first menus changed two kinds of choice.",
-      "caption": "The first comparison shows planned calorie intake. The second shows the share choosing a higher-priced buffet tier in Study 2. Neither measures actual restaurant consumption.",
+      "caption": "Planned calories · premium-tier choice.",
       "source": "Project materials: Study 1 n = 257; Study 2 n = 147; ordinal logit and mediation.",
       "studies": [
         {
@@ -596,7 +596,7 @@
       "id": "influencer-strategy",
       "type": "constructs",
       "title": "Engagement links content experience with returning.",
-      "caption": "The arrows show relationships examined in the survey model. R² describes how much variation in survey scores the model accounts for. It is not a percentage increase in engagement or returning users.",
+      "caption": "Survey model · engagement and retention.",
       "source": "Manuscript structure and reported figure; total n = 565, EFA = 200, CFA/SEM = 365.",
       "inputs": [
         {
@@ -656,7 +656,7 @@
       "id": "arts-workshop",
       "type": "constructs",
       "title": "A positive view of the workshop links learning with intention.",
-      "caption": "The arrows show the relationships examined in the study. The two numbers are reported model coefficients, not percentages or increases in bookings.",
+      "caption": "Model coefficients · not percentages.",
       "source": "Ladder Art Space project record; 216 valid responses; PROCESS Model 4.",
       "inputs": [
         {
@@ -708,7 +708,7 @@
       "id": "psych-ownership",
       "type": "constructs",
       "title": "Feeling mine and feeling ours are different.",
-      "caption": "The arrows show proposed relationships with commitment and teamwork. These relationships have not been estimated with a new university dataset.",
+      "caption": "Proposed framework · no new sample.",
       "source": "Existing psychological-ownership framework; no estimated sample or coefficients in the source record.",
       "inputs": [
         {
@@ -753,7 +753,7 @@
       "id": "hotel-value-framework",
       "type": "profiles",
       "title": "Three examples connect guest needs with service ideas.",
-      "caption": "Each profile shows a review theme, a possible service response and a question to check with guests. These profiles are examples, not measured market segments.",
+      "caption": "Three guest needs · service concepts.",
       "source": "Interpretation framework linked to the Da Nang segmentation study; no separate dataset or numerical weights.",
       "profiles": [
         {

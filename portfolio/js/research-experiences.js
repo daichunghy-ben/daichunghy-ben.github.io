@@ -20,13 +20,13 @@ if(choice){
    const button=chooseButtons.find(button=>button.dataset.choose===id);
    button.setAttribute('aria-pressed',String(active));
   }
-  result.textContent=selected?(vi?`Bạn chọn ${selected.toUpperCase()}.`:`You chose ${selected.toUpperCase()}.`):(vi?'So sánh giá, quãng đường và thời gian sạc.':'Compare price, range and charging.');
+  result.textContent=selected?(vi?`Bạn chọn ${selected.toUpperCase()}.`:`You chose ${selected.toUpperCase()}.`):(vi?'Giá · quãng đường · thời gian sạc':'Price · range · charging');
  };
  const renderTask=()=>{
   const task=tasks[taskIndex];
   for(const id of ['a','b'])for(const key of ['price','range','charging'])choice.querySelector(`[data-spec="${id}-${key}"]`).textContent=task[id][key];
   const price=task.b.price-task.a.price,range=task.b.range-task.a.range,charging=task.b.charging-task.a.charging;
-  choice.querySelector('[data-choice-comparison]').textContent=vi?`Xe B đắt hơn ${price} triệu VND${range?`, đi xa hơn ${range} km mỗi lần sạc`:`, quãng đường giữ nguyên`}${charging<0?` và sạc nhanh hơn ${-charging} phút.`:` và sạc lâu hơn ${charging} phút.`}`:`B costs VND ${price} million more${range?`, adds ${range} km of range`:`, offers the same range`}${charging<0?` and charges ${-charging} minutes faster.`:` and takes ${charging} minutes longer to charge.`}`;
+  choice.querySelector('[data-choice-comparison]').textContent=vi?`Xe B đắt hơn ${price} triệu${range?`, thêm ${range} km`:`, quãng đường bằng nhau`}${charging<0?`, sạc nhanh hơn ${-charging} phút.`:`, sạc chậm hơn ${charging} phút.`}`:`B costs VND ${price}m more${range?`, adds ${range} km`:`, same range`}${charging<0?`, charges ${-charging} minutes faster.`:`, charges ${charging} minutes slower.`}`;
   choice.querySelector('[data-task-count]').textContent=`${vi?'So sánh':'Comparison'} ${taskIndex+1} / ${tasks.length}`;
   stepButtons[0].disabled=taskIndex===0;stepButtons[1].disabled=taskIndex===tasks.length-1;
   renderSelection();animateChange(choice.querySelector('.choice-options'));
@@ -55,6 +55,6 @@ if(map){
    const scroller=map.querySelector('.attribute-scroll');
    scroller.scrollTo({left:stage.clientWidth*(start+columnWidth/2)/100-scroller.clientWidth/2,behavior:reducedMotion.matches?'instant':'smooth'});
   }
-  map.querySelector('[data-attribute-reading]').textContent=all?(vi?'Cả tám yếu tố đều được hiển thị. Màu sắc thể hiện nhận xét tiêu cực hay tích cực (−1 đến +1).':'All eight topics are visible. Color shows whether comments were negative or positive (−1 to +1).'):(vi?`Đang tô nổi ${button.textContent.toLowerCase()} ở các nhóm nhận xét 0–9. So sánh màu theo cột này; các yếu tố khác vẫn được hiển thị.`:`${button.textContent} highlighted across review groups 0–9. Compare the colors down this column; the other topics remain visible.`);
+  map.querySelector('[data-attribute-reading]').textContent=all?(vi?'Màu thể hiện sắc thái nhận xét: −1 đến +1.':'Review sentiment: −1 to +1.'):(vi?`Nổi bật: ${button.textContent.toLowerCase()} · cụm 0–9.`:`${button.textContent} · clusters 0–9.`);
  });
 }
