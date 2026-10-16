@@ -47,9 +47,6 @@ export async function buildLocales(){
   }).join('');
   // The home page's legacy profile-anchor redirects stay in the chosen locale.
   vi=vi.replace("new URL('about.html#'","new URL('about.vi.html#'");
-  // Original scientific image labels are retained; their adjacent explanations
-  // and accessible descriptions are translated, without redrawing source data.
-  vi=vi.replace(/(<figure class="inline-model">[\s\S]*?<figcaption>)/g,'$1Nhãn trong sơ đồ được giữ bằng tiếng Anh để đối chiếu; phần giải thích tiếng Việt ở bên dưới. ');
   await fs.writeFile(path.join(root,'portfolio',file),decorate(source,file,'en'));
   await fs.writeFile(path.join(root,'portfolio',viFile(file)),decorate(vi,file,'vi'));
  }

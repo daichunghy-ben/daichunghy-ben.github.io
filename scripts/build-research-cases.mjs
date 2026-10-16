@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {validateModels,modelSvg} from './research-model-markup.mjs';
 import {modelMarkup} from './static-research-models.mjs';
-import {evidenceMarkup,methodsMarkup} from './static-research-evidence.mjs';
+import {evidenceMarkup} from './static-research-evidence.mjs';
 import {researchExperienceMarkup} from './research-experience-markup.mjs';
 
 const root=process.cwd();
@@ -47,7 +47,7 @@ for(let i=0;i<cases.length;i++){
 <link rel="stylesheet" href="styles/case-study.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/research-evidence.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<link rel="stylesheet" href="styles/research-experiences.css?v=experiences1"/>':''}
-<link rel="stylesheet" href="styles/research-layout.css?v=clarity1"/>
+<link rel="stylesheet" href="styles/research-layout.css?v=skills2"/>
 </head>
 <body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
@@ -63,9 +63,8 @@ for(let i=0;i<cases.length;i++){
 <p class="case-limit"><strong>Read with care</strong><span>${text(c.limit)}</span></p>
 ${figure}
 </section>
-${methodsMarkup(evidence)}
-${modelMarkup(c,model)}
-<section class="case-notes" id="study-notes"><h2>Study notes & sources</h2><div class="notes-content"><dl>${c.notes.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
+${modelMarkup(c,model,capability)}
+<section class="case-notes case-notes-compact" id="study-notes"><h2>Source & status</h2><p>${text(c.status)}</p><div class="notes-content"><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
 <script type="module" src="js/case-study.js?v=reader-first1"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v=bilingual1"></script>':''}

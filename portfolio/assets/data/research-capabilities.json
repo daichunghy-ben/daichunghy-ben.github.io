@@ -8,7 +8,14 @@
         "Customer grouping"
       ],
       "work": "Grouped hotel reviews by what guests discussed and whether their comments were positive or negative.",
-      "output": "Ten review-based groups to help hotel teams compare guest feedback."
+      "output": "Ten review-based groups to help hotel teams compare guest feedback.",
+      "methods": [
+        "Text analysis",
+        "Aspect-based sentiment",
+        "K-means",
+        "Gaussian mixture",
+        "Customer segmentation"
+      ]
     },
     {
       "id": "ev-choice",
@@ -18,7 +25,14 @@
         "Comparing buyer groups"
       ],
       "work": "Analyzed how young consumers balanced price, driving range and charging time when choosing an electric car.",
-      "output": "Two buyer groups and estimates of how much extra they would pay for different features."
+      "output": "Two buyer groups and estimates of how much extra they would pay for different features.",
+      "methods": [
+        "Choice experiment",
+        "Multinomial logit",
+        "Mixed logit",
+        "Latent class",
+        "Willingness to pay"
+      ]
     },
     {
       "id": "virtual-influencers",
@@ -28,7 +42,13 @@
         "Comparing audience responses"
       ],
       "work": "Co-authored a study of how a virtual creator and the product message relate to young consumers’ willingness to buy.",
-      "output": "A published Springer chapter on how audiences respond to virtual creators."
+      "output": "A published Springer chapter on how audiences respond to virtual creators.",
+      "methods": [
+        "2 × 2 experiment",
+        "Consumer research",
+        "Moderation analysis",
+        "Elaboration Likelihood Model"
+      ]
     },
     {
       "id": "nutrition-diet",
@@ -38,7 +58,14 @@
         "Comparing dietary patterns"
       ],
       "work": "Co-authored a study of students’ nutrition knowledge, physical activity and reported food choices.",
-      "output": "A comparison of what students knew about food and how that related to their reported diets."
+      "output": "A comparison of what students knew about food and how that related to their reported diets.",
+      "methods": [
+        "Survey analysis",
+        "Multiple regression",
+        "CoNKS",
+        "IPAQ-SF",
+        "DQQ"
+      ]
     },
     {
       "id": "motorbike-phaseout",
@@ -48,7 +75,13 @@
         "Comparing public preferences"
       ],
       "work": "Compared how people valued travel restrictions and support when considering a move away from petrol motorbikes.",
-      "output": "Estimates of which policy features people favored or disliked in the choice tasks."
+      "output": "Estimates of which policy features people favored or disliked in the choice tasks.",
+      "methods": [
+        "Choice experiment",
+        "Mixed logit",
+        "Interaction analysis",
+        "Willingness to pay"
+      ]
     },
     {
       "id": "hotel-prca",
@@ -58,7 +91,14 @@
         "Service planning"
       ],
       "work": "Compared which service complaints went with lower hotel ratings and which positive comments went with higher ratings.",
-      "output": "A comparison of service failures to prevent and improvements worth investigating."
+      "output": "A comparison of service failures to prevent and improvements worth investigating.",
+      "methods": [
+        "Text analysis",
+        "Sentence-BERT",
+        "OLS regression",
+        "PRCA",
+        "Kano model"
+      ]
     },
     {
       "id": "hotel-value-framework",
@@ -68,7 +108,12 @@
         "Service design"
       ],
       "work": "Organized themes from hotel reviews into examples of guest needs and possible service responses.",
-      "output": "Three example guest profiles and questions for a future study."
+      "output": "Three example guest profiles and questions for a future study.",
+      "methods": [
+        "Research synthesis",
+        "Service design",
+        "Concept development"
+      ]
     },
     {
       "id": "influencer-strategy",
@@ -78,7 +123,13 @@
         "Understanding engagement"
       ],
       "work": "Examined a survey model of what encourages people to engage with content and keep using a platform.",
-      "output": "A research model linking content experience, engagement and the intention to return."
+      "output": "A research model linking content experience, engagement and the intention to return.",
+      "methods": [
+        "Survey analysis",
+        "EFA",
+        "CFA",
+        "SEM"
+      ]
     },
     {
       "id": "buffet-nudging",
@@ -88,7 +139,12 @@
         "Data interpretation"
       ],
       "work": "Compared how menu order affected the amount people planned to eat and their choice of a higher-priced buffet option.",
-      "output": "A comparison of planned calorie intake and higher-priced buffet choices under different menu orders."
+      "output": "A comparison of planned calorie intake and higher-priced buffet choices under different menu orders.",
+      "methods": [
+        "Experiment design",
+        "Ordinal logit",
+        "Mediation analysis"
+      ]
     },
     {
       "id": "psych-ownership",
@@ -98,7 +154,12 @@
         "Commitment and teamwork"
       ],
       "work": "Outlined how feeling that work is mine or ours may relate to commitment and teamwork.",
-      "output": "A plan for future research, rather than results from a new university survey."
+      "output": "A plan for future research, rather than results from a new university survey.",
+      "methods": [
+        "Research planning",
+        "Concept development",
+        "Framework design"
+      ]
     },
     {
       "id": "arts-workshop",
@@ -108,7 +169,13 @@
         "Workshop service design"
       ],
       "work": "Examined how what people valued in a workshop related to their view of it and their intention to join.",
-      "output": "Findings about learning value and questions for improving beginner workshop support."
+      "output": "Findings about learning value and questions for improving beginner workshop support.",
+      "methods": [
+        "Survey analysis",
+        "Scale validation",
+        "Mediation analysis",
+        "PROCESS Model 4"
+      ]
     }
   ]
 }
