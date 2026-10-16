@@ -26,10 +26,10 @@
         ]
       ],
       "question": "What do guests say about their stay?",
-      "study": "A hotel can have a good overall rating but receive very different feedback from different guests. This study grouped reviews with similar patterns, looking at what guests mentioned and how they described it.",
+      "study": "An overall rating can hide different priorities. Review text shows which parts of a stay guests praise or criticize.",
       "findingTitle": "Guests described ten different patterns",
-      "finding": "The analysis reported ten review-based groups. The largest, labelled Minimalists, covered 43.7% of the reviews. These are groups in the review data, not confirmed types of people.",
-      "use": "Compare feedback before deciding which part of the guest experience to investigate or improve. The group names help summarize patterns; the actual comments and attribute results should guide a decision.",
+      "finding": "Ten review-based groups were reported. The largest, Minimalists, covered 43.7% of reviews. These are patterns in reviews, not confirmed types of people.",
+      "use": "Compare comments and attribute results to decide which parts of the guest experience need closer attention.",
       "limit": "The shares describe this review sample. They do not measure hotel occupancy, market share or revenue.",
       "visual": {
         "type": "segments",
@@ -129,10 +129,10 @@
         ]
       ],
       "question": "What matters when choosing an electric car?",
-      "study": "Participants chose between cars with different features and prices. Comparing many choices helped identify which features mattered and whether buyers followed different patterns.",
+      "study": "Participants repeatedly chose between cars with different prices and features, revealing their priorities and differences in preferences.",
       "findingTitle": "Driving range stood out in both groups",
-      "finding": "The analysis reported two buyer groups, making up 65% and 35% of the sample. Extra driving range had the highest estimated value in both. The estimates for body design were less certain.",
-      "use": "The results can help a team decide which features to emphasize for different buyers. They do not predict how many cars will sell at a given price.",
+      "finding": "Two buyer groups represented 65% and 35% of the sample. Extra driving range had the highest estimated value in both; body-design estimates were less certain.",
+      "use": "Choose which features to emphasize for each buyer group. The results do not predict sales at a given price.",
       "limit": "People chose hypothetical cars. The amounts are model estimates, not money spent on actual purchases.",
       "visual": {
         "type": "comparison",
@@ -216,10 +216,10 @@
         ]
       ],
       "question": "Is it the message or the creator?",
-      "study": "Each participant saw one of four simulated Instagram posts. The posts varied the strength of the product message and the creator’s appeal. The study then compared willingness to buy.",
+      "study": "Participants saw one of four simulated Instagram posts, varying message strength and creator appeal, then reported their willingness to buy.",
       "findingTitle": "Audience acceptance matters too",
-      "finding": "Creator-related cues were linked to willingness to buy. A stronger preference for human endorsers was linked to lower willingness to buy after seeing a virtual creator.",
-      "use": "Check whether an audience accepts virtual creators before choosing one. An appealing appearance may not be enough for people who prefer human endorsers.",
+      "finding": "Creator cues were linked to purchase intention. People with a stronger preference for human endorsers reported lower willingness to buy after seeing a virtual creator.",
+      "use": "Check audience acceptance before choosing a virtual creator; an appealing appearance may not be enough.",
       "limit": "The study measured what people said they might buy after seeing a simulated post. It did not measure purchases or sales.",
       "visual": {
         "type": "stimuli",
@@ -299,10 +299,10 @@
         ]
       ],
       "question": "Does knowing about food go with eating well?",
-      "study": "Students answered questions about nutrition, physical activity and foods eaten the previous day. The analysis compared these answers while also accounting for age and sex.",
+      "study": "Compared students’ nutrition knowledge, activity and previous-day food intake, accounting for age and sex.",
       "findingTitle": "Calories were harder to understand",
-      "finding": "Students answered basic dietary questions more accurately than calorie questions. The food-group scores describe their reported diets; each score uses its own scale.",
-      "use": "Use the knowledge gaps to choose topics for nutrition education. The study also found a link between physical activity and diet quality that could be examined further.",
+      "finding": "Students answered basic dietary questions more accurately than calorie questions. Their reported food-group scores use separate scales.",
+      "use": "Use the knowledge gaps to choose nutrition-education topics. Study the activity–diet relationship further.",
       "limit": "This was a survey at one point in time. It cannot show that a class or an activity programme caused healthier eating.",
       "visual": {
         "type": "comparison",
@@ -394,10 +394,10 @@
         ]
       ],
       "question": "What would make a transport change easier to accept?",
-      "study": "Hanoi respondents chose between policy packages. Some included restrictions; others added public transport or financial support. Their choices were used to estimate how they valued each feature.",
+      "study": "Hanoi respondents chose between packages combining travel restrictions, public transport and financial support.",
       "findingTitle": "Restrictions were disliked; support was valued",
-      "finding": "Restrictions on fossil-fuel vehicles received negative estimated values. Better public transport, reinvestment and an electric-motorcycle grant received positive values.",
-      "use": "Compare restrictions and support together when discussing a transition. The results show what respondents preferred in the survey, not what they will necessarily do.",
+      "finding": "Vehicle restrictions received negative estimated values; better public transport, reinvestment and electric-motorcycle grants received positive values.",
+      "use": "Discuss restrictions and support together. Survey preferences do not guarantee the same behavior in practice.",
       "limit": "The study does not predict traffic, compliance or the effects of a particular law. Suggested policy sequencing is an interpretation of the findings.",
       "visual": {
         "type": "comparison",
@@ -489,10 +489,10 @@
         ]
       ],
       "question": "Which service problems matter most in reviews?",
-      "study": "The analysis sorted review sentences into eight parts of the hotel experience. It then compared how positive and negative comments about each part related to review scores.",
+      "study": "Compared how praise and complaints about eight hotel-service topics related to review scores.",
       "findingTitle": "Cleanliness and staff service played different roles",
-      "finding": "Poor cleanliness had the largest reported link to lower scores. Positive comments about staff service had the largest link to higher scores.",
-      "use": "Separate problems that need fixing from improvements that might help a hotel stand out. The comparison gives a starting point for investigating service priorities.",
+      "finding": "Cleanliness complaints had the largest reported link to lower scores. Staff praise had the largest link to higher scores.",
+      "use": "Distinguish service failures to prevent from improvements that may help a hotel stand out.",
       "limit": "The results link review language with review scores. They do not show how much revenue a service investment would generate.",
       "visual": {
         "type": "comparison",
@@ -592,10 +592,10 @@
         ]
       ],
       "question": "How can guest feedback guide a service idea?",
-      "study": "The framework connects review themes, such as comfort and local experiences, with possible hotel services. It provides examples to discuss and test, rather than new customer groups measured from data.",
+      "study": "Connects review themes with service ideas to discuss and test. It does not identify new customer groups.",
       "findingTitle": "Three example ways to understand a guest",
-      "finding": "The profiles describe guests seeking comfort, local experiences or reliability. They are discussion tools, not additional groups discovered in the segmentation study.",
-      "use": "Discuss which needs a service idea addresses, then check those assumptions through guest interviews or a new study.",
+      "finding": "Three illustrative profiles focus on comfort, local experiences and reliability. They are discussion tools, not new measured segments.",
+      "use": "Discuss which guest needs a service addresses, then check the assumptions through interviews or a new study.",
       "limit": "These profiles and service ideas are conceptual. Measured group sizes belong to the separate customer-segmentation study.",
       "visual": {
         "type": "profiles",
@@ -669,10 +669,10 @@
         ]
       ],
       "question": "What might make an audience come back?",
-      "study": "The analysis first checked whether the survey questions measured the intended ideas. It then examined how content experience, expectations and brand perceptions related to engagement and returning.",
+      "study": "Checked survey measures, then examined links between content experience, expectations, brand perceptions, engagement and retention.",
       "findingTitle": "Engagement connected the parts of the model",
-      "finding": "The model accounted for 55% of variation in engagement scores and 70% in retention scores. These describe patterns in survey answers, not improvements delivered by a campaign.",
-      "use": "Look beyond exposure alone. Examine whether content meets expectations, fits the brand and gives people a reason to interact.",
+      "finding": "The model explained 55% of variation in engagement scores and 70% in retention scores. These are survey patterns, not campaign improvements.",
+      "use": "Check whether content meets expectations, fits the brand and gives people a reason to interact.",
       "limit": "A one-time survey cannot prove that a campaign change makes people return. The available materials do not include all model coefficients.",
       "visual": {
         "type": "pathway",
@@ -744,10 +744,10 @@
         ]
       ],
       "question": "Does menu order change what people choose?",
-      "study": "Participants saw menus with food options or price tiers in different orders. The studies compared how much people planned to eat and whether they chose a higher-priced option.",
+      "study": "Changed the order of food options or price tiers, then compared planned intake and higher-priced choices.",
       "findingTitle": "Lower planned intake came with fewer premium choices",
-      "finding": "Putting healthier options first reduced planned calorie intake in both studies. In Study 2, the share choosing a higher-priced tier fell from 52.4% to 23.8%.",
-      "use": "Try changing menu order while watching both food choices and interest in higher-priced tiers. A design that supports one goal may work against another.",
+      "finding": "Healthier options first reduced planned calories in both studies. In Study 2, premium-tier choice fell from 52.4% to 23.8%.",
+      "use": "Test menu order while tracking both food choices and premium-tier demand; the two goals may conflict.",
       "limit": "These were stated choices and planned intake. The studies did not measure food eaten or waste in an operating restaurant.",
       "visual": {
         "type": "comparison",
@@ -825,10 +825,10 @@
         ]
       ],
       "question": "Does feeling ownership change how people work together?",
-      "study": "The framework separates a personal connection to work from a shared sense of responsibility. It proposes questions about how these feelings relate to commitment and cooperation.",
+      "study": "Separates personal ownership from shared responsibility to frame questions about commitment and cooperation.",
       "findingTitle": "Two ideas to test in a future study",
-      "finding": "Personal ownership is a sense that the work is mine. Shared ownership is a sense that it is ours. The framework proposes studying how each relates to commitment and teamwork.",
-      "use": "Use it to plan interviews or a survey about involvement in decisions, meaningful work and shared goals.",
+      "finding": "Work can feel like mine or ours. The framework proposes studying how each form of ownership relates to commitment and teamwork.",
+      "use": "Plan interviews or a survey about decision-making, meaningful work and shared goals.",
       "limit": "This is a research framework. The materials do not provide a university sample or measured effects.",
       "visual": {
         "type": "pathway",
@@ -896,10 +896,10 @@
         ]
       ],
       "question": "What makes someone want to join a workshop?",
-      "study": "Participants answered questions about learning, social experience and enjoyment at Ladder Art Space. The analysis examined how these related to their view of the workshop and their intention to take part.",
+      "study": "Examined how learning, social experience and enjoyment at Ladder Art Space related to attitudes and participation intention.",
       "findingTitle": "Learning was the strongest reported link",
-      "finding": "Learning value had the strongest reported link to a positive view of the workshop. A more positive view was, in turn, linked to the intention to participate.",
-      "use": "Test clearer learning goals, beginner guidance and feedback. These ideas follow from the survey findings but have not yet been shown to increase bookings.",
+      "finding": "Learning value had the strongest reported link to a positive attitude, which was linked to participation intention.",
+      "use": "Test clearer learning goals, beginner guidance and feedback. The survey has not established an increase in bookings.",
       "limit": "The survey measured intention at one point in time. It did not establish an increase in bookings or repeat attendance.",
       "visual": {
         "type": "pathway",

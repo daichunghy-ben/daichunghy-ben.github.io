@@ -27,6 +27,7 @@ for(let i=0;i<cases.length;i++){
  const experience=researchExperienceMarkup(c.id);
  const model=models.find(m=>m.id===c.id);
  const capability=capabilities.find(entry=>entry.id===c.id);
+ const conceptual=['hotel-value-framework','psych-ownership'].includes(c.id);
  if(!capability)throw new Error('Missing capability');
  for(const mode of ['study','next'])await fs.writeFile(path.join(root,'portfolio/assets/models',c.id+'-'+mode+'.svg'),modelSvg(c,model,mode));
  const html=`<!DOCTYPE html>
@@ -46,18 +47,20 @@ for(let i=0;i<cases.length;i++){
 <link rel="stylesheet" href="styles/case-study.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/research-evidence.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<link rel="stylesheet" href="styles/research-experiences.css?v=experiences1"/>':''}
+<link rel="stylesheet" href="styles/research-layout.css?v=clarity1"/>
 </head>
 <body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
 <main class="page-width case-main">
 <section class="case-hero" aria-labelledby="case-title">
-<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(capability.work)}</p><p class="case-skills">${capability.skills.map(text).join(' · ')}</p><div class="case-output"><span>Output</span><p>${text(capability.output)}</p></div><p class="case-status">${text(c.status)}</p></div>
+<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(capability.work)}</p><p class="case-skills">${capability.skills.map(skill=>`<span>${text(skill)}</span>`).join('')}</p><div class="case-output"><span>Output</span><p>${text(capability.output)}</p></div><p class="case-status">${text(c.status)}</p></div>
 <figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/>${c.image.includes('research-reader-first/')?'<figcaption class="cover-label">Concept illustration</figcaption>':''}</figure>
 </section>
 <dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
-<section class="case-overview" aria-labelledby="question-title"><h2 id="question-title">${text(c.question)}</h2><p>${text(c.study)}</p></section>${experience?'\n'+experience:''}
-<section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
-<section class="case-interpretation" aria-labelledby="use-title"><h2 id="use-title">${text(c.useTitle)}</h2><div><p>${text(c.use)}</p><p class="case-limit">${text(c.limit)}</p></div></section>
+<section class="case-overview" aria-labelledby="question-title"><div><p class="section-label">Research question</p><h2 id="question-title">${text(c.question)}</h2></div><p>${text(c.study)}</p></section>${experience?'\n'+experience:''}
+<section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-summary"><div class="finding-intro"><p class="section-label">${conceptual?'Framework focus':'Key finding'}</p><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
+<section class="case-interpretation" aria-labelledby="use-title"><p class="section-label">Practical use</p><h2 id="use-title">${text(c.useTitle)}</h2><p>${text(c.use)}</p></section></div>
+<p class="case-limit"><strong>Read with care</strong><span>${text(c.limit)}</span></p>
 ${figure}
 </section>
 ${methodsMarkup(evidence)}
