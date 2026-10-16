@@ -211,3 +211,9 @@ p+p {margin-top:15px}
  @view-transition {navigation:none}
  .study-row:hover img,.study-row:focus-visible img {transform:none;filter:none}
 }
+
+/* Shared identity: a quiet, borderless mark with a 44px touch target. */
+.hy-brand {display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;margin-right:auto;border-radius:14px}
+.hy-brand img {width:40px;height:40px;transition:opacity .2s}
+.hy-brand:hover img {opacity:.85}
+@media (max-width:380px) {.site-header:has(.hy-brand) {gap:10px}}
