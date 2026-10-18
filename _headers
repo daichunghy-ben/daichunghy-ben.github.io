@@ -1,9 +1,9 @@
 # Security headers for hosts that honor a _headers file (Cloudflare Pages,
 # Netlify). GitHub Pages does NOT read this file; for GitHub Pages the
 # Content-Security-Policy and Referrer-Policy are applied as <meta> tags by
-# scripts/stage-pages.mjs. Keep the CSP here in sync with CSP_DIRECTIVES there.
+# scripts/stage-pages.mjs. Staging adds the inline script hashes to this header as well.
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin

@@ -262,7 +262,7 @@ const main = async () => {
   }
 
   const port = await getFreePort();
-  const server = spawn('python3', ['-m', 'http.server', String(port), '--directory', PUBLIC_DIR], {
+  const server = spawn('python3', ['-m', 'http.server', String(port), '--bind', '127.0.0.1', '--directory', PUBLIC_DIR], {
     cwd: ROOT,
     stdio: 'ignore'
   });

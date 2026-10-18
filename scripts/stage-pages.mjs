@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {buildLocales} from './build-locales.mjs';
+import {injectSecurityMeta, inlineScriptHashes, scriptPolicy} from './security-policy.mjs';
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, '.deploy', 'public');
@@ -388,93 +389,24 @@ const updateDeploySiteConfig = async (siteUrl) => {
   await fs.writeFile(configPath, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8');
 };
 
-// Content-Security-Policy and related hardening for the static GitHub Pages
-// site. GitHub Pages cannot send custom HTTP headers, so the policy is applied
-// via <meta> tags at stage time. Directives that browsers ignore inside <meta>
-// (frame-ancestors, X-Frame-Options, X-Content-Type-Options) are instead set in
-// the _headers file for any host that honors it (Cloudflare/Netlify).
-const CSP_DIRECTIVES = [
-  "default-src 'self'",
-  "base-uri 'self'",
-  "object-src 'none'",
-  // 'unsafe-inline' is required: the pages use inline <script> blocks and inline
-  // event-handler attributes (onload on preloaded styles, onerror on images).
-  // Per-request nonces are impossible on a static host. All third-party scripts
-  // (e.g. Chart.js) are self-hosted under assets/vendor, so no external script
-  // origin is allowed.
-  "script-src 'self' 'unsafe-inline'",
-  // 'unsafe-inline' covers inline style="" attributes and the <style> block in
-  // 404.html; Google Fonts ships its face declarations from googleapis.
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' https://fonts.gstatic.com data:",
-  "img-src 'self' data:",
-  "media-src 'self'",
-  "connect-src 'self'",
-  "form-action 'self'",
-  "frame-src 'none'",
-  'upgrade-insecure-requests'
-];
-
-const CSP_CONTENT = CSP_DIRECTIVES.join('; ');
-
-const SECURITY_META_MARK = 'data-staged-security="csp"';
-
-const buildSecurityMetaBlock = () =>
-  [
-    `<meta http-equiv="Content-Security-Policy" ${SECURITY_META_MARK} content="${CSP_CONTENT}"/>`,
-    '<meta name="referrer" content="strict-origin-when-cross-origin"/>'
-  ].join('\n');
-
-const injectSecurityMeta = (html) => {
-  // Idempotent: never insert twice.
-  if (html.includes(SECURITY_META_MARK)) return html;
-
-  const block = buildSecurityMetaBlock();
-
-  // Prefer inserting right after the charset meta so the declared encoding stays
-  // first. Fall back to just after the opening <head> tag.
-  const charsetMatch = html.match(/<meta\b[^>]*\bcharset\b[^>]*>/i);
-  if (charsetMatch) {
-    const index = charsetMatch.index + charsetMatch[0].length;
-    return `${html.slice(0, index)}\n${block}${html.slice(index)}`;
-  }
-
-  const headMatch = html.match(/<head\b[^>]*>/i);
-  if (headMatch) {
-    const index = headMatch.index + headMatch[0].length;
-    return `${html.slice(0, index)}\n${block}${html.slice(index)}`;
-  }
-
-  return html;
-};
-
+// Apply security to every published HTML document, independently of sitemap
+// selection. This includes portfolio/404.html and future nested pages.
 const applySecurityMetaToStagedHtml = async () => {
-  const portfolioDir = path.join(OUT_DIR, 'portfolio');
-  const htmlFiles = (await dirExists(portfolioDir)) ? await listTopLevelHtmlFiles(portfolioDir) : [];
-
-  let patched = 0;
-  for (const htmlFile of htmlFiles) {
-    const filePath = path.join(portfolioDir, htmlFile);
+  const htmlFiles = (await listFilesRecursive(OUT_DIR)).filter(file => file.endsWith('.html'));
+  const hashes = new Set();
+  for (const filePath of htmlFiles) {
     const html = await fs.readFile(filePath, 'utf8');
-    const next = injectSecurityMeta(html);
-    if (next !== html) {
-      await fs.writeFile(filePath, next, 'utf8');
-      patched += 1;
-    }
+    inlineScriptHashes(html).forEach(hash => hashes.add(hash));
+    await fs.writeFile(filePath, injectSecurityMeta(html), 'utf8');
   }
-
-  // The custom 404 lives at the deploy root and is served by GitHub Pages too.
-  const rootNotFound = path.join(OUT_DIR, '404.html');
-  if (await fileExists(rootNotFound)) {
-    const html = await fs.readFile(rootNotFound, 'utf8');
-    const next = injectSecurityMeta(html);
-    if (next !== html) {
-      await fs.writeFile(rootNotFound, next, 'utf8');
-      patched += 1;
-    }
+  // Alternate hosts also enforce HTTP headers. Keep their script allowlist in
+  // sync so the header and meta policies both permit the intended inline code.
+  const headersPath = path.join(OUT_DIR, '_headers');
+  if (await fileExists(headersPath)) {
+    const headers = await fs.readFile(headersPath, 'utf8');
+    await fs.writeFile(headersPath, headers.replace(/script-src\s+[^;\n]+/, scriptPolicy([...hashes])), 'utf8');
   }
-
-  console.log(`Applied security CSP meta to ${patched} HTML file(s).`);
+  console.log(`Applied hashed-script CSP to ${htmlFiles.length} HTML file(s).`);
 };
 
 const rewriteStagedHtmlAssetRefs = async () => {

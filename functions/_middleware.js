@@ -50,6 +50,9 @@ export async function onRequest(context) {
     return context.next();
   }
 
-  const redirectUrl = new URL(`${requestUrl.pathname}${requestUrl.search}`, primary);
+  // Assign path components without interpreting a leading // as an authority.
+  const redirectUrl = new URL(primary.href);
+  redirectUrl.pathname = requestUrl.pathname;
+  redirectUrl.search = requestUrl.search;
   return Response.redirect(redirectUrl.href, 301);
 }
