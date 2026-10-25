@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {validateModels,modelSvg} from './research-model-markup.mjs';
-import {modelMarkup} from './static-research-models.mjs';
 import {evidenceMarkup} from './static-research-evidence.mjs';
 import {researchExperienceMarkup} from './research-experience-markup.mjs';
+import {heroPreview,methodSteps,themeStyle,themes,researchVersion,researchArchive} from './research-landing-markup.mjs';
 
 const root=process.cwd();
 const {cases}=JSON.parse(await fs.readFile(path.join(root,'portfolio/assets/data/case-studies.json'),'utf8'));
@@ -23,7 +23,8 @@ for(let i=0;i<cases.length;i++){
  const canonical='https://daichunghy-ben.github.io/portfolio/'+c.file;
  const evidence=entries.find(e=>e.id===c.id);
  if(!evidence)throw new Error('Missing case evidence');
- const figure=evidenceMarkup(evidence,c);
+ const themedCase={...c,accent:themes[c.id][0]};
+ const figure=evidenceMarkup(evidence,themedCase);
  const experience=researchExperienceMarkup(c.id);
  const model=models.find(m=>m.id===c.id);
  const capability=capabilities.find(entry=>entry.id===c.id);
@@ -35,42 +36,44 @@ for(let i=0;i<cases.length;i++){
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#faf9f6"/>
+<meta name="theme-color" content="#ffffff"/>
 <title>${text(c.title)} | Dai Chung Hy</title>
 <meta name="description" content="${escape(c.lead)}"/>
 <meta property="og:title" content="${escape(c.title)} | Dai Chung Hy"/>
 <meta property="og:description" content="${escape(c.lead)}"/>
 <meta property="og:url" content="${canonical}"/>
 <link rel="canonical" href="${canonical}"/>
-<link rel="icon" href="../assets/favicon.png"/>
+<link rel="icon" href="assets/favicon.svg"/>
 <link rel="stylesheet" href="styles/home-v2.css?v=cases8"/>
-<link rel="stylesheet" href="styles/case-study.css?v=reader-first1"/>
 <link rel="stylesheet" href="styles/research-evidence.css?v=reader-first1"/>
-<link rel="stylesheet" href="styles/reader-first.css?v=reader-first1"/>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<link rel="stylesheet" href="styles/research-experiences.css?v=experiences1"/>':''}
-<link rel="stylesheet" href="styles/research-layout.css?v=skills2"/>
+${['ev-choice','hotel-segmentation'].includes(c.id)?'<link rel="stylesheet" href="styles/research-experiences.css?v=experiences1"/>':''}
+<link rel="stylesheet" href="styles/research-landing.css?v=${researchVersion}"/>
 </head>
-<body class="case-study" data-study="${escape(c.id)}" style="--case-accent:${c.accent}">
+<body class="case-study research-landing" data-study="${escape(c.id)}" data-research-version="${researchVersion}" style="${themeStyle(c.id)}">
 <header class="case-header page-width"><a class="back-link" href="projects.html">← Research</a><nav aria-label="Portfolio navigation"><a href="index.html#work">Experience</a><a href="about.html#research">Full profile ↗</a></nav></header>
 <main class="page-width case-main">
-<section class="case-hero" aria-labelledby="case-title">
-<div class="case-hero-copy"><p class="case-topic">${text(c.topic)}</p><h1 id="case-title">${text(c.title)}</h1><p class="case-skills">${capability.skills.map(skill=>`<span>${text(skill)}</span>`).join('')}</p></div>
-<figure class="case-cover"><img class="case-hero-image" src="${escape(c.image)}" alt="${escape(c.imageAlt)}" width="1440" height="1024" fetchpriority="high"/>${c.image.includes('research-reader-first/')?'<figcaption class="cover-label">Concept illustration</figcaption>':''}</figure>
+<section class="case-opening" aria-labelledby="case-title"><div class="case-hero">
+<div class="case-hero-copy"><h1 id="case-title">${text(c.title)}</h1><p class="case-lede">${text(c.lead)}</p><div class="case-actions"><a class="research-button" href="#findings">Explore the findings <span aria-hidden="true">↓</span></a><a class="research-text-link" href="#models">Methods & sources <span aria-hidden="true">↗</span></a></div></div>
+${heroPreview(c,evidence)}
+</div><dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
 </section>
-<dl class="case-facts">${c.facts.map(([label,value])=>`<div><dt>${text(label)}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>
-${experience?'\n'+experience:''}
-<section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><p class="section-label">${conceptual?'Framework focus':'Key result'}</p><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div>
+<section id="findings" class="case-findings" aria-labelledby="finding-title"><div class="finding-intro"><div><h2 id="finding-title">${text(c.findingTitle)}</h2><p>${text(c.finding)}</p></div><p>${text(c.study)}</p></div>
 ${figure}
 </section>
-${modelMarkup(c,model,capability)}
-<section class="case-notes case-notes-compact" id="study-notes"><h2>Source & status</h2><p>${text(c.status)}</p><div class="notes-content"><div class="case-sources">${c.sources.filter(([label,href])=>!href.endsWith('.pdf')&&!/figure|diagram/i.test(label)).map(([label,href])=>link(label,href)).join('')}</div></div></section>
+${experience?'\n'+experience:''}
+<section class="research-application"><div><h2>${text(c.useTitle||'How the findings could be used')}</h2><p>${text(c.use)}</p></div><aside><h3>What the study does not establish</h3><p>${text(c.limit)}</p></aside></section>
+${methodSteps(evidence,capability)}
+<details class="research-model-detail"><summary>${conceptual?'Proposed framework':'Study diagram'} <span aria-hidden="true">+</span></summary><figure class="inline-model"><img src="assets/models/${model.id}-study.svg" alt="${escape(model.study.title)}" width="1000" height="700" loading="lazy"/></figure></details>
+<section class="case-notes" id="study-notes"><div><h2>Source & status</h2><p>${text(c.status)}</p></div><div class="case-sources">${c.sources.map(([label,href])=>link(label,href)).join('')}</div></section>
 <nav class="case-next" aria-label="More research"><a href="projects.html">All studies <span aria-hidden="true">↗</span></a><a href="${escape(next.file)}" data-study-link><span>Next study</span><strong>${text(next.title)} <span aria-hidden="true">→</span></strong></a></nav>
 </main>
-<script type="module" src="js/case-study.js?v=reader-first1"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v=bilingual1"></script>':''}
+<script type="module" src="js/case-study.js?v=${researchVersion}"></script><script type="module" src="js/research-landing.js?v=${researchVersion}"></script>${['ev-choice','hotel-segmentation'].includes(c.id)?'\n<script type="module" src="js/research-experiences.js?v='+researchVersion+'"></script>':''}
 </body>
 </html>
 `;
  await fs.writeFile(path.join(root,'portfolio',c.file),html);
 }
+await fs.writeFile(path.join(root,'portfolio/projects.html'),researchArchive(cases,entries));
 await fs.writeFile(path.join(root,'portfolio/research-hanoi-phaseout.html'),`<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Motorbike phase-out policy | Dai Chung Hy</title><meta name="robots" content="noindex,follow"/><link rel="canonical" href="https://daichunghy-ben.github.io/portfolio/research-motorbike-ban.html"/><meta http-equiv="refresh" content="0;url=research-motorbike-ban.html"/><link rel="stylesheet" href="styles/home-v2.css?v=cases8"/></head><body><main class="page-width" style="padding-block:80px"><h1>Motorbike phase-out policy</h1><p style="margin-top:25px"><a href="research-motorbike-ban.html">Open the study ↗</a></p></main><script>location.replace('research-motorbike-ban.html'+location.hash)</script></body></html>\n`);
 console.log('Rendered '+cases.length+' study pages and the legacy policy route.');

@@ -34,6 +34,7 @@ if(choice){
  for(const button of chooseButtons){button.hidden=false;button.addEventListener('click',()=>{answers.set(taskIndex,button.dataset.choose);renderSelection();});}
  choice.querySelector('.choice-step-controls').hidden=false;
  for(const button of stepButtons)button.addEventListener('click',()=>{taskIndex=Math.max(0,Math.min(tasks.length-1,taskIndex+Number(button.dataset.choiceStep)));renderTask();});
+ renderTask();
 }
 
 const map=document.querySelector('[data-attribute-map]');

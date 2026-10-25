@@ -38,8 +38,9 @@ if(imageLinks.length){
  if(typeof dialog.showModal==='function'){
   const header=element('div','analysis-dialog-header'),title=element('h2','');title.id='analysis-image-title';
   dialog.setAttribute('aria-labelledby',title.id);
-  const close=element('button','analysis-dialog-close','Close');close.type='button';close.addEventListener('click',()=>dialog.close());header.append(title,close);
-  const image=element('img','analysis-dialog-image'),original=element('a','analysis-dialog-original','Open original image ↗');original.target='_blank';original.rel='noopener noreferrer';
+  const vi=document.documentElement.lang==='vi';
+  const close=element('button','analysis-dialog-close',vi?'Đóng':'Close');close.type='button';close.addEventListener('click',()=>dialog.close());header.append(title,close);
+  const image=element('img','analysis-dialog-image'),original=element('a','analysis-dialog-original',vi?'Mở ảnh gốc ↗':'Open original image ↗');original.target='_blank';original.rel='noopener noreferrer';
   dialog.append(header,image,original);document.body.append(dialog);let returnTarget;
   document.addEventListener('click',event=>{
    const link=event.target.closest('.case-sources a,[data-analysis-image]');
