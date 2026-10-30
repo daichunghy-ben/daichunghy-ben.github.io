@@ -416,7 +416,9 @@ const rewriteStagedHtmlAssetRefs = async () => {
   for (const htmlFile of htmlFiles) {
     const filePath = path.join(portfolioDir, htmlFile);
     const html = await fs.readFile(filePath, 'utf8');
-    const rewritten = rewriteAssetRefsInHtml(html);
+    const rewritten = rewriteAssetRefsInHtml(html)
+      .replace(/(styles\/home-v2\.css)(?:\?[^"\']*)?/g, "$1?v=interaction-20261031")
+      .replace(/(js\/language-switch\.js)(?:\?[^"\']*)?/g, "$1?v=interaction-20261031");
     if (rewritten !== html) {
       await fs.writeFile(filePath, rewritten, 'utf8');
     }

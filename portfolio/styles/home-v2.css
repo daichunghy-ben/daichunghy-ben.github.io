@@ -217,3 +217,9 @@ p+p {margin-top:15px}
 .hy-brand img {width:40px;height:40px;transition:opacity .2s}
 .hy-brand:hover img {opacity:.85}
 @media (max-width:380px) {.site-header:has(.hy-brand) {gap:10px}}
+
+/* A warm highlight keeps selected text legible in both languages. */
+::selection {background:#f1c8ba;color:#24272c}
+.interaction-pulse {position:fixed;z-index:999;left:0;top:0;width:34px;height:34px;border-radius:50%;background:rgba(188,62,50,.19);pointer-events:none;transform:translate(-50%,-50%) scale(.2);animation:interaction-pulse .5s ease-out forwards}
+@keyframes interaction-pulse {to {transform:translate(-50%,-50%) scale(1.65);opacity:0}}
+@media (prefers-reduced-motion:reduce) {.interaction-pulse {display:none}}
