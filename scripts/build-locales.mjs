@@ -18,7 +18,8 @@ function decorate(html,file,locale){
  html=html.replace(/<html\b[^>]*>/,tag=>tag.replace(/lang="[^"]*"/,'lang="'+locale+'"'));
  html=html.replace(/<link\b[^>]*rel="canonical"[^>]*>/,`<link rel="canonical" href="${canonical}"/>`);
  html=html.replace(/<meta\b[^>]*property="og:url"[^>]*>/,`<meta property="og:url" content="${canonical}"/>`);
- html=html.replace('</head>',`<link data-bilingual rel="alternate" hreflang="en" href="${base+file}"/>\n<link data-bilingual rel="alternate" hreflang="vi" href="${base+viFile(file)}"/>\n<link data-bilingual rel="alternate" hreflang="x-default" href="${base+file}"/>\n<link data-bilingual rel="stylesheet" href="styles/bilingual.css?v=bilingual1"/>\n<script data-bilingual type="module" src="js/language-switch.js?v=bilingual1"></script>\n</head>`);
+ const enUrl=file==='index.html'?base:base+file;
+ html=html.replace('</head>',`<link data-bilingual rel="alternate" hreflang="en" href="${enUrl}"/>\n<link data-bilingual rel="alternate" hreflang="vi" href="${base+viFile(file)}"/>\n<link data-bilingual rel="alternate" hreflang="x-default" href="${enUrl}"/>\n<link data-bilingual rel="stylesheet" href="styles/bilingual.css?v=bilingual1"/>\n<script data-bilingual type="module" src="js/language-switch.js?v=bilingual1"></script>\n</head>`);
  html=html.replace('</header>',controls(file,locale)+'</header>');
  return html;
 }

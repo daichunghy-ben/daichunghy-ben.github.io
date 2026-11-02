@@ -8,7 +8,7 @@ const OUT_DIR = path.join(ROOT, '.deploy', 'public');
 const SOURCE_DIRS = ['assets', 'dist', 'portfolio'];
 const STATIC_FILES = ['404.html', 'robots.txt', '_headers', '_redirects'];
 const HTML_EXCLUDE = new Set(['index_patched.html']);
-const SITEMAP_EXCLUDE = new Set(['404.html', 'index_patched.html']);
+const SITEMAP_EXCLUDE = new Set(['404.html', 'index_patched.html', 'motion-review.html', 'intro-review.html']);
 const DEFAULT_PRIMARY_SITE_URL = 'https://daichunghy-ben.github.io/portfolio/';
 const DEFAULT_LEGACY_HOSTS = ['chunghy-portfolio.pages.dev', 'chunghy.pages.dev', 'daichunghy.pages.dev', 'daichunghy-portfolio.pages.dev'];
 const STAGED_ASSET_REFS = new Map([
@@ -294,7 +294,7 @@ const resolvePageUrlForFile = (siteUrl, htmlFileName, html) => {
 
 const generateRobotsTxt = async (siteUrl) => {
   const robotsPath = path.join(OUT_DIR, 'robots.txt');
-  const sitemapUrl = new URL('/sitemap.xml', siteUrl).href;
+  const sitemapUrl = new URL('sitemap.xml', siteUrl).href;
   const content = `User-agent: *\nAllow: /\nSitemap: ${sitemapUrl}\n`;
   await fs.writeFile(robotsPath, content, 'utf8');
 };
@@ -313,21 +313,18 @@ const generateSitemapXml = async (siteUrl) => {
 
     if (canonicalUrl !== pageUrl) continue;
 
-    const stats = await fs.stat(filePath);
-    pages.push({
-      lastmod: stats.mtime.toISOString().slice(0, 10),
-      url: pageUrl
-    });
+    pages.push({ url: pageUrl });
   }
 
   const entries = pages
     .map(
-      ({ lastmod, url }) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n    <lastmod>${escapeXml(lastmod)}</lastmod>\n  </url>`
+      ({ url }) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n  </url>`
     )
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
   await fs.writeFile(path.join(OUT_DIR, 'sitemap.xml'), xml, 'utf8');
+  await fs.writeFile(path.join(portfolioDir, 'sitemap.xml'), xml, 'utf8');
 };
 
 const applyMetadataForSiteUrl = async (siteUrl, legacyHosts) => {
