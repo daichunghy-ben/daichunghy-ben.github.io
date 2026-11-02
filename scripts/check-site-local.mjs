@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
+import { fetchLocal } from './local-http.mjs';
 
 const ROOT = process.cwd();
 const PUBLIC_DIR = path.join(ROOT, '.deploy', 'public');
@@ -103,21 +104,7 @@ const extractRefsFromJs = (jsText) => {
   return refs;
 };
 
-const fetchWithTimeout = async (url) => {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 12_000);
-  try {
-    return await fetch(url, {
-      signal: controller.signal,
-      redirect: 'follow',
-      headers: {
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'
-      }
-    });
-  } finally {
-    clearTimeout(timeout);
-  }
-};
+const fetchWithTimeout = fetchLocal;
 
 const waitForServer = async (baseUrl) => {
   const start = Date.now();
