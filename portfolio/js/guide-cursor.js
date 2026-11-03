@@ -38,27 +38,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Hi, I'm Chung Hy — welcome to my portfolio."
+        text: "Hi, I'm Chung Hy. Welcome to my site."
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "AI & B2B Digital Transformation consultant — working with customer data, system requirements, and workflows that actually save time."
+        text: "I work on B2B digital transformation, customer data analysis, and workflow design."
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "Hands-on consulting at 1Office and FPT Education — including cutting a 3-day reporting workflow down to 30 minutes."
+        text: "My projects at 1Office and FPT Education, focusing on workflow optimization and AI tools."
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "Applied research and a published Springer chapter — bridging data analysis with real-world business context."
+        text: "My research on consumer behavior, including a paper published with Springer."
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Always open to discuss digital transformation, data, or new opportunities. Feel free to reach out!"
+        text: "Here is my contact info. Feel free to email me or connect on LinkedIn."
       }
     ],
     vi: [
@@ -66,27 +66,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Chào bạn, mình là Chung Hy — chào mừng bạn ghé thăm portfolio của mình."
+        text: "Chào bạn, mình là Chung Hy. Chào mừng bạn đến với trang web của mình."
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "Chuyên viên tư vấn AI & Chuyển đổi số B2B — tập trung vào phân tích khách hàng, yêu cầu hệ thống và quy trình tối ưu vận hành."
+        text: "Mình làm về chuyển đổi số B2B, phân tích dữ liệu khách hàng và thiết kế quy trình."
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "Kinh nghiệm tư vấn thực tế tại 1Office và FPT Education — bao gồm rút ngắn quy trình báo cáo 3 ngày xuống còn 30 phút."
+        text: "Các dự án tại 1Office và FPT Education về tối ưu quy trình và công cụ AI."
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "Các nghiên cứu ứng dụng và chương sách xuất bản bởi Springer — kết nối phân tích dữ liệu với bài toán thực tiễn."
+        text: "Các nghiên cứu về hành vi người tiêu dùng và một bài báo xuất bản với Springer."
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Luôn sẵn sàng trao đổi về chuyển đổi số, dữ liệu hoặc cơ hội hợp tác mới. Kết nối với mình tại đây nhé!"
+        text: "Thông tin liên hệ của mình. Bạn có thể gửi email hoặc kết nối qua LinkedIn."
       }
     ]
   };
