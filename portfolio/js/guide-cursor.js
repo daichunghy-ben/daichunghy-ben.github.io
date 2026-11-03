@@ -38,27 +38,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Hi, I'm Chung Hy. Welcome to my site."
+        text: "Hi, I'm Chung Hy. Welcome to my site 👋"
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "I work on B2B digital transformation, customer data analysis, and workflow design."
+        text: "I work on B2B digital transformation, customer data analysis, and workflow design 📊"
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "My projects at 1Office and FPT Education, focusing on workflow optimization and AI tools."
+        text: "My projects at 1Office and FPT Education, focusing on workflow optimization and AI tools ⚙️"
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "My research on consumer behavior, including a paper published with Springer."
+        text: "My research on consumer behavior, including a paper published with Springer 📚"
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Here is my contact info. Feel free to email me or connect on LinkedIn."
+        text: "Here is my contact info. Feel free to email me or connect on LinkedIn ✉️"
       }
     ],
     vi: [
@@ -66,27 +66,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Chào bạn, mình là Chung Hy. Chào mừng bạn đến với trang web của mình."
+        text: "Chào bạn, mình là Chung Hy. Chào mừng bạn đến với trang web của mình 👋"
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "Mình làm về chuyển đổi số B2B, phân tích dữ liệu khách hàng và thiết kế quy trình."
+        text: "Mình làm về chuyển đổi số B2B, phân tích dữ liệu khách hàng và thiết kế quy trình 📊"
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "Các dự án tại 1Office và FPT Education về tối ưu quy trình và công cụ AI."
+        text: "Các dự án tại 1Office và FPT Education về tối ưu quy trình và công cụ AI ⚙️"
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "Các nghiên cứu về hành vi người tiêu dùng và một bài báo xuất bản với Springer."
+        text: "Các nghiên cứu về hành vi người tiêu dùng và một bài báo xuất bản với Springer 📚"
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Thông tin liên hệ của mình. Bạn có thể gửi email hoặc kết nối qua LinkedIn."
+        text: "Thông tin liên hệ của mình. Bạn có thể gửi email hoặc kết nối qua LinkedIn ✉️"
       }
     ]
   };
