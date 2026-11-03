@@ -38,27 +38,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Hi, I'm Chung Hy! Welcome to my corner of the web 👋"
+        text: "Hi, I'm Chung Hy — welcome to my portfolio."
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "AI & B2B Digital Transformation consultant — turning chaotic spreadsheets into sleek workflows (yes, Excel is my superpower) ⚡"
+        text: "AI & B2B Digital Transformation consultant — working with customer data, system requirements, and workflows that actually save time."
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "My battle-tested work at 1Office & FPT Education — ask me how we cut a 3-day reporting nightmare down to 30 mins! 🚀"
+        text: "Hands-on consulting at 1Office and FPT Education — including cutting a 3-day reporting workflow down to 30 minutes."
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "Peer-reviewed research and a Springer chapter — proof that I don't just guess, I bring the data 📊"
+        text: "Applied research and a published Springer chapter — bridging data analysis with real-world business context."
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Got a fun project or want to chat digital transformation? Don't be shy, say hi! ☕"
+        text: "Always open to discuss digital transformation, data, or new opportunities. Feel free to reach out!"
       }
     ],
     vi: [
@@ -66,27 +66,27 @@
         guide: 'intro',
         at: 'above',
         free: true,
-        text: "Chào bạn, mình là Chung Hy! Chào mừng bạn ghé thăm góc nhỏ của mình 👋"
+        text: "Chào bạn, mình là Chung Hy — chào mừng bạn ghé thăm portfolio của mình."
       },
       {
         guide: 'skills',
         at: 'below',
-        text: "Chuyên viên tư vấn AI & Chuyển đổi số B2B — chuyên 'trị' bảng tính lộn xộn thành quy trình mượt mà (Excel là siêu năng lực của mình đấy) ⚡"
+        text: "Chuyên viên tư vấn AI & Chuyển đổi số B2B — tập trung vào phân tích khách hàng, yêu cầu hệ thống và quy trình tối ưu vận hành."
       },
       {
         guide: 'nav-work',
         at: 'below',
-        text: "Kinh nghiệm thực chiến tại 1Office & FPT Education — giảm một bản báo cáo từ 3 ngày xuống còn 30 phút là có thật nhé! 🚀"
+        text: "Kinh nghiệm tư vấn thực tế tại 1Office và FPT Education — bao gồm rút ngắn quy trình báo cáo 3 ngày xuống còn 30 phút."
       },
       {
         guide: 'nav-research',
         at: 'below',
-        text: "Nghiên cứu khoa học và chương sách Springer — bằng chứng là mình không đoán mò mà nói chuyện bằng dữ liệu 📊"
+        text: "Các nghiên cứu ứng dụng và chương sách xuất bản bởi Springer — kết nối phân tích dữ liệu với bài toán thực tiễn."
       },
       {
         guide: 'nav-contact',
         at: 'below',
-        text: "Có dự án thú vị hoặc muốn trò chuyện về chuyển đổi số? Đừng ngần ngại nhắn mình nhé! ☕"
+        text: "Luôn sẵn sàng trao đổi về chuyển đổi số, dữ liệu hoặc cơ hội hợp tác mới. Kết nối với mình tại đây nhé!"
       }
     ]
   };
