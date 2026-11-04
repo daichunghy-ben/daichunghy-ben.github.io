@@ -8,7 +8,24 @@ const OUT_DIR = path.join(ROOT, '.deploy', 'public');
 const SOURCE_DIRS = ['assets', 'dist', 'portfolio'];
 const STATIC_FILES = ['404.html', 'robots.txt', '_headers', '_redirects'];
 const HTML_EXCLUDE = new Set(['index_patched.html']);
-const SITEMAP_EXCLUDE = new Set(['404.html', 'index_patched.html', 'motion-review.html', 'intro-review.html']);
+const HTML_PROCESS_EXCLUDE = new Set(['404.html', 'index_patched.html', 'motion-review.html', 'intro-review.html']);
+const SITEMAP_EXCLUDE = new Set([
+  '404.html',
+  'index_patched.html',
+  'motion-review.html',
+  'intro-review.html',
+  'creator-economy.html',
+  'health-behavior.html',
+  'hospitality-analytics.html',
+  'insight-ev-choice-vietnam.html',
+  'insight-student-diet-quality-vietnam.html',
+  'insight-virtual-influencer-trust.html',
+  'insights.html',
+  'mobility-policy.html',
+  'organizational-behavior.html',
+  'references.html',
+  'research-hanoi-phaseout.html'
+]);
 const DEFAULT_PRIMARY_SITE_URL = 'https://daichunghy-ben.github.io/portfolio/';
 const DEFAULT_LEGACY_HOSTS = ['chunghy-portfolio.pages.dev', 'chunghy.pages.dev', 'daichunghy.pages.dev', 'daichunghy-portfolio.pages.dev'];
 const STAGED_ASSET_REFS = new Map([
@@ -160,7 +177,7 @@ const listTopLevelHtmlFiles = async (dirPath) => {
     .map((entry) => entry.name)
     .filter((name) => name.endsWith('.html'))
     .filter((name) => !name.includes('.report.html'))
-    .filter((name) => !SITEMAP_EXCLUDE.has(name))
+    .filter((name) => !HTML_PROCESS_EXCLUDE.has(name))
     .sort();
 };
 
@@ -306,6 +323,7 @@ const generateSitemapXml = async (siteUrl) => {
   const pages = [];
 
   for (const htmlFile of htmlFiles) {
+    if (SITEMAP_EXCLUDE.has(htmlFile)) continue;
     const filePath = path.join(portfolioDir, htmlFile);
     const html = await fs.readFile(filePath, 'utf8');
     const pageUrl = absolutePageUrlForFile(siteUrl, htmlFile);
