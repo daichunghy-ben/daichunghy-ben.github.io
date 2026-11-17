@@ -1,3 +1,7 @@
+if (document.documentElement.dataset.opening === 'pending') {
+  import('./opening-motion.js?v=english4');
+}
+
 let ProfilePuppet;
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -101,15 +105,29 @@ let loading = false;
 async function preparePortraits() {
   if (ready || loading || reduced.matches) { syncMotion();return; }
   loading = true;
+  const yieldFrame = () => new Promise(resolve => setTimeout(resolve, 40));
   try {
     ({ProfilePuppet} = await import('./profile-film.js?v=mt6'));
     wave = await loadPuppet('chung-hy-mascot-greeting-v1.webp');
-    const poses = await Promise.allSettled([loadPuppet('chung-hy-mascot-profile-point-v3.webp', true),loadPuppet('chung-hy-mascot-closing-v2.webp')]);
-    point = poses[0].status === 'fulfilled' ? poses[0].value : wave;
-    closing = poses[1].status === 'fulfilled' ? poses[1].value : wave;
+    await yieldFrame();
+    const [pointRes, closingRes] = await Promise.allSettled([
+      loadPuppet('chung-hy-mascot-profile-point-v3.webp', true),
+      loadPuppet('chung-hy-mascot-closing-v2.webp')
+    ]);
+    await yieldFrame();
+    point = pointRes.status === 'fulfilled' ? pointRes.value : wave;
+    closing = closingRes.status === 'fulfilled' ? closingRes.value : wave;
     ready = true;staticFrame();syncMotion();
   } catch { control.hidden = true; }
   finally { loading = false; }
 }
 reduced.addEventListener('change', preparePortraits);
-preparePortraits();
+const schedulePortraits = () => {
+  const start = () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(() => preparePortraits(), { timeout: 2000 });
+    else setTimeout(preparePortraits, 800);
+  };
+  if (document.readyState === 'complete') setTimeout(start, 600);
+  else window.addEventListener('load', () => setTimeout(start, 600), { once: true });
+};
+schedulePortraits();

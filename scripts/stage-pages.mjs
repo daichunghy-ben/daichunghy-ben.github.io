@@ -321,26 +321,38 @@ const generateSitemapXml = async (siteUrl) => {
   const htmlFiles = (await dirExists(portfolioDir)) ? await listTopLevelHtmlFiles(portfolioDir) : [];
 
   const pages = [];
+  const lastmod = new Date().toISOString().slice(0, 10);
 
   for (const htmlFile of htmlFiles) {
     if (SITEMAP_EXCLUDE.has(htmlFile)) continue;
     const filePath = path.join(portfolioDir, htmlFile);
     const html = await fs.readFile(filePath, 'utf8');
+    if (/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) continue;
     const pageUrl = absolutePageUrlForFile(siteUrl, htmlFile);
     const canonicalUrl = resolvePageUrlForFile(siteUrl, htmlFile, html);
 
     if (canonicalUrl !== pageUrl) continue;
 
-    pages.push({ url: pageUrl });
+    pages.push({ htmlFile, url: pageUrl });
   }
 
+  const urlSet = new Set(pages.map((p) => p.url));
   const entries = pages
-    .map(
-      ({ url }) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n  </url>`
-    )
+    .map(({ htmlFile, url }) => {
+      const isVi = htmlFile.endsWith('.vi.html');
+      const enFile = isVi ? htmlFile.replace(/\.vi\.html$/, '.html') : htmlFile;
+      const viFile = isVi ? htmlFile : htmlFile.replace(/\.html$/, '.vi.html');
+      const enUrl = absolutePageUrlForFile(siteUrl, enFile);
+      const viUrl = absolutePageUrlForFile(siteUrl, viFile);
+      const alternates =
+        urlSet.has(enUrl) && urlSet.has(viUrl)
+          ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(enUrl)}"/>\n    <xhtml:link rel="alternate" hreflang="vi" href="${escapeXml(viUrl)}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(enUrl)}"/>`
+          : '';
+      return `  <url>\n    <loc>${escapeXml(url)}</loc>\n    <lastmod>${lastmod}</lastmod>${alternates}\n  </url>`;
+    })
     .join('\n');
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries}\n</urlset>\n`;
   await fs.writeFile(path.join(OUT_DIR, 'sitemap.xml'), xml, 'utf8');
   await fs.writeFile(path.join(portfolioDir, 'sitemap.xml'), xml, 'utf8');
 };
